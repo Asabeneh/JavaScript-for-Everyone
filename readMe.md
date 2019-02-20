@@ -32,6 +32,7 @@ programming language for four consecutive years and is the most used programming
 Github 
 ## Setup
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
+Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 ## Adding JavaScript to a web page
 JavaScript can be added to a web pages in three ways:
 * ***Inline script***
@@ -145,11 +146,49 @@ In JavaScript and also other programming languages there are different kinds of 
 Strings are text which are under ***single*** or ***double*** quote.
 Lets' see some examples of string:
 ```js
-let firstName = 'Asabeneh'
-let country = 'Finland'
-let city = 'Helsinki'
-let language = 'JavaScript'
+let firstName = 'Asabeneh';
+let lastName = 'Yetayeh';
+let country = 'Finland';
+let city = 'Helsinki';
+let language = 'JavaScript';
+let job = 'teacher'
 ```
+#### String Concatination
+```js
+// Declaring different variables of different data types
+let firstName = 'Asabeneh';
+let lastName = 'Yetayeh';
+let country = 'Finland';
+let city = 'Helsinki';
+let language = 'JavaScript';
+let job = 'teacher'
+
+let fullName = firstName + " " + lastName; // concatination, merging to string together.
+console.log(fullName);
+
+
+let personInfoOne = fullName + ".I am " + age + ". I live in " + country; // ES5
+let personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 - String interpolation method
+let personInfoThree = `I am ${fullName}. I live in ${country}, ${city}. I am a ${job}. I teach ${language}.`
+console.log(personInfoOne);
+console.log(personInfoTwo);
+//More Examples
+var gravity = 9.81;
+var boilingPoint = 100;
+var bodyTemp = 37;
+
+/*
+ The boiling point of water is 100 oC.
+ Human body temperatue is 37 oC.
+ The gravity of earth is 9.81 m/s2.
+ */
+console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body temperatue is ${body} oC.\nThe gravity of earth is ${gravity} m / s2.`
+);
+
+
+```
+
+
 #### Exercises:String
 1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
 1. Print the string  on the browser console using *console.log()*

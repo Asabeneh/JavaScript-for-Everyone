@@ -5,7 +5,7 @@ let fullName = firstName + " " + lastName; // concatination, merging to string t
 console.log(fullName);
 
 
-var personInfoOne = fullName + ".I am " + age + ". I live in " + country; // ES5
-var personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 - String interpolation method
+let personInfoOne = fullName + ".I am " + age + ". I live in " + country; // ES5
+let personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 - String interpolation method
 console.log(personInfoOne);
 console.log(personInfoTwo);
