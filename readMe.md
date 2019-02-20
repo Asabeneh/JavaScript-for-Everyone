@@ -160,11 +160,12 @@ let language = 'JavaScript'
 1. Check if the string contains a word *Academy* using *includes()* method
 1. Split the *string* into *array* using *split()* method
 1. Split the string Coding Academy at the space using *split()* method
-1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma  and change it to an array.
+1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" *split* the string at the comma  and change it to an array.
 1. Change Coding Academy  to Microsoft Academy using *replace()* method.
 1. What is character at index 10 in "Coding Academy" string use *charAt()* method.
 1. What is the character code of A in 'Coding Academy' string using *charCodeAt()*
 1. Use *indexOf* to determine the position of  the first occurrence of c in Coding Academy
+1. Use *search* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
 1. Use *lastIndexOf* to determine the position of the last occurrence of c in Coding Academy
 1. Use *trim()* to remove if there is trailing whitespace at the beginning and the end of a string.E.g "  Coding Academy   ". 
 1. Use *startsWith()* method with the string Coding Academy make the result true
@@ -507,6 +508,16 @@ do {
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop.
 1. Iterate 10 to 0 using for loop, do the same using while and do while loop.
 1. Iterate the array from above question using a for loop and print out the items.
+1. Use for loop to iterate from 0 to 100 and print only even numbers
+1. Use for loop to iterate from 0 to 100 and print only odd numbers
+1. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
+```js
+The sum all numbers is 5050.
+```
+1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+```js
+The sum of all evens is 2550. And the sum of all odds is 2500.
+```
 
 ## Functions
 ```js
