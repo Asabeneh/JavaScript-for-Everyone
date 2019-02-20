@@ -54,7 +54,7 @@ Create a folder on your desktop or in any location and create an ***index.html**
 </html>
 ```
 ### Internal script
-Internal script can be written in the ***head*** or the ***body*** but it is preferrable to put it on the ***body*** of the html document.
+Internal script can be written in the *head* or the *body* but it is preferrable to put it on the body of the html document.
 ```html
 <DOCTYPE html>
 <html>
@@ -78,13 +78,13 @@ Internal script can be written in the ***head*** or the ***body*** but it is pre
   <body>
   //it could be in header or in the body
   // Here is the recommended place to put the script
-  <script src="script.js"></script>
+  <script src="introduction.js"></script>
   </body>
 </html>
 ```
 #### Exercises:Setting Up your machine
 ## Variables
-Variables are ***containers*** of data. Variables ***store*** data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, ***var***, ***let*** or ***const*** key word. For a variable which changes at different time we use ***let*** but if the data doesn't change at all we use ***const***. For example PI, country name, gravity.
+Variables are *containers* of data. Variables *store* data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, *var*, *let* or *const* key word. For a variable which changes at different time we use *let* but if the data doesn't change at all we use *const*. For example PI, country name, gravity.
 ```js
 // Declaring different variables of different data types
 let firstName = "Asabeneh";
@@ -103,7 +103,7 @@ let name = "Asabeneh",
   live = "Finland";
   console.log(name, job, live) 
 ```
-#### Exercises:Variables
+#### Exercise - 1:Variables
 1. Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name,  marital status, country and age in a single line
 1. Declare two variables *myAge* and *yourAge* and assign them initial values and log to browser console. 
@@ -131,10 +131,16 @@ Multiline commenting:
     This is a Multiple line comment
     */
 ```
-#### Exercises:Comments
+#### Exercise - 2:Comments
+1. Write a single line comment which says, *comments can make code readable*
+1. Write a multiline comment which says, *comments can make code readable, easy to use*
+*and informative*
  
 ## Data Types
-In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:***String, Number, Boolean, undefined, Null*** and ***Symbol***.
+In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:*String, Number, Boolean, undefined, Null* and *Symbol*.
+#### Exercises: Data Types
+1. The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
+
 ### Strings
 Strings are text which are under ***single*** or ***double*** quote.
 Lets' see some examples of string:
@@ -145,30 +151,30 @@ let city = 'Helsinki'
 let language = 'JavaScript'
 ```
 #### Exercises:String
-1. Declare a variable name company and assign it to an initial value "Coding Academy".
-1. Print the string  on the browser console using console.log()
-1. Print the length of the string  on the browser console using console.log()
-1. Change all the string to capital letters using toUpperCase() method
-1. Change all the string to small letters using toLowerCase() method
-1. Cut(slice) out the first word of the string using slice, substr() or substring() method
-1. Check if the string contains a word Academy using includes() method
-1. Split the string into array using split() method
-1. Split the string Coding Academy at the space using split() method
-1. "Facebook, Google, Microsoft, Apple, IBM,Oracle, Amazon" split the string at the comma  and change it to an array.
-1. Change Coding Academy  to Microsoft Academy using replace() method.
-1. What is character at index 10 in "Coding Academy" string use charAt() method.
-1. What is the character code of A in "Coding Academy" string using charCodeAt()
-1. Use indexOf to determine the position of  the first occurrence of e in Coding Academy
-1. Use lastIndexOf to determine the position of the last occurrence of e in Coding Academy
-1. Use trim() to remove if there is trailing whitespace at the beginning and the end of a string.E.g "  Coding Academy   ". 
-1. Use startsWith() method with the string Coding Academy make the result true
-1. Use endsWith() method with the string Coding Academy make the result true
-1. Use  match() method to find all the a’s in Coding Academy
-1. Use concat() and merge ‘Coding’ and "Academy" to a single string, "Coding Academy"
-1. Use repeat() method to print Coding Academy 5 times
+1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
+1. Print the string  on the browser console using *console.log()*
+1. Print the *length* of the string  on the browser console using *console.log()*
+1. Change all the string to capital letters using *toUpperCase()* method
+1. Change all the string to lowercase letters using *toLowerCase()* method
+1. Cut(slice) out the first word of the string using *slice*, *substr()* or *substring()* method
+1. Check if the string contains a word *Academy* using *includes()* method
+1. Split the *string* into *array* using *split()* method
+1. Split the string Coding Academy at the space using *split()* method
+1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma  and change it to an array.
+1. Change Coding Academy  to Microsoft Academy using *replace()* method.
+1. What is character at index 10 in "Coding Academy" string use *charAt()* method.
+1. What is the character code of A in 'Coding Academy' string using *charCodeAt()*
+1. Use *indexOf* to determine the position of  the first occurrence of c in Coding Academy
+1. Use *lastIndexOf* to determine the position of the last occurrence of c in Coding Academy
+1. Use *trim()* to remove if there is trailing whitespace at the beginning and the end of a string.E.g "  Coding Academy   ". 
+1. Use *startsWith()* method with the string Coding Academy make the result true
+1. Use *endsWith()* method with the string Coding Academy make the result true
+1. Use *match()* method to find all the c’s in Coding Academy
+1. Use *concat()* and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
+1. Use *repeat()* method to print Coding Academy 5 times
 
 ### Numbers
-Numbers are integers and decimal numbers which can do all the arithemtic operators.
+Numbers are integers and decimal values which can do all the arithemtic operations
 Lets' see some examples of Numbers
 ```js
 let age = 35;
@@ -178,6 +184,7 @@ let temperature = 37;
 
 ```
 ### Booleans
+ Boolean value is either true or false. Any comparisons return a boolean value which is either true or false. 
 ```js
 let isRaining = false
 let hungery = false;
@@ -188,7 +195,6 @@ let isMarried = true;
 Boolean value is either true or false. 
 1. Write three JavaScript statement which provide truthy value. 
 1. Write three JavaScript statement which provide falsy value.
-1. Boolean value is either true or false. Any comparison return a boolean either true or false. 
 1. Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===. 
 Which are true or which are false ?
   1. 4 > 3
@@ -219,6 +225,7 @@ String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitiv
 
 ## Operators
 ### Arthimetic Operators
+Arthimetic operators are mathematical operators:+, -, *, /, *
 ```js
 let numOne = 4;
 let numTwo = 3;
@@ -396,6 +403,36 @@ switch (weather) {
     break;
   default:
     console.log(" No need for rain coat.");
+    break;
+}
+// Switch More Examples
+var dayUserInput = prompt('What day is it ?');
+var day = dayUserInput.toLowerCase();
+switch (day) {
+  case 'monday':
+    console.log('Today is Monday');
+    break;
+  case 'tuesday':
+    console.log('Today is Tuesday');
+    break;
+  case 'wednesday':
+    console.log('Today is Wednesday');
+    break;
+  case 'thursday':
+    console.log('Today is Thursday');
+    break;
+  case 'friday':
+    console.log('Today is Friday');
+    break;
+  case 'saturday':
+    console.log('Today is Saturday');
+    break;
+  case 'sunday':
+    console.log('Today is Sunday');
+    break;
+
+  default:
+    console.log('It is not a week day.');
     break;
 }
 ```
