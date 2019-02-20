@@ -379,13 +379,13 @@ console.log(shoppingCart)
 ```
 #### Exercises:Arrays
 1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
-1. Print the array using console.log()
+1. Print the array using *console.log()*
 1. Print the number of companies in the array
 1. Print out each company
 1. Change companies to uppercase and print them out
 1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
-1. Sort the array using sort() method
-1. Reverse the array using reverse() method
+1. Sort the array using *sort()* method
+1. Reverse the array using *reverse()* method
 
 ## Conditionals
 #### If
@@ -616,17 +616,17 @@ console.log(sumArrayValues(numbers));
 
 ```
 #### Exercises:Functions
-1. Declare a function fullName and it print out your full name.
-1. Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
-1. Declare a function addNumbers and it takes two two parameters and it returns sum.
-1. Declare a function name printArray. It takes array as a parameter and it prints out each value of thearray.
-1. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the arra- (dont’ use method).
-1. Declare a function name capitalizeArray. It takes array as a parameter and it returns  the - capitalizedarray. 
-1. Declare a function name removeItem. It returns array after removing an item
-1. Declare a function name addItem. It returns array after adding an item
-1. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
-1. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
-1. Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+1. Declare a function *fullName* and it print out your full name.
+1. Declare a function *fullName* and now it takes firstName, lastName as a parameter and it returns your full - name.
+1. Declare a function *addNumbers* and it takes two two parameters and it returns sum.
+1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
+1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the arra- (dont’ use method).
+1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
+1. Declare a function name *addItem*. It returns array after adding an item
+1. Declare a function name *removeItem*. It returns array after removing an item
+1. Declare a function name *sumOfNumbers*. It takes a number parameter and it adds all the numbers in that range.
+1. Declare a function name *sumOfOdds*. It takes a number parameter and it adds all the odd numbers in that - range.
+1. Declare a function name *sumOfEven*. It takes a number parameter and it adds all the even numbers in that - range.
 1. Declare a function name 	. It takes a number parameter and it counts number of evens and odds in the - number.
 output:
 ```she
@@ -634,23 +634,19 @@ evensAndOdds(100);
 The number of odds are 50.
 The number of evens are 51.
 ```
-- Declare a function name randomHexaNumberGenerator. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
+- Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
 output:
 ```she
 console.log(randomHexaNumberGenerator());
  '#ee33df'
-console.log(randomHexaNumberGenerator());
-'#28def10'
-console.log(randomHexaNumberGenerator());
-'#38eeda'
 ```
-- Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+- Declare a function name *userIdGenerator*. When this function is called it generates seven character id. The function return the id.
 Output:
 ```sh
 console.log(userIdGenerator());
 41XTDbE
 ```
-- Modify question number n . Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
+- Modify question number n . Declare a function name *userIdGeneratedByUser*. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
 ```sh
 userIdGeneratedByUser()
 "kcsy2
@@ -660,13 +656,6 @@ ZXOYh
 2Rgxf
 "
 userIdGeneratedByUser()
-"3RexwUqvqe
-rVUY6dC1il
-YCf88ZHuAf
-7JhI6Mn063
-mo3GYyH26O
-"
-userIdGeneratedByUser()
 "1GCSgPLMaBAVQZ26
 YD7eFwNQKNs7qXaT
 ycArC5yrRupyG00S
@@ -674,12 +663,12 @@ UbGxOFI7UXSWAyKN
 dIV0SSUTgAdKwStr
 "
 ```
-- Write a function name rgbColorGenerator and it generates rgb colors.
+- Write a function name *rgbColorGenerator* and it generates rgb colors.
 Output:
 ```sh
 rgb(125,244,255)
 ```
-- Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
+- Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
 - Use the new Date() object to get month, date, year, hour and minute.
 Output:
 ```sh
@@ -704,7 +693,7 @@ person.live = 'Finland';
 
 ```
 #### Exercises:Objects
-- Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncomes, totalExpenses, acountInfo,addIncome, addExpence and accountBalance methods. Incomes is a set of incomes and its description and the same for expenses. 
+- Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncomes, totalExpenses, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses. 
 
 ## Class
 ```js
