@@ -104,7 +104,7 @@ let name = "Asabeneh",
   live = "Finland";
   console.log(name, job, live) 
 ```
-#### Exercise - 1:Variables
+#### Exercise - 1 : Variables
 1. Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name,  marital status, country and age in a single line
 1. Declare two variables *myAge* and *yourAge* and assign them initial values and log to browser console. 
@@ -132,14 +132,14 @@ Multiline commenting:
     This is a Multiple line comment
     */
 ```
-#### Exercise - 2:Comments
+#### Exercise - 2 : Comments
 1. Write a single line comment which says, *comments can make code readable*
 1. Write a multiline comment which says, *comments can make code readable, easy to use*
 *and informative*
  
 ## Data Types
 In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:*String, Number, Boolean, undefined, Null* and *Symbol*.
-#### Exercises: Data Types
+#### Exercises - 3 : Data Types
 1. The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
 
 ### Strings
@@ -189,13 +189,14 @@ console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body tempe
 ```
 
 
-#### Exercises:String
+#### Exercise - 3 : String
 1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
 1. Print the string  on the browser console using *console.log()*
 1. Print the *length* of the string  on the browser console using *console.log()*
 1. Change all the string to capital letters using *toUpperCase()* method
 1. Change all the string to lowercase letters using *toLowerCase()* method
 1. Cut(slice) out the first word of the string using *slice*, *substr()* or *substring()* method
+1. Use *substr* to slice out the phase *because because because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
 1. Check if the string contains a word *Academy* using *includes()* method
 1. Split the *string* into *array* using *split()* method
 1. Split the string Coding Academy at the space using *split()* method
@@ -204,12 +205,15 @@ console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body tempe
 1. What is character at index 10 in "Coding Academy" string use *charAt()* method.
 1. What is the character code of A in 'Coding Academy' string using *charCodeAt()*
 1. Use *indexOf* to determine the position of  the first occurrence of c in Coding Academy
+1. Use *lastIndexOf* to determine the position of the last occurrence of c in Coding Academy.
+1. Use *indexOf* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
+1. Use *lastIndexOf* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
 1. Use *search* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
-1. Use *lastIndexOf* to determine the position of the last occurrence of c in Coding Academy
 1. Use *trim()* to remove if there is trailing whitespace at the beginning and the end of a string.E.g "  Coding Academy   ". 
 1. Use *startsWith()* method with the string Coding Academy make the result true
 1. Use *endsWith()* method with the string Coding Academy make the result true
 1. Use *match()* method to find all the c’s in Coding Academy
+1. Use *match()* to count the number all because's in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
 1. Use *concat()* and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
 1. Use *repeat()* method to print Coding Academy 5 times
 
@@ -386,6 +390,13 @@ console.log(shoppingCart)
 1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
 1. Sort the array using *sort()* method
 1. Reverse the array using *reverse()* method
+1. Slice out the first 3 companies from the array
+1. Slice out the last 3 companies from the array
+1. Slice out the middle IT company or companies from the array
+1. Remove the first IT company from the array
+1. Remove the middle IT company or companies from the array
+1. Remove the last IT company from the array
+1. Remove all IT companies
 
 ## Conditionals
 #### If
@@ -619,11 +630,19 @@ console.log(sumArrayValues(numbers));
 1. Declare a function *fullName* and it print out your full name.
 1. Declare a function *fullName* and now it takes firstName, lastName as a parameter and it returns your full - name.
 1. Declare a function *addNumbers* and it takes two two parameters and it returns sum.
+1. An area of a rectangle is calculated as follows: *area = lenght x width*. Write a function which calculates  *areaOfRectangle*.
+1. A perimeter of a rectangle is calculated as follows: *perimeter= 2x(lenght + width)*. Write a function which calculates  *perimeterOfRectangle*.
+1. A volume of a rectangular prism is calculated as follows: *volume = lenght x width x height*. Write a function which calculates  *volumeOfRectPrism*.
+1. Density of a substance is calculated as follows:*density= mass/volume*.  Write a function which calculates  *density*.
+1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
+1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*.
+1. Linear equation is calculated as follows: *f(x) = ax + b*. Write a function which calculates value of a linear equation, *solvLinEquation*.
+1. Quadratic equation is calculated as follows: *f(x) = ax2 + bx + c*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
 1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the arra- (dont’ use method).
 1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
-1. Declare a function name *addItem*. It returns array after adding an item
-1. Declare a function name *removeItem*. It returns array after removing an item
+1. Declare a function name *addItem*. It takes an item parameter and it returns an array after adding the item
+1. Declare a function name *removeItem*. It takes an index parameter and it returns an array after removing an item
 1. Declare a function name *sumOfNumbers*. It takes a number parameter and it adds all the numbers in that range.
 1. Declare a function name *sumOfOdds*. It takes a number parameter and it adds all the odd numbers in that - range.
 1. Declare a function name *sumOfEven*. It takes a number parameter and it adds all the even numbers in that - range.
