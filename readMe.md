@@ -16,12 +16,12 @@
 13. [Class](#class)
 14. [Document Object Model](#dom)
 15. [Functional Programming](#functional-programming)
-16. [Call Back and Higher Order Functions](#callback-and-higher-order-functions)
+16. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
 17. [Destructuring](#destructuring)
 19. [Rest and Spread](#rest-and-spread)
 20. [Document Object Model](#document-object-model)
 21. [Regular Expressions](#regular-expressions)
-22. [LocalStorage](#localstorage)
+22. [Local Storage](#localstorage)
 23. [Cookies](#cookies)
 
 ## Introduction
@@ -172,23 +172,7 @@ let personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 
 let personInfoThree = `I am ${fullName}. I live in ${country}, ${city}. I am a ${job}. I teach ${language}.`
 console.log(personInfoOne);
 console.log(personInfoTwo);
-//More Examples
-var gravity = 9.81;
-var boilingPoint = 100;
-var bodyTemp = 37;
-
-/*
- The boiling point of water is 100 oC.
- Human body temperatue is 37 oC.
- The gravity of earth is 9.81 m/s2.
- */
-console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body temperatue is ${body} oC.\nThe gravity of earth is ${gravity} m / s2.`
-);
-
-
 ```
-
-
 #### Exercise - 3 : String
 1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
 1. Print the string  on the browser console using *console.log()*
@@ -216,15 +200,21 @@ console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body tempe
 1. Use *match()* to count the number all because's in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
 1. Use *concat()* and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
 1. Use *repeat()* method to print Coding Academy 5 times
+1. Calculate the total annual income of the person by extract the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 
 ### Numbers
 Numbers are integers and decimal values which can do all the arithemtic operations
 Lets' see some examples of Numbers
 ```js
 let age = 35;
-let gravity = 9.81;
-let pi = 3.14;
-let temperature = 37;
+let gravity = 9.81; // m/s2
+let mass = 72 // keg
+const PI = 3.14;// constant
+
+//More Examples
+const boilingPoint = 100; // oC, boiling point of water
+var bodyTemp = 37; // oc body temperature
+console.log(age, gravity, mass, PI, boilingPoint,bodyTemp)
 
 ```
 ### Booleans
@@ -278,7 +268,31 @@ let diff = numOne - numTwo;
 let mult = numOne * numTwo;
 let div = numOne / numTwo;
 let remainder = numOne % numTwo;
+console.log(sum, diff,mult,div,remainder) // ->7,1,12,1.33,1
 
+let PI = 3.14;
+let radius = 100;// length in meter
+
+const gravity = 9.81; // in m/s2
+let mass = 72; // in Killogram
+const boilingPoint = 100;// temperature in oC, boiling point of water
+const bodyTemp = 37; // body temperature in oC
+
+//Lets calculate area of a circle
+const areaOfCircle = PI * radius * radius;
+console.log(areaOfCircle) // -> 314 m
+// Lets calculate weight of a substance
+const weight = mass * gravity;
+console.log(weigth) // -> 706.32 N(Newton)
+
+//Concatinating string with numbers using string interpolation
+/*
+ The boiling point of water is 100 oC.
+ Human body temperatue is 37 oC.
+ The gravity of earth is 9.81 m/s2.
+ */
+console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body temperatue is ${body} oC.\nThe gravity of earth is ${gravity} m / s2.`
+);
 ```
 #### Exercises:Arthimetic Operators:
 JavaScript arithmetic operators are addition(+), subtraction(-), multiplication(*), division(/), modulus(%), increment(++) and decrement(--).
@@ -397,6 +411,18 @@ console.log(shoppingCart)
 1. Remove the middle IT company or companies from the array
 1. Remove the last IT company from the array
 1. Remove all IT companies
+## More on Arrays
+Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and returns the array. If the array length is less than five it return ‘item not found’.
+```js
+console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
+// →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
+console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
+// →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
+console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
+// →"Not Found"
+
+```
+
 
 ## Conditionals
 #### If
@@ -676,44 +702,49 @@ const square = n => n * n;
 1. Area of a circle is calculated as follows: *area = π x r x r*. Write a function which calculates  *areaOfCircle*
 1. Circumference of a circle is calculated as follows: *circumference = 2πr*. Write a function which calculates  *circumOfCircle*
 1. Density of a substance is calculated as follows:*density= mass/volume*.  Write a function which calculates  *density*.
+1. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a fucntion which calculates a speed of a moving object, *speed*.
 1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
-1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*.
-BMI is used to broadly define different weight groups in adults 20 years old or older.
-  The same groups apply to both men and women.
-  Underweight: BMI is less than 18.5
-  Normal weight: BMI is 18.5 to 24.9
-  Overweight: BMI is 25 to 29.9
-  Obese: BMI is 30 or more
-1. Linear equation is calculated as follows: *f(x) = ax + b*. Write a function which calculates value of a linear equation, *solvLinEquation*.
-1. Quadratic equation is calculated as follows: *f(x) = ax2 + bx + c*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
+1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is *underweight, normal, overweight* or *obsese* based the information given below.
+  - The same groups apply to both men and women.
+  - *Underweight*: BMI is less than 18.5
+  - *Normal weight*: BMI is 18.5 to 24.9
+  - *Overweight*: BMI is 25 to 29.9
+  - *Obese*: BMI is 30 or more
+1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solvLinEquation*.
+1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
-1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the arra- (dont’ use method).
+1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the array (dont’ use method).
 1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
 1. Declare a function name *addItem*. It takes an item parameter and it returns an array after adding the item
 1. Declare a function name *removeItem*. It takes an index parameter and it returns an array after removing an item
 1. Declare a function name *sumOfNumbers*. It takes a number parameter and it adds all the numbers in that range.
 1. Declare a function name *sumOfOdds*. It takes a number parameter and it adds all the odd numbers in that - range.
 1. Declare a function name *sumOfEven*. It takes a number parameter and it adds all the even numbers in that - range.
-1. Declare a function name 	. It takes a number parameter and it counts number of evens and odds in the - number.
+1. Declare a function name evensAndOdds	. It takes a positive integer as parameter and it counts number of evens and odds in the number.
 output:
 ```she
 evensAndOdds(100);
 The number of odds are 50.
 The number of evens are 51.
 ```
-- Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
+1. Write a funcition which takes any number of arguments and return the sum of the arguments
+```js
+sum(1,2,3) // -> 6
+sum(1,2,3,4) // -> 10
+```
+1. Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
 output:
 ```she
 console.log(randomHexaNumberGenerator());
  '#ee33df'
 ```
-- Declare a function name *userIdGenerator*. When this function is called it generates seven character id. The function return the id.
+1. Declare a function name *userIdGenerator*. When this function is called it generates seven character id. The function return the id.
 Output:
 ```sh
 console.log(userIdGenerator());
 41XTDbE
 ```
-- Modify question number n . Declare a function name *userIdGeneratedByUser*. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
+1. Modify question number n . Declare a function name *userIdGeneratedByUser*. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
 ```sh
 userIdGeneratedByUser()
 "kcsy2
@@ -730,13 +761,13 @@ UbGxOFI7UXSWAyKN
 dIV0SSUTgAdKwStr
 "
 ```
-- Write a function name *rgbColorGenerator* and it generates rgb colors.
+1. Write a function name *rgbColorGenerator* and it generates rgb colors.
 Output:
 ```sh
 rgb(125,244,255)
 ```
-- Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
-- Use the new Date() object to get month, date, year, hour and minute.
+1. Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
+1. Use the new Date() object to get month, date, year, hour and minute.
 Output:
 ```sh
 28/08/2018 04:08
