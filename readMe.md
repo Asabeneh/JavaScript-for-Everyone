@@ -94,11 +94,11 @@ let location = "Helsinki";// capital city
 const country = "Finland"; // country
 let age = 100; // age in years
 let isMarried = true;
-console.log(firstName, lastName, location, country, age);//Asabeneh, Yetayeh,Helsinki, Finland,100
+console.log(firstName, lastName, location, country, age);//Asabeneh, Yetayeh, Helsinki, Finland, 100
 
 // Declaring variables with number values
-const gravity = 9.81; // in m/s2
-const boilingPoint = 100; // temperature in oC
+const gravity = 9.81; // earth gravity  in m/s2
+const boilingPoint = 100; // water boiling point, temperature in oC
 const PI = 3.14; // geometrical constant
 console.log(gravity, boilingPoint, PI); // 9.81, 100, 3.14
 // Variables can also be declaring in one line
@@ -111,11 +111,11 @@ let name = "Asabeneh", //name of a person
 1. Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name,  marital status, country and age in a single line
 1. Declare two variables *myAge* and *yourAge* and assign them initial values and log to browser console. 
-Output:
-```sh
-I am 25 years old.
-You are 30 years old.
-```
+      Output:
+      ```sh
+      I am 25 years old.
+      You are 30 years old.
+      ```
 ## Comments
 Commenting in JavaScript is similar to other programming languages. Comments can help to make code more readable.
 There are two ways of commenting:
@@ -147,13 +147,13 @@ In JavaScript and also other programming languages there are different kinds of 
 ### Strings
 Strings are text which are under ***single*** or ***double*** quote.
 Lets' see some examples of string:
-```js
-let firstName = 'Asabeneh';
-let lastName = 'Yetayeh';
-let country = 'Finland';
-let city = 'Helsinki';
-let language = 'JavaScript';
-let job = 'teacher'
+  ```js
+  let firstName = 'Asabeneh';
+  let lastName = 'Yetayeh';
+  let country = 'Finland';
+  let city = 'Helsinki';
+  let language = 'JavaScript';
+  let job = 'teacher'
 ```
 #### String Concatination
 ```js
@@ -220,9 +220,11 @@ console.log(age, gravity, mass, PI, boilingPoint,bodyTemp)
 ### Booleans
  Boolean value is either true or false. Any comparisons return a boolean value which is either true or false. 
 ```js
+let isLightOn = true;
 let isRaining = false
 let hungery = false;
 let isMarried = true;
+
 ```
 #### Exercise : Booleans
 Boolean value is either true or false. 
@@ -344,12 +346,11 @@ Which are true or which are false ?
 4 >= 4;
 4 < 3
 4 <= 3
-4 === 4
 4 != 3;
 4 !== '4';
-4 !=== '4'
 4 == '4'
 4 === '4'
+4 === 4
 ```
 #### Exercises:Comparison Operators
 Boolean value is either true or false. Any comparison return a boolean either true or false. 
@@ -366,75 +367,6 @@ Which are true or which are false ?
 1. 4 != '4'
 1. 4 == '4'
 1. 4 === '4'
-
-## Arrays
-In contrast to variables array can store *multiple values*. Each value in an array has an *index* and each index has *a reference in a memory address*. Each value can be accessed by using their *indexes*. The index of an array starts from *zero* and the last element is less by one from the lenght of the array.
-```js
-const webTechs = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Redux",
-  "Node",
-  "MongoDB"
-];
-const countries = [
-  "Albania",
-  "Bolivia",
-  "Canada",
-  "Denmark",
-  "Ethiopia",
-  "Finland",
-  "Germany",
-  "Hungary"
-];
-const numbers = [0, 3.14, 9.81, 37, 98.6, 100];
-const shoppingCart = [
-  "Milk",
-  "Mango",
-  "Tomato",
-  "Potato",
-  "Avocado",
-  "Meat",
-  "Eggs",
-  "Sugar"
-];
-console.log(webTechs);
-console.log(webTechs.length) // => to know the size of the array, which is 7
-console.log(webTechs[0]) //--> HTML;
-console.log(webTechs[webTechs.length-1]) //--> MongoDB
-console.log(countries);
-console.log(numbers);
-console.log(shoppingCart)
-```
-#### Exercises:Arrays
-1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
-1. Print the array using *console.log()*
-1. Print the number of companies in the array
-1. Print out each company
-1. Change companies to uppercase and print them out
-1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
-1. Sort the array using *sort()* method
-1. Reverse the array using *reverse()* method
-1. Slice out the first 3 companies from the array
-1. Slice out the last 3 companies from the array
-1. Slice out the middle IT company or companies from the array
-1. Remove the first IT company from the array
-1. Remove the middle IT company or companies from the array
-1. Remove the last IT company from the array
-1. Remove all IT companies
-## More on Arrays
-Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and returns the array. If the array length is less than five it return ‘item not found’.
-```js
-console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
-// →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
-console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
-// →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
-console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
-// →"Not Found"
-```
-
 ## Conditionals
 #### If
 ```js
@@ -558,7 +490,7 @@ Output:
 4 is greater than 3
 ```
 ## Loops
-In programming languages to carry out repetitive tast we use different kinds of loop. The following examples are the commonly used loops.
+In programming languages to carry out repetitive task we use different kinds of loop. The following examples are the commonly used loops.
 ### For Loop
 ```js
 //For loop structure
@@ -603,15 +535,102 @@ do {
       ```js
       The sum of all evens is 2550. And the sum of all odds is 2500.
       ```
+## Arrays
+In contrast to variables array can store *multiple values*. Each value in an array has an *index* and each index has *a reference in a memory address*. Each value can be accessed by using their *indexes*. The index of an array starts from *zero* and the last element is less by one from the lenght of the array.
+```js
+const numbers = [0, 3.14, 9.81, 37, 98.6, 100]; // set of numbers
+console.log(numbers.length) // => to know the size of the array, which is 6
+console.log(numbers) // -> [0, 3.14, 9.81, 37, 98.6, 100]
+console.log(numbers[0]) //  -> 0
+console.log(numbers[5]) //  -> 100
+let lastIdex = numbers.length - 1;
+console.log(numbers[lastIndex]) -> 100
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB"
+];
+console.log(webTechs) // all the array items
+console.log(webTechs.length) // => to know the size of the array, which is 7
+console.log(webTechs[0]) //  -> HTML
+console.log(webTechs[6]) //  -> MongoDB
+let lastIdex = webTechs.length - 1;
+console.log(webTechs[lastIndex]) -> MongoDB
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan"
+  "Kenya"
+];
+console.log(countries) // -> all countries in array
+console.log(countries[0]) //  -> Albania
+console.log(countries[10]) //  -> Kenya
+let lastIdex = countries.length - 1;
+console.log(countries[lastIndex]) -> // Kenya
+
+const shoppingCart = [
+  "Milk",
+  "Mango",
+  "Tomato",
+  "Potato",
+  "Avocado",
+  "Meat",
+  "Eggs",
+  "Sugar"
+];
+console.log(shoppingCart) // -> all shoppingCart in array
+console.log(shoppingCart[0]) //  -> Milk
+console.log(shoppingCart[7]) //  -> Sugar
+let lastIdex = shoppingCart.length - 1;
+console.log(shoppingCart[lastIndex]) -> // Sugar
+```
+#### Exercises:Arrays
+1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
+1. Print the array using *console.log()*
+1. Print the number of companies in the array
+1. Print out each company
+1. Change companies to uppercase and print them out
+1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+1. Sort the array using *sort()* method
+1. Reverse the array using *reverse()* method
+1. Slice out the first 3 companies from the array
+1. Slice out the last 3 companies from the array
+1. Slice out the middle IT company or companies from the array
+1. Remove the first IT company from the array
+1. Remove the middle IT company or companies from the array
+1. Remove the last IT company from the array
+1. Remove all IT companies
+1. Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+      ```js
+      console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
+      // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
+      // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
+      // →"Not Found"
+      ```
+## More on Arrays
+
 
 ## Functions
 A function is a block of code designed to perform a certain task.
 A function is declared by a function key word followed by a name, followed by parentheses (). A parentheses can take a parameter. If a function take a parameter it will be called with argument. A function can also take a default paramenter.
 A function can be declared or created in couple of ways:
-* ***Decleration function**
-* ***Expression function**
-* ***Anonymous function***
-* ***Arrow function***
+* *Decleration function*
+* *Expression function*
+* *Anonymous function*
+* *Arrow function*
 ### Function Declaration
 ```js
 //function without parameter
@@ -872,17 +891,19 @@ localStorage.clear()
 ## Cookies
 #### Exercises:Cookies
 ## Document Object Model
-HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below.
+HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
 
 ### Getting Element
 ```js
-let allTitle = document.getElementsByTagName('h1');
-let allTitle = document.getElementsByClassName('title');
+let allTitles = document.getElementsByTagName('h1');
+let allTitles = document.getElementsByClassName('title');
 let firstTitle = document.getElementById('first-title');
-let allDiv = document.querySelectorAll('div');
+
+let firstTitle = document.querySelect('h1');
+let allDivs = document.querySelectorAll('div');
 let span = document.querySelector('span');
 let firstPara = document.querySelector('#first-para');
-let allPara = document.querySelector('.para');
+let allParas = document.querySelectorAll('.para');
 
 ```
 ### Creating Element
@@ -944,6 +965,7 @@ pattern.test(name)
 #### Exercises:Regular Expressions
 - Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.’
 ## Functional Programming
+*any, every, find, filter, map, reduce ,some*
 - Declare a function called getStringLists which takes an array as a parameter  and then returns an array only with string items.
 - Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array from slack).
 - Declare a getFirstTenCountries function and return an array of ten countries
