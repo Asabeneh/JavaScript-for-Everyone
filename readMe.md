@@ -116,7 +116,6 @@ Output:
 I am 25 years old.
 You are 30 years old.
 ```
-
 ## Comments
 Commenting in JavaScript is similar to other programming languages. Comments can help to make code more readable.
 There are two ways of commenting:
@@ -217,7 +216,6 @@ const PI = 3.14;// constant
 const boilingPoint = 100; // oC, boiling point of water
 var bodyTemp = 37; // oc body temperature
 console.log(age, gravity, mass, PI, boilingPoint,bodyTemp)
-
 ```
 ### Booleans
  Boolean value is either true or false. Any comparisons return a boolean value which is either true or false. 
@@ -225,25 +223,24 @@ console.log(age, gravity, mass, PI, boilingPoint,bodyTemp)
 let isRaining = false
 let hungery = false;
 let isMarried = true;
-
 ```
 #### Exercise : Booleans
 Boolean value is either true or false. 
 1. Write three JavaScript statement which provide truthy value. 
 1. Write three JavaScript statement which provide falsy value.
 1. Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===. 
-Which are true or which are false ?
-  1. 4 > 3
-  1. 4 >= 3
-  1. 4 < 3
-  1. 4 <= 3
-  1. 4 == 4
-  1. 4 === 4
-  1. 4 != 4
-  1. 4 !== 4
-  1. 4 != '4'
-  1. 4 == '4'
-  1. 4 === '4'
+    Which are true or which are false ?
+      1. 4 > 3
+      1. 4 >= 3
+      1. 4 < 3
+      1. 4 <= 3
+      1. 4 == 4
+      1. 4 === 4
+      1. 4 != 4
+      1. 4 !== 4
+      1. 4 != '4'
+      1. 4 == '4'
+      1. 4 === '4'
 
 ### Undefined
 ```js
@@ -410,7 +407,6 @@ console.log(webTechs[webTechs.length-1]) //--> MongoDB
 console.log(countries);
 console.log(numbers);
 console.log(shoppingCart)
-
 ```
 #### Exercises:Arrays
 1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
@@ -437,7 +433,6 @@ console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "I
 // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
 console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
 // →"Not Found"
-
 ```
 
 ## Conditionals
@@ -455,7 +450,6 @@ if (isRaining) {
 ```js
 if(condition){
   // if the condition met
-
 } else{
  // if condition doesn't met
 }
@@ -534,7 +528,6 @@ Another way to write conditionals is using ternary operators.
 ```js
 let isRaining = true;
 isRaining ?  console.log('You need a rain coat.') : console.log('No need for a rain coat.')
-
 ```
 #### Exercises:Flow Control
 - Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
@@ -603,13 +596,13 @@ do {
 1. Use for loop to iterate from 0 to 100 and print only even numbers
 1. Use for loop to iterate from 0 to 100 and print only odd numbers
 1. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
-```js
-The sum all numbers is 5050.
-```
+      ```js
+      The sum all numbers is 5050.
+      ```
 1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
-```js
-The sum of all evens is 2550. And the sum of all odds is 2500.
-```
+      ```js
+      The sum of all evens is 2550. And the sum of all odds is 2500.
+      ```
 
 ## Functions
 A function is a block of code designed to perform a certain task.
@@ -787,11 +780,16 @@ const square = n => n * n; // -> 4
       rgb(125,244,255)
       ```
 1. Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
-1. Use the new Date() object to get month, date, year, hour and minute.
+1. Use the new Date() object to get *month, date, year, hour* and *minute*.
       Output:
       ```sh
       28/08/2018 04:08
       ```
+ 1. Call your function *shuffleArray*, it takes an array as a parameter and it returns a shuffled array
+ 1. Call your function *factorial*, it takes a whole number as a parameter and it return a factorial of the number
+ 1. Call your function *isEmpty*, it takes a parameter and it checks if it is empty or not
+ 1. Call your function *sum*, it takes any number of arguments and it returns the sum.
+
 ## Object
 Everything can be an object and objects do have properties and properties have values.
 ```js
