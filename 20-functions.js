@@ -40,6 +40,26 @@ function sumArrayValues(arr) {
 const numbers = [1, 2, 3, 4, 5];
 console.log(sumArrayValues(numbers));
 
+//
+function sumOfEvensAndOdds() {
+  var sumOfEvens = 0;
+  var sumOfOdds = 0;
+  for (var i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+      sumOfEvens = sumOfEvens + i;
+      console.log('I am proudly even', i);
+    } else {
+      sumOfOdds = sumOfOdds + i;
+      console.log('I am a proud odd number', i);
+    }
+  }
+  return { evens: sumOfEvens, odds: sumOfOdds };
+  //return [sumOfEvens, sumOfOdds];
+  //return `The sum of all evens is ${sumOfEvens}. And the sum of all odds is ${sumOfOdds}`;
+}
+
+console.log(sumOfEvensAndOdds());
+
 
 
 
