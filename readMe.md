@@ -88,19 +88,22 @@ Internal script can be written in the *head* or the *body* but it is preferrable
 Variables are *containers* of data. Variables *store* data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, *var*, *let* or *const* key word. For a variable which changes at different time we use *let* but if the data doesn't change at all we use *const*. For example PI, country name, gravity.
 ```js
 // Declaring different variables of different data types
-let firstName = "Asabeneh";
-let lastName = "Yetayeh";
-let location = "Helsinki";
-const country = "Finland";
-let age = 100;
+let firstName = "Asabeneh"; // first name of a person
+let lastName = "Yetayeh"; // last name of a person
+let location = "Helsinki";// capital city
+const country = "Finland"; // country
+let age = 100; // age in years
 let isMarried = true;
-const gravity = 9.81;
-const boilingPoint = 100;
-const PI = 3.14;
-console.log(firstName, lastName, location, country, age, gravity, PI);
+console.log(firstName, lastName, location, country, age);//Asabeneh, Yetayeh,Helsinki, Finland,100
+
+// Declaring variables with number values
+const gravity = 9.81; // in m/s2
+const boilingPoint = 100; // temperature in oC
+const PI = 3.14; // geometrical constant
+console.log(gravity, boilingPoint, PI); // 9.81, 100, 3.14
 // Variables can also be declaring in one line
-let name = "Asabeneh",
-  job = "Teacher",
+let name = "Asabeneh", //name of a person
+  job = "teacher", 
   live = "Finland";
   console.log(name, job, live) 
 ```
@@ -163,13 +166,12 @@ let city = 'Helsinki';
 let language = 'JavaScript';
 let job = 'teacher'
 
-let fullName = firstName + " " + lastName; // concatination, merging to string together.
+let fullName = firstName + " " + lastName; // concatination, merging two string together.
 console.log(fullName);
-
 
 let personInfoOne = fullName + ".I am " + age + ". I live in " + country; // ES5
 let personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 - String interpolation method
-let personInfoThree = `I am ${fullName}. I live in ${country}, ${city}. I am a ${job}. I teach ${language}.`
+let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`
 console.log(personInfoOne);
 console.log(personInfoTwo);
 ```
@@ -225,7 +227,7 @@ let hungery = false;
 let isMarried = true;
 
 ```
-#### Exercises:Booleans
+#### Exercise : Booleans
 Boolean value is either true or false. 
 1. Write three JavaScript statement which provide truthy value. 
 1. Write three JavaScript statement which provide falsy value.
@@ -253,7 +255,7 @@ console.log(firstName); //not defined
 let empty = null;
 console.log(empty); //no value
 ```
-#### Exercises:Data types
+#### Exercise : Data types
 String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitive data types.
 - The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
 
@@ -303,12 +305,27 @@ let operandTwo = 3;
 Using the above operands apply different JavaScript arithmetic operators
 
 ### Logical Operators
-&& , ||
+The following symbols are the common logical operators:
+&&(ampersand) , ||(pipe) and !(negation).
+&& gets true only if the two operands are true.
+|| gets true either of the operand is true.
+! negates true to false, false to true.
 
 ```js
-const check = 4 > 3 && 10 < 5;
-const check = 4 > 3 || 10 < 5;
-
+//&& ampersand example
+const check = 4 > 3 && 10 > 5; // true and true -> true
+const check = 4 > 3 && 10 < 5; // true and false -> false
+const check = 4 < 3 && 10 < 5; // false and false -> false
+//|| pipe or, example
+const check = 4 > 3 || 10 > 5; // true and true -> true
+const check = 4 > 3 || 10 < 5; // true and false -> true
+const check = 4 < 3 || 10 < 5; // false and false -> false
+//! Negation examples
+let check = 4 > 3 // -> true
+let check = !(4 > 3) // -> false
+let isLightOn = true;
+let isLightOff = !isLightOn; // -> false
+let isMarried = !false; // -> true
 ```
 #### Exercises: Logical Operators
 Which are true or which are false ?
@@ -321,7 +338,7 @@ Which are true or which are false ?
 1. !(false)
 1. !(4 > 3 && 10 < 12)
 1. !(4 > 3 && 10 > 12)
-1. !(4 ===’4’)
+1. !(4 === '4')
 
 ### Comparison Operators
 
@@ -331,7 +348,7 @@ Which are true or which are false ?
 4< 3
 4 <= 3
 4 === 4
-4 !=3;
+4 != 3;
 4 !== '4';
 4 !=== '4'
 4 == '4'
@@ -422,7 +439,6 @@ console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
 // →"Not Found"
 
 ```
-
 
 ## Conditionals
 #### If
@@ -666,10 +682,12 @@ console.log(sumArrayValues(numbers));
 function square (n) {
 return n * n;
 }
+console.log(square(2)) // -> 4
 // Function expression
 const square = function (n){
   return n * n;
 }
+console.log(square(2)) // -> 4
 ```
 ### Anonymous Function
 ```js
@@ -684,8 +702,9 @@ const square = function (n){
 const square = (n) => {
   return n * n 
 }
+console.log(square(2)) // -> 4
 // if we have only one line, it can be written as follows
-const square = n => n * n;
+const square = n => n * n; // -> 4
 
 ```
 ### Arrow Function vs Declaration Function
@@ -705,11 +724,11 @@ const square = n => n * n;
 1. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a fucntion which calculates a speed of a moving object, *speed*.
 1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
 1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is *underweight, normal, overweight* or *obsese* based the information given below.
-  - The same groups apply to both men and women.
-  - *Underweight*: BMI is less than 18.5
-  - *Normal weight*: BMI is 18.5 to 24.9
-  - *Overweight*: BMI is 25 to 29.9
-  - *Obese*: BMI is 30 or more
+    - The same groups apply to both men and women.
+    - *Underweight*: BMI is less than 18.5
+    - *Normal weight*: BMI is 18.5 to 24.9
+    - *Overweight*: BMI is 25 to 29.9
+    - *Obese*: BMI is 30 or more
 1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solvLinEquation*.
 1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
