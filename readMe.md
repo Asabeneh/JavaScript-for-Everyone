@@ -32,6 +32,7 @@ programming language for four consecutive years and is the most used programming
 Github 
 ## Setup
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
+Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 ## Adding JavaScript to a web page
 JavaScript can be added to a web pages in three ways:
 * ***Inline script***
@@ -54,7 +55,7 @@ Create a folder on your desktop or in any location and create an ***index.html**
 </html>
 ```
 ### Internal script
-Internal script can be written in the ***head*** or the ***body*** but it is preferrable to put it on the ***body*** of the html document.
+Internal script can be written in the *head* or the *body* but it is preferrable to put it on the body of the html document.
 ```html
 <DOCTYPE html>
 <html>
@@ -78,13 +79,13 @@ Internal script can be written in the ***head*** or the ***body*** but it is pre
   <body>
   //it could be in header or in the body
   // Here is the recommended place to put the script
-  <script src="script.js"></script>
+  <script src="introduction.js"></script>
   </body>
 </html>
 ```
 #### Exercises:Setting Up your machine
 ## Variables
-Variables are ***containers*** of data. Variables ***store*** data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, ***var***, ***let*** or ***const*** key word. For a variable which changes at different time we use ***let*** but if the data doesn't change at all we use ***const***. For example PI, country name, gravity.
+Variables are *containers* of data. Variables *store* data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, *var*, *let* or *const* key word. For a variable which changes at different time we use *let* but if the data doesn't change at all we use *const*. For example PI, country name, gravity.
 ```js
 // Declaring different variables of different data types
 let firstName = "Asabeneh";
@@ -103,7 +104,7 @@ let name = "Asabeneh",
   live = "Finland";
   console.log(name, job, live) 
 ```
-#### Exercises:Variables
+#### Exercise - 1 : Variables
 1. Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name,  marital status, country and age in a single line
 1. Declare two variables *myAge* and *yourAge* and assign them initial values and log to browser console. 
@@ -131,44 +132,93 @@ Multiline commenting:
     This is a Multiple line comment
     */
 ```
-#### Exercises:Comments
+#### Exercise - 2 : Comments
+1. Write a single line comment which says, *comments can make code readable*
+1. Write a multiline comment which says, *comments can make code readable, easy to use*
+*and informative*
  
 ## Data Types
-In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:***String, Number, Boolean, undefined, Null*** and ***Symbol***.
+In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:*String, Number, Boolean, undefined, Null* and *Symbol*.
+#### Exercises - 3 : Data Types
+1. The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
+
 ### Strings
 Strings are text which are under ***single*** or ***double*** quote.
 Lets' see some examples of string:
 ```js
-let firstName = 'Asabeneh'
-let country = 'Finland'
-let city = 'Helsinki'
-let language = 'JavaScript'
+let firstName = 'Asabeneh';
+let lastName = 'Yetayeh';
+let country = 'Finland';
+let city = 'Helsinki';
+let language = 'JavaScript';
+let job = 'teacher'
 ```
-#### Exercises:String
-1. Declare a variable name company and assign it to an initial value "Coding Academy".
-1. Print the string  on the browser console using console.log()
-1. Print the length of the string  on the browser console using console.log()
-1. Change all the string to capital letters using toUpperCase() method
-1. Change all the string to small letters using toLowerCase() method
-1. Cut(slice) out the first word of the string using slice, substr() or substring() method
-1. Check if the string contains a word Academy using includes() method
-1. Split the string into array using split() method
-1. Split the string Coding Academy at the space using split() method
-1. "Facebook, Google, Microsoft, Apple, IBM,Oracle, Amazon" split the string at the comma  and change it to an array.
-1. Change Coding Academy  to Microsoft Academy using replace() method.
-1. What is character at index 10 in "Coding Academy" string use charAt() method.
-1. What is the character code of A in "Coding Academy" string using charCodeAt()
-1. Use indexOf to determine the position of  the first occurrence of e in Coding Academy
-1. Use lastIndexOf to determine the position of the last occurrence of e in Coding Academy
-1. Use trim() to remove if there is trailing whitespace at the beginning and the end of a string.E.g "  Coding Academy   ". 
-1. Use startsWith() method with the string Coding Academy make the result true
-1. Use endsWith() method with the string Coding Academy make the result true
-1. Use  match() method to find all the a’s in Coding Academy
-1. Use concat() and merge ‘Coding’ and "Academy" to a single string, "Coding Academy"
-1. Use repeat() method to print Coding Academy 5 times
+#### String Concatination
+```js
+// Declaring different variables of different data types
+let firstName = 'Asabeneh';
+let lastName = 'Yetayeh';
+let country = 'Finland';
+let city = 'Helsinki';
+let language = 'JavaScript';
+let job = 'teacher'
+
+let fullName = firstName + " " + lastName; // concatination, merging to string together.
+console.log(fullName);
+
+
+let personInfoOne = fullName + ".I am " + age + ". I live in " + country; // ES5
+let personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 - String interpolation method
+let personInfoThree = `I am ${fullName}. I live in ${country}, ${city}. I am a ${job}. I teach ${language}.`
+console.log(personInfoOne);
+console.log(personInfoTwo);
+//More Examples
+var gravity = 9.81;
+var boilingPoint = 100;
+var bodyTemp = 37;
+
+/*
+ The boiling point of water is 100 oC.
+ Human body temperatue is 37 oC.
+ The gravity of earth is 9.81 m/s2.
+ */
+console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body temperatue is ${body} oC.\nThe gravity of earth is ${gravity} m / s2.`
+);
+
+
+```
+
+
+#### Exercise - 3 : String
+1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
+1. Print the string  on the browser console using *console.log()*
+1. Print the *length* of the string  on the browser console using *console.log()*
+1. Change all the string to capital letters using *toUpperCase()* method
+1. Change all the string to lowercase letters using *toLowerCase()* method
+1. Cut(slice) out the first word of the string using *slice*, *substr()* or *substring()* method
+1. Use *substr* to slice out the phase *because because because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
+1. Check if the string contains a word *Academy* using *includes()* method
+1. Split the *string* into *array* using *split()* method
+1. Split the string Coding Academy at the space using *split()* method
+1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" *split* the string at the comma  and change it to an array.
+1. Change Coding Academy  to Microsoft Academy using *replace()* method.
+1. What is character at index 10 in "Coding Academy" string use *charAt()* method.
+1. What is the character code of A in 'Coding Academy' string using *charCodeAt()*
+1. Use *indexOf* to determine the position of  the first occurrence of c in Coding Academy
+1. Use *lastIndexOf* to determine the position of the last occurrence of c in Coding Academy.
+1. Use *indexOf* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
+1. Use *lastIndexOf* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
+1. Use *search* to find the position of the first occurrence of the word *because* in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
+1. Use *trim()* to remove if there is trailing whitespace at the beginning and the end of a string.E.g "  Coding Academy   ". 
+1. Use *startsWith()* method with the string Coding Academy make the result true
+1. Use *endsWith()* method with the string Coding Academy make the result true
+1. Use *match()* method to find all the c’s in Coding Academy
+1. Use *match()* to count the number all because's in the following sentence:*'You cannot end a sentence with because because because is a conjunction'*
+1. Use *concat()* and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
+1. Use *repeat()* method to print Coding Academy 5 times
 
 ### Numbers
-Numbers are integers and decimal numbers which can do all the arithemtic operators.
+Numbers are integers and decimal values which can do all the arithemtic operations
 Lets' see some examples of Numbers
 ```js
 let age = 35;
@@ -178,6 +228,7 @@ let temperature = 37;
 
 ```
 ### Booleans
+ Boolean value is either true or false. Any comparisons return a boolean value which is either true or false. 
 ```js
 let isRaining = false
 let hungery = false;
@@ -188,7 +239,6 @@ let isMarried = true;
 Boolean value is either true or false. 
 1. Write three JavaScript statement which provide truthy value. 
 1. Write three JavaScript statement which provide falsy value.
-1. Boolean value is either true or false. Any comparison return a boolean either true or false. 
 1. Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===. 
 Which are true or which are false ?
   1. 4 > 3
@@ -219,6 +269,7 @@ String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitiv
 
 ## Operators
 ### Arthimetic Operators
+Arthimetic operators are mathematical operators:+, -, *, /, *
 ```js
 let numOne = 4;
 let numTwo = 3;
@@ -332,13 +383,20 @@ console.log(shoppingCart)
 ```
 #### Exercises:Arrays
 1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
-1. Print the array using console.log()
+1. Print the array using *console.log()*
 1. Print the number of companies in the array
 1. Print out each company
 1. Change companies to uppercase and print them out
 1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
-1. Sort the array using sort() method
-1. Reverse the array using reverse() method
+1. Sort the array using *sort()* method
+1. Reverse the array using *reverse()* method
+1. Slice out the first 3 companies from the array
+1. Slice out the last 3 companies from the array
+1. Slice out the middle IT company or companies from the array
+1. Remove the first IT company from the array
+1. Remove the middle IT company or companies from the array
+1. Remove the last IT company from the array
+1. Remove all IT companies
 
 ## Conditionals
 #### If
@@ -396,6 +454,36 @@ switch (weather) {
     break;
   default:
     console.log(" No need for rain coat.");
+    break;
+}
+// Switch More Examples
+var dayUserInput = prompt('What day is it ?');
+var day = dayUserInput.toLowerCase();
+switch (day) {
+  case 'monday':
+    console.log('Today is Monday');
+    break;
+  case 'tuesday':
+    console.log('Today is Tuesday');
+    break;
+  case 'wednesday':
+    console.log('Today is Wednesday');
+    break;
+  case 'thursday':
+    console.log('Today is Thursday');
+    break;
+  case 'friday':
+    console.log('Today is Friday');
+    break;
+  case 'saturday':
+    console.log('Today is Saturday');
+    break;
+  case 'sunday':
+    console.log('Today is Sunday');
+    break;
+
+  default:
+    console.log('It is not a week day.');
     break;
 }
 ```
@@ -470,6 +558,16 @@ do {
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop.
 1. Iterate 10 to 0 using for loop, do the same using while and do while loop.
 1. Iterate the array from above question using a for loop and print out the items.
+1. Use for loop to iterate from 0 to 100 and print only even numbers
+1. Use for loop to iterate from 0 to 100 and print only odd numbers
+1. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
+```js
+The sum all numbers is 5050.
+```
+1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+```js
+The sum of all evens is 2550. And the sum of all odds is 2500.
+```
 
 ## Functions
 ```js
@@ -529,17 +627,25 @@ console.log(sumArrayValues(numbers));
 
 ```
 #### Exercises:Functions
-1. Declare a function fullName and it print out your full name.
-1. Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
-1. Declare a function addNumbers and it takes two two parameters and it returns sum.
-1. Declare a function name printArray. It takes array as a parameter and it prints out each value of thearray.
-1. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the arra- (dont’ use method).
-1. Declare a function name capitalizeArray. It takes array as a parameter and it returns  the - capitalizedarray. 
-1. Declare a function name removeItem. It returns array after removing an item
-1. Declare a function name addItem. It returns array after adding an item
-1. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
-1. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
-1. Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+1. Declare a function *fullName* and it print out your full name.
+1. Declare a function *fullName* and now it takes firstName, lastName as a parameter and it returns your full - name.
+1. Declare a function *addNumbers* and it takes two two parameters and it returns sum.
+1. An area of a rectangle is calculated as follows: *area = lenght x width*. Write a function which calculates  *areaOfRectangle*.
+1. A perimeter of a rectangle is calculated as follows: *perimeter= 2x(lenght + width)*. Write a function which calculates  *perimeterOfRectangle*.
+1. A volume of a rectangular prism is calculated as follows: *volume = lenght x width x height*. Write a function which calculates  *volumeOfRectPrism*.
+1. Density of a substance is calculated as follows:*density= mass/volume*.  Write a function which calculates  *density*.
+1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
+1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*.
+1. Linear equation is calculated as follows: *f(x) = ax + b*. Write a function which calculates value of a linear equation, *solvLinEquation*.
+1. Quadratic equation is calculated as follows: *f(x) = ax2 + bx + c*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
+1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
+1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the arra- (dont’ use method).
+1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
+1. Declare a function name *addItem*. It takes an item parameter and it returns an array after adding the item
+1. Declare a function name *removeItem*. It takes an index parameter and it returns an array after removing an item
+1. Declare a function name *sumOfNumbers*. It takes a number parameter and it adds all the numbers in that range.
+1. Declare a function name *sumOfOdds*. It takes a number parameter and it adds all the odd numbers in that - range.
+1. Declare a function name *sumOfEven*. It takes a number parameter and it adds all the even numbers in that - range.
 1. Declare a function name 	. It takes a number parameter and it counts number of evens and odds in the - number.
 output:
 ```she
@@ -547,23 +653,19 @@ evensAndOdds(100);
 The number of odds are 50.
 The number of evens are 51.
 ```
-- Declare a function name randomHexaNumberGenerator. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
+- Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
 output:
 ```she
 console.log(randomHexaNumberGenerator());
  '#ee33df'
-console.log(randomHexaNumberGenerator());
-'#28def10'
-console.log(randomHexaNumberGenerator());
-'#38eeda'
 ```
-- Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+- Declare a function name *userIdGenerator*. When this function is called it generates seven character id. The function return the id.
 Output:
 ```sh
 console.log(userIdGenerator());
 41XTDbE
 ```
-- Modify question number n . Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
+- Modify question number n . Declare a function name *userIdGeneratedByUser*. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
 ```sh
 userIdGeneratedByUser()
 "kcsy2
@@ -573,13 +675,6 @@ ZXOYh
 2Rgxf
 "
 userIdGeneratedByUser()
-"3RexwUqvqe
-rVUY6dC1il
-YCf88ZHuAf
-7JhI6Mn063
-mo3GYyH26O
-"
-userIdGeneratedByUser()
 "1GCSgPLMaBAVQZ26
 YD7eFwNQKNs7qXaT
 ycArC5yrRupyG00S
@@ -587,12 +682,12 @@ UbGxOFI7UXSWAyKN
 dIV0SSUTgAdKwStr
 "
 ```
-- Write a function name rgbColorGenerator and it generates rgb colors.
+- Write a function name *rgbColorGenerator* and it generates rgb colors.
 Output:
 ```sh
 rgb(125,244,255)
 ```
-- Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
+- Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
 - Use the new Date() object to get month, date, year, hour and minute.
 Output:
 ```sh
@@ -617,7 +712,7 @@ person.live = 'Finland';
 
 ```
 #### Exercises:Objects
-- Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncomes, totalExpenses, acountInfo,addIncome, addExpence and accountBalance methods. Incomes is a set of incomes and its description and the same for expenses. 
+- Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncomes, totalExpenses, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses. 
 
 ## Class
 ```js
