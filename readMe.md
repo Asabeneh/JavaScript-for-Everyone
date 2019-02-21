@@ -570,12 +570,20 @@ The sum of all evens is 2550. And the sum of all odds is 2500.
 ```
 
 ## Functions
+A function is a block of code designed to perform a certain task.
+A function is declared by a function key word followed by a name, followed by parentheses (). A parentheses can take a parameter. If a function take a parameter it will be called with argument. A function can also take a default paramenter.
+A function can be declared or created in couple of ways:
+* ***Decleration function**
+* ***Expression function**
+* ***Anonymous function***
+* ***Arrow function***
+### Function Declaration
 ```js
 
 function functionName(){
   // code goes here
 }
-functionName() // calling function
+functionName() // calling function by its name and with parentheses
 
     // function without parameters
 function addTwoNumbers() {
@@ -626,6 +634,38 @@ console.log(sumArrayValues(numbers));
     }
 
 ```
+### Function Expression
+```js
+//Declaration function
+function square (n) {
+return n * n;
+}
+// Function expression
+const square = function (n){
+  return n * n;
+}
+```
+### Anonymous Function
+```js
+// Self invoking functions
+(function (n) {
+ return n * n;
+})(10);
+```
+
+### Arrow Function
+```js
+const square = (n) => {
+  return n * n 
+}
+// if we have only one line, it can be written as follows
+const square = n => n * n;
+
+```
+### Arrow Function vs Declaration Function
+```js
+```
+
 #### Exercises:Functions
 1. Declare a function *fullName* and it print out your full name.
 1. Declare a function *fullName* and now it takes firstName, lastName as a parameter and it returns your full - name.
@@ -633,9 +673,17 @@ console.log(sumArrayValues(numbers));
 1. An area of a rectangle is calculated as follows: *area = lenght x width*. Write a function which calculates  *areaOfRectangle*.
 1. A perimeter of a rectangle is calculated as follows: *perimeter= 2x(lenght + width)*. Write a function which calculates  *perimeterOfRectangle*.
 1. A volume of a rectangular prism is calculated as follows: *volume = lenght x width x height*. Write a function which calculates  *volumeOfRectPrism*.
+1. Area of a circle is calculated as follows: *area = π x r x r*. Write a function which calculates  *areaOfCircle*
+1. Circumference of a circle is calculated as follows: *circumference = 2πr*. Write a function which calculates  *circumOfCircle*
 1. Density of a substance is calculated as follows:*density= mass/volume*.  Write a function which calculates  *density*.
 1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
 1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*.
+BMI is used to broadly define different weight groups in adults 20 years old or older.
+  The same groups apply to both men and women.
+  Underweight: BMI is less than 18.5
+  Normal weight: BMI is 18.5 to 24.9
+  Overweight: BMI is 25 to 29.9
+  Obese: BMI is 30 or more
 1. Linear equation is calculated as follows: *f(x) = ax + b*. Write a function which calculates value of a linear equation, *solvLinEquation*.
 1. Quadratic equation is calculated as follows: *f(x) = ax2 + bx + c*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
