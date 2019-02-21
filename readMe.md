@@ -345,7 +345,7 @@ Which are true or which are false ?
 ```js
 4 > 3;
 4 >= 4;
-4< 3
+4 < 3
 4 <= 3
 4 === 4
 4 != 3;
@@ -723,6 +723,7 @@ const square = n => n * n; // -> 4
 1. Density of a substance is calculated as follows:*density= mass/volume*.  Write a function which calculates  *density*.
 1. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a fucntion which calculates a speed of a moving object, *speed*.
 1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
+1. Temperature in 0C can be converted to oF using this formula: *oF = (oC x 9/5) + 32*. Write a function which converst oC to oF  *convertCelciusToFahrenheit*.
 1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is *underweight, normal, overweight* or *obsese* based the information given below.
     - The same groups apply to both men and women.
     - *Underweight*: BMI is less than 18.5
@@ -740,61 +741,60 @@ const square = n => n * n; // -> 4
 1. Declare a function name *sumOfOdds*. It takes a number parameter and it adds all the odd numbers in that - range.
 1. Declare a function name *sumOfEven*. It takes a number parameter and it adds all the even numbers in that - range.
 1. Declare a function name evensAndOdds	. It takes a positive integer as parameter and it counts number of evens and odds in the number.
-output:
-```she
-evensAndOdds(100);
-The number of odds are 50.
-The number of evens are 51.
-```
+      output:
+      ```she
+      evensAndOdds(100);
+      The number of odds are 50.
+      The number of evens are 51.
+      ```
 1. Write a funcition which takes any number of arguments and return the sum of the arguments
-```js
-sum(1,2,3) // -> 6
-sum(1,2,3,4) // -> 10
-```
+      ```js
+      sum(1,2,3) // -> 6
+      sum(1,2,3,4) // -> 10
+      ```
 1. Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
-output:
-```she
-console.log(randomHexaNumberGenerator());
- '#ee33df'
-```
+      output:
+      ```she
+      console.log(randomHexaNumberGenerator());
+      '#ee33df'
+      ```
 1. Declare a function name *userIdGenerator*. When this function is called it generates seven character id. The function return the id.
-Output:
-```sh
-console.log(userIdGenerator());
-41XTDbE
-```
+      Output:
+      ```sh
+      console.log(userIdGenerator());
+      41XTDbE
+      ```
 1. Modify question number n . Declare a function name *userIdGeneratedByUser*. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
-```sh
-userIdGeneratedByUser()
-"kcsy2
-SMFYb
-bWmeq
-ZXOYh
-2Rgxf
-"
-userIdGeneratedByUser()
-"1GCSgPLMaBAVQZ26
-YD7eFwNQKNs7qXaT
-ycArC5yrRupyG00S
-UbGxOFI7UXSWAyKN
-dIV0SSUTgAdKwStr
-"
-```
+      ```sh
+      userIdGeneratedByUser()
+      "kcsy2
+      SMFYb
+      bWmeq
+      ZXOYh
+      2Rgxf
+      "
+      userIdGeneratedByUser()
+      "1GCSgPLMaBAVQZ26
+      YD7eFwNQKNs7qXaT
+      ycArC5yrRupyG00S
+      UbGxOFI7UXSWAyKN
+      dIV0SSUTgAdKwStr
+      "
+      ```
 1. Write a function name *rgbColorGenerator* and it generates rgb colors.
-Output:
-```sh
-rgb(125,244,255)
-```
+      Output:
+      ```sh
+      rgb(125,244,255)
+      ```
 1. Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
 1. Use the new Date() object to get month, date, year, hour and minute.
-Output:
-```sh
-28/08/2018 04:08
-```
+      Output:
+      ```sh
+      28/08/2018 04:08
+      ```
 ## Object
 Everything can be an object and objects do have properties and properties have values.
 ```js
-
 const person = {
   firstName:'Asabeneh',
   lastName:'Yetayeh',
