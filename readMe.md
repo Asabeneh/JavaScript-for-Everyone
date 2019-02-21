@@ -596,6 +596,10 @@ let lastIdex = shoppingCart.length - 1;
 console.log(shoppingCart[lastIndex]) -> // Sugar
 ```
 #### Exercises:Arrays
+1. Declare an *empty* array;
+1. Declare an array with more than 5 number of items
+1. Find the length of your array
+1. Declare an array called *mixedDataTypes*,put different data types and in your array and the array size should be greater than 5
 1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
 1. Print the array using *console.log()*
 1. Print the number of companies in the array
@@ -758,15 +762,15 @@ const square = n => n * n; // -> 4
 1. Density of a substance is calculated as follows:*density= mass/volume*.  Write a function which calculates  *density*.
 1. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a fucntion which calculates a speed of a moving object, *speed*.
 1. Weight of a substance is calculated as follows: *weight = mass x gravity*. Write a function which calculates  *weight*.
-1. Temperature in 0C can be converted to oF using this formula: *oF = (oC x 9/5) + 32*. Write a function which converst oC to oF  *convertCelciusToFahrenheit*.
+1. Temperature in oC can be converted to oF using this formula: *oF = (oC x 9/5) + 32*. Write a function which converst oC to oF  *convertCelciusToFahrenheit*.
 1. Body mass index(BMI) is calculated as follows: *bmi = weight in Kg / (height x height) in m2*. Write a function which calculates  *bmi*. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is *underweight, normal, overweight* or *obsese* based the information given below.
     - The same groups apply to both men and women.
     - *Underweight*: BMI is less than 18.5
     - *Normal weight*: BMI is 18.5 to 24.9
     - *Overweight*: BMI is 25 to 29.9
     - *Obese*: BMI is 30 or more
-1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solvLinEquation*.
-1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solvQuadEquation*.
+1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solveLinEquation*.
+1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solveQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
 1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the array (dont’ use method).
 1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
@@ -819,12 +823,14 @@ const square = n => n * n; // -> 4
 1. Write a function name *rgbColorGenerator* and it generates rgb colors.
       Output:
       ```sh
+      rgbColorGenerator()
       rgb(125,244,255)
       ```
-1. Write a function name *displayDateTime*  and it display in this format: 28/08/2018 04:08
 1. Use the new Date() object to get *month, date, year, hour* and *minute*.
+1. Write a function name *displayDateTime*  which display time in this format: 28/08/2018 04:08
       Output:
       ```sh
+      displayDateTime()
       28/08/2018 04:08
       ```
  1. Call your function *shuffleArray*, it takes an array as a parameter and it returns a shuffled array
