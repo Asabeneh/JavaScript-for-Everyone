@@ -14,14 +14,14 @@
 11. [Hoisting](#Hoisting)
 12. [Object](#object)
 13. [Class](#class)
-14. [Document Object Model](#dom)
+14. [Document Object Model](#document-object-model)
 15. [Functional Programming](#functional-programming)
 16. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
 17. [Destructuring](#destructuring)
 19. [Rest and Spread](#rest-and-spread)
 20. [Document Object Model](#document-object-model)
 21. [Regular Expressions](#regular-expressions)
-22. [Local Storage](#localstorage)
+22. [Local Storage](#local-storage)
 23. [Cookies](#cookies)
 
 ## Introduction
@@ -245,12 +245,12 @@ Boolean value is either true or false.
 ### Undefined
 ```js
 let firstName;
-console.log(firstName); //not defined
+console.log(firstName); //not defined, because it is not assigned to a value yet
 ```
 ### Null
 ```js
 let empty = null;
-console.log(empty); //no value
+console.log(empty); // -> null , means no value
 ```
 #### Exercise : Data types
 String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitive data types.
@@ -449,9 +449,9 @@ if (isRaining) {
 #### If Else
 ```js
 if(condition){
-  // if the condition met
+  // if the condition meets
 } else{
- // if condition doesn't met
+ // if condition doesn't meet
 }
 let isRaining = true;
 if (isRaining) {
@@ -614,20 +614,41 @@ A function can be declared or created in couple of ways:
 * ***Arrow function***
 ### Function Declaration
 ```js
-
+//function without parameter
 function functionName(){
-  // code goes here
+// code goes here
 }
 functionName() // calling function by its name and with parentheses
 
-    // function without parameters
+//function without parameter
 function addTwoNumbers() {
   var numOne = 10;
   var numTwo = 20;
   var sum = numOne + numTwo;
   console.log(sum);
 }
-addTwoNumbers(); // function has to be called to be executed
+addTwoNumbers(); // function has to be called to be executed by it name
+
+// function with one parameter
+function functionName(parm1){
+  //code goes ther
+}
+functionName(parm1); // during calling or invoking one argument needed
+function areaOfCircle(r){
+  let area = Math.PI * r * r;
+  return area;
+}
+console.log(areaOfCircle(10)) // should be called with one argument
+function square(number) {
+  return number * number;
+}
+console.log(square(10));
+
+// function with two parameters
+function functionName(parm1, parm2){
+  //code goes ther
+}
+functionName(parm1,parm2); // during calling or invoking two arguments needed
 // Function without parater doesn' take input, so lets make a parameter with parameter
 function sumTwoNumbers(numOne, numTwo) {
   var sum = numOne + numTwo;
@@ -646,10 +667,12 @@ function printFullName(firstName, lastName) {
 console.log(printFullName("Asabeneh", "Yetayeh"));
 console.log(printFullName("Dean", "Phan"));
 
-function square(number) {
-  return number * number;
+// function with multiple parameters
+function functionName(parm1, parm2, parm3,...){
+  //code goes ther
 }
-console.log(square(10));
+functionName(parm1,parm2,parm3,...) // during calling or invoking three arguments needed
+
 
 // this function takes array as a parameter and sum up the numbers in the array
 function sumArrayValues(arr) {
