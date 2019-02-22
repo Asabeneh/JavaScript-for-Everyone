@@ -621,7 +621,7 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Change companies to uppercase and print them out
 1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
 1. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is *not found*.
-1. Filter out companies which have more than two 'o' without the filter method
+1. Filter out companies which have more than one 'o' without the filter method
 1. Sort the array using *sort()* method
 1. Reverse the array without *reverse* method
 1. Reverse the array using *reverse()* method
