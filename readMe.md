@@ -489,6 +489,18 @@ Output:
       let b = 3;
       4 is greater than 3
       ```
+1. Write a code which give grade students according to theirs scores:
+    * 80-100, A
+    * 70-89, B
+    * 60-69, C
+    * 50-59, D
+    * 0 -49, F
+1. Check if the season is Autumn, Winter, Spring or Summer. 
+ If the user input is:
+    * September, October or November, the season is Autumn.
+    * December, January or February, the season is Winter.
+    * March, April or May, the season is Spring
+    * June, July or August, the season is Summer
 ## Loops
 In programming languages to carry out repetitive task we use different kinds of loop. The following examples are the commonly used loops.
 ### For Loop
@@ -768,6 +780,7 @@ const square = n => n * n; // -> 4
     - *Normal weight*: BMI is 18.5 to 24.9
     - *Overweight*: BMI is 25 to 29.9
     - *Obese*: BMI is 30 or more
+1. Write a function called *checkSeason*, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
 1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solveLinEquation*.
 1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solveQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
