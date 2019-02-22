@@ -13,16 +13,15 @@
 10. [Scope](#scope)
 11. [Hoisting](#Hoisting)
 12. [Object](#object)
-13. [Class](#class)
-14. [Document Object Model](#document-object-model)
-15. [Functional Programming](#functional-programming)
-16. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
+13. [Document Object Model](#document-object-model)
+14. [Class](#class)
+15. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
+16. [Functional Programming](#functional-programming)
 17. [Destructuring](#destructuring)
-19. [Rest and Spread](#rest-and-spread)
-20. [Document Object Model](#document-object-model)
-21. [Regular Expressions](#regular-expressions)
-22. [Local Storage](#local-storage)
-23. [Cookies](#cookies)
+18. [Rest and Spread](#rest-and-spread)
+19. [Regular Expressions](#regular-expressions)
+20. [Local Storage](#local-storage)
+21. [Cookies](#cookies)
 
 ## Introduction
 Welcome to JavaScript. ***Congratulations*** for deciding to learn JavaScript.
@@ -101,7 +100,7 @@ const gravity = 9.81; // earth gravity  in m/s2
 const boilingPoint = 100; // water boiling point, temperature in oC
 const PI = 3.14; // geometrical constant
 console.log(gravity, boilingPoint, PI); // 9.81, 100, 3.14
-// Variables can also be declaring in one line
+// Variables can also be declaring in one line separated by comma
 let name = "Asabeneh", //name of a person
   job = "teacher", 
   live = "Finland";
@@ -208,14 +207,14 @@ Numbers are integers and decimal values which can do all the arithemtic operatio
 Lets' see some examples of Numbers
 ```js
 let age = 35;
-let gravity = 9.81; // m/s2
-let mass = 72 // keg
-const PI = 3.14;// constant
+const gravity = 9.81; //graviational constant in  m/s2
+let mass = 72 // mass in Killogram
+const PI = 3.14;// pi a geometrical constant
 
 //More Examples
-const boilingPoint = 100; // oC, boiling point of water
-var bodyTemp = 37; // oc body temperature
-console.log(age, gravity, mass, PI, boilingPoint,bodyTemp)
+const boilingPoint = 100; // temperature in oC, boiling point of water which is a constant
+const bodyTemp = 37; // oc aveage human body temperature, which is a constant
+console.log(age, gravity, mass, PI, boilingPoint, bodyTemp)
 ```
 ### Booleans
  Boolean value is either true or false. Any comparisons return a boolean value which is either true or false. 
@@ -295,7 +294,7 @@ console.log(weigth) // -> 706.32 N(Newton)
 console.log(`The boiling point of water is ${boilingPoint} oC.\nHuman body temperatue is ${body} oC.\nThe gravity of earth is ${gravity} m / s2.`
 );
 ```
-#### Exercises:Arthimetic Operators:
+#### Exercises : Arthimetic Operators:
 JavaScript arithmetic operators are addition(+), subtraction(-), multiplication(*), division(/), modulus(%), increment(++) and decrement(--).
 ```js
 let operandOne = 4;
@@ -461,34 +460,31 @@ Another way to write conditionals is using ternary operators.
 let isRaining = true;
 isRaining ?  console.log('You need a rain coat.') : console.log('No need for a rain coat.')
 ```
-#### Exercises:Flow Control
-- Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
+#### Exercises: Conditionals
+1. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
+      Output:
+      ```sh
+      Enter your age: 30
+      You are old enough to drive. 
+      ```
+      Output:
+      ```sh
+      Enter your age:15
+      You are left with 3 years to drive.
+      ``` 	
+1. Compare the values of myAge and yourAge using if … else. Based on the comparison log   to console who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
+      Output:
+      ```sh
+      Enter your age: 30
+      You are 5 years older than me. 
+      ```
+1. If a is greater than b return a is greater than b else a is less than b.
 Output:
-```sh
-Enter your age: 30
-You are old enough to drive. 
-```
-
-Output:
-```sh
-Enter your age:15
-You are left with 3 years to drive.
-``` 	
-- Compare the values of myAge and yourAge using if … else. Based on the comparison log   to console who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
-Output:
-```sh
-Enter your age: 30
-You are 5 years older than me. 
-```
-```sh
-let a = 4;
-let b = 3;
-```
-- If a is greater than b return a is greater than b else a is less than b.
-Output:
-```sh
-4 is greater than 3
-```
+      ```sh
+      let a = 4;
+      let b = 3;
+      4 is greater than 3
+      ```
 ## Loops
 In programming languages to carry out repetitive task we use different kinds of loop. The following examples are the commonly used loops.
 ### For Loop
@@ -599,14 +595,19 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Declare an *empty* array;
 1. Declare an array with more than 5 number of items
 1. Find the length of your array
+1. Get the first item, the middle item and the last item of the array
 1. Declare an array called *mixedDataTypes*,put different data types and in your array and the array size should be greater than 5
 1. Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
 1. Print the array using *console.log()*
 1. Print the number of companies in the array
+1. Print the first company, middle and last company
 1. Print out each company
 1. Change companies to uppercase and print them out
 1. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+1. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is *not found*.
+1. Filter out companies which have more than two 'o' without the filter method
 1. Sort the array using *sort()* method
+1. Reverse the array without *reverse* method
 1. Reverse the array using *reverse()* method
 1. Slice out the first 3 companies from the array
 1. Slice out the last 3 companies from the array
@@ -615,15 +616,7 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove the middle IT company or companies from the array
 1. Remove the last IT company from the array
 1. Remove all IT companies
-1. Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
-      ```js
-      console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
-      // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
-      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
-      // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
-      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
-      // →"Not Found"
-      ```
+
 ## More on Arrays
 
 
@@ -837,6 +830,17 @@ const square = n => n * n; // -> 4
  1. Call your function *factorial*, it takes a whole number as a parameter and it return a factorial of the number
  1. Call your function *isEmpty*, it takes a parameter and it checks if it is empty or not
  1. Call your function *sum*, it takes any number of arguments and it returns the sum.
+ 1. Write a function called *sumOfArrayItems*, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+ 1. Write a function called *average*, it takes an array parameter and returns the average the items. Check if all the array items are number types. If not give return reasonable feedback.
+ 1. Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+      ```js
+      console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
+      // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
+      // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
+      // →"Not Found"
+      ```
 
 ## Object
 Everything can be an object and objects do have properties and properties have values.
