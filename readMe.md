@@ -107,6 +107,8 @@ let name = "Asabeneh", //name of a person
   console.log(name, job, live) 
 ```
 #### Exercise - 1 : Variables
+1. Declare variables without assigning values
+1. Declare variables with assigning values
 1. Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name,  marital status, country and age in a single line
 1. Declare two variables *myAge* and *yourAge* and assign them initial values and log to browser console. 
@@ -141,6 +143,7 @@ Multiline commenting:
 ## Data Types
 In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:*String, Number, Boolean, undefined, Null* and *Symbol*.
 #### Exercises - 3 : Data Types
+1. Declare variables and assign string, boolean, undefined and null data types
 1. The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
 
 ### Strings
@@ -173,7 +176,7 @@ let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a $
 console.log(personInfoOne);
 console.log(personInfoTwo);
 ```
-#### Exercise - 3 : String
+#### Exercise - 4 : String
 1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
 1. Print the string  on the browser console using *console.log()*
 1. Print the *length* of the string  on the browser console using *console.log()*
@@ -225,7 +228,7 @@ let hungery = false;
 let isMarried = true;
 
 ```
-#### Exercise : Booleans
+#### Exercise - 5 : Booleans
 Boolean value is either true or false. 
 1. Write three JavaScript statement which provide truthy value. 
 1. Write three JavaScript statement which provide falsy value.
@@ -253,9 +256,9 @@ console.log(firstName); //not defined, because it is not assigned to a value yet
 let empty = null;
 console.log(empty); // -> null , means no value
 ```
-#### Exercise : Data types
+#### Exercise - 6 : Data types
 String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitive data types.
-- The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
+1. The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
 
 ## Operators
 ### Arthimetic Operators
@@ -351,7 +354,7 @@ Which are true or which are false ?
 4 === '4'
 4 === 4
 ```
-#### Exercises:Comparison Operators
+#### Exercise - 7 : Comparison Operators
 Boolean value is either true or false. Any comparison return a boolean either true or false. 
 Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===. 
 Which are true or which are false ?
@@ -372,6 +375,7 @@ Which are true or which are false ?
 if(condition){
   //code goes here
 }
+
 let isRaining = true;
 if (isRaining) {
   console.log("Remember to take your rain coat.");
@@ -460,7 +464,7 @@ Another way to write conditionals is using ternary operators.
 let isRaining = true;
 isRaining ?  console.log('You need a rain coat.') : console.log('No need for a rain coat.')
 ```
-#### Exercises: Conditionals
+#### Exercise - 8 : Conditionals
 1. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
       Output:
       ```sh
@@ -549,7 +553,7 @@ const webTechs = [
   "Redux",
   "Node",
   "MongoDB"
-];
+]; // List of web technologies
 console.log(webTechs) // all the array items
 console.log(webTechs.length) // => to know the size of the array, which is 7
 console.log(webTechs[0]) //  -> HTML
@@ -568,7 +572,7 @@ const countries = [
   "Ireland",
   "Japan"
   "Kenya"
-];
+]; // List of countries;
 console.log(countries) // -> all countries in array
 console.log(countries[0]) //  -> Albania
 console.log(countries[10]) //  -> Kenya
@@ -584,14 +588,14 @@ const shoppingCart = [
   "Meat",
   "Eggs",
   "Sugar"
-];
+]; // List of food products
 console.log(shoppingCart) // -> all shoppingCart in array
 console.log(shoppingCart[0]) //  -> Milk
 console.log(shoppingCart[7]) //  -> Sugar
 let lastIdex = shoppingCart.length - 1;
 console.log(shoppingCart[lastIndex]) -> // Sugar
 ```
-#### Exercises:Arrays
+#### Exercise - 9 : Arrays
 1. Declare an *empty* array;
 1. Declare an array with more than 5 number of items
 1. Find the length of your array
@@ -618,7 +622,9 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove all IT companies
 
 ## More on Arrays
-
+coming---
+---
+#### Exercise -10 : Array Methods
 
 ## Functions
 A function is a block of code designed to perform a certain task.
@@ -743,7 +749,7 @@ const square = n => n * n; // -> 4
 ```js
 ```
 
-#### Exercises:Functions
+#### Exercise - 10 : Functions
 1. Declare a function *fullName* and it print out your full name.
 1. Declare a function *fullName* and now it takes firstName, lastName as a parameter and it returns your full - name.
 1. Declare a function *addNumbers* and it takes two two parameters and it returns sum.
@@ -773,7 +779,6 @@ const square = n => n * n; // -> 4
 1. Declare a function name *sumOfOdds*. It takes a number parameter and it adds all the odd numbers in that - range.
 1. Declare a function name *sumOfEven*. It takes a number parameter and it adds all the even numbers in that - range.
 1. Declare a function name evensAndOdds	. It takes a positive integer as parameter and it counts number of evens and odds in the number.
-      output:
       ```she
       evensAndOdds(100);
       The number of odds are 50.
@@ -785,13 +790,11 @@ const square = n => n * n; // -> 4
       sum(1,2,3,4) // -> 10
       ```
 1. Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
-      output:
       ```she
       console.log(randomHexaNumberGenerator());
       '#ee33df'
       ```
 1. Declare a function name *userIdGenerator*. When this function is called it generates seven character id. The function return the id.
-      Output:
       ```sh
       console.log(userIdGenerator());
       41XTDbE
@@ -814,14 +817,12 @@ const square = n => n * n; // -> 4
       "
       ```
 1. Write a function name *rgbColorGenerator* and it generates rgb colors.
-      Output:
       ```sh
       rgbColorGenerator()
       rgb(125,244,255)
       ```
 1. Use the new Date() object to get *month, date, year, hour* and *minute*.
 1. Write a function name *displayDateTime*  which display time in this format: 28/08/2018 04:08
-      Output:
       ```sh
       displayDateTime()
       28/08/2018 04:08
@@ -860,46 +861,8 @@ person.live = 'Finland';
 
 ```
 #### Exercises:Objects
-- Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncomes, totalExpenses, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses. 
-
-## Class
-```js
-class Person {
-  constructor(firstName, lastName, age, location,skills){
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.location = location;
-    this.skills = skills;
-  }
-  getFull () {
-    return `${this.firstName} ${this.lastName}`
-  }
-}
-```
-#### Exercises:Classes
-## localStorage
-Local storage is used to store data on the browser.
-```js
-let skills = [
-  {teck:'HTML',level:10},
-  {tech:'CSS', level:9},
-  {tech:'JS',level:8},
-  {tech:'React', level:9},
-  {tech:'Redux',level:10},
-  {tech:'Node',level:8},
-  {tech:'MongoDB',level:8}
-  ]
-
-let skillJSON = JSON.stringify(skills)
-localStorage.setItem('skills',skillJSON);
-let skillsObj = JSON.parse(localStorage.getItem('skills'),undefined, 4)
-console.log(skillsObj)
-localStorage.clear()
-```
-## Exercises:Local Storage
-## Cookies
-#### Exercises:Cookies
+1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncomes, totalExpenses, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
+2. Develop a small JavaScript library. 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
 
@@ -964,6 +927,46 @@ button.addEventListener('click', (e) => {
 
 ```
 #### Exercises:Document Object Model
+
+## Class
+```js
+class Person {
+  constructor(firstName, lastName, age, location,skills){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.location = location;
+    this.skills = skills;
+  }
+  getFull () {
+    return `${this.firstName} ${this.lastName}`
+  }
+}
+```
+#### Exercises:Classes
+## localStorage
+Local storage is used to store data on the browser.
+```js
+let skills = [
+  {teck:'HTML',level:10},
+  {tech:'CSS', level:9},
+  {tech:'JS',level:8},
+  {tech:'React', level:9},
+  {tech:'Redux',level:10},
+  {tech:'Node',level:8},
+  {tech:'MongoDB',level:8}
+  ]
+
+let skillJSON = JSON.stringify(skills)
+localStorage.setItem('skills',skillJSON);
+let skillsObj = JSON.parse(localStorage.getItem('skills'),undefined, 4)
+console.log(skillsObj)
+localStorage.clear()
+```
+## Exercises:Local Storage
+## Cookies
+#### Exercises:Cookies
+
 
 ## Regular Expressions
 ```js
