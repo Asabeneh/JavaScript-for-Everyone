@@ -876,7 +876,7 @@ const square = n => n * n; // -> 4
  1. Call your function *isEmpty*, it takes a parameter and it checks if it is empty or not
  1. Call your function *sum*, it takes any number of arguments and it returns the sum.
  1. Write a function called *sumOfArrayItems*, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
- 1. Write a function called *average*, it takes an array parameter and returns the average the items. Check if all the array items are number types. If not give return reasonable feedback.
+ 1. Write a function called *average*, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
  1. Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
       ```js
       console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
@@ -886,6 +886,8 @@ const square = n => n * n; // -> 4
       console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
       // →"Not Found"
       ```
+1. Write a function called *isPrime, which checks if a number is prime number.
+1. Write a functions which checks if all items are unique in the array.
 1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
     ```js
     sevenRandomNumbers()
@@ -908,9 +910,20 @@ const person = {
 person.nationality = 'Ethiopian'
 person.live = 'Finland';
 
+const rectangle = {
+  length:20;
+  width:20,
+  getArea:function(){
+    return this.length * this.width;
+  },
+  getPerimeter:function (){
+    return 2 * (this.length + this.width)
+  }
+}
+
 ```
 #### Exercises:Objects
-1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncomes, totalExpenses, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
+1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncome, totalExpense, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
 2. Develop a small JavaScript library. 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
