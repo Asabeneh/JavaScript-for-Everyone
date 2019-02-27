@@ -25,10 +25,13 @@
 
 ## Introduction
 Welcome to JavaScript. ***Congratulations*** for deciding to learn JavaScript.
-***JavaScript for Everone*** is a guide for both beginner and advanced JavaScript developers. In this step by step tutorial, I will teach you JavaScript, the most popular programming language in the history of mankind. You use JavaScript ***to add interactivity to websites, to develop mobile apps, desktop applications, games*** and nowadays JavaScript can be used for ***machine learning*** and ***AI***.
+***JavaScript for Everone*** is a guide for both beginner and advanced JavaScript developers. 
+
+In this step by step tutorial, I will teach you JavaScript, the most popular programming language in the history of mankind. 
+You use JavaScript ***to add interactivity to websites, to develop mobile apps, desktop applications, games*** and nowadays JavaScript can be used for ***machine learning*** and ***AI***.
 ***JavaScript (JS)*** has increased in popularity in recent years and has been the leading
 programming language for four consecutive years and is the most used programming language on
-Github 
+Github.
 ## Setup
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
@@ -536,7 +539,17 @@ do {
 #### Exercises:Loops
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop.
 1. Iterate 10 to 0 using for loop, do the same using while and do while loop.
-1. Iterate the array from above question using a for loop and print out the items.
+1. Write a loop that makes seven calls to console.log to output the following triangle:
+    ```js
+        #
+        ##
+        ###
+        ####
+        #####
+        ######
+        #######
+    ```
+1. Iterate the array, ['HTML', 'CSS', 'JavaScript'] using a for loop and print out the items.
 1. Use for loop to iterate from 0 to 100 and print only even numbers
 1. Use for loop to iterate from 0 to 100 and print only odd numbers
 1. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
@@ -634,7 +647,7 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove all IT companies
 
 ## More on Arrays
-coming---
+
 ---
 #### Exercise -10 : Array Methods
 
@@ -781,10 +794,28 @@ const square = n => n * n; // -> 4
     - *Overweight*: BMI is 25 to 29.9
     - *Obese*: BMI is 30 or more
 1. Write a function called *checkSeason*, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+1. Math.max returns its largest argument.  Write a function findMax that takes three arguments and returns their maxiumum with out using Math.max method.
+    ```js
+    console.log(findMax(0, 10, 5));
+    10
+    console.log(findMax(0, -10,-2));
+    0
+    ```
 1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solveLinEquation*.
 1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solveQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
+1. Declare a functin name *swapValues*. This function swaps value of x to y.
+      ```js
+      swapValues(3,4); // x => 4, y=>3
+      swapValues(4,5); // x = 5, y = 4
+      ```
 1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the array (dont’ use method).
+    ```js
+    console.log(reverseArray([1, 2, 3,4,5]));
+    [5,4,3,2,1]
+    console.log(reverseArray(["A", "B", "C"]));
+    ["C", "B", "A"]
+    ```
 1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
 1. Declare a function name *addItem*. It takes an item parameter and it returns an array after adding the item
 1. Declare a function name *removeItem*. It takes an index parameter and it returns an array after removing an item
@@ -855,6 +886,11 @@ const square = n => n * n; // -> 4
       console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
       // →"Not Found"
       ```
+1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+    ```js
+    sevenRandomNumbers()
+    [1,4,5,7,9,8,0]
+    ```
 
 ## Object
 Everything can be an object and objects do have properties and properties have values.
