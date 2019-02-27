@@ -647,6 +647,67 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove all IT companies
 
 ## More on Arrays
+There are different methods to manipulate an array. These are some of the available methods to deal with arrays:*length, indexOf, slice, splice, push, pop, shift, unshift*
+Length:To know the size of the array
+    ```js
+    const numbers = [1,2,3,4,5];
+    console.log(numbers.length) // -> 5
+    ```
+indexOf:To check if an item exist in an array. If it exist it returns the index else it returns -1.
+    ```js
+    const numbers = [1,2,3,4,5];
+    console.log(numbers.indexOf(5)) // -> 4
+    console.log(numbers.indexOf(0)) // -> -1
+    console.log(numbers.indexOf(1)) // -> 0
+    console.log(numbers.indexOf(6)) // -> -1
+    ```
+Slice: To cut out a multiple items in range. It takes two paramters:starting and ending position. It doesn't include the ending position
+    ```js
+    const numbers = [1,2,3,4,5];
+    console.log(numbers.slice() // -> it copies all  item
+    console.log(numbers.slice(0) // -> it copies all  item
+    console.log(numbers.indexOf(0, numbers.length)) // it copies all  item
+    console.log(numbers.slice(1,4)) // -> [2,3,4] // it doesn't include the ending position
+
+    ```
+Splice: It takes three parameters:Starting position, number of times to be removed and number items to be added.
+    ```js
+    const numbers = [1,2,3,4,5]; 
+    console.log(numbers.splice() // -> remove all items
+    console.log(numbers.splice(0,1)) // remove the first item
+    console.log(numbers.splice(3,3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
+
+    ```
+Push: adding item in the end
+    ```js
+    const numbers = [1,2,3,4,5];
+    numbers.push(6)
+    console.log(numbers) // -> [1,2,3,4,5,6]
+    numbers.pop() // -> remove one item from the end
+    console.log(numbers) // -> [1,2,3,4,5]
+    ```
+Pop: Removing item in the end
+    ```js
+    const numbers = [1,2,3,4,5];
+    numbers.pop() // -> remove one item from the end
+    console.log(numbers) // -> [1,2,3,4]
+    ```
+
+  shift: Removing item in the beginning
+    ```js
+    const numbers = [1,2,3,4,5];
+    numbers.shift() // -> remove one item from the beginning
+    console.log(numbers) // -> [2,3,4,5]
+    ```
+  unshift: Adding item in the beginning
+    ```js
+    const numbers = [1,2,3,4,5];
+    numbers.unshift(0) // -> remove one item from the beginning
+    console.log(numbers) // -> [0,1,2,3,4,5]
+    ```
+
+
+
 
 ---
 #### Exercise -10 : Array Methods
