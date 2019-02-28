@@ -25,10 +25,13 @@
 
 ## Introduction
 Welcome to JavaScript. ***Congratulations*** for deciding to learn JavaScript.
-***JavaScript for Everone*** is a guide for both beginner and advanced JavaScript developers. In this step by step tutorial, I will teach you JavaScript, the most popular programming language in the history of mankind. You use JavaScript ***to add interactivity to websites, to develop mobile apps, desktop applications, games*** and nowadays JavaScript can be used for ***machine learning*** and ***AI***.
+***JavaScript for Everone*** is a guide for both beginner and advanced JavaScript developers. 
+
+In this step by step tutorial, I will teach you JavaScript, the most popular programming language in the history of mankind. 
+You use JavaScript ***to add interactivity to websites, to develop mobile apps, desktop applications, games*** and nowadays JavaScript can be used for ***machine learning*** and ***AI***.
 ***JavaScript (JS)*** has increased in popularity in recent years and has been the leading
 programming language for four consecutive years and is the most used programming language on
-Github 
+Github.
 ## Setup
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
@@ -536,7 +539,17 @@ do {
 #### Exercises:Loops
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop.
 1. Iterate 10 to 0 using for loop, do the same using while and do while loop.
-1. Iterate the array from above question using a for loop and print out the items.
+1. Write a loop that makes seven calls to console.log to output the following triangle:
+    ```js
+        #
+        ##
+        ###
+        ####
+        #####
+        ######
+        #######
+    ```
+1. Iterate the array, ['HTML', 'CSS', 'JavaScript'] using a for loop and print out the items.
 1. Use for loop to iterate from 0 to 100 and print only even numbers
 1. Use for loop to iterate from 0 to 100 and print only odd numbers
 1. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
@@ -634,7 +647,67 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove all IT companies
 
 ## More on Arrays
-coming---
+There are different methods to manipulate an array. These are some of the available methods to deal with arrays:*length, indexOf, slice, splice, push, pop, shift, unshift*
+Length:To know the size of the array
+```js
+    const numbers = [1,2,3,4,5];
+    console.log(numbers.length) // -> 5
+  ```
+indexOf:To check if an item exist in an array. If it exist it returns the index else it returns -1.
+  ```js
+  const numbers = [1,2,3,4,5];
+  console.log(numbers.indexOf(5)) // -> 4
+  console.log(numbers.indexOf(0)) // -> -1
+  console.log(numbers.indexOf(1)) // -> 0
+  console.log(numbers.indexOf(6)) // -> -1
+  ```
+Slice: To cut out a multiple items in range. It takes two paramters:starting and ending position. It doesn't include the ending position
+  ```js
+    const numbers = [1,2,3,4,5];
+    console.log(numbers.slice() // -> it copies all  item
+    console.log(numbers.slice(0) // -> it copies all  item
+    console.log(numbers.indexOf(0, numbers.length)) // it copies all  item
+    console.log(numbers.slice(1,4)) // -> [2,3,4] // it doesn't include the ending position
+  ```
+Splice: It takes three parameters:Starting position, number of times to be removed and number items to be added.
+  ```js
+    const numbers = [1,2,3,4,5]; 
+    console.log(numbers.splice() // -> remove all items
+    console.log(numbers.splice(0,1)) // remove the first item
+    console.log(numbers.splice(3,3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
+
+  ```
+Push: adding item in the end
+  ```js
+    const numbers = [1,2,3,4,5];
+    numbers.push(6)
+    console.log(numbers) // -> [1,2,3,4,5,6]
+    numbers.pop() // -> remove one item from the end
+    console.log(numbers) // -> [1,2,3,4,5]
+  ```
+Pop: Removing item in the end
+  ```js
+    const numbers = [1,2,3,4,5];
+    numbers.pop() // -> remove one item from the end
+    console.log(numbers) // -> [1,2,3,4]
+  ```
+
+  shift: Removing item in the beginning
+  ```js
+    const numbers = [1,2,3,4,5];
+    numbers.shift() // -> remove one item from the beginning
+    console.log(numbers) // -> [2,3,4,5]
+  ```
+  unshift: Adding item in the beginning
+  ```js
+    const numbers = [1,2,3,4,5];
+    numbers.unshift(0) // -> remove one item from the beginning
+    console.log(numbers) // -> [0,1,2,3,4,5]
+  ```
+
+
+
+
 ---
 #### Exercise -10 : Array Methods
 
@@ -781,10 +854,28 @@ const square = n => n * n; // -> 4
     - *Overweight*: BMI is 25 to 29.9
     - *Obese*: BMI is 30 or more
 1. Write a function called *checkSeason*, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+1. Math.max returns its largest argument.  Write a function findMax that takes three arguments and returns their maxiumum with out using Math.max method.
+    ```js
+    console.log(findMax(0, 10, 5));
+    10
+    console.log(findMax(0, -10,-2));
+    0
+    ```
 1. Linear equation is calculated as follows: *ax + b = c*. Write a function which calculates value of a linear equation, *solveLinEquation*.
 1. Quadratic equation is calculated as follows: *ax2 + bx + c = 0*. Write a function which calculates value or values of a quadratic equation, *solveQuadEquation*.
 1. Declare a function name *printArray*. It takes array as a parameter and it prints out each value of thearray.
+1. Declare a functin name *swapValues*. This function swaps value of x to y.
+      ```js
+      swapValues(3,4); // x => 4, y=>3
+      swapValues(4,5); // x = 5, y = 4
+      ```
 1. Declare a function name *reverseArray*. It takes array as a parameter and it returns the reverse of the array (dont’ use method).
+    ```js
+    console.log(reverseArray([1, 2, 3,4,5]));
+    [5,4,3,2,1]
+    console.log(reverseArray(["A", "B", "C"]));
+    ["C", "B", "A"]
+    ```
 1. Declare a function name *capitalizeArray*. It takes array as a parameter and it returns  the - capitalizedarray. 
 1. Declare a function name *addItem*. It takes an item parameter and it returns an array after adding the item
 1. Declare a function name *removeItem*. It takes an index parameter and it returns an array after removing an item
@@ -845,7 +936,7 @@ const square = n => n * n; // -> 4
  1. Call your function *isEmpty*, it takes a parameter and it checks if it is empty or not
  1. Call your function *sum*, it takes any number of arguments and it returns the sum.
  1. Write a function called *sumOfArrayItems*, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
- 1. Write a function called *average*, it takes an array parameter and returns the average the items. Check if all the array items are number types. If not give return reasonable feedback.
+ 1. Write a function called *average*, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
  1. Write a function called *modifyArray* takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
       ```js
       console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
@@ -855,6 +946,13 @@ const square = n => n * n; // -> 4
       console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
       // →"Not Found"
       ```
+1. Write a function called *isPrime, which checks if a number is prime number.
+1. Write a functions which checks if all items are unique in the array.
+1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+    ```js
+    sevenRandomNumbers()
+    [1,4,5,7,9,8,0]
+    ```
 
 ## Object
 Everything can be an object and objects do have properties and properties have values.
@@ -872,9 +970,20 @@ const person = {
 person.nationality = 'Ethiopian'
 person.live = 'Finland';
 
+const rectangle = {
+  length:20;
+  width:20,
+  getArea:function(){
+    return this.length * this.width;
+  },
+  getPerimeter:function (){
+    return 2 * (this.length + this.width)
+  }
+}
+
 ```
 #### Exercises:Objects
-1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncomes, totalExpenses, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
+1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncome, totalExpense, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
 2. Develop a small JavaScript library. 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
