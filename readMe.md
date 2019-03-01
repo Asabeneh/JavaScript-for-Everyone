@@ -893,6 +893,8 @@ const square = n => n * n; // -> 4
       sum(1,2,3) // -> 6
       sum(1,2,3,4) // -> 10
       ```
+1. Writ a function which generates a *randomUserIp*.
+1. Write a function which generates a *randomMacAddress*
 1. Declare a function name *randomHexaNumberGenerator*. When this function is called it generates  a random hexadecimal  number. The function return the hexadecimal number.
       ```she
       console.log(randomHexaNumberGenerator());
@@ -948,6 +950,7 @@ const square = n => n * n; // -> 4
       ```
 1. Write a function called *isPrime, which checks if a number is prime number.
 1. Write a functions which checks if all items are unique in the array.
+1. Write a function which checks if all the itmes of the array are the same data type.
 1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
     ```js
     sevenRandomNumbers()
@@ -984,6 +987,53 @@ const rectangle = {
 ```
 #### Exercises:Objects
 1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncome, totalExpense, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
+1. Count logged in users,count users having greater than equal to 50 points  from the following object.
+  ```js
+     const users = {
+        Alex: {
+          email: 'alex@alex.com',
+          skills: ['HTML', 'CSS', 'JavaScript'],
+          age: 20,
+          isLoggedIn: false,
+          points: 30,
+        },
+        Asab: {
+          email: 'asab@asab.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+          age: 25,
+          isLoggedIn: false,
+          points: 50,
+        },
+        Brook: {
+          email: 'daniel@daniel.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+          age: 30,
+          isLoggedIn: true,
+          points: 50,
+        },
+        Daniel: {
+          email: 'daniel@alex.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+          age: 20,
+          isLoggedIn: false,
+          points: 40,
+        },
+        John: {
+          email: 'john@john.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+          age: 20,
+          isLoggedIn: true,
+          point:50
+        },
+        Thomas: {
+          email: 'thomas@thomas.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+          age: 20,
+          isLoggedIn: false,
+          points: 40,
+        },
+      };
+  ```
 2. Develop a small JavaScript library. 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
