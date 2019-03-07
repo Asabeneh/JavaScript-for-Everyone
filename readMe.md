@@ -959,32 +959,82 @@ const square = n => n * n; // -> 4
 
 ## Object
 Everything can be an object and objects do have properties and properties have values.
-```js
-const person = {
-  firstName:'Asabeneh',
-  lastName:'Yetayeh',
-  age:100,
-  location:'Helsinki',
-  skills:['HTML', 'CSS', 'JavaScript', 'React','Node','MongoDB', 'Python', 'D3.js']
-  getFullName:function() {
-    return `${this.firstName}${this.lastName}`
-  }
-}
-person.nationality = 'Ethiopian'
-person.live = 'Finland';
 
-const rectangle = {
-  length:20;
-  width:20,
-  getArea:function(){
-    return this.length * this.width;
-  },
-  getPerimeter:function (){
-    return 2 * (this.length + this.width)
+Creating an object literal. To create an object literal, we use two curely brackets.
+
+An empty object
+```js
+   const person = {}
+```
+Now, the person object has firstName, lastName, age, location, skills and getFullName properties. The getFullName is function inside the person object and we call it method. The *this* key word refers to the object itself.Example of object:
+```js
+  const person = {
+    firstName:'Asabeneh',
+    lastName:'Yetayeh',
+    age:100,
+    location:'Helsinki',
+    skills:['HTML', 'CSS', 'JavaScript', 'React','Node','MongoDB', 'Python', 'D3.js'],
+    getFullName:function() {
+      return `${this.firstName}${this.lastName}`;
+    }
   }
-}
+
+  const rectangle = {
+    length:20,
+    width:20,
+    getArea:function(){
+      return this.length * this.width;
+    },
+    getPerimeter:function (){
+      return 2 * (this.length + this.width);
+    }
+  }
 
 ```
+Getting values from an object:
+```js
+  const person = {
+    firstName:'Asabeneh',
+    lastName:'Yetayeh',
+    age:100,
+    location:'Helsinki',
+    skills:['HTML', 'CSS', 'JavaScript', 'React','Node','MongoDB', 'Python', 'D3.js']
+    getFullName:function() {
+      return `${this.firstName}${this.lastName}`
+    }
+  }
+
+  console.log(person.firstName);
+  console.log(person.lastName);
+  console.log(person.getFullName());
+  // value can be accessed
+  console.log(person['age');
+  console.log(person['location']);
+
+```
+Setting a new keys in an object
+```js
+  const person = {
+    firstName:'Asabeneh',
+    lastName:'Yetayeh',
+    age:100,
+    location:'Helsinki',
+    skills:['HTML', 'CSS', 'JavaScript', 'React','Node','MongoDB', 'Python', 'D3.js']
+    getFullName:function() {
+      return `${this.firstName}${this.lastName}`
+    }
+  }
+  person.nationality = 'Ethiopian'
+  person.live = 'Finland';
+  console.log(person)
+```
+### Object Methods:
+*Object.assign*: To copy an object without modifying the original object
+*hasOwnProperty*: To check if a specific key or property exist in an object
+*Object.keys*: To get keys of an objet as an array
+*Object.values*:To get values of an object as an array
+*Object.entries*:To get the keys and values in an array
+
 #### Exercises:Objects
 1. Create an object literal called *personAccount*. It has *firstName, lastName, incomes, expenses* properties and it has *totalIncome, totalExpense, acountInfo,addIncome, addExpence* and *accountBalance* methods. Incomes is a set of incomes and its description and the same for expenses.
 1. Count logged in users,count users having greater than equal to 50 points  from the following object.
@@ -1034,7 +1084,7 @@ const rectangle = {
         },
       };
   ```
-2. Develop a small JavaScript library. 
+1. Develop a small JavaScript library. 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
 
