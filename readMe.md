@@ -66,7 +66,6 @@ Create a folder on your desktop or in any location and create an **_index.html_*
       <button onclick="alert('Welcome to JavaScript!');">Click Me</button>
     </body>
   </html>
->
 ```
 
 ### Internal script
@@ -85,11 +84,9 @@ Internal script can be written in the _head_ or the _body_ but it is preferrable
       </script>
     </body>
   </html>
->
 ```
 
 ### External script
-
 ```html
 <DOCTYPE html>
   <html>
@@ -101,7 +98,6 @@ Internal script can be written in the _head_ or the _body_ but it is preferrable
       put the script
       <script src="introduction.js"></script>
     </body></html
->
 ```
 
 #### Exercises:Setting Up your machine
@@ -264,6 +260,30 @@ const PI = 3.14; // pi a geometrical constant
 const boilingPoint = 100; // temperature in oC, boiling point of water which is a constant
 const bodyTemp = 37; // oc aveage human body temperature, which is a constant
 console.log(age, gravity, mass, PI, boilingPoint, bodyTemp);
+```
+#### Math Object
+In JavaScript the Math Object provides a lots of methods to work with numbers.
+```js
+const PI = Math.PI
+console.log(PI) // 3.141592653589793
+console.log(Math.round(PI)) // 3;
+console.log(Math.floor(PI)) // 3;
+console.log(Math.ceil(PI)) // 4;
+
+const randNum = Math.random() // creates random number between 0 to 0.999999
+console.log(randNum)
+// Let create random number between 0 to 10
+const num = Math.floor(Math.random () * 11) // creates random number between 0 and 10
+console.log(num)
+
+//Absolute value
+console.log(Math.abs(-10)) //10
+//Square root
+console.log(Math.sqrt(100)) // 10
+console.log(Math.sqrt(2)); //1.4142135623730951
+//
+console.log(Math.E) // 2.718
+
 ```
 
 ### Booleans
@@ -1124,12 +1144,6 @@ const square = n => n * n; // -> 4
    rgbColorGenerator()
    rgb(125,244,255)
    ```
-1. Use the new Date() object to get _month, date, year, hour_ and _minute_.
-1. Write a function name _displayDateTime_ which display time in this format: 28/08/2018 04:08
-   ```sh
-   displayDateTime()
-   28/08/2018 04:08
-   ```
 1. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
 1. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
 1. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
@@ -1145,7 +1159,7 @@ const square = n => n * n; // -> 4
    console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
    // →"Not Found"
    ```
-1. Write a function called \*isPrime, which checks if a number is prime number.
+1. Write a function called *isPrime*, which checks if a number is prime number.
 1. Write a functions which checks if all items are unique in the array.
 1. Write a function which checks if all the itmes of the array are the same data type.
 1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
@@ -1294,11 +1308,30 @@ _hasOwnProperty_: To check if a specific key or property exist in an object
 console.log(copyPerson.hasOwnProperty("name"));
 console.log(copyPerson.hasOwnProperty("score"));
 ```
+### Date Object
+In JavaScript current time and date is created using JavaScript Date Object.
+Some of the methods to extract date object values:*getFullYear(), getMonths(), getDate(), getDay(), getHours(), getMinutes*
+```js
+const now = new Date ();
+const year = now.getFullYear(); // return year
+const month = now.getMonth() + 1; // return month(0 - 11)
+const date = now.getDate(); // return date (1 - 31)
+const hours = now.getHours(); // return number (0 - 23)
+const minutes = now.getMinutes();// return number (0 -59)
+console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
+```
+#### Exercises:
+1. Use the new Date() object to get _month, date, year, hour_ and _minute_.
+1. Write a function name _displayDateTime_ which display time in this format: 10/03/2019 04:08
+   ```sh
+   displayDateTime()
+   10/03/2019 04:08
+   ```
 
 #### Exercises:Objects
 1. Create an empty object called dog
 1. Print the the dog object on the console
-1. Add name, legs, color, age and bark properties for the dog object. The bark property is the a method which return *woof woof*
+1. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return *woof woof*
 1. Get name, legs, color, age and bark value from the dog object
 1. Set new properties the dog object: breed, getDogInfo
 1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, acountInfo,addIncome, addExpence_ and _accountBalance_ methods. Incomes is a set of incomes and its description and the same for expenses.
@@ -1475,6 +1508,7 @@ console.log(age) // 5
   const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
+1. Explain the difference between *forEach, map, filter, and reduce*.
 1. Use *forEach* to console.log each country in the countries array.
 1. Use *forEach* to console.log each name in the names array.
 1. Use *forEach* to console.log each number in the numbers array.
@@ -1485,14 +1519,16 @@ console.log(age) // 5
 1. Use *filter* to filter out countries having six character.
 1. Use *filter* to filter out countries containing six letters in the counntry array.
 1. Use *filter* to filter out country start with 'E';
+1. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
 1. Use *reduce* to sum all the numbers in the numbers array.
+1. Use *reduce* to concatinate all the countries and to produce this sentence: *Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries*
+1. Explain the difference between *some* and *every*
 1. Use *some* to check if some names' length greater than seven in names array
 1. Use *every* to check if all the countries contain the word land
-1. Use *reduce* to concatinate all the countries and to produce this sentence: *Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries*
+1. Explain the difference between *find* and *findIndex*.
 1. Use *find* to find the first country containing only six letters in the countries array
 1. Use *findIndex* to find the position of the first country containing only six letters in the countries array
-1. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
-1. Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js).
+1. Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
 1. Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
 1. Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
 1. Declare a getLastTenCountries function which takes the last ten countries and r
@@ -1516,7 +1552,6 @@ HTML document is structured as a JavaScript Object. Every HTML element has a dif
     </body>
   </html>
 ```
-There are different 
 #### Getting elements by tag name
 *getElementsByTagName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
 ```js
@@ -1627,7 +1662,6 @@ for(let i = 0; i < 3; i++){
   document.body.appendChild(title);
 }
 ```
-
 ### Event Listeners
 Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown, onkeyup, onload.
 We can add event listener method to any DOM object. Use use *addEventListener()* method to listen different event types on HTML elements.
@@ -1663,15 +1697,15 @@ class Person {
 ## Regular Expressions
 Regular expression is a small program language which is used with many programming langagues. Regular expression match or search for a pattern. We use ' or '' to create a string data type. We can create a pattern in two ways.
 
-### Creatign a pattern
+### Creating a pattern
 ```js
 let pattern = /love/; 
 let pattern = new RegEx('love');
 ```
-### Creatign a pattern with flags:global flag, case insensitive flag
+### Creatign a pattern with flags: global flag (g), case insensitive flag(i)
 ```js
-let pattern = /love/gi; // 
-let pattern = new RegEx('love','gi');
+let pattern = /love/gi; // declaring a regex pattern
+let pattern = new RegEx('love','gi');  // declaring a regex pattern using RegEx object
 ```
 ```js
 let pattern = /[A-Z][a-z]{3,12}/;
