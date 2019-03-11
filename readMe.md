@@ -1384,20 +1384,20 @@ const users = {
 ```
 1. Develop a small JavaScript library.
 ## Functional Programming
-*forEach*:Iterate an array elements and use for array. It takes a callback function with elements and index parameter.
+*forEach*: Iterate an array elements and use for array. It takes a callback function with elements and index parameter.
 
 ```js
 arr.forEach(function(element, index){
   console.log(index, element)
 })
 // The above code can be written using arrow function
-arr.forEach((element, index)=>{
+arr.forEach((element, index) => {
   console.log(index, element)
 })
 // The above code can be written using arrow function and explicit return
-arr.forEach((element, index) => console.log(index, element);
+arr.forEach((element, index) => console.log(index, element));
 ```
-*map*:Iterate an array elements and modify the array elements. It takes a callback function with elements and index parameter and return the modified array.
+*map*: Iterate an array elements and modify the array elements. It takes a callback function with elements and index parameter and return the modified array.
 ```js
 const modifiedArray = arr.map(function(element,index){
   return element
@@ -1439,7 +1439,7 @@ const countriesToUpperCase = countries.map((country) => {
 const countriesToUpperCase = countries.map(country => country.toUpperCase());
 */
 ```
-*Filter*:Screen out the itmes which full fill screening requirments
+*Filter*: Filter out itmes which full fill filtering conditions
 
 ```js
 //Filter countries containing land
@@ -1535,7 +1535,7 @@ console.log(age) // 5
 1. Find out with which letter are there many countries
 
 ## Document Object Model
-HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
+HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
 
 ### Getting Element
 ```html
@@ -1563,8 +1563,8 @@ for(let i = 0; i < allTitles.length; i++){
 }
 
 ```
-#### Getting elements by tag class name
-*getElementsByClassName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
+#### Getting elements by class name
+*getElementsByClassName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
 ```js
 const allTitles = document.getElementsByClassName("title");
 console.log(allTitles) //HTMCollections
@@ -1574,13 +1574,13 @@ for(let i = 0; i < allTitles.length; i++){
 }
 ```
 #### Getting an element by id
-*getElementsById()* method returns an HTML element. 
+*getElementsById()*  targets a single HTML element. We pass the id without # as an argument. 
 ```js
 let firstTitle = document.getElementById("first-title");
 console.log(firstTitle) // <h1>First Title</h1>
 ```
 #### Getting elements by using querySelector using tag, class and id:
-*querySelector*: can be used to select html element by its tag name, id or class. If the tag name is used it selects only the first element
+*querySelector*: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
 
 ```js
 let firstTitle = document.querySelect("h1");// select the first available h2 element
@@ -1588,7 +1588,7 @@ let firstTitle = document.querySelector("#first-title"); // select id with first
 let firstTitle = document.querySelector(".title"); // select the first available h2 element with class title
 
 ```
-*querySelectorAll*: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods.
+*querySelectorAll*: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use *for loop* or *forEach* to loop through each nodeList elements.
 ```js
 const allTitles = document.querySelectAll("h1");
 console.log(allTitles.length) // 4
@@ -1601,17 +1601,27 @@ const allTitles = document.querySelectorAll(".title"); // the same goes for sele
 ### Adding attribute
 An attribute is added in the opening tag of HTML which gives additional information about the element. Common HTML attributes: id, class, src, style, href,disabled, title, alt. Lets add id and class for the fourth title.
 
+#### Adding attribute using setAttribute
+The *setAttribute()* method set any html attribute. It takes two parameters the type of the attribute and the name of the attribute. 
+Let's add class and id attribute for the fourth title.
+
 ```js
 const titles = document.querySelectorAll("h1");
 titles[3].setAttribut("class", "title");
 titles[3].setAttribut("id", "fourth-title");
+```
+#### Adding attribute without setAttribute
+Some attributes are DOM object property and they can be set directly. For instance id and class
+```js
 //another way to setting an attribute
 titles[3].className = "title";
 titles[3].id = "fourth-title";
-
+```
+#### Adding class using classList
+The class list method is a good method to append additional class. It doens't override the original class if a class exists
+```js
 //another way to setting an attribute: append the class, does't over ride
 titles[3].classList.add("title", "header-title")
-
 ```
 ### Adding Text conent
 ```js
@@ -1672,9 +1682,43 @@ button.addEventListener("click", e => {
   console.log(e.target);
 });
 ```
+### Getting value from an input element
+We usaully fill forms and forms accept data. Form fields are created using input HTML element.
+```html
+<input type ="text" placeholder = "Mass in Killogram" />
+<input type = "text" placeholder = "Height in meters" />
+<button>Calculate BMI</button>
+```
+```js
+const mass = document.querySelector('#mass');
+const height = document.querySelector('#height');
+const button = document.querySelector('button');
+let bmi;
+button.addEventListen('click', ()=>{
+  bmi = mass.value * height.value;
+});
+
+console.log(bmi)
+
+
+```
 
 #### Exercises:Document Object Model
-
+    ```html
+    <!-- index.html -->
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+    <p>Fourth Paragraph</p>
+    ```
+  1. Create an index.html file and put four p elementts as above:Get the first paragraph, get all paragraph
+  2. Set id and class attribute for all the paragraphs using different attribute setting methods
+  3. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-famil)
+  4. Select all paragraphs and loop through each elements and give the first and third paragraph a color of color, and the second and the fourth paragraph a red color
+  5. Create a div container on HTML document and create 100 numbers dynamically and append to the container div. Put each number in 150px by 150px box. If the number is even the background will be lightgreen else lightblue.
+  6. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
+   
+   
 ## Class
 
 ```js
@@ -1755,3 +1799,101 @@ localStorage.clear();
 
 
 
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [JavaScript for Everyone](#javascript-for-everyone)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Setup](#setup)
+  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
+    - [Inline Script](#inline-script)
+    - [Internal script](#internal-script)
+    - [External script](#external-script)
+      - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
+  - [Variables](#variables)
+      - [Exercise - 1 : Variables](#exercise---1--variables)
+  - [Comments](#comments)
+      - [Exercise - 2 : Comments](#exercise---2--comments)
+  - [Data Types](#data-types)
+      - [Exercises - 3 : Data Types](#exercises---3--data-types)
+    - [Strings](#strings)
+      - [String Concatination](#string-concatination)
+      - [Exercise - 4 : String](#exercise---4--string)
+    - [Numbers](#numbers)
+      - [Math Object](#math-object)
+    - [Booleans](#booleans)
+      - [Exercise - 5 : Booleans](#exercise---5--booleans)
+    - [Undefined](#undefined)
+    - [Null](#null)
+      - [Exercise - 6 : Data types](#exercise---6--data-types)
+  - [Operators](#operators)
+    - [Arthimetic Operators](#arthimetic-operators)
+      - [Exercises : Arthimetic Operators:](#exercises--arthimetic-operators)
+    - [Logical Operators](#logical-operators)
+      - [Exercises: Logical Operators](#exercises-logical-operators)
+    - [Comparison Operators](#comparison-operators)
+      - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
+  - [Conditionals](#conditionals)
+      - [If](#if)
+      - [If Else](#if-else)
+      - [If Else if else](#if-else-if-else)
+      - [Switch](#switch)
+      - [Ternary Operators](#ternary-operators)
+      - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
+  - [Loops](#loops)
+    - [For Loop](#for-loop)
+    - [While loop](#while-loop)
+    - [Do while loop](#do-while-loop)
+      - [Exercises:Loops](#exercisesloops)
+  - [Arrays](#arrays)
+      - [Exercise - 9 : Arrays](#exercise---9--arrays)
+  - [More on Arrays](#more-on-arrays)
+      - [Exercise -10 : Array Methods](#exercise--10--array-methods)
+  - [Functions](#functions)
+    - [Function Declaration](#function-declaration)
+    - [Function Expression](#function-expression)
+    - [Anonymous Function](#anonymous-function)
+    - [Arrow Function](#arrow-function)
+    - [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
+      - [Exercise - 10 : Functions](#exercise---10--functions)
+  - [Object](#object)
+    - [Object Methods:](#object-methods)
+    - [Date Object](#date-object)
+      - [Exercises:](#exercises)
+      - [Exercises:Objects](#exercisesobjects)
+  - [Functional Programming](#functional-programming)
+    - [Exercises:](#exercises-1)
+  - [Document Object Model](#document-object-model)
+    - [Getting Element](#getting-element)
+      - [Getting elements by tag name](#getting-elements-by-tag-name)
+      - [Getting elements by class name](#getting-elements-by-class-name)
+      - [Getting an element by id](#getting-an-element-by-id)
+      - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
+    - [Adding attribute](#adding-attribute)
+      - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
+      - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
+      - [Adding class using classList](#adding-class-using-classlist)
+    - [Adding Text conent](#adding-text-conent)
+    - [Adding style](#adding-style)
+    - [Creating an Element](#creating-an-element)
+    - [Creating elements](#creating-elements)
+    - [Appending to a parent element](#appending-to-a-parent-element)
+    - [Event Listeners](#event-listeners)
+    - [Getting value from an input element](#getting-value-from-an-input-element)
+      - [Exercises:Document Object Model](#exercisesdocument-object-model)
+  - [Class](#class)
+      - [Exercises:Classes](#exercisesclasses)
+  - [Regular Expressions](#regular-expressions)
+    - [Creating a pattern](#creating-a-pattern)
+    - [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
+    - [RegExp Object Methods](#regexp-object-methods)
+      - [Exercises:Regular Expressions](#exercisesregular-expressions)
+  - [localStorage](#localstorage)
+  - [Exercises:Local Storage](#exerciseslocal-storage)
+  - [Cookies](#cookies)
+      - [Exercises:Cookies](#exercisescookies)
+
+<!-- /code_chunk_output -->
