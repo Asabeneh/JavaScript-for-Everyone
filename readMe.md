@@ -130,8 +130,8 @@ console.log(name, job, live);
 
 #### Exercise - 1 : Variables
 
-1. Declare variables without assigning values
-1. Declare variables with assigning values
+1. Declare four variables without assigning values
+1. Declare four variables with assigning values
 1. Declare variables to store your first name, last name, marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name, marital status, country and age in a single line
 1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
@@ -1336,53 +1336,56 @@ console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
 1. Set new properties the dog object: breed, getDogInfo
 1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, acountInfo,addIncome, addExpence_ and _accountBalance_ methods. Incomes is a set of incomes and its description and the same for expenses.
 1. Count logged in users,count users having greater than equal to 50 points from the following object.
-```js
-const users = {
-  Alex: {
-    email: "alex@alex.com",
-    skills: ["HTML", "CSS", "JavaScript"],
-    age: 20,
-    isLoggedIn: false,
-    points: 30
-  },
-  Asab: {
-    email: "asab@asab.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
-    age: 25,
-    isLoggedIn: false,
-    points: 50
-  },
-  Brook: {
-    email: "daniel@daniel.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
-    age: 30,
-    isLoggedIn: true,
-    points: 50
-  },
-  Daniel: {
-    email: "daniel@alex.com",
-    skills: ["HTML", "CSS", "JavaScript", "Python"],
-    age: 20,
-    isLoggedIn: false,
-    points: 40
-  },
-  John: {
-    email: "john@john.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
-    age: 20,
-    isLoggedIn: true,
-    point: 50
-  },
-  Thomas: {
-    email: "thomas@thomas.com",
-    skills: ["HTML", "CSS", "JavaScript", "React"],
-    age: 20,
-    isLoggedIn: false,
-    points: 40
-  }
-};
-```
-1. Develop a small JavaScript library.
+      ```js
+      const users = {
+        Alex: {
+          email: "alex@alex.com",
+          skills: ["HTML", "CSS", "JavaScript"],
+          age: 20,
+          isLoggedIn: false,
+          points: 30
+        },
+        Asab: {
+          email: "asab@asab.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          age: 25,
+          isLoggedIn: false,
+          points: 50
+        },
+        Brook: {
+          email: "daniel@daniel.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+          age: 30,
+          isLoggedIn: true,
+          points: 50
+        },
+        Daniel: {
+          email: "daniel@alex.com",
+          skills: ["HTML", "CSS", "JavaScript", "Python"],
+          age: 20,
+          isLoggedIn: false,
+          points: 40
+        },
+        John: {
+          email: "john@john.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          age: 20,
+          isLoggedIn: true,
+          point: 50
+        },
+        Thomas: {
+          email: "thomas@thomas.com",
+          skills: ["HTML", "CSS", "JavaScript", "React"],
+          age: 20,
+          isLoggedIn: false,
+          points: 40
+        }
+      };
+    ```
+1. Set your name in the users object without modifying the original users object
+1. Get all keys or properties of users object
+1. Get all the values of users object
+1. ** Develop a small JavaScript library.
 ## Functional Programming
 *forEach*: Iterate an array elements and use for array. It takes a callback function with elements and index parameter.
 
@@ -1533,6 +1536,9 @@ console.log(age) // 5
 1. Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
 1. Declare a getLastTenCountries function which takes the last ten countries and r
 1. Find out with which letter are there many countries
+   
+## Destructuring and Spread
+   
 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
@@ -1704,20 +1710,34 @@ console.log(bmi)
 ```
 
 #### Exercises:Document Object Model
-    ```html
-    <!-- index.html -->
+```html
+  <!-- index.html -->
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>JavaScript for Everyone:DOM</title>
+    </head>
+    <body>
     <p>First Paragraph</p>
-    <p>Second Paragraph</p>
+    <p>Second Paragradph</p>
     <p>Third Paragraph</p>
-    <p>Fourth Paragraph</p>
-    ```
-  1. Create an index.html file and put four p elementts as above:Get the first paragraph, get all paragraph
-  2. Set id and class attribute for all the paragraphs using different attribute setting methods
-  3. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-famil)
-  4. Select all paragraphs and loop through each elements and give the first and third paragraph a color of color, and the second and the fourth paragraph a red color
-  5. Create a div container on HTML document and create 100 numbers dynamically and append to the container div. Put each number in 150px by 150px box. If the number is even the background will be lightgreen else lightblue.
-  6. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
-   
+    <p></p>
+    </body>
+  </html>
+```
+  1. Create an index.html file and put four p elementts as above: Get the first paragraph by using *document.querySelector(tagname)* and tag name
+  2. Get get each of the the paragraph using *document.querySelector('#id')* and by their id
+  3. Get all the p as nodeList using *document.querySelectorAll(tagname)* and by their tag name
+  4. Loop through the nodeList and get the text content of each paragraph
+  5. Set a text content to paragraph the fourth paragraph,*Fourth Paragraph*
+  6. Set id and class attribute for all the paragraphs using different attribute setting methods
+  7. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-famil)
+  8. Select all paragraphs and loop through each elements and give the first and third paragraph a color of color, and the second and the fourth paragraph a red color
+  9. Remove all the paragrapsh and create them using JavaScript
+  10. Set text content, id and class to each paragraph
+  11. Create a div container on HTML document and create 100 numbers dynamically and append to the container div. Put each number in 150px by 150px box. If the number is even the background will be lightgreen else lightblue.
+  12. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
+  13. Use the countries.js to visualize all the countries on the HTML document. You need one wrapper div and box for each countries. In the box display, the letter the country starts with, the name of the country and the number of characters for the country name.
    
 ## Class
 
@@ -1798,102 +1818,101 @@ localStorage.clear();
 #### Exercises:Cookies
 
 
-
-
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [JavaScript for Everyone](#javascript-for-everyone)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Setup](#setup)
-  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
-    - [Inline Script](#inline-script)
-    - [Internal script](#internal-script)
-    - [External script](#external-script)
-      - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
-  - [Variables](#variables)
-      - [Exercise - 1 : Variables](#exercise---1--variables)
-  - [Comments](#comments)
-      - [Exercise - 2 : Comments](#exercise---2--comments)
-  - [Data Types](#data-types)
-      - [Exercises - 3 : Data Types](#exercises---3--data-types)
-    - [Strings](#strings)
-      - [String Concatination](#string-concatination)
-      - [Exercise - 4 : String](#exercise---4--string)
-    - [Numbers](#numbers)
-      - [Math Object](#math-object)
-    - [Booleans](#booleans)
-      - [Exercise - 5 : Booleans](#exercise---5--booleans)
-    - [Undefined](#undefined)
-    - [Null](#null)
-      - [Exercise - 6 : Data types](#exercise---6--data-types)
-  - [Operators](#operators)
-    - [Arthimetic Operators](#arthimetic-operators)
-      - [Exercises : Arthimetic Operators:](#exercises--arthimetic-operators)
-    - [Logical Operators](#logical-operators)
-      - [Exercises: Logical Operators](#exercises-logical-operators)
-    - [Comparison Operators](#comparison-operators)
-      - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
-  - [Conditionals](#conditionals)
-      - [If](#if)
-      - [If Else](#if-else)
-      - [If Else if else](#if-else-if-else)
-      - [Switch](#switch)
-      - [Ternary Operators](#ternary-operators)
-      - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
-  - [Loops](#loops)
-    - [For Loop](#for-loop)
-    - [While loop](#while-loop)
-    - [Do while loop](#do-while-loop)
-      - [Exercises:Loops](#exercisesloops)
-  - [Arrays](#arrays)
-      - [Exercise - 9 : Arrays](#exercise---9--arrays)
-  - [More on Arrays](#more-on-arrays)
-      - [Exercise -10 : Array Methods](#exercise--10--array-methods)
-  - [Functions](#functions)
-    - [Function Declaration](#function-declaration)
-    - [Function Expression](#function-expression)
-    - [Anonymous Function](#anonymous-function)
-    - [Arrow Function](#arrow-function)
-    - [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
-      - [Exercise - 10 : Functions](#exercise---10--functions)
-  - [Object](#object)
-    - [Object Methods:](#object-methods)
-    - [Date Object](#date-object)
-      - [Exercises:](#exercises)
-      - [Exercises:Objects](#exercisesobjects)
-  - [Functional Programming](#functional-programming)
-    - [Exercises:](#exercises-1)
-  - [Document Object Model](#document-object-model)
-    - [Getting Element](#getting-element)
-      - [Getting elements by tag name](#getting-elements-by-tag-name)
-      - [Getting elements by class name](#getting-elements-by-class-name)
-      - [Getting an element by id](#getting-an-element-by-id)
-      - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
-    - [Adding attribute](#adding-attribute)
-      - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
-      - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
-      - [Adding class using classList](#adding-class-using-classlist)
-    - [Adding Text conent](#adding-text-conent)
-    - [Adding style](#adding-style)
-    - [Creating an Element](#creating-an-element)
-    - [Creating elements](#creating-elements)
-    - [Appending to a parent element](#appending-to-a-parent-element)
-    - [Event Listeners](#event-listeners)
-    - [Getting value from an input element](#getting-value-from-an-input-element)
-      - [Exercises:Document Object Model](#exercisesdocument-object-model)
-  - [Class](#class)
-      - [Exercises:Classes](#exercisesclasses)
-  - [Regular Expressions](#regular-expressions)
-    - [Creating a pattern](#creating-a-pattern)
-    - [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
-    - [RegExp Object Methods](#regexp-object-methods)
-      - [Exercises:Regular Expressions](#exercisesregular-expressions)
-  - [localStorage](#localstorage)
-  - [Exercises:Local Storage](#exerciseslocal-storage)
-  - [Cookies](#cookies)
-      - [Exercises:Cookies](#exercisescookies)
+* [JavaScript for Everyone](#javascript-for-everyone)
+	* [Table of Contents](#table-of-contents)
+	* [Introduction](#introduction)
+	* [Setup](#setup)
+	* [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
+		* [Inline Script](#inline-script)
+		* [Internal script](#internal-script)
+		* [External script](#external-script)
+			* [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
+	* [Variables](#variables)
+			* [Exercise - 1 : Variables](#exercise-1-variables)
+	* [Comments](#comments)
+			* [Exercise - 2 : Comments](#exercise-2-comments)
+	* [Data Types](#data-types)
+			* [Exercises - 3 : Data Types](#exercises-3-data-types)
+		* [Strings](#strings)
+			* [String Concatination](#string-concatination)
+			* [Exercise - 4 : String](#exercise-4-string)
+		* [Numbers](#numbers)
+			* [Math Object](#math-object)
+		* [Booleans](#booleans)
+			* [Exercise - 5 : Booleans](#exercise-5-booleans)
+		* [Undefined](#undefined)
+		* [Null](#null)
+			* [Exercise - 6 : Data types](#exercise-6-data-types)
+	* [Operators](#operators)
+		* [Arthimetic Operators](#arthimetic-operators)
+			* [Exercises : Arthimetic Operators:](#exercises-arthimetic-operators)
+		* [Logical Operators](#logical-operators)
+			* [Exercises: Logical Operators](#exercises-logical-operators)
+		* [Comparison Operators](#comparison-operators)
+			* [Exercise - 7 : Comparison Operators](#exercise-7-comparison-operators)
+	* [Conditionals](#conditionals)
+			* [If](#if)
+			* [If Else](#if-else)
+			* [If Else if else](#if-else-if-else)
+			* [Switch](#switch)
+			* [Ternary Operators](#ternary-operators)
+			* [Exercise - 8 : Conditionals](#exercise-8-conditionals)
+	* [Loops](#loops)
+		* [For Loop](#for-loop)
+		* [While loop](#while-loop)
+		* [Do while loop](#do-while-loop)
+			* [Exercises:Loops](#exercisesloops)
+	* [Arrays](#arrays)
+			* [Exercise - 9 : Arrays](#exercise-9-arrays)
+	* [More on Arrays](#more-on-arrays)
+			* [Exercise -10 : Array Methods](#exercise-10-array-methods)
+	* [Functions](#functions)
+		* [Function Declaration](#function-declaration)
+		* [Function Expression](#function-expression)
+		* [Anonymous Function](#anonymous-function)
+		* [Arrow Function](#arrow-function)
+		* [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
+			* [Exercise - 10 : Functions](#exercise-10-functions)
+	* [Object](#object)
+		* [Object Methods:](#object-methods)
+		* [Date Object](#date-object)
+			* [Exercises:](#exercises)
+			* [Exercises:Objects](#exercisesobjects)
+	* [Functional Programming](#functional-programming)
+		* [Exercises:](#exercises-1)
+	* [Destructuring and Spread](#destructuring-and-spread)
+	* [Document Object Model](#document-object-model)
+		* [Getting Element](#getting-element)
+			* [Getting elements by tag name](#getting-elements-by-tag-name)
+			* [Getting elements by class name](#getting-elements-by-class-name)
+			* [Getting an element by id](#getting-an-element-by-id)
+			* [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
+		* [Adding attribute](#adding-attribute)
+			* [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
+			* [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
+			* [Adding class using classList](#adding-class-using-classlist)
+		* [Adding Text conent](#adding-text-conent)
+		* [Adding style](#adding-style)
+		* [Creating an Element](#creating-an-element)
+		* [Creating elements](#creating-elements)
+		* [Appending to a parent element](#appending-to-a-parent-element)
+		* [Event Listeners](#event-listeners)
+		* [Getting value from an input element](#getting-value-from-an-input-element)
+			* [Exercises:Document Object Model](#exercisesdocument-object-model)
+	* [Class](#class)
+			* [Exercises:Classes](#exercisesclasses)
+	* [Regular Expressions](#regular-expressions)
+		* [Creating a pattern](#creating-a-pattern)
+		* [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
+		* [RegExp Object Methods](#regexp-object-methods)
+			* [Exercises:Regular Expressions](#exercisesregular-expressions)
+	* [localStorage](#localstorage)
+	* [Exercises:Local Storage](#exerciseslocal-storage)
+	* [Cookies](#cookies)
+			* [Exercises:Cookies](#exercisescookies)
 
 <!-- /code_chunk_output -->
