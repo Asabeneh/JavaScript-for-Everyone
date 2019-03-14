@@ -43,13 +43,10 @@ First thing first, lets install text or code editor. Install code editor, it cou
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 
 ## Adding JavaScript to a web page
-
 JavaScript can be added to a web pages in three ways:
-
 - **_Inline script_**
 - **_Internal script_**
 - **_External script_**
-
 The following sections shows different ways of adding JavaScript code to your web page.
 
 ### Inline Script
@@ -69,7 +66,6 @@ Create a folder on your desktop or in any location and create an **_index.html_*
 ```
 
 ### Internal script
-
 Internal script can be written in the _head_ or the _body_ but it is preferrable to put it on the body of the html document.
 
 ```html
@@ -103,7 +99,6 @@ Internal script can be written in the _head_ or the _body_ but it is preferrable
 #### Exercises:Setting Up your machine
 
 ## Variables
-
 Variables are _containers_ of data. Variables _store_ data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, _var_, _let_ or _const_ key word. For a variable which changes at different time we use _let_ but if the data doesn't change at all we use _const_. For example PI, country name, gravity.
 
 ```js
@@ -130,8 +125,8 @@ console.log(name, job, live);
 
 #### Exercise - 1 : Variables
 
-1. Declare variables without assigning values
-1. Declare variables with assigning values
+1. Declare four variables without assigning values
+1. Declare four variables with assigning values
 1. Declare variables to store your first name, last name, marital status, country and age in multiple lines
 1. Declare variables to store your first name, last name, marital status, country and age in a single line
 1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
@@ -218,31 +213,31 @@ console.log(personInfoTwo);
 #### Exercise - 4 : String
 
 1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
-1. Print the string on the browser console using _console.log()_
-1. Print the _length_ of the string on the browser console using _console.log()_
-1. Change all the string to capital letters using _toUpperCase()_ method
-1. Change all the string to lowercase letters using _toLowerCase()_ method
-1. Cut(slice) out the first word of the string using _slice_, _substr()_ or _substring()_ method
-1. Use _substr_ to slice out the phase _because because because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Check if the string contains a word _Academy_ using _includes()_ method
-1. Split the _string_ into _array_ using _split()_ method
-1. Split the string Coding Academy at the space using _split()_ method
-1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" _split_ the string at the comma and change it to an array.
-1. Change Coding Academy to Microsoft Academy using _replace()_ method.
-1. What is character at index 10 in "Coding Academy" string use _charAt()_ method.
-1. What is the character code of A in 'Coding Academy' string using _charCodeAt()_
-1. Use _indexOf_ to determine the position of the first occurrence of c in Coding Academy
-1. Use _lastIndexOf_ to determine the position of the last occurrence of c in Coding Academy.
-1. Use _indexOf_ to find the position of the first occurrence of the word _because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _lastIndexOf_ to find the position of the first occurrence of the word _because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _search_ to find the position of the first occurrence of the word _because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _trim()_ to remove if there is trailing whitespace at the beginning and the end of a string.E.g " Coding Academy ".
-1. Use _startsWith()_ method with the string Coding Academy make the result true
-1. Use _endsWith()_ method with the string Coding Academy make the result true
-1. Use _match()_ method to find all the c’s in Coding Academy
-1. Use _match()_ to count the number all because's in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _concat()_ and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
-1. Use _repeat()_ method to print Coding Academy 5 times
+1. Print the string on the browser console using __console.log()__
+1. Print the __length__ of the string on the browser console using _console.log()_
+1. Change all the string to capital letters using __toUpperCase()__ method
+1. Change all the string to lowercase letters using __toLowerCase()__ method
+1. Cut(slice) out the first word of the string using __slice__, __substr()__ or __substring()__ method
+1. Use __substr__ to slice out the phase __because because because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Check if the string contains a word __Academy__ using __includes()__ method
+1. Split the __string__ into __array__ using __split()__ method
+1. Split the string Coding Academy at the space using __split()__ method
+1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" __split__ the string at the comma and change it to an array.
+1. Change Coding Academy to Microsoft Academy using __replace()__ method.
+1. What is character at index 10 in "Coding Academy" string use __charAt()__ method.
+1. What is the character code of A in 'Coding Academy' string using __charCodeAt()__
+1. Use __indexOf__ to determine the position of the first occurrence of c in Coding Academy
+1. Use __lastIndexOf__ to determine the position of the last occurrence of c in Coding Academy.
+1. Use __indexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __lastIndexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __search__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __trim()__ to remove if there is trailing whitespace at the beginning and the end of a string.E.g " Coding Academy ".
+1. Use __startsWith()__ method with the string Coding Academy make the result true
+1. Use __endsWith()__ method with the string Coding Academy make the result true
+1. Use __match()__ method to find all the c’s in Coding Academy
+1. Use __match()__ to count the number all because's in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __concat()__ and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
+1. Use __repeat()__ method to print Coding Academy 5 times
 1. Calculate the total annual income of the person by extract the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 
 ### Numbers
@@ -1336,53 +1331,56 @@ console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
 1. Set new properties the dog object: breed, getDogInfo
 1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, acountInfo,addIncome, addExpence_ and _accountBalance_ methods. Incomes is a set of incomes and its description and the same for expenses.
 1. Count logged in users,count users having greater than equal to 50 points from the following object.
-```js
-const users = {
-  Alex: {
-    email: "alex@alex.com",
-    skills: ["HTML", "CSS", "JavaScript"],
-    age: 20,
-    isLoggedIn: false,
-    points: 30
-  },
-  Asab: {
-    email: "asab@asab.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
-    age: 25,
-    isLoggedIn: false,
-    points: 50
-  },
-  Brook: {
-    email: "daniel@daniel.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
-    age: 30,
-    isLoggedIn: true,
-    points: 50
-  },
-  Daniel: {
-    email: "daniel@alex.com",
-    skills: ["HTML", "CSS", "JavaScript", "Python"],
-    age: 20,
-    isLoggedIn: false,
-    points: 40
-  },
-  John: {
-    email: "john@john.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
-    age: 20,
-    isLoggedIn: true,
-    point: 50
-  },
-  Thomas: {
-    email: "thomas@thomas.com",
-    skills: ["HTML", "CSS", "JavaScript", "React"],
-    age: 20,
-    isLoggedIn: false,
-    points: 40
-  }
-};
-```
-1. Develop a small JavaScript library.
+      ```js
+      const users = {
+        Alex: {
+          email: "alex@alex.com",
+          skills: ["HTML", "CSS", "JavaScript"],
+          age: 20,
+          isLoggedIn: false,
+          points: 30
+        },
+        Asab: {
+          email: "asab@asab.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          age: 25,
+          isLoggedIn: false,
+          points: 50
+        },
+        Brook: {
+          email: "daniel@daniel.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+          age: 30,
+          isLoggedIn: true,
+          points: 50
+        },
+        Daniel: {
+          email: "daniel@alex.com",
+          skills: ["HTML", "CSS", "JavaScript", "Python"],
+          age: 20,
+          isLoggedIn: false,
+          points: 40
+        },
+        John: {
+          email: "john@john.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          age: 20,
+          isLoggedIn: true,
+          point: 50
+        },
+        Thomas: {
+          email: "thomas@thomas.com",
+          skills: ["HTML", "CSS", "JavaScript", "React"],
+          age: 20,
+          isLoggedIn: false,
+          points: 40
+        }
+      };
+    ```
+1. Set your name in the users object without modifying the original users object
+1. Get all keys or properties of users object
+1. Get all the values of users object
+1. ** Develop a small JavaScript library.
 ## Functional Programming
 *forEach*: Iterate an array elements and use for array. It takes a callback function with elements and index parameter.
 
@@ -1508,31 +1506,38 @@ console.log(age) // 5
   const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-1. Explain the difference between *forEach, map, filter, and reduce*.
-1. Use *forEach* to console.log each country in the countries array.
-1. Use *forEach* to console.log each name in the names array.
-1. Use *forEach* to console.log each number in the numbers array.
-1. Use *map* to create a new array  by changing each country to uppercase in the countries array;
-1. Use *map* to create a new array  by changing each number to square in the numbers array
-1. Use *map* to change to each name to uppercase in the names array
-1. Use *filter* to filter out countries containing *land*.
-1. Use *filter* to filter out countries having six character.
-1. Use *filter* to filter out countries containing six letters in the counntry array.
-1. Use *filter* to filter out country start with 'E';
-1. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
-1. Use *reduce* to sum all the numbers in the numbers array.
-1. Use *reduce* to concatinate all the countries and to produce this sentence: *Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries*
-1. Explain the difference between *some* and *every*
-1. Use *some* to check if some names' length greater than seven in names array
-1. Use *every* to check if all the countries contain the word land
-1. Explain the difference between *find* and *findIndex*.
-1. Use *find* to find the first country containing only six letters in the countries array
-1. Use *findIndex* to find the position of the first country containing only six letters in the countries array
-1. Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
-1. Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
-1. Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
-1. Declare a getLastTenCountries function which takes the last ten countries and r
-1. Find out with which letter are there many countries
+1. Explain the difference between ***forEach, map, filter, and reduce***.
+2. Define a call function before you them in forEach, map, filter or reduce.
+3. Use ***forEach*** to console.log each country in the countries array.
+4. Use ***forEach*** to console.log each name in the names array.
+5. Use ***forEach*** to console.log each number in the numbers array.
+6. Use ***map*** to create a new array  by changing each country to uppercase in the countries array;
+7. Use ***map*** to create a new array  by changing each number to square in the numbers array
+8. Use ***map*** to change to each name to uppercase in the names array
+9. Use ***filter*** to filter out countries containing ***land***.
+10. Use ***filter*** to filter out countries having six character.
+11. Use ***filter*** to filter out countries containing six letters and more in the counntry array.
+12. Use ***filter*** to filter out country start with 'E';
+13. Chain two or more array iterators(eg. arr.map(callback).filter(callback).reduce(callback))
+14. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+15. Use ***reduce*** to sum all the numbers in the numbers array.
+16. Use ***reduce*** to concatinate all the countries and to produce this sentence: ***Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries***
+17. Explain the difference between ***some*** and ***every***
+18. Use ***some*** to check if some names' length greater than seven in names array
+19. Use ***every*** to check if all the countries contain the word land
+20. Explain the difference between ***find*** and ***findIndex***.
+21. Use ***find*** to find the first country containing only six letters in the countries array
+22. Use ***findIndex*** to find the position of the first country containing only six letters in the countries array
+23. Use ***findIndex*** to find the position of ***Norway*** if it doesn't exist in the array you will get -1.
+24. Use ***findIndex*** to find the position of ***Russia*** if it doesn't exist in the array you will get -1.
+25. Declare a function called ***categorizeCountries*** which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
+26. Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+27. Declare a ***getFirstTenCountries*** function and return an array of ten countries. Use different functional programming to work on the countries.js array
+28. Declare a ***getLastTenCountries*** function which which returns the last ten countries in the countries array.
+29. Find out which *letter* is used many *times* as intial for a country name from the conuntries array (eg. Finland, Fiji, France etc)
+   
+## Destructuring and Spread
+   
 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
@@ -1553,7 +1558,7 @@ HTML document is structured as a JavaScript Object. Every HTML element has a dif
   </html>
 ```
 #### Getting elements by tag name
-*getElementsByTagName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
+***getElementsByTagName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
 ```js
 const allTitles = document.getElementsByTagName("h1");
 console.log(allTitles) //HTMCollections
@@ -1564,7 +1569,7 @@ for(let i = 0; i < allTitles.length; i++){
 
 ```
 #### Getting elements by class name
-*getElementsByClassName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
+***getElementsByClassName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
 ```js
 const allTitles = document.getElementsByClassName("title");
 console.log(allTitles) //HTMCollections
@@ -1574,13 +1579,13 @@ for(let i = 0; i < allTitles.length; i++){
 }
 ```
 #### Getting an element by id
-*getElementsById()*  targets a single HTML element. We pass the id without # as an argument. 
+***getElementsById()***  targets a single HTML element. We pass the id without # as an argument. 
 ```js
 let firstTitle = document.getElementById("first-title");
 console.log(firstTitle) // <h1>First Title</h1>
 ```
 #### Getting elements by using querySelector using tag, class and id:
-*querySelector*: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
+***querySelector***: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
 
 ```js
 let firstTitle = document.querySelect("h1");// select the first available h2 element
@@ -1588,7 +1593,7 @@ let firstTitle = document.querySelector("#first-title"); // select id with first
 let firstTitle = document.querySelector(".title"); // select the first available h2 element with class title
 
 ```
-*querySelectorAll*: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use *for loop* or *forEach* to loop through each nodeList elements.
+***querySelectorAll***: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use ***for loop*** or ***forEach*** to loop through each nodeList elements.
 ```js
 const allTitles = document.querySelectAll("h1");
 console.log(allTitles.length) // 4
@@ -1602,7 +1607,7 @@ const allTitles = document.querySelectorAll(".title"); // the same goes for sele
 An attribute is added in the opening tag of HTML which gives additional information about the element. Common HTML attributes: id, class, src, style, href,disabled, title, alt. Lets add id and class for the fourth title.
 
 #### Adding attribute using setAttribute
-The *setAttribute()* method set any html attribute. It takes two parameters the type of the attribute and the name of the attribute. 
+The ***setAttribute()*** method set any html attribute. It takes two parameters the type of the attribute and the name of the attribute. 
 Let's add class and id attribute for the fourth title.
 
 ```js
@@ -1674,7 +1679,7 @@ for(let i = 0; i < 3; i++){
 ```
 ### Event Listeners
 Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown, onkeyup, onload.
-We can add event listener method to any DOM object. Use use *addEventListener()* method to listen different event types on HTML elements.
+We can add event listener method to any DOM object. Use use ***addEventListener()*** method to listen different event types on HTML elements.
 The following is an example of click type event.
 ```js
 const button = document.querySelector("button");
@@ -1704,20 +1709,34 @@ console.log(bmi)
 ```
 
 #### Exercises:Document Object Model
-    ```html
-    <!-- index.html -->
+```html
+  <!-- index.html -->
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>JavaScript for Everyone:DOM</title>
+    </head>
+    <body>
     <p>First Paragraph</p>
-    <p>Second Paragraph</p>
+    <p>Second Paragradph</p>
     <p>Third Paragraph</p>
-    <p>Fourth Paragraph</p>
-    ```
-  1. Create an index.html file and put four p elementts as above:Get the first paragraph, get all paragraph
-  2. Set id and class attribute for all the paragraphs using different attribute setting methods
-  3. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-famil)
-  4. Select all paragraphs and loop through each elements and give the first and third paragraph a color of color, and the second and the fourth paragraph a red color
-  5. Create a div container on HTML document and create 100 numbers dynamically and append to the container div. Put each number in 150px by 150px box. If the number is even the background will be lightgreen else lightblue.
-  6. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
-   
+    <p></p>
+    </body>
+  </html>
+```
+  1. Create an index.html file and put four p elementts as above: Get the first paragraph by using ***document.querySelector(tagname)*** and tag name
+  2. Get get each of the the paragraph using ***document.querySelector('#id')*** and by their id
+  3. Get all the p as nodeList using ***document.querySelectorAll(tagname)*** and by their tag name
+  4. Loop through the nodeList and get the text content of each paragraph
+  5. Set a text content to paragraph the fourth paragraph,***Fourth Paragraph***
+  6. Set id and class attribute for all the paragraphs using different attribute setting methods
+  7. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-famil)
+  8. Select all paragraphs and loop through each elements and give the first and third paragraph a color of color, and the second and the fourth paragraph a red color
+  9. Remove all the paragrapsh and create them using JavaScript
+  10. Set text content, id and class to each paragraph
+  11. Create a div container on HTML document and create 100 numbers dynamically and append to the container div. Put each number in 150px by 150px box. If the number is even the background will be lightgreen else lightblue.
+  12. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
+  13. Use the countries.js to visualize all the countries on the HTML document. You need one wrapper div and box for each countries. In the box display, the letter the country starts with, the name of the country and the number of characters for the country name.
    
 ## Class
 
@@ -1798,8 +1817,6 @@ localStorage.clear();
 #### Exercises:Cookies
 
 
-
-
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
@@ -1866,6 +1883,7 @@ localStorage.clear();
       - [Exercises:Objects](#exercisesobjects)
   - [Functional Programming](#functional-programming)
     - [Exercises:](#exercises-1)
+  - [Destructuring and Spread](#destructuring-and-spread)
   - [Document Object Model](#document-object-model)
     - [Getting Element](#getting-element)
       - [Getting elements by tag name](#getting-elements-by-tag-name)
