@@ -43,13 +43,10 @@ First thing first, lets install text or code editor. Install code editor, it cou
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 
 ## Adding JavaScript to a web page
-
 JavaScript can be added to a web pages in three ways:
-
 - **_Inline script_**
 - **_Internal script_**
 - **_External script_**
-
 The following sections shows different ways of adding JavaScript code to your web page.
 
 ### Inline Script
@@ -69,7 +66,6 @@ Create a folder on your desktop or in any location and create an **_index.html_*
 ```
 
 ### Internal script
-
 Internal script can be written in the _head_ or the _body_ but it is preferrable to put it on the body of the html document.
 
 ```html
@@ -103,7 +99,6 @@ Internal script can be written in the _head_ or the _body_ but it is preferrable
 #### Exercises:Setting Up your machine
 
 ## Variables
-
 Variables are _containers_ of data. Variables _store_ data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, _var_, _let_ or _const_ key word. For a variable which changes at different time we use _let_ but if the data doesn't change at all we use _const_. For example PI, country name, gravity.
 
 ```js
@@ -218,31 +213,31 @@ console.log(personInfoTwo);
 #### Exercise - 4 : String
 
 1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
-1. Print the string on the browser console using _console.log()_
-1. Print the _length_ of the string on the browser console using _console.log()_
-1. Change all the string to capital letters using _toUpperCase()_ method
-1. Change all the string to lowercase letters using _toLowerCase()_ method
-1. Cut(slice) out the first word of the string using _slice_, _substr()_ or _substring()_ method
-1. Use _substr_ to slice out the phase _because because because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Check if the string contains a word _Academy_ using _includes()_ method
-1. Split the _string_ into _array_ using _split()_ method
-1. Split the string Coding Academy at the space using _split()_ method
-1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" _split_ the string at the comma and change it to an array.
-1. Change Coding Academy to Microsoft Academy using _replace()_ method.
-1. What is character at index 10 in "Coding Academy" string use _charAt()_ method.
-1. What is the character code of A in 'Coding Academy' string using _charCodeAt()_
-1. Use _indexOf_ to determine the position of the first occurrence of c in Coding Academy
-1. Use _lastIndexOf_ to determine the position of the last occurrence of c in Coding Academy.
-1. Use _indexOf_ to find the position of the first occurrence of the word _because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _lastIndexOf_ to find the position of the first occurrence of the word _because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _search_ to find the position of the first occurrence of the word _because_ in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _trim()_ to remove if there is trailing whitespace at the beginning and the end of a string.E.g " Coding Academy ".
-1. Use _startsWith()_ method with the string Coding Academy make the result true
-1. Use _endsWith()_ method with the string Coding Academy make the result true
-1. Use _match()_ method to find all the c’s in Coding Academy
-1. Use _match()_ to count the number all because's in the following sentence:_'You cannot end a sentence with because because because is a conjunction'_
-1. Use _concat()_ and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
-1. Use _repeat()_ method to print Coding Academy 5 times
+1. Print the string on the browser console using __console.log()__
+1. Print the __length__ of the string on the browser console using _console.log()_
+1. Change all the string to capital letters using __toUpperCase()__ method
+1. Change all the string to lowercase letters using __toLowerCase()__ method
+1. Cut(slice) out the first word of the string using __slice__, __substr()__ or __substring()__ method
+1. Use __substr__ to slice out the phase __because because because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Check if the string contains a word __Academy__ using __includes()__ method
+1. Split the __string__ into __array__ using __split()__ method
+1. Split the string Coding Academy at the space using __split()__ method
+1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" __split__ the string at the comma and change it to an array.
+1. Change Coding Academy to Microsoft Academy using __replace()__ method.
+1. What is character at index 10 in "Coding Academy" string use __charAt()__ method.
+1. What is the character code of A in 'Coding Academy' string using __charCodeAt()__
+1. Use __indexOf__ to determine the position of the first occurrence of c in Coding Academy
+1. Use __lastIndexOf__ to determine the position of the last occurrence of c in Coding Academy.
+1. Use __indexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __lastIndexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __search__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __trim()__ to remove if there is trailing whitespace at the beginning and the end of a string.E.g " Coding Academy ".
+1. Use __startsWith()__ method with the string Coding Academy make the result true
+1. Use __endsWith()__ method with the string Coding Academy make the result true
+1. Use __match()__ method to find all the c’s in Coding Academy
+1. Use __match()__ to count the number all because's in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+1. Use __concat()__ and merge 'Coding' and 'Academy' to a single string, 'Coding Academy'
+1. Use __repeat()__ method to print Coding Academy 5 times
 1. Calculate the total annual income of the person by extract the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 
 ### Numbers
@@ -1511,31 +1506,35 @@ console.log(age) // 5
   const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-1. Explain the difference between *forEach, map, filter, and reduce*.
-1. Use *forEach* to console.log each country in the countries array.
-1. Use *forEach* to console.log each name in the names array.
-1. Use *forEach* to console.log each number in the numbers array.
-1. Use *map* to create a new array  by changing each country to uppercase in the countries array;
-1. Use *map* to create a new array  by changing each number to square in the numbers array
-1. Use *map* to change to each name to uppercase in the names array
-1. Use *filter* to filter out countries containing *land*.
-1. Use *filter* to filter out countries having six character.
-1. Use *filter* to filter out countries containing six letters in the counntry array.
-1. Use *filter* to filter out country start with 'E';
-1. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
-1. Use *reduce* to sum all the numbers in the numbers array.
-1. Use *reduce* to concatinate all the countries and to produce this sentence: *Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries*
-1. Explain the difference between *some* and *every*
-1. Use *some* to check if some names' length greater than seven in names array
-1. Use *every* to check if all the countries contain the word land
-1. Explain the difference between *find* and *findIndex*.
-1. Use *find* to find the first country containing only six letters in the countries array
-1. Use *findIndex* to find the position of the first country containing only six letters in the countries array
-1. Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
-1. Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
-1. Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
-1. Declare a getLastTenCountries function which takes the last ten countries and r
-1. Find out with which letter are there many countries
+1. Explain the difference between ***forEach, map, filter, and reduce***.
+2. Define a call function before you them in forEach, map, filter or reduce.
+3. Use ***forEach*** to console.log each country in the countries array.
+4. Use ***forEach*** to console.log each name in the names array.
+5. Use ***forEach*** to console.log each number in the numbers array.
+6. Use ***map*** to create a new array  by changing each country to uppercase in the countries array;
+7. Use ***map*** to create a new array  by changing each number to square in the numbers array
+8. Use ***map*** to change to each name to uppercase in the names array
+9. Use ***filter*** to filter out countries containing ***land***.
+10. Use ***filter*** to filter out countries having six character.
+11. Use ***filter*** to filter out countries containing six letters and more in the counntry array.
+12. Use ***filter*** to filter out country start with 'E';
+13. Chain two or more array iterators(eg. arr.map(callback).filter(callback).reduce(callback))
+14. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+15. Use ***reduce*** to sum all the numbers in the numbers array.
+16. Use ***reduce*** to concatinate all the countries and to produce this sentence: ***Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries***
+17. Explain the difference between ***some*** and ***every***
+18. Use ***some*** to check if some names' length greater than seven in names array
+19. Use ***every*** to check if all the countries contain the word land
+20. Explain the difference between ***find*** and ***findIndex***.
+21. Use ***find*** to find the first country containing only six letters in the countries array
+22. Use ***findIndex*** to find the position of the first country containing only six letters in the countries array
+23. Use ***findIndex*** to find the position of ***Norway*** if it doesn't exist in the array you will get -1.
+24. Use ***findIndex*** to find the position of ***Russia*** if it doesn't exist in the array you will get -1.
+25. Declare a function called ***categorizeCountries*** which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
+26. Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+27. Declare a ***getFirstTenCountries*** function and return an array of ten countries. Use different functional programming to work on the countries.js array
+28. Declare a ***getLastTenCountries*** function which which returns the last ten countries in the countries array.
+29. Find out which *letter* is used many *times* as intial for a country name from the conuntries array (eg. Finland, Fiji, France etc)
    
 ## Destructuring and Spread
    
@@ -1559,7 +1558,7 @@ HTML document is structured as a JavaScript Object. Every HTML element has a dif
   </html>
 ```
 #### Getting elements by tag name
-*getElementsByTagName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
+***getElementsByTagName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
 ```js
 const allTitles = document.getElementsByTagName("h1");
 console.log(allTitles) //HTMCollections
@@ -1570,7 +1569,7 @@ for(let i = 0; i < allTitles.length; i++){
 
 ```
 #### Getting elements by class name
-*getElementsByClassName()* method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
+***getElementsByClassName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
 ```js
 const allTitles = document.getElementsByClassName("title");
 console.log(allTitles) //HTMCollections
@@ -1580,13 +1579,13 @@ for(let i = 0; i < allTitles.length; i++){
 }
 ```
 #### Getting an element by id
-*getElementsById()*  targets a single HTML element. We pass the id without # as an argument. 
+***getElementsById()***  targets a single HTML element. We pass the id without # as an argument. 
 ```js
 let firstTitle = document.getElementById("first-title");
 console.log(firstTitle) // <h1>First Title</h1>
 ```
 #### Getting elements by using querySelector using tag, class and id:
-*querySelector*: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
+***querySelector***: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
 
 ```js
 let firstTitle = document.querySelect("h1");// select the first available h2 element
@@ -1594,7 +1593,7 @@ let firstTitle = document.querySelector("#first-title"); // select id with first
 let firstTitle = document.querySelector(".title"); // select the first available h2 element with class title
 
 ```
-*querySelectorAll*: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use *for loop* or *forEach* to loop through each nodeList elements.
+***querySelectorAll***: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use ***for loop*** or ***forEach*** to loop through each nodeList elements.
 ```js
 const allTitles = document.querySelectAll("h1");
 console.log(allTitles.length) // 4
@@ -1608,7 +1607,7 @@ const allTitles = document.querySelectorAll(".title"); // the same goes for sele
 An attribute is added in the opening tag of HTML which gives additional information about the element. Common HTML attributes: id, class, src, style, href,disabled, title, alt. Lets add id and class for the fourth title.
 
 #### Adding attribute using setAttribute
-The *setAttribute()* method set any html attribute. It takes two parameters the type of the attribute and the name of the attribute. 
+The ***setAttribute()*** method set any html attribute. It takes two parameters the type of the attribute and the name of the attribute. 
 Let's add class and id attribute for the fourth title.
 
 ```js
@@ -1680,7 +1679,7 @@ for(let i = 0; i < 3; i++){
 ```
 ### Event Listeners
 Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown, onkeyup, onload.
-We can add event listener method to any DOM object. Use use *addEventListener()* method to listen different event types on HTML elements.
+We can add event listener method to any DOM object. Use use ***addEventListener()*** method to listen different event types on HTML elements.
 The following is an example of click type event.
 ```js
 const button = document.querySelector("button");
@@ -1725,11 +1724,11 @@ console.log(bmi)
     </body>
   </html>
 ```
-  1. Create an index.html file and put four p elementts as above: Get the first paragraph by using *document.querySelector(tagname)* and tag name
-  2. Get get each of the the paragraph using *document.querySelector('#id')* and by their id
-  3. Get all the p as nodeList using *document.querySelectorAll(tagname)* and by their tag name
+  1. Create an index.html file and put four p elementts as above: Get the first paragraph by using ***document.querySelector(tagname)*** and tag name
+  2. Get get each of the the paragraph using ***document.querySelector('#id')*** and by their id
+  3. Get all the p as nodeList using ***document.querySelectorAll(tagname)*** and by their tag name
   4. Loop through the nodeList and get the text content of each paragraph
-  5. Set a text content to paragraph the fourth paragraph,*Fourth Paragraph*
+  5. Set a text content to paragraph the fourth paragraph,***Fourth Paragraph***
   6. Set id and class attribute for all the paragraphs using different attribute setting methods
   7. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-famil)
   8. Select all paragraphs and loop through each elements and give the first and third paragraph a color of color, and the second and the fourth paragraph a red color
@@ -1822,97 +1821,97 @@ localStorage.clear();
 
 <!-- code_chunk_output -->
 
-* [JavaScript for Everyone](#javascript-for-everyone)
-	* [Table of Contents](#table-of-contents)
-	* [Introduction](#introduction)
-	* [Setup](#setup)
-	* [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
-		* [Inline Script](#inline-script)
-		* [Internal script](#internal-script)
-		* [External script](#external-script)
-			* [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
-	* [Variables](#variables)
-			* [Exercise - 1 : Variables](#exercise-1-variables)
-	* [Comments](#comments)
-			* [Exercise - 2 : Comments](#exercise-2-comments)
-	* [Data Types](#data-types)
-			* [Exercises - 3 : Data Types](#exercises-3-data-types)
-		* [Strings](#strings)
-			* [String Concatination](#string-concatination)
-			* [Exercise - 4 : String](#exercise-4-string)
-		* [Numbers](#numbers)
-			* [Math Object](#math-object)
-		* [Booleans](#booleans)
-			* [Exercise - 5 : Booleans](#exercise-5-booleans)
-		* [Undefined](#undefined)
-		* [Null](#null)
-			* [Exercise - 6 : Data types](#exercise-6-data-types)
-	* [Operators](#operators)
-		* [Arthimetic Operators](#arthimetic-operators)
-			* [Exercises : Arthimetic Operators:](#exercises-arthimetic-operators)
-		* [Logical Operators](#logical-operators)
-			* [Exercises: Logical Operators](#exercises-logical-operators)
-		* [Comparison Operators](#comparison-operators)
-			* [Exercise - 7 : Comparison Operators](#exercise-7-comparison-operators)
-	* [Conditionals](#conditionals)
-			* [If](#if)
-			* [If Else](#if-else)
-			* [If Else if else](#if-else-if-else)
-			* [Switch](#switch)
-			* [Ternary Operators](#ternary-operators)
-			* [Exercise - 8 : Conditionals](#exercise-8-conditionals)
-	* [Loops](#loops)
-		* [For Loop](#for-loop)
-		* [While loop](#while-loop)
-		* [Do while loop](#do-while-loop)
-			* [Exercises:Loops](#exercisesloops)
-	* [Arrays](#arrays)
-			* [Exercise - 9 : Arrays](#exercise-9-arrays)
-	* [More on Arrays](#more-on-arrays)
-			* [Exercise -10 : Array Methods](#exercise-10-array-methods)
-	* [Functions](#functions)
-		* [Function Declaration](#function-declaration)
-		* [Function Expression](#function-expression)
-		* [Anonymous Function](#anonymous-function)
-		* [Arrow Function](#arrow-function)
-		* [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
-			* [Exercise - 10 : Functions](#exercise-10-functions)
-	* [Object](#object)
-		* [Object Methods:](#object-methods)
-		* [Date Object](#date-object)
-			* [Exercises:](#exercises)
-			* [Exercises:Objects](#exercisesobjects)
-	* [Functional Programming](#functional-programming)
-		* [Exercises:](#exercises-1)
-	* [Destructuring and Spread](#destructuring-and-spread)
-	* [Document Object Model](#document-object-model)
-		* [Getting Element](#getting-element)
-			* [Getting elements by tag name](#getting-elements-by-tag-name)
-			* [Getting elements by class name](#getting-elements-by-class-name)
-			* [Getting an element by id](#getting-an-element-by-id)
-			* [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
-		* [Adding attribute](#adding-attribute)
-			* [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
-			* [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
-			* [Adding class using classList](#adding-class-using-classlist)
-		* [Adding Text conent](#adding-text-conent)
-		* [Adding style](#adding-style)
-		* [Creating an Element](#creating-an-element)
-		* [Creating elements](#creating-elements)
-		* [Appending to a parent element](#appending-to-a-parent-element)
-		* [Event Listeners](#event-listeners)
-		* [Getting value from an input element](#getting-value-from-an-input-element)
-			* [Exercises:Document Object Model](#exercisesdocument-object-model)
-	* [Class](#class)
-			* [Exercises:Classes](#exercisesclasses)
-	* [Regular Expressions](#regular-expressions)
-		* [Creating a pattern](#creating-a-pattern)
-		* [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
-		* [RegExp Object Methods](#regexp-object-methods)
-			* [Exercises:Regular Expressions](#exercisesregular-expressions)
-	* [localStorage](#localstorage)
-	* [Exercises:Local Storage](#exerciseslocal-storage)
-	* [Cookies](#cookies)
-			* [Exercises:Cookies](#exercisescookies)
+- [JavaScript for Everyone](#javascript-for-everyone)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Setup](#setup)
+  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
+    - [Inline Script](#inline-script)
+    - [Internal script](#internal-script)
+    - [External script](#external-script)
+      - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
+  - [Variables](#variables)
+      - [Exercise - 1 : Variables](#exercise---1--variables)
+  - [Comments](#comments)
+      - [Exercise - 2 : Comments](#exercise---2--comments)
+  - [Data Types](#data-types)
+      - [Exercises - 3 : Data Types](#exercises---3--data-types)
+    - [Strings](#strings)
+      - [String Concatination](#string-concatination)
+      - [Exercise - 4 : String](#exercise---4--string)
+    - [Numbers](#numbers)
+      - [Math Object](#math-object)
+    - [Booleans](#booleans)
+      - [Exercise - 5 : Booleans](#exercise---5--booleans)
+    - [Undefined](#undefined)
+    - [Null](#null)
+      - [Exercise - 6 : Data types](#exercise---6--data-types)
+  - [Operators](#operators)
+    - [Arthimetic Operators](#arthimetic-operators)
+      - [Exercises : Arthimetic Operators:](#exercises--arthimetic-operators)
+    - [Logical Operators](#logical-operators)
+      - [Exercises: Logical Operators](#exercises-logical-operators)
+    - [Comparison Operators](#comparison-operators)
+      - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
+  - [Conditionals](#conditionals)
+      - [If](#if)
+      - [If Else](#if-else)
+      - [If Else if else](#if-else-if-else)
+      - [Switch](#switch)
+      - [Ternary Operators](#ternary-operators)
+      - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
+  - [Loops](#loops)
+    - [For Loop](#for-loop)
+    - [While loop](#while-loop)
+    - [Do while loop](#do-while-loop)
+      - [Exercises:Loops](#exercisesloops)
+  - [Arrays](#arrays)
+      - [Exercise - 9 : Arrays](#exercise---9--arrays)
+  - [More on Arrays](#more-on-arrays)
+      - [Exercise -10 : Array Methods](#exercise--10--array-methods)
+  - [Functions](#functions)
+    - [Function Declaration](#function-declaration)
+    - [Function Expression](#function-expression)
+    - [Anonymous Function](#anonymous-function)
+    - [Arrow Function](#arrow-function)
+    - [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
+      - [Exercise - 10 : Functions](#exercise---10--functions)
+  - [Object](#object)
+    - [Object Methods:](#object-methods)
+    - [Date Object](#date-object)
+      - [Exercises:](#exercises)
+      - [Exercises:Objects](#exercisesobjects)
+  - [Functional Programming](#functional-programming)
+    - [Exercises:](#exercises-1)
+  - [Destructuring and Spread](#destructuring-and-spread)
+  - [Document Object Model](#document-object-model)
+    - [Getting Element](#getting-element)
+      - [Getting elements by tag name](#getting-elements-by-tag-name)
+      - [Getting elements by class name](#getting-elements-by-class-name)
+      - [Getting an element by id](#getting-an-element-by-id)
+      - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
+    - [Adding attribute](#adding-attribute)
+      - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
+      - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
+      - [Adding class using classList](#adding-class-using-classlist)
+    - [Adding Text conent](#adding-text-conent)
+    - [Adding style](#adding-style)
+    - [Creating an Element](#creating-an-element)
+    - [Creating elements](#creating-elements)
+    - [Appending to a parent element](#appending-to-a-parent-element)
+    - [Event Listeners](#event-listeners)
+    - [Getting value from an input element](#getting-value-from-an-input-element)
+      - [Exercises:Document Object Model](#exercisesdocument-object-model)
+  - [Class](#class)
+      - [Exercises:Classes](#exercisesclasses)
+  - [Regular Expressions](#regular-expressions)
+    - [Creating a pattern](#creating-a-pattern)
+    - [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
+    - [RegExp Object Methods](#regexp-object-methods)
+      - [Exercises:Regular Expressions](#exercisesregular-expressions)
+  - [localStorage](#localstorage)
+  - [Exercises:Local Storage](#exerciseslocal-storage)
+  - [Cookies](#cookies)
+      - [Exercises:Cookies](#exercisescookies)
 
 <!-- /code_chunk_output -->
