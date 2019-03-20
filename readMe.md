@@ -126,10 +126,10 @@ console.log(name, job, live);
 #### Exercise - 1 : Variables
 
 1. Declare four variables without assigning values
-1. Declare four variables with assigning values
-1. Declare variables to store your first name, last name, marital status, country and age in multiple lines
-1. Declare variables to store your first name, last name, marital status, country and age in a single line
-1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
+2. Declare four variables with assigning values
+3. Declare variables to store your first name, last name, marital status, country and age in multiple lines
+4. Declare variables to store your first name, last name, marital status, country and age in a single line
+5. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
    Output:
    ```sh
    I am 25 years old.
@@ -2029,6 +2029,13 @@ localStorage.clear();
 
 #### Exercises:Cookies
 
+### [JavaScipt Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
+- [JavaScript Test 1]()
+- [JavaScript Test 2](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-2)
+- [JavaScript Test 3](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-3)
+
+___
+
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
@@ -2131,5 +2138,6 @@ localStorage.clear();
   - [Exercises:Local Storage](#exerciseslocal-storage)
   - [Cookies](#cookies)
       - [Exercises:Cookies](#exercisescookies)
+    - [JavaScipt Tests](#javascipt-tests)
 
 <!-- /code_chunk_output -->
