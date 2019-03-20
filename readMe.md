@@ -488,7 +488,7 @@ if (isRaining) {
 }
 ```
 
-#### If Else if else
+#### If else if else
 
 ```js
 // if else if else
@@ -867,10 +867,10 @@ Slice: To cut out a multiple items in range. It takes two paramters:starting and
 Splice: It takes three parameters:Starting position, number of times to be removed and number items to be added.
 
 ```js
-  const numbers = [1,2,3,4,5];
+  const numbers = [1, 2, 3, 4, 5];
   console.log(numbers.splice() // -> remove all items
   console.log(numbers.splice(0,1)) // remove the first item
-  console.log(numbers.splice(3,3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
+  console.log(numbers.splice(3, 3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
 
 ```
 
@@ -911,6 +911,29 @@ console.log(numbers); // -> [0,1,2,3,4,5]
 ---
 
 #### Exercise -10 : Array Methods
+```js
+const shoppingCart = ['Milk','Coffee','Tea', 'Honey'];
+const todoList = [
+{
+	task:'Learn JavaScript',
+	time:'4/3/2019 8:30',
+	completed:true
+	
+},
+{
+	task:'Help some in need',
+	time:'4/3/2019 4:00',
+	completed:false
+	
+},
+{
+	task:'Do some physical exercises',
+	time:'4/3/2019 6:00',
+	completed:false
+	
+}]
+
+```
 
 ## Functions
 
@@ -1145,14 +1168,14 @@ const square = n => n * n; // -> 4
 4. Write a function ***convertRgbToHexa*** which converts rgb to hexa color  and it returns an hexa color.
 5. Write a function ***generateColors*** which can generate any number of hexa or rgb colors. 
     ```js
-      generate('hexa', 3)
+      generateColors('hexa', 3)
       ['#a3e12f','#03ed55','#eb3d2b']
-      generate('hexa', 1)
+      generateColors('hexa', 1)
       '#b334ef'
 
-      generate('rgb', 3)
+      generateColors('rgb', 3)
       ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80']
-      generate('rgb', 1)
+      generateColors('rgb', 1)
       'rgb(33,79, 176)'
 
     ```
@@ -1174,10 +1197,12 @@ const square = n => n * n; // -> 4
 13. Write a function called *isPrime*, which checks if a number is prime number.
 14. Write a functions which checks if all items are unique in the array.
 15. Write a function which checks if all the itmes of the array are the same data type.
+1. JavaScript variable name does not support special characters or symbols execpt $ or _. Write a function ***isValidVariable** which check if a variable is valid or invlaid variable.
 16. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
    ```js
    sevenRandomNumbers()[(1, 4, 5, 7, 9, 8, 0)];
    ```
+
 
 ## Object
 
@@ -1460,8 +1485,8 @@ const countriesToUpperCase = countries.map(country => country.toUpperCase());
 //Filter countries containing land
 const countriesContainingLand = countries.filter(country => country.includes('land'));
 console.log(countriesContainingLand )  //["Finland", "Ireland"]
-const countriesEndByia = countries.filter(country => country.includes('land'));
-console.log(countriesEndByia) //["Finland", "Ireland"]
+const countriesEndByia = countries.filter(country => country.includes('ia'));
+console.log(countriesEndByia) //["Albania", "Bolivia","Ethiopia"]
 const countriesHaveFiveLetters = countries.filter(country => country.length === 5);
 console.log(countriesHaveFiveLetters ) //  ["Japan", "Kenya"]
 const scores = [{name:'Asabeneh', score:95},{name:'Mathias', score:80},{name:'Elias', score:50},{name:'Martha', score:85},{name:'John', score:100}];
@@ -1561,7 +1586,7 @@ Destructuring is a way to unpack arrays, and objects and assigning to a distinct
   let [numOne, numTwo, numThree] = numbers;
   console.log(numOne, numTwo, numThree) // 1,2,3
   const names = ['Asabeneh', 'Brook', 'David', 'John']
-  let [firstPerson, secondPerson, ThirdPerson, fourth Person] = name;s
+  let [firstPerson, secondPerson, ThirdPerson, fourth Person] = names;
   console.log(firstName, secondPerson,thirdPerson, fourthPerson) //Asabeneh, Brook, David, John
   const scientificConstants = [2.72, 3.14, 9.81, 37, 100];
   let [e, pi, gravity, bodyTemp, boilingTemp] = scientificConstants
@@ -1578,6 +1603,12 @@ If we like to skip on of the values in the array we use additional comma. The co
   console.log(secondPerson, fourthPerson) //Brook, John
 
 ```
+We can use default value in case the value of array for that index is undefined:
+```js
+const names = [undefined, 'Brook', 'David'];
+let [firstPerson = 'Asabeneh', secondPerson, thirdPerson, fourthPerson = 'John' ] = names;
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson) // Asabeneh Brook David John
+```
 
 #### Destructuring Object
 When we destructure the name of the variable we use to destructure should be exactly the same us the key or property of the object. See example below.
@@ -1588,7 +1619,7 @@ const rectangle = {
   area: 200
 }
 let {width, height, area, perimeter} = rectangle;
-console.log(width, height, area, perimeter) //20, 10, 200, undefined
+console.log(width, height, area, perimeter) //20 10 200 undefined
 
 ```
 #### Renaming during structuring
@@ -1599,11 +1630,122 @@ const rectangle = {
   area: 200
 }
 let {width:w, heigh:h, area:a, perimeter:p} = rectangle;
-console.log(w, h, a, p) //20, 10, 200, undefined
+console.log(w, h, a, p) //20 10 200 undefined
 
 ```
+If the key is not found in the object the variable will be assinged to undefined. In case, the key is not in the object we can give a default value during declaration. See the example.
+```js
+const rectangle = {
+  width: 20, 
+  height:10,
+  area: 200
+}
+let {width, heigh, area, perimeter = 60} = rectangle;
+console.log(width, height, area, perimeter)  //20 10 200 60
+//Lets modify the object:width to 30 and perimeter to 80
+const rectangle = {
+  width: 30, 
+  height:10,
+  area: 200,
+  perimeter:80
+}
+let {width, heigh, area, perimeter = 60} = rectangle;
+console.log(width, height, area, perimeter) //20 10 200 80
+```
 
-   === not completed ==
+Destructuring keys as a function paramters. Lets create a function which take a rectangle object and it return a perimeter of a rectangle.
+```js
+    // Without destructuring
+    const rect = {
+      width:20,
+      height:10
+    }
+    const calculatePerimeter = (rectangle) => {
+      return 2 * (rectangle.width + rectangle.height)
+    }
+    console.log(calculatePerimeter(rect)) // 60
+    //with destructuring
+
+     const calculatePerimeter = ({width, height}) => {
+      return 2 * (width + height)
+    }
+
+    console.log(calculatePerimeter(rect)) // 60
+
+    //Another Example
+const person = {
+  firstName: "Asabeneh",
+  lastName: "Yetayeh",
+  age: 200,
+  country: "Finland",
+  job: "Instructor and Developer",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Node",
+    "MongoDB",
+    "Python",
+    "D3.js"
+  ],
+  languages: ["Amharic", "English", "Suomi(Finnish)"]
+};
+// Lets create a function which give information about the person object without destructuring
+
+const getPersonInfo = obj => {
+  const skills = obj.skills;
+  const formattedSkills = skills.slice(0, -1).join(", ");
+  const languages = obj.languages;
+  const formattedLanguages = languages.slice(0, -1).join(", ");
+
+  return `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is  ${
+    obj.age
+  } years old. He is an ${obj.job}. He teaches ${formattedSkills} and ${
+    skills[skills.length - 1]
+  }. He speakes ${formattedLanguages} and a little bit of ${languages[2]}.`;
+};
+console.log(getPersonInfo(person));
+// Lets create a function which give information about the person object with destructuring
+
+const getPersonInfo = ({
+  firstName,
+  lastName,
+  age,
+  country,
+  job,
+  skills,
+  languages
+}) => {
+  const formattedSkills = skills.slice(0, -1).join(", ");
+  const formattedLanguages = languages.slice(0, -1).join(", ");
+
+  return `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He teaches ${formattedSkills} and ${skills[skills.length - 1]}. He speakes ${formattedLanguages} and a little bit of ${languages[2]}.`;
+};
+console.log(getPersonInfo(person))
+/*
+Asabeneh Yetayeh lives in Finland. He is  200 years old. He is an Instructor and Developer. He teaches HTML, CSS, JavaScript, React, Redux, Node, MongoDB, Python and D3.js. He speakes Amharic, English and a little bit of Suomi(Finnish)
+*/
+```
+### Spread or Rest Operator
+
+  #### Exercise: Destructuring
+   ```js
+   const constants = [2.72, 3.14, 9.81,37, 100]
+   const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+
+   const rectangle = {
+     width:20,
+     height:10,
+     area:200,
+     perimeter:60
+   }
+
+   ```
+   1. Assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
+   2. Assign the elements of countries array to fin, est, sw, den, nor
+   3. Destructure the rectangle object by its propertis or keys.
 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
@@ -1927,7 +2069,7 @@ localStorage.clear();
   - [Conditionals](#conditionals)
       - [If](#if)
       - [If Else](#if-else)
-      - [If Else if else](#if-else-if-else)
+      - [If else if else](#if-else-if-else)
       - [Switch](#switch)
       - [Ternary Operators](#ternary-operators)
       - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
@@ -1958,6 +2100,7 @@ localStorage.clear();
       - [Destructing Arrays](#destructing-arrays)
       - [Destructuring Object](#destructuring-object)
       - [Renaming during structuring](#renaming-during-structuring)
+    - [Spread or Rest Operator](#spread-or-rest-operator)
   - [Document Object Model](#document-object-model)
     - [Getting Element](#getting-element)
       - [Getting elements by tag name](#getting-elements-by-tag-name)
