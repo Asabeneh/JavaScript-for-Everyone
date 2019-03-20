@@ -1139,25 +1139,42 @@ const square = n => n * n; // -> 4
    rgbColorGenerator()
    rgb(125,244,255)
    ```
-1. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
-1. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
-1. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
-1. Call your function _sum_, it takes any number of arguments and it returns the sum.
-1. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
-1. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
-1. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
-   ```js
-   console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
-   // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
-   console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
-   // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
-   console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
-   // →"Not Found"
-   ```
-1. Write a function called *isPrime*, which checks if a number is prime number.
-1. Write a functions which checks if all items are unique in the array.
-1. Write a function which checks if all the itmes of the array are the same data type.
-1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+1. Write a function ***arrayOfHexaColors*** which return any number of hexadecimal colors in an array.
+2. Write a function ***arrayOfRgbColors*** which return any number of RGB colors in an array.
+3. Write a function ***convertHexaToRgb*** which converts hexa color to rgb and it returns an rgb color.
+4. Write a function ***convertRgbToHexa*** which converts rgb to hexa color  and it returns an hexa color.
+5. Write a function ***generateColors*** which can generate any number of hexa or rgb colors. 
+    ```js
+      generate('hexa', 3)
+      ['#a3e12f','#03ed55','#eb3d2b']
+      generate('hexa', 1)
+      '#b334ef'
+
+      generate('rgb', 3)
+      ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80']
+      generate('rgb', 1)
+      'rgb(33,79, 176)'
+
+    ```
+6. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
+7. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
+8. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
+9.  Call your function _sum_, it takes any number of arguments and it returns the sum.
+10. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+11. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+12. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+      ```js
+      console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
+      // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
+      // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
+      // →"Not Found"
+      ```
+13. Write a function called *isPrime*, which checks if a number is prime number.
+14. Write a functions which checks if all items are unique in the array.
+15. Write a function which checks if all the itmes of the array are the same data type.
+16. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
    ```js
    sevenRandomNumbers()[(1, 4, 5, 7, 9, 8, 0)];
    ```
@@ -1537,7 +1554,56 @@ console.log(age) // 5
 29. Find out which *letter* is used many *times* as intial for a country name from the conuntries array (eg. Finland, Fiji, France etc)
    
 ## Destructuring and Spread
-   
+Destructuring is a way to unpack arrays, and objects and assigning to a distinct variable.
+#### Destructing  Arrays
+```js
+  const numbers = [1, 2,3];
+  let [numOne, numTwo, numThree] = numbers;
+  console.log(numOne, numTwo, numThree) // 1,2,3
+  const names = ['Asabeneh', 'Brook', 'David', 'John']
+  let [firstPerson, secondPerson, ThirdPerson, fourth Person] = name;s
+  console.log(firstName, secondPerson,thirdPerson, fourthPerson) //Asabeneh, Brook, David, John
+  const scientificConstants = [2.72, 3.14, 9.81, 37, 100];
+  let [e, pi, gravity, bodyTemp, boilingTemp] = scientificConstants
+  console.log(e,pi,gravity, bodyTemp, boilingTemp) //2.72, 3.14, 9.81, 37, 100
+
+```
+If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that index
+```js
+  const numbers = [1, 2,3];
+  let [numOne, , , numThree] = numbers; //2 is omitted
+  console.log(numOne,, numThree) // 1,2,3
+  const names = ['Asabeneh', 'Brook', 'David', 'John']
+  let [, secondPerson, , fourth Person] = name; // first and third person is omitted
+  console.log(secondPerson, fourthPerson) //Brook, John
+
+```
+
+#### Destructuring Object
+When we destructure the name of the variable we use to destructure should be exactly the same us the key or property of the object. See example below.
+```js
+const rectangle = {
+  width: 20, 
+  height:10,
+  area: 200
+}
+let {width, height, area, perimeter} = rectangle;
+console.log(width, height, area, perimeter) //20, 10, 200, undefined
+
+```
+#### Renaming during structuring
+```js
+const rectangle = {
+  width: 20, 
+  height:10,
+  area: 200
+}
+let {width:w, heigh:h, area:a, perimeter:p} = rectangle;
+console.log(w, h, a, p) //20, 10, 200, undefined
+
+```
+
+   === not completed ==
 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
@@ -1738,6 +1804,11 @@ console.log(bmi)
   12. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
   13. Use the countries.js to visualize all the countries on the HTML document. You need one wrapper div and box for each countries. In the box display, the letter the country starts with, the name of the country and the number of characters for the country name.
    
+#### DOM: Mini Projects
+1. BMI calculator
+2. Hexadecimal or RGB color Generator
+3. World Countries List
+   
 ## Class
 
 ```js
@@ -1884,6 +1955,9 @@ localStorage.clear();
   - [Functional Programming](#functional-programming)
     - [Exercises:](#exercises-1)
   - [Destructuring and Spread](#destructuring-and-spread)
+      - [Destructing Arrays](#destructing-arrays)
+      - [Destructuring Object](#destructuring-object)
+      - [Renaming during structuring](#renaming-during-structuring)
   - [Document Object Model](#document-object-model)
     - [Getting Element](#getting-element)
       - [Getting elements by tag name](#getting-elements-by-tag-name)
@@ -1902,6 +1976,7 @@ localStorage.clear();
     - [Event Listeners](#event-listeners)
     - [Getting value from an input element](#getting-value-from-an-input-element)
       - [Exercises:Document Object Model](#exercisesdocument-object-model)
+      - [DOM: Mini Projects](#dom-mini-projects)
   - [Class](#class)
       - [Exercises:Classes](#exercisesclasses)
   - [Regular Expressions](#regular-expressions)
