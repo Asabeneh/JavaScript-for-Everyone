@@ -1542,6 +1542,60 @@ console.log(result) // 0
 const age = ages.findIndex((age) => age < 20);
 console.log(age) // 5
 ```
+*sort*: The sort methods arranges the array elements either ascending or decending order. By default, the ***sort()*** method sorts values as strings.This works well for string array items but not for numbers. If number values are sorted as strings and it give us wrong result. Sort method modify the original array.  It is recommended to copy the original document before you start sorting.
+#### Sorting string values
+```js
+const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot'];
+console.log(products.sort()) // ["Apple", "Carrot", "Coffee", "Honey", "Milk", "Sugar"]
+
+//Now the original products array  is also sorted 
+```
+#### Sorting Numeric  values
+As you can see in the example below, 100 came first after sorted in ascending order. Sort converts items to string , since '100' and other numbers compared, 1 which the beginning of the string '100' became the smallest.  To avoid this, we use a compare call back function inside the sort method, which return a negative, zero or positive.
+```js
+
+const numbers = [9.81, 3.14, 100, 37]
+// Using sort method to sort number items provde a wrong result. see below
+console.log(numbers.sort()) //[100, 3.14, 37, 9.81]
+numbers.sort(function(a, b) {
+return a - b;
+})
+
+
+console.log(numbers) // [3.14, 9.81, 37, 100]
+numbers.sort(function(a, b) {
+return b - a;
+});
+console.log(numbers) //[100, 37, 9.81, 3.14]
+
+```
+#### Sorting Object Arrays
+When ever we sort objects in an array. We use the object key to compare. Lets see the example below.
+
+```js
+objArr.sort(function(a, b) {
+  if (a.key < b.key) return -1;
+  if (a.key > b.key) return 1;
+  return 0;
+});
+// or 
+objArr.sort(function(a, b) {
+  if (a['key'] < b['key']) return -1;
+  if (a['key'] > b['key']) return 1;
+  return 0;
+});
+const users = [{name:"Asabeneh", age:150}, {name:"Brook", age:50}, {name:"Eyo", age:100},{name:"Elias", age:22}];
+users.sort((a, b) => {
+  if (a.age < b.age) return -1;
+  if (a.age > b.age) return 1;
+  return 0;
+});
+console.log(users); // sorted ascending
+//[{…}, {…}, {…}, {…}]
+
+
+```
+
 ### Exercises: 
 ```js
   const countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand'];
@@ -1577,6 +1631,9 @@ console.log(age) // 5
 27. Declare a ***getFirstTenCountries*** function and return an array of ten countries. Use different functional programming to work on the countries.js array
 28. Declare a ***getLastTenCountries*** function which which returns the last ten countries in the countries array.
 29. Find out which *letter* is used many *times* as intial for a country name from the conuntries array (eg. Finland, Fiji, France etc)
+30. Use the countries information, in the data folder. Sort countries by name, by capital, by population
+31. Sort out the ten most spoken langauges by location.
+32. Sort out the ten most populated countries.
    
 ## Destructuring and Spread
 Destructuring is a way to unpack arrays, and objects and assigning to a distinct variable.
@@ -2002,10 +2059,25 @@ console.log(result);
 
 ## localStorage
 
-Local storage is the parat of the web storage API which is used to store data on the browser with no expiration data. The data will be availabe on the browser even after the browser is closed. There are five methods to work on local stroage:
+Local storage is the para of the web storage API which is used to store data on the browser with no expiration data. The data will be availabe on the browser even after the browser is closed. There are five methods to work on local stroage:
 _setItem(), getItem(), removeItem(), clear(), key()_
 
+##### Setting item to the localStorage
+When we set data to be stored in a localStorage, it will be stored as a string.  If we are storing an array or an object, we should stringify it first to keep the format unless otherwise we lose the array structure or the object structure of the original data
 ```js
+localStorage.setItem('name', 'Asabeneh');
+console.log(localStorage) //Storage {name: "Asabeneh", length: 1}
+localStorage.setItem('age', 200);
+console.log(localStorage) //Storage {age: "200", name: "Asabeneh", length: 2}
+const skills = ['HTML', 'CSS', 'JS', 'React'];
+//Skills array has to be stringfied first to keep the format.
+const skillsJSON = JSON.stringify(skills,undefined, 4)
+localStorage.setItem('skills', skillsJSON);
+console.log(localStorage) //Storage {age: "200", name: "Asabeneh", skills: "HTML,CSS,JS,React", length: 3}
+```
+If we are storing an array, an object or object array, we should stringify the object first. See the example below.
+```js
+
 let skills = [
   { tech: "HTML", level: 10 },
   { tech: "CSS", level: 9 },
@@ -2018,8 +2090,22 @@ let skills = [
 
 let skillJSON = JSON.stringify(skills);
 localStorage.setItem("skills", skillJSON);
+```
+##### Getting item from localStorage
+```js
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+let skills = localStorage.getItem('skills');
+console.log(name, age, skills) // 'Asabeneh', '200', '["HTML","CSS","JS","React"]'
+
+
 let skillsObj = JSON.parse(localStorage.getItem("skills"), undefined, 4);
 console.log(skillsObj);
+
+```
+##### Clearing the localStorage
+The clear method, will clear eveything stored in the local storage
+```js
 localStorage.clear();
 ```
 
@@ -2041,103 +2127,108 @@ ___
 
 <!-- code_chunk_output -->
 
-- [JavaScript for Everyone](#javascript-for-everyone)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Setup](#setup)
-  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
-    - [Inline Script](#inline-script)
-    - [Internal script](#internal-script)
-    - [External script](#external-script)
-      - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
-  - [Variables](#variables)
-      - [Exercise - 1 : Variables](#exercise---1--variables)
-  - [Comments](#comments)
-      - [Exercise - 2 : Comments](#exercise---2--comments)
-  - [Data Types](#data-types)
-      - [Exercises - 3 : Data Types](#exercises---3--data-types)
-    - [Strings](#strings)
-      - [String Concatination](#string-concatination)
-      - [Exercise - 4 : String](#exercise---4--string)
-    - [Numbers](#numbers)
-      - [Math Object](#math-object)
-    - [Booleans](#booleans)
-      - [Exercise - 5 : Booleans](#exercise---5--booleans)
-    - [Undefined](#undefined)
-    - [Null](#null)
-      - [Exercise - 6 : Data types](#exercise---6--data-types)
-  - [Operators](#operators)
-    - [Arthimetic Operators](#arthimetic-operators)
-      - [Exercises : Arthimetic Operators:](#exercises--arthimetic-operators)
-    - [Logical Operators](#logical-operators)
-      - [Exercises: Logical Operators](#exercises-logical-operators)
-    - [Comparison Operators](#comparison-operators)
-      - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
-  - [Conditionals](#conditionals)
-      - [If](#if)
-      - [If Else](#if-else)
-      - [If else if else](#if-else-if-else)
-      - [Switch](#switch)
-      - [Ternary Operators](#ternary-operators)
-      - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
-  - [Loops](#loops)
-    - [For Loop](#for-loop)
-    - [While loop](#while-loop)
-    - [Do while loop](#do-while-loop)
-      - [Exercises:Loops](#exercisesloops)
-  - [Arrays](#arrays)
-      - [Exercise - 9 : Arrays](#exercise---9--arrays)
-  - [More on Arrays](#more-on-arrays)
-      - [Exercise -10 : Array Methods](#exercise--10--array-methods)
-  - [Functions](#functions)
-    - [Function Declaration](#function-declaration)
-    - [Function Expression](#function-expression)
-    - [Anonymous Function](#anonymous-function)
-    - [Arrow Function](#arrow-function)
-    - [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
-      - [Exercise - 10 : Functions](#exercise---10--functions)
-  - [Object](#object)
-    - [Object Methods:](#object-methods)
-    - [Date Object](#date-object)
-      - [Exercises:](#exercises)
-      - [Exercises:Objects](#exercisesobjects)
-  - [Functional Programming](#functional-programming)
-    - [Exercises:](#exercises-1)
-  - [Destructuring and Spread](#destructuring-and-spread)
-      - [Destructing Arrays](#destructing-arrays)
-      - [Destructuring Object](#destructuring-object)
-      - [Renaming during structuring](#renaming-during-structuring)
-    - [Spread or Rest Operator](#spread-or-rest-operator)
-  - [Document Object Model](#document-object-model)
-    - [Getting Element](#getting-element)
-      - [Getting elements by tag name](#getting-elements-by-tag-name)
-      - [Getting elements by class name](#getting-elements-by-class-name)
-      - [Getting an element by id](#getting-an-element-by-id)
-      - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
-    - [Adding attribute](#adding-attribute)
-      - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
-      - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
-      - [Adding class using classList](#adding-class-using-classlist)
-    - [Adding Text conent](#adding-text-conent)
-    - [Adding style](#adding-style)
-    - [Creating an Element](#creating-an-element)
-    - [Creating elements](#creating-elements)
-    - [Appending to a parent element](#appending-to-a-parent-element)
-    - [Event Listeners](#event-listeners)
-    - [Getting value from an input element](#getting-value-from-an-input-element)
-      - [Exercises:Document Object Model](#exercisesdocument-object-model)
-      - [DOM: Mini Projects](#dom-mini-projects)
-  - [Class](#class)
-      - [Exercises:Classes](#exercisesclasses)
-  - [Regular Expressions](#regular-expressions)
-    - [Creating a pattern](#creating-a-pattern)
-    - [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
-    - [RegExp Object Methods](#regexp-object-methods)
-      - [Exercises:Regular Expressions](#exercisesregular-expressions)
-  - [localStorage](#localstorage)
-  - [Exercises:Local Storage](#exerciseslocal-storage)
-  - [Cookies](#cookies)
-      - [Exercises:Cookies](#exercisescookies)
-    - [JavaScipt Tests](#javascipt-tests)
+* [JavaScript for Everyone](#javascript-for-everyone)
+	* [Table of Contents](#table-of-contents)
+	* [Introduction](#introduction)
+	* [Setup](#setup)
+	* [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
+		* [Inline Script](#inline-script)
+		* [Internal script](#internal-script)
+		* [External script](#external-script)
+			* [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
+	* [Variables](#variables)
+			* [Exercise - 1 : Variables](#exercise-1-variables)
+	* [Comments](#comments)
+			* [Exercise - 2 : Comments](#exercise-2-comments)
+	* [Data Types](#data-types)
+			* [Exercises - 3 : Data Types](#exercises-3-data-types)
+		* [Strings](#strings)
+			* [String Concatination](#string-concatination)
+			* [Exercise - 4 : String](#exercise-4-string)
+		* [Numbers](#numbers)
+			* [Math Object](#math-object)
+		* [Booleans](#booleans)
+			* [Exercise - 5 : Booleans](#exercise-5-booleans)
+		* [Undefined](#undefined)
+		* [Null](#null)
+			* [Exercise - 6 : Data types](#exercise-6-data-types)
+	* [Operators](#operators)
+		* [Arthimetic Operators](#arthimetic-operators)
+			* [Exercises : Arthimetic Operators:](#exercises-arthimetic-operators)
+		* [Logical Operators](#logical-operators)
+			* [Exercises: Logical Operators](#exercises-logical-operators)
+		* [Comparison Operators](#comparison-operators)
+			* [Exercise - 7 : Comparison Operators](#exercise-7-comparison-operators)
+	* [Conditionals](#conditionals)
+			* [If](#if)
+			* [If Else](#if-else)
+			* [If else if else](#if-else-if-else)
+			* [Switch](#switch)
+			* [Ternary Operators](#ternary-operators)
+			* [Exercise - 8 : Conditionals](#exercise-8-conditionals)
+	* [Loops](#loops)
+		* [For Loop](#for-loop)
+		* [While loop](#while-loop)
+		* [Do while loop](#do-while-loop)
+			* [Exercises:Loops](#exercisesloops)
+	* [Arrays](#arrays)
+			* [Exercise - 9 : Arrays](#exercise-9-arrays)
+	* [More on Arrays](#more-on-arrays)
+			* [Exercise -10 : Array Methods](#exercise-10-array-methods)
+	* [Functions](#functions)
+		* [Function Declaration](#function-declaration)
+		* [Function Expression](#function-expression)
+		* [Anonymous Function](#anonymous-function)
+		* [Arrow Function](#arrow-function)
+		* [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
+			* [Exercise - 10 : Functions](#exercise-10-functions)
+	* [Object](#object)
+		* [Object Methods:](#object-methods)
+		* [Date Object](#date-object)
+			* [Exercises:](#exercises)
+			* [Exercises:Objects](#exercisesobjects)
+	* [Functional Programming](#functional-programming)
+			* [Sorting string values](#sorting-string-values)
+			* [Sorting Numeric  values](#sorting-numeric-values)
+			* [Sorting Object Arrays](#sorting-object-arrays)
+		* [Exercises:](#exercises-1)
+	* [Destructuring and Spread](#destructuring-and-spread)
+			* [Destructing  Arrays](#destructing-arrays)
+			* [Destructuring Object](#destructuring-object)
+			* [Renaming during structuring](#renaming-during-structuring)
+		* [Spread or Rest Operator](#spread-or-rest-operator)
+	* [Document Object Model](#document-object-model)
+		* [Getting Element](#getting-element)
+			* [Getting elements by tag name](#getting-elements-by-tag-name)
+			* [Getting elements by class name](#getting-elements-by-class-name)
+			* [Getting an element by id](#getting-an-element-by-id)
+			* [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
+		* [Adding attribute](#adding-attribute)
+			* [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
+			* [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
+			* [Adding class using classList](#adding-class-using-classlist)
+		* [Adding Text conent](#adding-text-conent)
+		* [Adding style](#adding-style)
+		* [Creating an Element](#creating-an-element)
+		* [Creating elements](#creating-elements)
+		* [Appending to a parent element](#appending-to-a-parent-element)
+		* [Event Listeners](#event-listeners)
+		* [Getting value from an input element](#getting-value-from-an-input-element)
+			* [Exercises:Document Object Model](#exercisesdocument-object-model)
+			* [DOM: Mini Projects](#dom-mini-projects)
+	* [Class](#class)
+			* [Exercises:Classes](#exercisesclasses)
+	* [Regular Expressions](#regular-expressions)
+		* [Creating a pattern](#creating-a-pattern)
+		* [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
+		* [RegExp Object Methods](#regexp-object-methods)
+			* [Exercises:Regular Expressions](#exercisesregular-expressions)
+	* [localStorage](#localstorage)
+				* [Set Item](#set-item)
+				* [Getting item from local storage](#getting-item-from-local-storage)
+	* [Exercises:Local Storage](#exerciseslocal-storage)
+	* [Cookies](#cookies)
+			* [Exercises:Cookies](#exercisescookies)
+		* [JavaScipt Tests](#javascipt-testshttpsgithubcomasabenehjavascript-for-everyonewikijavascript-test-1)
 
 <!-- /code_chunk_output -->
