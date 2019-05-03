@@ -126,10 +126,10 @@ console.log(name, job, live);
 #### Exercise - 1 : Variables
 
 1. Declare four variables without assigning values
-1. Declare four variables with assigning values
-1. Declare variables to store your first name, last name, marital status, country and age in multiple lines
-1. Declare variables to store your first name, last name, marital status, country and age in a single line
-1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
+2. Declare four variables with assigning values
+3. Declare variables to store your first name, last name, marital status, country and age in multiple lines
+4. Declare variables to store your first name, last name, marital status, country and age in a single line
+5. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
    Output:
    ```sh
    I am 25 years old.
@@ -488,7 +488,7 @@ if (isRaining) {
 }
 ```
 
-#### If Else if else
+#### If else if else
 
 ```js
 // if else if else
@@ -867,10 +867,10 @@ Slice: To cut out a multiple items in range. It takes two paramters:starting and
 Splice: It takes three parameters:Starting position, number of times to be removed and number items to be added.
 
 ```js
-  const numbers = [1,2,3,4,5];
+  const numbers = [1, 2, 3, 4, 5];
   console.log(numbers.splice() // -> remove all items
   console.log(numbers.splice(0,1)) // remove the first item
-  console.log(numbers.splice(3,3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
+  console.log(numbers.splice(3, 3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
 
 ```
 
@@ -911,6 +911,29 @@ console.log(numbers); // -> [0,1,2,3,4,5]
 ---
 
 #### Exercise -10 : Array Methods
+```js
+const shoppingCart = ['Milk','Coffee','Tea', 'Honey'];
+const todoList = [
+{
+	task:'Learn JavaScript',
+	time:'4/3/2019 8:30',
+	completed:true
+	
+},
+{
+	task:'Help some in need',
+	time:'4/3/2019 4:00',
+	completed:false
+	
+},
+{
+	task:'Do some physical exercises',
+	time:'4/3/2019 6:00',
+	completed:false
+	
+}]
+
+```
 
 ## Functions
 
@@ -1139,28 +1162,47 @@ const square = n => n * n; // -> 4
    rgbColorGenerator()
    rgb(125,244,255)
    ```
-1. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
-1. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
-1. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
-1. Call your function _sum_, it takes any number of arguments and it returns the sum.
-1. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
-1. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
-1. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
-   ```js
-   console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
-   // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
-   console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
-   // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
-   console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
-   // →"Not Found"
-   ```
-1. Write a function called *isPrime*, which checks if a number is prime number.
-1. Write a functions which checks if all items are unique in the array.
-1. Write a function which checks if all the itmes of the array are the same data type.
-1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+1. Write a function ***arrayOfHexaColors*** which return any number of hexadecimal colors in an array.
+2. Write a function ***arrayOfRgbColors*** which return any number of RGB colors in an array.
+3. Write a function ***convertHexaToRgb*** which converts hexa color to rgb and it returns an rgb color.
+4. Write a function ***convertRgbToHexa*** which converts rgb to hexa color  and it returns an hexa color.
+5. Write a function ***generateColors*** which can generate any number of hexa or rgb colors. 
+    ```js
+      generateColors('hexa', 3)
+      ['#a3e12f','#03ed55','#eb3d2b']
+      generateColors('hexa', 1)
+      '#b334ef'
+
+      generateColors('rgb', 3)
+      ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80']
+      generateColors('rgb', 1)
+      'rgb(33,79, 176)'
+
+    ```
+6. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
+7. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
+8. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
+9.  Call your function _sum_, it takes any number of arguments and it returns the sum.
+10. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+11. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+12. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+      ```js
+      console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
+      // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
+      // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
+      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
+      // →"Not Found"
+      ```
+13. Write a function called *isPrime*, which checks if a number is prime number.
+14. Write a functions which checks if all items are unique in the array.
+15. Write a function which checks if all the itmes of the array are the same data type.
+1. JavaScript variable name does not support special characters or symbols execpt $ or _. Write a function ***isValidVariable** which check if a variable is valid or invlaid variable.
+16. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
    ```js
    sevenRandomNumbers()[(1, 4, 5, 7, 9, 8, 0)];
    ```
+
 
 ## Object
 
@@ -1443,8 +1485,8 @@ const countriesToUpperCase = countries.map(country => country.toUpperCase());
 //Filter countries containing land
 const countriesContainingLand = countries.filter(country => country.includes('land'));
 console.log(countriesContainingLand )  //["Finland", "Ireland"]
-const countriesEndByia = countries.filter(country => country.includes('land'));
-console.log(countriesEndByia) //["Finland", "Ireland"]
+const countriesEndByia = countries.filter(country => country.includes('ia'));
+console.log(countriesEndByia) //["Albania", "Bolivia","Ethiopia"]
 const countriesHaveFiveLetters = countries.filter(country => country.length === 5);
 console.log(countriesHaveFiveLetters ) //  ["Japan", "Kenya"]
 const scores = [{name:'Asabeneh', score:95},{name:'Mathias', score:80},{name:'Elias', score:50},{name:'Martha', score:85},{name:'John', score:100}];
@@ -1500,6 +1542,60 @@ console.log(result) // 0
 const age = ages.findIndex((age) => age < 20);
 console.log(age) // 5
 ```
+*sort*: The sort methods arranges the array elements either ascending or decending order. By default, the ***sort()*** method sorts values as strings.This works well for string array items but not for numbers. If number values are sorted as strings and it give us wrong result. Sort method modify the original array.  It is recommended to copy the original document before you start sorting.
+#### Sorting string values
+```js
+const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot'];
+console.log(products.sort()) // ["Apple", "Carrot", "Coffee", "Honey", "Milk", "Sugar"]
+
+//Now the original products array  is also sorted 
+```
+#### Sorting Numeric  values
+As you can see in the example below, 100 came first after sorted in ascending order. Sort converts items to string , since '100' and other numbers compared, 1 which the beginning of the string '100' became the smallest.  To avoid this, we use a compare call back function inside the sort method, which return a negative, zero or positive.
+```js
+
+const numbers = [9.81, 3.14, 100, 37]
+// Using sort method to sort number items provde a wrong result. see below
+console.log(numbers.sort()) //[100, 3.14, 37, 9.81]
+numbers.sort(function(a, b) {
+return a - b;
+})
+
+
+console.log(numbers) // [3.14, 9.81, 37, 100]
+numbers.sort(function(a, b) {
+return b - a;
+});
+console.log(numbers) //[100, 37, 9.81, 3.14]
+
+```
+#### Sorting Object Arrays
+When ever we sort objects in an array. We use the object key to compare. Lets see the example below.
+
+```js
+objArr.sort(function(a, b) {
+  if (a.key < b.key) return -1;
+  if (a.key > b.key) return 1;
+  return 0;
+});
+// or 
+objArr.sort(function(a, b) {
+  if (a['key'] < b['key']) return -1;
+  if (a['key'] > b['key']) return 1;
+  return 0;
+});
+const users = [{name:"Asabeneh", age:150}, {name:"Brook", age:50}, {name:"Eyo", age:100},{name:"Elias", age:22}];
+users.sort((a, b) => {
+  if (a.age < b.age) return -1;
+  if (a.age > b.age) return 1;
+  return 0;
+});
+console.log(users); // sorted ascending
+//[{…}, {…}, {…}, {…}]
+
+
+```
+
 ### Exercises: 
 ```js
   const countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand'];
@@ -1535,9 +1631,178 @@ console.log(age) // 5
 27. Declare a ***getFirstTenCountries*** function and return an array of ten countries. Use different functional programming to work on the countries.js array
 28. Declare a ***getLastTenCountries*** function which which returns the last ten countries in the countries array.
 29. Find out which *letter* is used many *times* as intial for a country name from the conuntries array (eg. Finland, Fiji, France etc)
+30. Use the countries information, in the data folder. Sort countries by name, by capital, by population
+31. Sort out the ten most spoken langauges by location.
+32. Sort out the ten most populated countries.
    
 ## Destructuring and Spread
-   
+Destructuring is a way to unpack arrays, and objects and assigning to a distinct variable.
+#### Destructing  Arrays
+```js
+  const numbers = [1, 2,3];
+  let [numOne, numTwo, numThree] = numbers;
+  console.log(numOne, numTwo, numThree) // 1,2,3
+  const names = ['Asabeneh', 'Brook', 'David', 'John']
+  let [firstPerson, secondPerson, ThirdPerson, fourth Person] = names;
+  console.log(firstName, secondPerson,thirdPerson, fourthPerson) //Asabeneh, Brook, David, John
+  const scientificConstants = [2.72, 3.14, 9.81, 37, 100];
+  let [e, pi, gravity, bodyTemp, boilingTemp] = scientificConstants
+  console.log(e,pi,gravity, bodyTemp, boilingTemp) //2.72, 3.14, 9.81, 37, 100
+
+```
+If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that index
+```js
+  const numbers = [1, 2,3];
+  let [numOne, , , numThree] = numbers; //2 is omitted
+  console.log(numOne,, numThree) // 1,2,3
+  const names = ['Asabeneh', 'Brook', 'David', 'John']
+  let [, secondPerson, , fourth Person] = name; // first and third person is omitted
+  console.log(secondPerson, fourthPerson) //Brook, John
+
+```
+We can use default value in case the value of array for that index is undefined:
+```js
+const names = [undefined, 'Brook', 'David'];
+let [firstPerson = 'Asabeneh', secondPerson, thirdPerson, fourthPerson = 'John' ] = names;
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson) // Asabeneh Brook David John
+```
+
+#### Destructuring Object
+When we destructure the name of the variable we use to destructure should be exactly the same us the key or property of the object. See example below.
+```js
+const rectangle = {
+  width: 20, 
+  height:10,
+  area: 200
+}
+let {width, height, area, perimeter} = rectangle;
+console.log(width, height, area, perimeter) //20 10 200 undefined
+
+```
+#### Renaming during structuring
+```js
+const rectangle = {
+  width: 20, 
+  height:10,
+  area: 200
+}
+let {width:w, heigh:h, area:a, perimeter:p} = rectangle;
+console.log(w, h, a, p) //20 10 200 undefined
+
+```
+If the key is not found in the object the variable will be assinged to undefined. In case, the key is not in the object we can give a default value during declaration. See the example.
+```js
+const rectangle = {
+  width: 20, 
+  height:10,
+  area: 200
+}
+let {width, heigh, area, perimeter = 60} = rectangle;
+console.log(width, height, area, perimeter)  //20 10 200 60
+//Lets modify the object:width to 30 and perimeter to 80
+const rectangle = {
+  width: 30, 
+  height:10,
+  area: 200,
+  perimeter:80
+}
+let {width, heigh, area, perimeter = 60} = rectangle;
+console.log(width, height, area, perimeter) //20 10 200 80
+```
+
+Destructuring keys as a function paramters. Lets create a function which take a rectangle object and it return a perimeter of a rectangle.
+```js
+    // Without destructuring
+    const rect = {
+      width:20,
+      height:10
+    }
+    const calculatePerimeter = (rectangle) => {
+      return 2 * (rectangle.width + rectangle.height)
+    }
+    console.log(calculatePerimeter(rect)) // 60
+    //with destructuring
+
+     const calculatePerimeter = ({width, height}) => {
+      return 2 * (width + height)
+    }
+
+    console.log(calculatePerimeter(rect)) // 60
+
+    //Another Example
+const person = {
+  firstName: "Asabeneh",
+  lastName: "Yetayeh",
+  age: 200,
+  country: "Finland",
+  job: "Instructor and Developer",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Node",
+    "MongoDB",
+    "Python",
+    "D3.js"
+  ],
+  languages: ["Amharic", "English", "Suomi(Finnish)"]
+};
+// Lets create a function which give information about the person object without destructuring
+
+const getPersonInfo = obj => {
+  const skills = obj.skills;
+  const formattedSkills = skills.slice(0, -1).join(", ");
+  const languages = obj.languages;
+  const formattedLanguages = languages.slice(0, -1).join(", ");
+
+  return `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is  ${
+    obj.age
+  } years old. He is an ${obj.job}. He teaches ${formattedSkills} and ${
+    skills[skills.length - 1]
+  }. He speakes ${formattedLanguages} and a little bit of ${languages[2]}.`;
+};
+console.log(getPersonInfo(person));
+// Lets create a function which give information about the person object with destructuring
+
+const getPersonInfo = ({
+  firstName,
+  lastName,
+  age,
+  country,
+  job,
+  skills,
+  languages
+}) => {
+  const formattedSkills = skills.slice(0, -1).join(", ");
+  const formattedLanguages = languages.slice(0, -1).join(", ");
+
+  return `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He teaches ${formattedSkills} and ${skills[skills.length - 1]}. He speakes ${formattedLanguages} and a little bit of ${languages[2]}.`;
+};
+console.log(getPersonInfo(person))
+/*
+Asabeneh Yetayeh lives in Finland. He is  200 years old. He is an Instructor and Developer. He teaches HTML, CSS, JavaScript, React, Redux, Node, MongoDB, Python and D3.js. He speakes Amharic, English and a little bit of Suomi(Finnish)
+*/
+```
+### Spread or Rest Operator
+
+  #### Exercise: Destructuring
+   ```js
+   const constants = [2.72, 3.14, 9.81,37, 100]
+   const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+
+   const rectangle = {
+     width:20,
+     height:10,
+     area:200,
+     perimeter:60
+   }
+
+   ```
+   1. Assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
+   2. Assign the elements of countries array to fin, est, sw, den, nor
+   3. Destructure the rectangle object by its propertis or keys.
 
 ## Document Object Model
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
@@ -1738,6 +2003,11 @@ console.log(bmi)
   12. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
   13. Use the countries.js to visualize all the countries on the HTML document. You need one wrapper div and box for each countries. In the box display, the letter the country starts with, the name of the country and the number of characters for the country name.
    
+#### DOM: Mini Projects
+1. BMI calculator
+2. Hexadecimal or RGB color Generator
+3. World Countries List
+   
 ## Class
 
 ```js
@@ -1789,10 +2059,25 @@ console.log(result);
 
 ## localStorage
 
-Local storage is the parat of the web storage API which is used to store data on the browser with no expiration data. The data will be availabe on the browser even after the browser is closed. There are five methods to work on local stroage:
+Local storage is the para of the web storage API which is used to store data on the browser with no expiration data. The data will be availabe on the browser even after the browser is closed. There are five methods to work on local stroage:
 _setItem(), getItem(), removeItem(), clear(), key()_
 
+##### Setting item to the localStorage
+When we set data to be stored in a localStorage, it will be stored as a string.  If we are storing an array or an object, we should stringify it first to keep the format unless otherwise we lose the array structure or the object structure of the original data
 ```js
+localStorage.setItem('name', 'Asabeneh');
+console.log(localStorage) //Storage {name: "Asabeneh", length: 1}
+localStorage.setItem('age', 200);
+console.log(localStorage) //Storage {age: "200", name: "Asabeneh", length: 2}
+const skills = ['HTML', 'CSS', 'JS', 'React'];
+//Skills array has to be stringfied first to keep the format.
+const skillsJSON = JSON.stringify(skills,undefined, 4)
+localStorage.setItem('skills', skillsJSON);
+console.log(localStorage) //Storage {age: "200", name: "Asabeneh", skills: "HTML,CSS,JS,React", length: 3}
+```
+If we are storing an array, an object or object array, we should stringify the object first. See the example below.
+```js
+
 let skills = [
   { tech: "HTML", level: 10 },
   { tech: "CSS", level: 9 },
@@ -1805,8 +2090,22 @@ let skills = [
 
 let skillJSON = JSON.stringify(skills);
 localStorage.setItem("skills", skillJSON);
+```
+##### Getting item from localStorage
+```js
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+let skills = localStorage.getItem('skills');
+console.log(name, age, skills) // 'Asabeneh', '200', '["HTML","CSS","JS","React"]'
+
+
 let skillsObj = JSON.parse(localStorage.getItem("skills"), undefined, 4);
 console.log(skillsObj);
+
+```
+##### Clearing the localStorage
+The clear method, will clear eveything stored in the local storage
+```js
 localStorage.clear();
 ```
 
@@ -1816,102 +2115,120 @@ localStorage.clear();
 
 #### Exercises:Cookies
 
+### [JavaScipt Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
+- [JavaScript Test 1](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
+- [JavaScript Test 2](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-2)
+- [JavaScript Test 3](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-3)
+
+___
+
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [JavaScript for Everyone](#javascript-for-everyone)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Setup](#setup)
-  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
-    - [Inline Script](#inline-script)
-    - [Internal script](#internal-script)
-    - [External script](#external-script)
-      - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
-  - [Variables](#variables)
-      - [Exercise - 1 : Variables](#exercise---1--variables)
-  - [Comments](#comments)
-      - [Exercise - 2 : Comments](#exercise---2--comments)
-  - [Data Types](#data-types)
-      - [Exercises - 3 : Data Types](#exercises---3--data-types)
-    - [Strings](#strings)
-      - [String Concatination](#string-concatination)
-      - [Exercise - 4 : String](#exercise---4--string)
-    - [Numbers](#numbers)
-      - [Math Object](#math-object)
-    - [Booleans](#booleans)
-      - [Exercise - 5 : Booleans](#exercise---5--booleans)
-    - [Undefined](#undefined)
-    - [Null](#null)
-      - [Exercise - 6 : Data types](#exercise---6--data-types)
-  - [Operators](#operators)
-    - [Arthimetic Operators](#arthimetic-operators)
-      - [Exercises : Arthimetic Operators:](#exercises--arthimetic-operators)
-    - [Logical Operators](#logical-operators)
-      - [Exercises: Logical Operators](#exercises-logical-operators)
-    - [Comparison Operators](#comparison-operators)
-      - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
-  - [Conditionals](#conditionals)
-      - [If](#if)
-      - [If Else](#if-else)
-      - [If Else if else](#if-else-if-else)
-      - [Switch](#switch)
-      - [Ternary Operators](#ternary-operators)
-      - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
-  - [Loops](#loops)
-    - [For Loop](#for-loop)
-    - [While loop](#while-loop)
-    - [Do while loop](#do-while-loop)
-      - [Exercises:Loops](#exercisesloops)
-  - [Arrays](#arrays)
-      - [Exercise - 9 : Arrays](#exercise---9--arrays)
-  - [More on Arrays](#more-on-arrays)
-      - [Exercise -10 : Array Methods](#exercise--10--array-methods)
-  - [Functions](#functions)
-    - [Function Declaration](#function-declaration)
-    - [Function Expression](#function-expression)
-    - [Anonymous Function](#anonymous-function)
-    - [Arrow Function](#arrow-function)
-    - [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
-      - [Exercise - 10 : Functions](#exercise---10--functions)
-  - [Object](#object)
-    - [Object Methods:](#object-methods)
-    - [Date Object](#date-object)
-      - [Exercises:](#exercises)
-      - [Exercises:Objects](#exercisesobjects)
-  - [Functional Programming](#functional-programming)
-    - [Exercises:](#exercises-1)
-  - [Destructuring and Spread](#destructuring-and-spread)
-  - [Document Object Model](#document-object-model)
-    - [Getting Element](#getting-element)
-      - [Getting elements by tag name](#getting-elements-by-tag-name)
-      - [Getting elements by class name](#getting-elements-by-class-name)
-      - [Getting an element by id](#getting-an-element-by-id)
-      - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
-    - [Adding attribute](#adding-attribute)
-      - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
-      - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
-      - [Adding class using classList](#adding-class-using-classlist)
-    - [Adding Text conent](#adding-text-conent)
-    - [Adding style](#adding-style)
-    - [Creating an Element](#creating-an-element)
-    - [Creating elements](#creating-elements)
-    - [Appending to a parent element](#appending-to-a-parent-element)
-    - [Event Listeners](#event-listeners)
-    - [Getting value from an input element](#getting-value-from-an-input-element)
-      - [Exercises:Document Object Model](#exercisesdocument-object-model)
-  - [Class](#class)
-      - [Exercises:Classes](#exercisesclasses)
-  - [Regular Expressions](#regular-expressions)
-    - [Creating a pattern](#creating-a-pattern)
-    - [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
-    - [RegExp Object Methods](#regexp-object-methods)
-      - [Exercises:Regular Expressions](#exercisesregular-expressions)
-  - [localStorage](#localstorage)
-  - [Exercises:Local Storage](#exerciseslocal-storage)
-  - [Cookies](#cookies)
-      - [Exercises:Cookies](#exercisescookies)
+* [JavaScript for Everyone](#javascript-for-everyone)
+	* [Table of Contents](#table-of-contents)
+	* [Introduction](#introduction)
+	* [Setup](#setup)
+	* [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
+		* [Inline Script](#inline-script)
+		* [Internal script](#internal-script)
+		* [External script](#external-script)
+			* [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
+	* [Variables](#variables)
+			* [Exercise - 1 : Variables](#exercise-1-variables)
+	* [Comments](#comments)
+			* [Exercise - 2 : Comments](#exercise-2-comments)
+	* [Data Types](#data-types)
+			* [Exercises - 3 : Data Types](#exercises-3-data-types)
+		* [Strings](#strings)
+			* [String Concatination](#string-concatination)
+			* [Exercise - 4 : String](#exercise-4-string)
+		* [Numbers](#numbers)
+			* [Math Object](#math-object)
+		* [Booleans](#booleans)
+			* [Exercise - 5 : Booleans](#exercise-5-booleans)
+		* [Undefined](#undefined)
+		* [Null](#null)
+			* [Exercise - 6 : Data types](#exercise-6-data-types)
+	* [Operators](#operators)
+		* [Arthimetic Operators](#arthimetic-operators)
+			* [Exercises : Arthimetic Operators:](#exercises-arthimetic-operators)
+		* [Logical Operators](#logical-operators)
+			* [Exercises: Logical Operators](#exercises-logical-operators)
+		* [Comparison Operators](#comparison-operators)
+			* [Exercise - 7 : Comparison Operators](#exercise-7-comparison-operators)
+	* [Conditionals](#conditionals)
+			* [If](#if)
+			* [If Else](#if-else)
+			* [If else if else](#if-else-if-else)
+			* [Switch](#switch)
+			* [Ternary Operators](#ternary-operators)
+			* [Exercise - 8 : Conditionals](#exercise-8-conditionals)
+	* [Loops](#loops)
+		* [For Loop](#for-loop)
+		* [While loop](#while-loop)
+		* [Do while loop](#do-while-loop)
+			* [Exercises:Loops](#exercisesloops)
+	* [Arrays](#arrays)
+			* [Exercise - 9 : Arrays](#exercise-9-arrays)
+	* [More on Arrays](#more-on-arrays)
+			* [Exercise -10 : Array Methods](#exercise-10-array-methods)
+	* [Functions](#functions)
+		* [Function Declaration](#function-declaration)
+		* [Function Expression](#function-expression)
+		* [Anonymous Function](#anonymous-function)
+		* [Arrow Function](#arrow-function)
+		* [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
+			* [Exercise - 10 : Functions](#exercise-10-functions)
+	* [Object](#object)
+		* [Object Methods:](#object-methods)
+		* [Date Object](#date-object)
+			* [Exercises:](#exercises)
+			* [Exercises:Objects](#exercisesobjects)
+	* [Functional Programming](#functional-programming)
+			* [Sorting string values](#sorting-string-values)
+			* [Sorting Numeric  values](#sorting-numeric-values)
+			* [Sorting Object Arrays](#sorting-object-arrays)
+		* [Exercises:](#exercises-1)
+	* [Destructuring and Spread](#destructuring-and-spread)
+			* [Destructing  Arrays](#destructing-arrays)
+			* [Destructuring Object](#destructuring-object)
+			* [Renaming during structuring](#renaming-during-structuring)
+		* [Spread or Rest Operator](#spread-or-rest-operator)
+	* [Document Object Model](#document-object-model)
+		* [Getting Element](#getting-element)
+			* [Getting elements by tag name](#getting-elements-by-tag-name)
+			* [Getting elements by class name](#getting-elements-by-class-name)
+			* [Getting an element by id](#getting-an-element-by-id)
+			* [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
+		* [Adding attribute](#adding-attribute)
+			* [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
+			* [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
+			* [Adding class using classList](#adding-class-using-classlist)
+		* [Adding Text conent](#adding-text-conent)
+		* [Adding style](#adding-style)
+		* [Creating an Element](#creating-an-element)
+		* [Creating elements](#creating-elements)
+		* [Appending to a parent element](#appending-to-a-parent-element)
+		* [Event Listeners](#event-listeners)
+		* [Getting value from an input element](#getting-value-from-an-input-element)
+			* [Exercises:Document Object Model](#exercisesdocument-object-model)
+			* [DOM: Mini Projects](#dom-mini-projects)
+	* [Class](#class)
+			* [Exercises:Classes](#exercisesclasses)
+	* [Regular Expressions](#regular-expressions)
+		* [Creating a pattern](#creating-a-pattern)
+		* [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
+		* [RegExp Object Methods](#regexp-object-methods)
+			* [Exercises:Regular Expressions](#exercisesregular-expressions)
+	* [localStorage](#localstorage)
+				* [Set Item](#set-item)
+				* [Getting item from local storage](#getting-item-from-local-storage)
+	* [Exercises:Local Storage](#exerciseslocal-storage)
+	* [Cookies](#cookies)
+			* [Exercises:Cookies](#exercisescookies)
+		* [JavaScipt Tests](#javascipt-testshttpsgithubcomasabenehjavascript-for-everyonewikijavascript-test-1)
 
 <!-- /code_chunk_output -->
