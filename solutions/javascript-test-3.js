@@ -314,7 +314,7 @@ console.log(checkUniqueness(arrOne));
 
 const arrTwo = [1, 4, 6, 2, 3];
 console.log(checkUniqueness(arrTwo));
-/* ====================== QUESTION 10 ==========================================================
+/* ====================== QUESTION 11 ==========================================================
    Write a function named shuffle, it takes an array parameter and it returns a shuffled array.
   ============================================================================================= */
 const shuffle = arr => {
@@ -332,7 +332,7 @@ const shuffle = arr => {
 };
 console.log(shuffle([1, 2, 3, 4, 5]));
 
-/* =============================== QUESTION 9 =============================================
+/* =============================== Bonus =============================================
     Write a function which filter users who has scoresGreaterThan85.
     Write a function which addUser to the user array only if the user does not exist. 
     Write a function which addUserSkill which can add skill to a user only if the user exist.
@@ -423,7 +423,7 @@ const addUserSkill = (arr, name, skill) => {
 
   return arr;
 };
-console.log(addUserSkill(users, "Brook", "React"));
+console.log(addUserSkill(users, "Brook", "Node"));
 
 const editUser = (arr, name, newUser) => {
   for (const user of arr) {
