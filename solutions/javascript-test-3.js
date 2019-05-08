@@ -3,19 +3,19 @@
   The function countWords takes a paragraph and word as parameters.
   ============================================================================================= */
 const paragraph =
-  "I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.";
+  'I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.';
 //Method one
 const countWords1 = (para, wrd) => {
-  const pattern = new RegExp(wrd, "gi"); //creating regex object using RegExp constructor
+  const pattern = new RegExp(wrd, 'gi'); //creating regex object using RegExp constructor
   const matches = para.match(pattern) || []; // if the para.match returns null, matches result will be en empty array
   return matches.length; // geting the length of the array
 };
-console.log(countWords1(paragraph, "love"));
+console.log(countWords1(paragraph, 'love'));
 
 //Method
 const countWords2 = (para, wrd) => {
   let count = 0;
-  const words = para.split(" "); // spliting the paragraph into array of words
+  const words = para.split(' '); // spliting the paragraph into array of words
   //iterating through words array and checking if the target word is in the array
   for (const word of words) {
     //includes or startsWith could give the same result
@@ -26,12 +26,12 @@ const countWords2 = (para, wrd) => {
   }
   return count;
 };
-console.log(countWords2(paragraph, "love"));
+console.log(countWords2(paragraph, 'love'));
 
 /* ======================================== QUESTION 2 ======================================================
     Write a function which takes an array as a parameter and returns an array of the data types of each item:
    ========================================================================================================== */
-const arr = ["Asabeneh", 100, true, null, undefined, { job: "teaching" }];
+const arr = ['Asabeneh', 100, true, null, undefined, { job: 'teaching' }];
 const checkDataTypes = arr => {
   const dataTypes = []; // creating an empty array
   let type; // will be used in the loop to store the data type of each element in the array
@@ -79,7 +79,7 @@ console.log(averageAge(ages));
 /* ======================== QUESTION 5 ===========================
   Write a function which remove an item or items from the middle of the array and replace with two items
   ================================================================ */
-const products = ["Milk", "Coffee", "Tea", "Honey", "Meat", "Cabage"];
+const products = ['Milk', 'Coffee', 'Tea', 'Honey', 'Meat', 'Cabage'];
 const removeMiddleItem = (arr, ...items) => {
   let middleIndex; // to store the middle index of the array,
   if (arr.length % 2 === 0) {
@@ -96,7 +96,7 @@ const removeMiddleItem = (arr, ...items) => {
 
   return arr;
 };
-console.log(removeMiddleItem(products, "potato", "banana"));
+console.log(removeMiddleItem(products, 'potato', 'banana'));
 
 /* ====================== QUESTION 6 ==============================================
    Write a function which can generate a random Finnish car code(Car plate number).
@@ -107,10 +107,10 @@ console.log(removeMiddleItem(products, "potato", "banana"));
    ================================================================================ */
 
 const genCarPlateNum = () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const numbers = "0123456789";
-  let lettersPart = ""; // variable to store, the letters part
-  let numbersPart = ""; // variable to store, the letters part
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const numbers = '0123456789';
+  let lettersPart = ''; // variable to store, the letters part
+  let numbersPart = ''; // variable to store, the letters part
   let indexOne; // random index to extract one of the letter at a time from letters array
   let indexTwo; // random index to extract one of the number at a time from numbers array
   for (let i = 0; i < 3; i++) {
@@ -135,18 +135,18 @@ console.log(genCarPlateNum());
     removeProduct(3);
     ["Coffee", "Tea", "Sugar"]
  ================================================================================================= */
-const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
 const addProduct = (products, product) => {
   products.push(product);
   return products;
 };
-addProduct(shoppingCart, "Meat");
+addProduct(shoppingCart, 'Meat');
 console.log(shoppingCart);
 const editProduct = (products, index, product) => {
   products[index] = product;
   return products;
 };
-editProduct(shoppingCart, 3, "Sugar");
+editProduct(shoppingCart, 3, 'Sugar');
 console.log(shoppingCart);
 const removeProduct = index => {
   shoppingCart.splice(index, 1);
@@ -165,25 +165,25 @@ console.log(shoppingCart);
     190395 - 225J
   ============================================================================= */
 const genSocialSecurityNum = () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const numbers = "0123456789";
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const numbers = '0123456789';
   let index = Math.floor(Math.random() * letters.length);
   const letter = letters[index]; // getting a letter from the letters array
   let date = Math.floor(Math.random() * 31) + 1; // date from 1 to 31
   let month = Math.floor(Math.random() * 12) + 1; // month from 1 to 12
 
   //if the date or month is less than 10
-  if (date < 10) date = "0" + date;
-  if (month < 10) month = "0" + month;
+  if (date < 10) date = '0' + date;
+  if (month < 10) month = '0' + month;
 
   let year = Math.floor(Math.random() * 2019);
   if (year > 100) {
     year = year.toString().substr(-2);
   } else if (year < 10) {
-    year = "0" + year;
+    year = '0' + year;
   }
 
-  let suffix = "";
+  let suffix = '';
   for (let i = 0; i < 3; i++) {
     let randomIndex = Math.floor(Math.random() * numbers.length);
     suffix += numbers[randomIndex];
@@ -218,18 +218,18 @@ console.log(genSocialSecurityNum());
 ========================================================================================================= */
 const todoList = [
   {
-    task: "Prepare JS Test",
-    time: "4/3/2019 8:30",
+    task: 'Prepare JS Test',
+    time: '4/3/2019 8:30',
     completed: true
   },
   {
-    task: "Give JS Test",
-    time: "4/3/2019 10:00",
+    task: 'Give JS Test',
+    time: '4/3/2019 10:00',
     completed: false
   },
   {
-    task: "Assess Test Result",
-    time: "4/3/2019 1:00",
+    task: 'Assess Test Result',
+    time: '4/3/2019 1:00',
     completed: false
   }
 ];
@@ -243,7 +243,7 @@ const displayDateTime = () => {
   const hours = now.getHours();
   let minutes = now.getMinutes();
   if (minutes < 10) {
-    minutes = "0" + minutes;
+    minutes = '0' + minutes;
   }
   return `${date}/${month}/${year} ${hours}:${minutes}`;
 };
@@ -339,45 +339,45 @@ console.log(shuffle([1, 2, 3, 4, 5]));
    ========================================================================================== */
 const users = [
   {
-    name: "Brook",
+    name: 'Brook',
     scores: 75,
-    skills: ["HTM", "CSS", "JS"],
+    skills: ['HTM', 'CSS', 'JS'],
     age: 16
   },
   {
-    name: "Alex",
+    name: 'Alex',
     scores: 80,
-    skills: ["HTM", "CSS", "JS"],
+    skills: ['HTM', 'CSS', 'JS'],
     age: 18
   },
   {
-    name: "David",
+    name: 'David',
     scores: 75,
-    skills: ["HTM", "CSS"],
+    skills: ['HTM', 'CSS'],
     age: 22
   },
   {
-    name: "John",
+    name: 'John',
     scores: 85,
-    skills: ["HTM"],
+    skills: ['HTM'],
     age: 25
   },
   {
-    name: "Sara",
+    name: 'Sara',
     scores: 95,
-    skills: ["HTM", "CSS", "JS"],
+    skills: ['HTM', 'CSS', 'JS'],
     age: 26
   },
   {
-    name: "Martha",
+    name: 'Martha',
     scores: 80,
-    skills: ["HTM", "CSS", "JS"],
+    skills: ['HTM', 'CSS', 'JS'],
     age: 18
   },
   {
-    name: "Thomas",
+    name: 'Thomas',
     scores: 90,
-    skills: ["HTM", "CSS", "JS"],
+    skills: ['HTM', 'CSS', 'JS'],
     age: 20
   }
 ];
@@ -393,49 +393,49 @@ const scoresGreaterThan85 = arr => {
 };
 
 console.log(scoresGreaterThan85(users));
-const user = {
-  name: "Asabeneh",
+const newUser = {
+  name: 'Asabeneh',
   scores: 800,
-  skills: ["HTML", "CSS", "JS"],
+  skills: ['HTML', 'CSS', 'JS'],
   age: 250
 };
-const addUser = (arr, user) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i]["name"] === user.name) {
-      return " A user does exist";
+const addUser = (arr, newUser) => {
+  for (const user of arr) {
+    if (user['name'] === newUser.name) {
+      return ' A user does exist';
     }
   }
-  arr.push(user);
+  arr.push(newUser);
   return arr;
 };
-console.log(addUser(users, user));
+console.log(addUser(users, newUser));
 
 const addUserSkill = (arr, name, skill) => {
   let found = false;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i]["name"] === name) {
-      arr[i].skills.push(skill);
+  for (const user of arr) {
+    if (user['name'] === name) {
+      user.skills.push(skill);
       found = true;
       break;
-    } 
-  }
-  if(!found) {
-      return "A user does not exist";
     }
+  }
+  if (!found) {
+    return 'A user does not exist';
+  }
 
   return arr;
 };
-console.log(addUserSkill(users, "Brook", "Node"));
+console.log(addUserSkill(users, 'Brook', 'Node'));
 
 const editUser = (arr, name, newUser) => {
   for (const user of arr) {
-    if (user["name"] === name) {
+    if (user['name'] === name) {
       user.name = newUser.name;
       user.scores = newUser.scores;
       user.skills = newUser.skills;
       user.age = newUser.age;
     } else {
-      return "A user does not exist";
+      return 'A user does not exist';
     }
   }
 
