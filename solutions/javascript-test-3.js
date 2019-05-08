@@ -1,7 +1,6 @@
 /* =============================== QUESTION 1 ================================================
-  Write a function which count the number of occurrence of words in a paragraph or a sentence.
-  The function countWords takes a paragraph and two words as parameters. 
-  It compare which word is most frequently occurred in the paragraph.
+  Write a function which count the number of occurrence of a word in a paragraph or a sentence.
+  The function countWords takes a paragraph and word as parameters.
   ============================================================================================= */
 const paragraph =
   "I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.";
@@ -412,14 +411,17 @@ const addUser = (arr, user) => {
 console.log(addUser(users, user));
 
 const addUserSkill = (arr, name, skill) => {
+  let found = false;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i]["name"] === name) {
       arr[i].skills.push(skill);
+      found = true;
       break;
-    } else {
+    } 
+  }
+  if(!found) {
       return "A user does not exist";
     }
-  }
 
   return arr;
 };
