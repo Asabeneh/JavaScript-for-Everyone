@@ -428,18 +428,22 @@ const addUserSkill = (arr, name, skill) => {
 console.log(addUserSkill(users, 'Brook', 'Node'));
 
 const editUser = (arr, name, newUser) => {
+  let found = false;
   for (const user of arr) {
     if (user['name'] === name) {
       user.name = newUser.name;
       user.scores = newUser.scores;
       user.skills = newUser.skills;
       user.age = newUser.age;
-    } else {
+      found = true;
+      break;
+    } 
+  }
+  if(!found) {
       return 'A user does not exist';
     }
-  }
 
   return arr;
 };
-// console.log(editUser(users, "Brook", user));
-// console.log(users);
+console.log(editUser(users, "Brook", newUser));
+console.log(users);
