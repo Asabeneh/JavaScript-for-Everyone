@@ -2120,6 +2120,8 @@ localStorage.clear();
 ##### [JavaScript Test 2](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-2)
 ##### [JavaScript Test 3](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-3)
 - [JavaScript Test 3: Solutions](https://github.com/Asabeneh/JavaScript-for-Everyone/blob/master/solutions/javascript-test-3.js)
+JavaScript-Test-4)
+- [JavaScript Test 4: Solutions](https://github.com/Asabeneh/JavaScript-for-Everyone/blob/master/solutions/javascript-test-4.js)
 
 ___
 
