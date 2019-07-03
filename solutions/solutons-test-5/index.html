@@ -30,7 +30,7 @@
       ========================================================================================================== 
       */
       // Q1. a
-      const weightQa = (m, g = 10) => m * g;
+      const weightQa = (m, g = 10) => (m * g).toFixed(2) + ' N';
       console.log(weightQa(100)); //Earth
       // 1000 N
       console.log(weightQa(100, 25)); //Jupiter
@@ -41,21 +41,31 @@
       // 162 N
       // Q1. b
       const weightOfObject = (m, planet) => {
+        let result;
         switch (planet.toLowerCase()) {
           case 'sun':
-            return 274 * m + ' N';
+            result = 274 * m ;
+            break;
           case 'jupiter':
-            return 25 * m + ' N';
+            result = 25 * m ;
+            break;
           case 'earth':
-            return (9.79 * m).toFixed(2) + ' N';
+            result = 9.79 * m ;
+            break;
           case 'venus':
-            return (8.87 * m).toFixed(2) + ' N';
+            result = 8.87 * m ;
+            break;
           case 'mars':
-            return 3.7 * m + ' N';
+            result = 3.7 * m ;
+            break;
           case 'moon':
-            return 1.62 * m + ' N';
+            result = 1.62 * m ;
+            break;
           default:
-        }
+           result = 'Not a valid input'     
+        };
+        if (typeof result ==='number') return result.toFixed(2) + ' N';
+        else result;
       };
 
       console.log(weightOfObject(100, 'earth'));
@@ -69,7 +79,7 @@
 ========================================================================================================== 
 */
       const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
-      const cleanText = sent => sent.replace(/[,;#%&@!$']/g, '');
+      const cleanText = (rawText) => rawText.replace(/[,;#%&@!$']/g, '');
       console.log(cleanText(sentence));
       /* 
 =============================== QUESTION 3 ===========================================================
@@ -82,9 +92,7 @@
         let count = 0;
         const words = text.replace(/[,;#%&@!$'.?]/g, '').split(' ');
         for (const word of words) {
-          if (word.length > 1) {
-            count++;
-          }
+          if (word.length > 1)  count++;  
         }
 
         return count;
@@ -96,14 +104,8 @@
 ======================================================================================================
 */
       const countVarietyOfWords = sent => {
-        let count = 0;
         const words = sent.replace(/[,;#%&@!$'.?]/g, '').split(' ');
-        const newWords = new Set();
-        for (const word of words) {
-          newWords.add(word);
-        }
-        console.log(Array.from(newWords));
-
+        const newWords = new Set(words);
         return newWords.size;
       };
       console.log(countVarietyOfWords(sentence));
@@ -115,11 +117,13 @@
 ========================================================================================================== 
 */
       const supportWords = [
-        'I',
+        'i',
         'me',
         'mine',
+        'my',
         'myself',
         'you',
+        'your',
         'yours',
         'yourself',
         'he',
@@ -211,16 +215,13 @@
         for (const word of words) {
           if (word.length > 1 && supportWords.indexOf(word.toLowerCase()) < 0) {
             newWords.push(word);
+            count++;
           }
         }
-        // console.log(Array.from(newWords));
-        // console.log(newWords);
-
-        // return newWords.size;
-        return newWords;
+        return { words: newWords, count}
       };
       console.log(countOnlyMainWords(sentence));
-      console.log(countOnlyMainWords(sentence));
+  
 
       /* 
 =============================== QUESTION 6 =================================================================
@@ -273,16 +274,14 @@ Write a function which calculates mean, median, mode, standardard deviation vari
       const stat = arr => {
         const mean = () => {
           let sum = 0;
-          let average;
           for (item of arr) {
             sum += item;
           }
-          average = sum / arr.length;
-          return average;
+    
+          return Math.round(sum / arr.length);
         };
         const median = () => {
           const arrangedArray = [...arr].sort((a, b) => a - b);
-          console.log(arrangedArray);
           const index = arrangedArray.length / 2;
 
           if (arrangedArray.length % 2 === 0) {
@@ -296,7 +295,6 @@ Write a function which calculates mean, median, mode, standardard deviation vari
         };
         const range = () => {
           const sortedArray = [...arr].sort((a, b) => a - b);
-          console.log(sortedArray);
           const lastIndex = sortedArray.length - 1;
           return sortedArray[lastIndex] - sortedArray[0];
         };
@@ -328,7 +326,7 @@ Write a function which calculates mean, median, mode, standardard deviation vari
         };
 
         return {
-          mean: mean().toFixed(2),
+          mean: mean(),
           median: median(),
           range: range(),
           mode: mode()
@@ -359,10 +357,10 @@ Write a function which calculates mean, median, mode, standardard deviation vari
         77.5,
         82.5
       ];
-      console.log(stat(scores).mean);
-      console.log(stat(scores).median);
-      console.log(stat(scores).range);
-      console.log(stat(scores).mode);
+      console.log('mean', stat(scores).mean);
+      console.log('median', stat(scores).median);
+      console.log('range', stat(scores).range);
+      console.log('mode', stat(scores).mode);
 
       /* 
 =============================== QUESTION 8 =================================================================
@@ -375,11 +373,9 @@ b. arrayOfHexaColors:
       // generate array of rgb colors numbers.
 
       const arrayOfRgbColors = (n = 1) => {
-        let red;
-        let green;
-        let blue;
+        let red, green, blue;
         let rgb;
-        let rgbColors = [];
+        const rgbColors = [];
         for (let i = 0; i < n; i++) {
           red = Math.floor(Math.random() * 256);
           green = Math.floor(Math.random() * 256);
@@ -391,6 +387,9 @@ b. arrayOfHexaColors:
         return rgbColors;
       };
       console.log(arrayOfRgbColors());
+      console.log(arrayOfRgbColors(2));
+      console.log(arrayOfRgbColors(5));
+
       // generate array of hexa colors numbers.
       const arrayOfHexaColors = (n = 1) => {
         const lettersNumbers = '0123456789abcdef';
@@ -409,6 +408,8 @@ b. arrayOfHexaColors:
         return hexaColors;
       };
       console.log(arrayOfHexaColors());
+      console.log(arrayOfHexaColors(2));
+      console.log(arrayOfHexaColors(5));
 
       /* 
 =============================== QUESTION 9 =================================================================
@@ -418,7 +419,7 @@ Write a function called arrayOfHexaOrRgb which generate an array of hexa or rgb 
 
       const arrayOfHexaOrRgb = (color = 'hexa', n = 1) => {
         let colors;
-        let value = color.toLowerCase();
+        const value = color.toLowerCase();
         if ('hexa' === value || 'hex' === value || 'hexadecimal' === value) {
           colors = arrayOfHexaColors(n);
         } else if ('rgb' === value || 'RGB' === value) {
@@ -452,19 +453,51 @@ b. Find the Melina's and Michele's 10 most frequently used words in their speech
 c. Do you think there is similarity between the speeches ?
 ============================================================================================================
 */
-
-      console.log(countOnlyMainWords(melina));
-      console.log(countOnlyMainWords(michelle));
-
-      const removeRepeatedWords = arr => {
+ const removeRepeatedWords = arr => {
         const set = new Set(arr);
         return Array.from(set);
       };
-      console.log(removeRepeatedWords(countOnlyMainWords(melina)).sort());
-      console.log(removeRepeatedWords(countOnlyMainWords(michelle)).sort());
 
-      const melinaWords = removeRepeatedWords(countOnlyMainWords(melina));
-      const michelleWords = removeRepeatedWords(countOnlyMainWords(michelle));
+const mostTenRepeatedWords = (words) => {
+        const map = new Map();
+          for (word of words) {
+            if (!map.has(word)) {
+              map.set(word, 1);
+            } else {
+              map.set(word, map.get(word) + 1);
+            }
+          }
+
+          const sortItems = arr => {
+            let sortedArray = [...arr];
+            sortedArray.sort((a, b) => {
+              if (a[1] > b[1]) {
+                return -1;
+              } else if (a[1] < b[1]) {
+                return 1;
+              } else {
+                return 0;
+              }
+            });
+            return sortedArray;
+          };
+          return sortItems(Array.from(map)).slice(0, 10)
+
+}
+console.log(mostTenRepeatedWords(countOnlyMainWords(melina).words)) // melinas 10 most repeated words
+console.log(mostTenRepeatedWords(countOnlyMainWords(michelle).words)) // michelle's 10 most repeated words
+      // console.log(countOnlyMainWords(melina));
+      // console.log(countOnlyMainWords(michelle));
+
+     
+      console.log(removeRepeatedWords(countOnlyMainWords(melina).words).sort());
+      console.log(removeRepeatedWords(countOnlyMainWords(michelle).words).sort());
+
+      const melinaWords = removeRepeatedWords(countOnlyMainWords(melina).words);
+      const michelleWords = removeRepeatedWords(countOnlyMainWords(michelle).words);
+
+      // common words
+      // check the similarity common words divided by their the total number of non repeated words
       const checkSimilarity = (firstWords, secondWords) => {
         const commonWords = [];
         for (firstWord of firstWords) {
@@ -477,8 +510,8 @@ c. Do you think there is similarity between the speeches ?
         return commonWords;
       };
       console.log(checkSimilarity(michelleWords, melinaWords));
-      console.log(melinaWords.length / 16);
-      console.log(michelleWords.length / 16);
+      console.log(Math.round(100 * 160 / melinaWords.length));  // the similarity between the speech is so high
+      console.log(Math.round(100* 160 / michelleWords.length));
     </script>
   </body>
 </html>
