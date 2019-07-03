@@ -510,8 +510,9 @@ console.log(mostTenRepeatedWords(countOnlyMainWords(michelle).words)) // michell
         return commonWords;
       };
       console.log(checkSimilarity(michelleWords, melinaWords));
-      console.log(Math.round(100 * 160 / melinaWords.length));  // the similarity between the speech is so high
-      console.log(Math.round(100* 160 / michelleWords.length));
+      const commonWords = checkSimilarity(michelleWords, melinaWords).length;
+      console.log(Math.round(100 * commonWords / melinaWords.length));  // the similarity between the speech is so high
+      console.log(Math.round(100* commonWords / michelleWords.length));
     </script>
   </body>
 </html>
