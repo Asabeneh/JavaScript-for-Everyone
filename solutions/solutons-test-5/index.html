@@ -44,27 +44,27 @@
         let result;
         switch (planet.toLowerCase()) {
           case 'sun':
-            result = 274 * m ;
+            result = 274 * m;
             break;
           case 'jupiter':
-            result = 25 * m ;
+            result = 25 * m;
             break;
           case 'earth':
-            result = 9.79 * m ;
+            result = 9.79 * m;
             break;
           case 'venus':
-            result = 8.87 * m ;
+            result = 8.87 * m;
             break;
           case 'mars':
-            result = 3.7 * m ;
+            result = 3.7 * m;
             break;
           case 'moon':
-            result = 1.62 * m ;
+            result = 1.62 * m;
             break;
           default:
-           result = 'Not a valid input'     
-        };
-        if (typeof result ==='number') return result.toFixed(2) + ' N';
+            result = 'Not a valid input';
+        }
+        if (typeof result === 'number') return result.toFixed(2) + ' N';
         else result;
       };
 
@@ -79,7 +79,7 @@
 ========================================================================================================== 
 */
       const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
-      const cleanText = (rawText) => rawText.replace(/[,;#%&@!$']/g, '');
+      const cleanText = rawText => rawText.replace(/[,;#%&@!$']/g, '');
       console.log(cleanText(sentence));
       /* 
 =============================== QUESTION 3 ===========================================================
@@ -92,7 +92,7 @@
         let count = 0;
         const words = text.replace(/[,;#%&@!$'.?]/g, '').split(' ');
         for (const word of words) {
-          if (word.length > 1)  count++;  
+          if (word.length > 1) count++;
         }
 
         return count;
@@ -218,10 +218,9 @@
             count++;
           }
         }
-        return { words: newWords, count}
+        return { words: newWords, count };
       };
       console.log(countOnlyMainWords(sentence));
-  
 
       /* 
 =============================== QUESTION 6 =================================================================
@@ -277,7 +276,7 @@ Write a function which calculates mean, median, mode, standardard deviation vari
           for (item of arr) {
             sum += item;
           }
-    
+
           return Math.round(sum / arr.length);
         };
         const median = () => {
@@ -453,48 +452,50 @@ b. Find the Melina's and Michele's 10 most frequently used words in their speech
 c. Do you think there is similarity between the speeches ?
 ============================================================================================================
 */
- const removeRepeatedWords = arr => {
+      const removeRepeatedWords = arr => {
         const set = new Set(arr);
         return Array.from(set);
       };
 
-const mostTenRepeatedWords = (words) => {
+      const mostTenRepeatedWords = words => {
         const map = new Map();
-          for (word of words) {
-            if (!map.has(word)) {
-              map.set(word, 1);
-            } else {
-              map.set(word, map.get(word) + 1);
-            }
+        for (word of words) {
+          if (!map.has(word)) {
+            map.set(word, 1);
+          } else {
+            map.set(word, map.get(word) + 1);
           }
+        }
 
-          const sortItems = arr => {
-            let sortedArray = [...arr];
-            sortedArray.sort((a, b) => {
-              if (a[1] > b[1]) {
-                return -1;
-              } else if (a[1] < b[1]) {
-                return 1;
-              } else {
-                return 0;
-              }
-            });
-            return sortedArray;
-          };
-          return sortItems(Array.from(map)).slice(0, 10)
-
-}
-console.log(mostTenRepeatedWords(countOnlyMainWords(melina).words)) // melinas 10 most repeated words
-console.log(mostTenRepeatedWords(countOnlyMainWords(michelle).words)) // michelle's 10 most repeated words
+        const sortItems = arr => {
+          let sortedArray = [...arr];
+          sortedArray.sort((a, b) => {
+            if (a[1] > b[1]) {
+              return -1;
+            } else if (a[1] < b[1]) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+          return sortedArray;
+        };
+        return sortItems(Array.from(map)).slice(0, 10);
+      };
+      console.log(mostTenRepeatedWords(countOnlyMainWords(melina).words)); // melinas 10 most repeated words
+      console.log(mostTenRepeatedWords(countOnlyMainWords(michelle).words)); // michelle's 10 most repeated words
       // console.log(countOnlyMainWords(melina));
       // console.log(countOnlyMainWords(michelle));
 
-     
       console.log(removeRepeatedWords(countOnlyMainWords(melina).words).sort());
-      console.log(removeRepeatedWords(countOnlyMainWords(michelle).words).sort());
+      console.log(
+        removeRepeatedWords(countOnlyMainWords(michelle).words).sort()
+      );
 
       const melinaWords = removeRepeatedWords(countOnlyMainWords(melina).words);
-      const michelleWords = removeRepeatedWords(countOnlyMainWords(michelle).words);
+      const michelleWords = removeRepeatedWords(
+        countOnlyMainWords(michelle).words
+      );
 
       // common words
       // check the similarity common words divided by their the total number of non repeated words
@@ -511,8 +512,8 @@ console.log(mostTenRepeatedWords(countOnlyMainWords(michelle).words)) // michell
       };
       console.log(checkSimilarity(michelleWords, melinaWords));
       const commonWords = checkSimilarity(michelleWords, melinaWords).length;
-      console.log(Math.round(100 * commonWords / melinaWords.length));  // the similarity between the speech is so high
-      console.log(Math.round(100* commonWords / michelleWords.length));
+      console.log(Math.round((100 * commonWords) / melinaWords.length)); // the similarity between the speech is so high
+      console.log(Math.round((100 * commonWords) / michelleWords.length));
     </script>
   </body>
 </html>
