@@ -42,6 +42,7 @@ Github.
 
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
+If you want help, you may join the [telegram](https://web.telegram.org/#/im?p=g393844817) channel.
 
 ## Adding JavaScript to a web page
 JavaScript can be added to a web pages in three ways:
