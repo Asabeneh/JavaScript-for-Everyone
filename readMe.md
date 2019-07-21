@@ -25,13 +25,14 @@
 19. [Regular Expressions](#regular-expressions)
 20. [Local Storage](#local-storage)
 21. [Cookies](#cookies)
+22. [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests):
+23. [JavaScript Interview Questions](#javascript-interview-questions)
+
 
 ## Introduction
+**_JavaScript for Everone_** is a guide for both beginner and advanced JavaScript developers. Welcome to JavaScript. **_Congratulations_** for deciding to learn JavaScript.
 
-Welcome to JavaScript. **_Congratulations_** for deciding to learn JavaScript.
-**_JavaScript for Everone_** is a guide for both beginner and advanced JavaScript developers.
-
-In this step by step tutorial, I will teach you JavaScript, the most popular programming language in the history of mankind.
+In this step by step tutorial, you will learn JavaScript, the most popular programming language in the history of mankind.
 You use JavaScript **_to add interactivity to websites, to develop mobile apps, desktop applications, games_** and nowadays JavaScript can be used for **_machine learning_** and **_AI_**.
 **_JavaScript (JS)_** has increased in popularity in recent years and has been the leading
 programming language for four consecutive years and is the most used programming language on
@@ -100,6 +101,39 @@ Internal script can be written in the _head_ or the _body_ but it is preferrable
 
 ## Variables
 Variables are _containers_ of data. Variables _store_ data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, _var_, _let_ or _const_ key word. For a variable which changes at different time we use _let_ but if the data doesn't change at all we use _const_. For example PI, country name, gravity.
+
+Valid variables in JavaScript:
+```js
+    firstName
+    lastName
+    country
+    city
+    capitalCity
+    age
+    isMarried
+
+    first_name
+    last_name
+    is_marreid
+    capital_city
+
+    num1
+    num_1
+    _num_1
+    $num1
+    year2019
+    year_2019
+```
+
+Camel case or the first way of declaring is conventional in JavaScript.
+
+Invalid variable:
+```js
+  first-name
+  1_num
+  num_#_1
+```
+
 
 ```js
 // Declaring different variables of different data types
@@ -2112,6 +2146,8 @@ localStorage.clear();
 ## Exercises:Local Storage
 
 ## Cookies
+## [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests)
+## JavaScript Interview Questions
 
 #### Exercises:Cookies
 
