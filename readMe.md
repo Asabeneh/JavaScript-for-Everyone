@@ -711,7 +711,7 @@ console.log(numbers.length) // => to know the size of the array, which is 6
 console.log(numbers) // -> [0, 3.14, 9.81, 37, 98.6, 100]
 console.log(numbers[0]) //  -> 0
 console.log(numbers[5]) //  -> 100
-let lastIdex = numbers.length - 1;
+let lastIndex = numbers.length - 1;
 console.log(numbers[lastIndex]) -> 100
 const webTechs = [
   "HTML",
@@ -726,7 +726,7 @@ console.log(webTechs) // all the array items
 console.log(webTechs.length) // => to know the size of the array, which is 7
 console.log(webTechs[0]) //  -> HTML
 console.log(webTechs[6]) //  -> MongoDB
-let lastIdex = webTechs.length - 1;
+let lastIndex = webTechs.length - 1;
 console.log(webTechs[lastIndex]) -> MongoDB
 const countries = [
   "Albania",
@@ -744,7 +744,7 @@ const countries = [
 console.log(countries) // -> all countries in array
 console.log(countries[0]) //  -> Albania
 console.log(countries[10]) //  -> Kenya
-let lastIdex = countries.length - 1;
+let lastIndex = countries.length - 1;
 console.log(countries[lastIndex]) -> // Kenya
 
 const shoppingCart = [
