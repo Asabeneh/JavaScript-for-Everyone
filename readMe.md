@@ -2,7 +2,7 @@
 
 ![JS](https://cdn-images-1.medium.com/max/1600/1*H-25KB7EbSHjv70HXrdl6w.png)
 
-## Table of Contents
+# Table of Contents
 
 1. [Introduction](#introduction)
 2. [Setup](#setup)
@@ -29,7 +29,7 @@
 23. [JavaScript Interview Questions](#javascript-interview-questions)
 
 
-## Introduction
+# Introduction
 **_JavaScript for Everone_** is a guide for both beginner and advanced JavaScript developers. Welcome to JavaScript. **_Congratulations_** for deciding to learn JavaScript.
 
 In this step by step tutorial, you will learn JavaScript, the most popular programming language in the history of mankind.
@@ -38,12 +38,12 @@ You use JavaScript **_to add interactivity to websites, to develop mobile apps, 
 programming language for four consecutive years and is the most used programming language on
 Github.
 
-## Setup
+# Setup
 
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 
-If you want help, you may join the [telegram](https://web.telegram.org/#/im?p=g393844817) channel.
+If you want help, you may join the [telegram](https://t.me/JavaScriptforEveryone) channel.
 
 ## Adding JavaScript to a web page
 JavaScript can be added to a web pages in three ways:
@@ -101,7 +101,7 @@ Internal script can be written in the _head_ or the _body_ but it is preferrable
 
 #### Exercises:Setting Up your machine
 
-## Variables
+# Variables
 Variables are _containers_ of data. Variables _store_ data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, _var_, _let_ or _const_ key word. For a variable which changes at different time we use _let_ but if the data doesn't change at all we use _const_. For example PI, country name, gravity.
 
 Valid variables in JavaScript:
@@ -127,7 +127,7 @@ Valid variables in JavaScript:
     year_2019
 ```
 
-Camel case or the first way of declaring is conventional in JavaScript.
+Camel case or the first way of declaring is conventional in JavaScript. In this material, camelCase variables will be used.
 
 Invalid variable:
 ```js
@@ -135,17 +135,15 @@ Invalid variable:
   1_num
   num_#_1
 ```
-
-
 ```js
 // Declaring different variables of different data types
 let firstName = "Asabeneh"; // first name of a person
 let lastName = "Yetayeh"; // last name of a person
-let location = "Helsinki"; // capital city
-const country = "Finland"; // country
+let country = "Finland"; // country
+let city = "Helsinki"; // capital city
 let age = 100; // age in years
 let isMarried = true;
-console.log(firstName, lastName, location, country, age); //Asabeneh, Yetayeh, Helsinki, Finland, 100
+console.log(firstName, lastName, country, city, age, isMarried); //Asabeneh, Yetayeh, Finland, Helsinki, 100, True
 
 // Declaring variables with number values
 const gravity = 9.81; // earth gravity  in m/s2
@@ -493,7 +491,7 @@ Which are true or which are false ?
 1. 4 == '4'
 1. 4 === '4'
 
-## Conditionals
+# Conditionals
 
 #### If
 
@@ -638,11 +636,11 @@ isRaining
    - March, April or May, the season is Spring
    - June, July or August, the season is Summer
 
-## Loops
+# Loops
 
 In programming languages to carry out repetitive task we use different kinds of loop. The following examples are the commonly used loops.
 
-### For Loop
+## For Loop
 
 ```js
 //For loop structure
@@ -655,7 +653,7 @@ for(let i = 0; i <= 5; i++){
 
 ```
 
-### While loop
+## While loop
 
 ```js
 let i = 0;
@@ -665,7 +663,7 @@ while (i <= 5) {
 }
 ```
 
-### Do while loop
+## Do while loop
 
 ```js
 let i = 0;
@@ -701,7 +699,7 @@ do {
    The sum of all evens is 2550. And the sum of all odds is 2500.
    ```
 
-## Arrays
+# Arrays
 
 In contrast to variables array can store _multiple values_. Each value in an array has an _index_ and each index has _a reference in a memory address_. Each value can be accessed by using their _indexes_. The index of an array starts from _zero_ and the last element is less by one from the lenght of the array.
 
@@ -791,7 +789,7 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove the last IT company from the array
 1. Remove all IT companies
 
-## More on Arrays
+# More on Arrays
 
 There are different methods to manipulate an array. These are some of the available methods to deal with arrays:_Array,length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift_
 Array:To create an array.
@@ -971,7 +969,7 @@ const todoList = [
 
 ```
 
-## Functions
+# Functions
 
 A function is a block of code designed to perform a certain task.
 A function is declared by a function key word followed by a name, followed by parentheses (). A parentheses can take a parameter. If a function take a parameter it will be called with argument. A function can also take a default paramenter.
@@ -1240,7 +1238,7 @@ const square = n => n * n; // -> 4
    ```
 
 
-## Object
+# Object
 
 Everything can be an object and objects do have properties and properties have values.
 
@@ -1840,7 +1838,7 @@ Asabeneh Yetayeh lives in Finland. He is  200 years old. He is an Instructor and
    2. Assign the elements of countries array to fin, est, sw, den, nor
    3. Destructure the rectangle object by its propertis or keys.
 
-## Document Object Model
+# Document Object Model (DOM)
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
 
 ### Getting Element
