@@ -48,7 +48,6 @@ switch (day) {
 
 //Example using numbers
 var i = 5;
-
 switch (i) {
   case 1:
     console.log("value is 1");
@@ -65,6 +64,7 @@ switch (i) {
   case 5:
     console.log("value is 5");
     break;
+
   default:
     console.log("value not found");
 }
