@@ -137,10 +137,10 @@ Invalid variable:
 ```
 ```js
 // Declaring different variables of different data types
-let firstName = "Asabeneh"; // first name of a person
-let lastName = "Yetayeh"; // last name of a person
-let country = "Finland"; // country
-let city = "Helsinki"; // capital city
+let firstName = 'Asabeneh'; // first name of a person
+let lastName = 'Yetayeh'; // last name of a person
+let country = 'Finland'; // country
+let city = 'Helsinki'; // capital city
 let age = 100; // age in years
 let isMarried = true;
 console.log(firstName, lastName, country, city, age, isMarried); //Asabeneh, Yetayeh, Finland, Helsinki, 100, True
@@ -151,9 +151,9 @@ const boilingPoint = 100; // water boiling point, temperature in oC
 const PI = 3.14; // geometrical constant
 console.log(gravity, boilingPoint, PI); // 9.81, 100, 3.14
 // Variables can also be declaring in one line separated by comma
-let name = "Asabeneh", //name of a person
-  job = "teacher",
-  live = "Finland";
+let name = 'Asabeneh', //name of a person
+  job = 'teacher',
+  live = 'Finland';
 console.log(name, job, live);
 ```
 
@@ -215,29 +215,29 @@ Strings are text which are under **_single_** or **_double_** quote.
 Lets' see some examples of string:
 
 ```js
-let firstName = "Asabeneh";
-let lastName = "Yetayeh";
-let country = "Finland";
-let city = "Helsinki";
-let language = "JavaScript";
-let job = "teacher";
+let firstName = 'Asabeneh';
+let lastName = 'Yetayeh';
+let country = 'Finland';
+let city = 'Helsinki';
+let language = 'JavaScript';
+let job = 'teacher';
 ```
 
 #### String Concatination
 
 ```js
 // Declaring different variables of different data types
-let firstName = "Asabeneh";
-let lastName = "Yetayeh";
-let country = "Finland";
-let city = "Helsinki";
-let language = "JavaScript";
-let job = "teacher";
+let firstName = 'Asabeneh';
+let lastName = 'Yetayeh';
+let country = 'Finland';
+let city = 'Helsinki';
+let language = 'JavaScript';
+let job = 'teacher';
 
-let fullName = firstName + " " + lastName; // concatination, merging two string together.
+let fullName = firstName + ' ' + lastName; // concatination, merging two string together.
 console.log(fullName);
 
-let personInfoOne = fullName + ".I am " + age + ". I live in " + country; // ES5
+let personInfoOne = fullName + '.I am ' + age + '. I live in ' + country; // ES5
 let personInfoTwo = `I am ${fullName}.I am ${age}. I live in ${country}`; //ES6 - String interpolation method
 let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`;
 console.log(personInfoOne);
@@ -246,7 +246,7 @@ console.log(personInfoTwo);
 
 #### Exercise - 4 : String
 
-1. Declare a variable name company and assign it to an initial value **"Coding Academy"**.
+1. Declare a variable name company and assign it to an initial value **'Coding Academy'**.
 1. Print the string on the browser console using __console.log()__
 1. Print the __length__ of the string on the browser console using _console.log()_
 1. Change all the string to capital letters using __toUpperCase()__ method
@@ -256,16 +256,16 @@ console.log(personInfoTwo);
 1. Check if the string contains a word __Academy__ using __includes()__ method
 1. Split the __string__ into __array__ using __split()__ method
 1. Split the string Coding Academy at the space using __split()__ method
-1. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" __split__ the string at the comma and change it to an array.
+1. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' __split__ the string at the comma and change it to an array.
 1. Change Coding Academy to Microsoft Academy using __replace()__ method.
-1. What is character at index 10 in "Coding Academy" string use __charAt()__ method.
+1. What is character at index 10 in 'Coding Academy' string use __charAt()__ method.
 1. What is the character code of A in 'Coding Academy' string using __charCodeAt()__
 1. Use __indexOf__ to determine the position of the first occurrence of c in Coding Academy
 1. Use __lastIndexOf__ to determine the position of the last occurrence of c in Coding Academy.
 1. Use __indexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
 1. Use __lastIndexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
 1. Use __search__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
-1. Use __trim()__ to remove if there is trailing whitespace at the beginning and the end of a string.E.g " Coding Academy ".
+1. Use __trim()__ to remove if there is trailing whitespace at the beginning and the end of a string.E.g ' Coding Academy '.
 1. Use __startsWith()__ method with the string Coding Academy make the result true
 1. Use __endsWith()__ method with the string Coding Academy make the result true
 1. Use __match()__ method to find all the c’s in Coding Academy
@@ -467,9 +467,9 @@ Which are true or which are false ?
 4 < 3;
 4 <= 3;
 4 != 3;
-4 !== "4";
-4 == "4";
-4 === "4";
+4 !== '4';
+4 == '4';
+4 === '4';
 4 === 4;
 ```
 
@@ -502,7 +502,7 @@ if (condition) {
 
 let isRaining = true;
 if (isRaining) {
-  console.log("Remember to take your rain coat.");
+  console.log('Remember to take your rain coat.');
 }
 ```
 
@@ -516,9 +516,9 @@ if (condition) {
 }
 let isRaining = true;
 if (isRaining) {
-  console.log("You need a rain coat.");
+  console.log('You need a rain coat.');
 } else {
-  console.log("No need for a rain coat.");
+  console.log('No need for a rain coat.');
 }
 ```
 
@@ -526,15 +526,15 @@ if (isRaining) {
 
 ```js
 // if else if else
-let weather = "sunny";
-if (weather === "rainy") {
-  console.log("You need a rain coat.");
-} else if (weather === "cloudy") {
-  console.log("It might be cold, you need a jacket.");
-} else if (weather === "sunny") {
-  console.log("Go out freely.");
+let weather = 'sunny';
+if (weather === 'rainy') {
+  console.log('You need a rain coat.');
+} else if (weather === 'cloudy') {
+  console.log('It might be cold, you need a jacket.');
+} else if (weather === 'sunny') {
+  console.log('Go out freely.');
 } else {
-  console.log("No need for rain coat.");
+  console.log('No need for rain coat.');
 }
 ```
 
@@ -543,49 +543,49 @@ if (weather === "rainy") {
 Switch an alternative for if else if else
 
 ```js
-var weather = "cloudy";
+var weather = 'cloudy';
 switch (weather) {
-  case "rainy":
-    console.log("You need a rain coat.");
+  case 'rainy':
+    console.log('You need a rain coat.');
     break;
-  case "cloudy":
-    console.log("It might be cold, you need a jacket.");
+  case 'cloudy':
+    console.log('It might be cold, you need a jacket.');
     break;
-  case "sunny":
-    console.log("Go out freely.");
+  case 'sunny':
+    console.log('Go out freely.');
     break;
   default:
-    console.log(" No need for rain coat.");
+    console.log(' No need for rain coat.');
     break;
 }
 // Switch More Examples
-var dayUserInput = prompt("What day is it ?");
+var dayUserInput = prompt('What day is it ?');
 var day = dayUserInput.toLowerCase();
 switch (day) {
-  case "monday":
-    console.log("Today is Monday");
+  case 'monday':
+    console.log('Today is Monday');
     break;
-  case "tuesday":
-    console.log("Today is Tuesday");
+  case 'tuesday':
+    console.log('Today is Tuesday');
     break;
-  case "wednesday":
-    console.log("Today is Wednesday");
+  case 'wednesday':
+    console.log('Today is Wednesday');
     break;
-  case "thursday":
-    console.log("Today is Thursday");
+  case 'thursday':
+    console.log('Today is Thursday');
     break;
-  case "friday":
-    console.log("Today is Friday");
+  case 'friday':
+    console.log('Today is Friday');
     break;
-  case "saturday":
-    console.log("Today is Saturday");
+  case 'saturday':
+    console.log('Today is Saturday');
     break;
-  case "sunday":
-    console.log("Today is Sunday");
+  case 'sunday':
+    console.log('Today is Sunday');
     break;
 
   default:
-    console.log("It is not a week day.");
+    console.log('It is not a week day.');
     break;
 }
 ```
@@ -597,8 +597,8 @@ Another way to write conditionals is using ternary operators.
 ```js
 let isRaining = true;
 isRaining
-  ? console.log("You need a rain coat.")
-  : console.log("No need for a rain coat.");
+  ? console.log('You need a rain coat.')
+  : console.log('No need for a rain coat.');
 ```
 
 #### Exercise - 8 : Conditionals
@@ -712,13 +712,13 @@ console.log(numbers[5]) //  -> 100
 let lastIndex = numbers.length - 1;
 console.log(numbers[lastIndex]) -> 100
 const webTechs = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Redux",
-  "Node",
-  "MongoDB"
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
 ]; // List of web technologies
 console.log(webTechs) // all the array items
 console.log(webTechs.length) // => to know the size of the array, which is 7
@@ -727,17 +727,17 @@ console.log(webTechs[6]) //  -> MongoDB
 let lastIndex = webTechs.length - 1;
 console.log(webTechs[lastIndex]) -> MongoDB
 const countries = [
-  "Albania",
-  "Bolivia",
-  "Canada",
-  "Denmark",
-  "Ethiopia",
-  "Finland",
-  "Germany",
-  "Hungary",
-  "Ireland",
-  "Japan",
-  "Kenya"
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
 ]; // List of countries;
 console.log(countries) // -> all countries in array
 console.log(countries[0]) //  -> Albania
@@ -746,14 +746,14 @@ let lastIndex = countries.length - 1;
 console.log(countries[lastIndex]) -> // Kenya
 
 const shoppingCart = [
-  "Milk",
-  "Mango",
-  "Tomato",
-  "Potato",
-  "Avocado",
-  "Meat",
-  "Eggs",
-  "Sugar"
+  'Milk',
+  'Mango',
+  'Tomato',
+  'Potato',
+  'Avocado',
+  'Meat',
+  'Eggs',
+  'Sugar'
 ]; // List of food products
 console.log(shoppingCart) // -> all shoppingCart in array
 console.log(shoppingCart[0]) //  -> Milk
@@ -806,7 +806,7 @@ console.log(eightEmptyValues); // [empty x 8]
 ```js
 const arr = Array(); // creates an an empty array
 console.log(arr);
-const eightXvalues = Array(8).fill("X"); // it creates eight element values
+const eightXvalues = Array(8).fill('X'); // it creates eight element values
 console.log(eightXvalue); // ['X', 'X','X','X','X','X','X','X']
 ```
 
@@ -871,7 +871,7 @@ toString:Converts array to string
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.toString()); // 1,2,3,4,5
-const names = ["Asabeneh", "Matias", "Elias", "Brook"];
+const names = ['Asabeneh', 'Matias', 'Elias', 'Brook'];
 console.log(names.toString()); // Asabeneh,Matias,Elias,Brook
 ```
 
@@ -880,12 +880,12 @@ join:To join the elements of the array, the argument passed in the join method w
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.join()); // 1,2,3,4,5
-const names = ["Asabeneh", "Matias", "Elias", "Brook"];
+const names = ['Asabeneh', 'Matias', 'Elias', 'Brook'];
 console.log(names.join()); // Asabeneh,Matias,Elias,Brook
-console.log(names.join("")); //AsabenehMatiasEliasBrook
-console.log(names.join(" ")); //Asabeneh Matias Elias Brook
-console.log(names.join(", ")); //Asabeneh, Matias, Elias, Brook
-console.log(names.join(" # ")); //Asabeneh # Matias # Elias # Brook
+console.log(names.join('')); //AsabenehMatiasEliasBrook
+console.log(names.join(' ')); //Asabeneh Matias Elias Brook
+console.log(names.join(', ')); //Asabeneh, Matias, Elias, Brook
+console.log(names.join(' # ')); //Asabeneh # Matias # Elias # Brook
 ```
 
 Slice: To cut out a multiple items in range. It takes two paramters:starting and ending position. It doesn't include the ending position
@@ -1033,8 +1033,8 @@ console.log(sumTwoNumbersAndReturn(10, 20));
 function printFullName(firstName, lastName) {
   return `${firstName} ${lastName}`;
 }
-console.log(printFullName("Asabeneh", "Yetayeh"));
-console.log(printFullName("Dean", "Phan"));
+console.log(printFullName('Asabeneh', 'Yetayeh'));
+console.log(printFullName('Dean', 'Phan'));
 
 // function with multiple parameters
 function functionName(parm1, parm2, parm3,...){
@@ -1142,8 +1142,8 @@ const square = n => n * n; // -> 4
    ```js
    console.log(reverseArray([1, 2, 3, 4, 5]));
    [5, 4, 3, 2, 1];
-   console.log(reverseArray(["A", "B", "C"]));
-   ["C", "B", "A"];
+   console.log(reverseArray(['A', 'B', 'C']));
+   ['C', 'B', 'A'];
    ```
 1. Declare a function name _capitalizeArray_. It takes array as a parameter and it returns the - capitalizedarray.
 1. Declare a function name _addItem_. It takes an item parameter and it returns an array after adding the item
@@ -1177,19 +1177,19 @@ const square = n => n * n; // -> 4
 1. Modify question number n . Declare a function name _userIdGeneratedByUser_. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
    ```sh
    userIdGeneratedByUser()
-   "kcsy2
+   'kcsy2
    SMFYb
    bWmeq
    ZXOYh
    2Rgxf
-   "
+   '
    userIdGeneratedByUser()
-   "1GCSgPLMaBAVQZ26
+   '1GCSgPLMaBAVQZ26
    YD7eFwNQKNs7qXaT
    ycArC5yrRupyG00S
    UbGxOFI7UXSWAyKN
    dIV0SSUTgAdKwStr
-   "
+   '
    ```
 1. Write a function name _rgbColorGenerator_ and it generates rgb colors.
    ```sh
@@ -1221,12 +1221,12 @@ const square = n => n * n; // -> 4
 11. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
 12. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
       ```js
-      console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
-      // →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
-      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
-      // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
-      console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
-      // →"Not Found"
+      console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
+      // →['Avocado', 'Tomato', 'Potato','Mango', 'LEMON', 'Carrot']
+      console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']);
+      // →['Google', 'Facebook','Apple', 'Amazon','MICROSOFT',  'IBM']
+      console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']);
+      // →'Not Found'
       ```
 13. Write a function called *isPrime*, which checks if a number is prime number.
 14. Write a functions which checks if all items are unique in the array.
@@ -1254,19 +1254,19 @@ Now, the person object has firstName, lastName, age, location, skills and getFul
 
 ```js
 const person = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
   age: 100,
-  location: "Helsinki",
+  location: 'Helsinki',
   skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node",
-    "MongoDB",
-    "Python",
-    "D3.js"
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js'
   ],
   getFullName: function() {
     return `${this.firstName}${this.lastName}`;
@@ -1330,14 +1330,14 @@ _Object.assign_: To copy an object without modifying the original object
 
 ```js
 const person = {
-  name: "Asabeneh",
+  name: 'Asabeneh',
   age: 200,
-  country: "Finland",
-  skills: ["HTML", "CSS", "JS"],
+  country: 'Finland',
+  skills: ['HTML', 'CSS', 'JS'],
   address: {
-    street: "Heitamienkatu 16",
+    street: 'Heitamienkatu 16',
     pobox: 2002,
-    city: "Helsinki"
+    city: 'Helsinki'
   },
   getPersonInfo: function() {
     return `I am ${this.name} and I live in ${this.country}. I am ${this.age}.`;
@@ -1355,9 +1355,9 @@ _Object.keys_: To get keys of an objet as an array
 
 ```js
 const keys = Object.keys(copyPerson);
-console.log(keys); //["name", "age", "country", "skills", "address", "getPersonInfo"]
+console.log(keys); //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
 const address = Object.keys(copyPerson.address);
-console.log(address); //["street", "pobox", "city"]
+console.log(address); //['street', 'pobox', 'city']
 ```
 
 _Object.values_:To get values of an object as an array
@@ -1376,8 +1376,8 @@ console.log(entries);
 _hasOwnProperty_: To check if a specific key or property exist in an object
 
 ```js
-console.log(copyPerson.hasOwnProperty("name"));
-console.log(copyPerson.hasOwnProperty("score"));
+console.log(copyPerson.hasOwnProperty('name'));
+console.log(copyPerson.hasOwnProperty('score'));
 ```
 ### Date Object
 In JavaScript current time and date is created using JavaScript Date Object.
@@ -1410,43 +1410,43 @@ console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
       ```js
       const users = {
         Alex: {
-          email: "alex@alex.com",
-          skills: ["HTML", "CSS", "JavaScript"],
+          email: 'alex@alex.com',
+          skills: ['HTML', 'CSS', 'JavaScript'],
           age: 20,
           isLoggedIn: false,
           points: 30
         },
         Asab: {
-          email: "asab@asab.com",
-          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          email: 'asab@asab.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
           age: 25,
           isLoggedIn: false,
           points: 50
         },
         Brook: {
-          email: "daniel@daniel.com",
-          skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+          email: 'daniel@daniel.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
           age: 30,
           isLoggedIn: true,
           points: 50
         },
         Daniel: {
-          email: "daniel@alex.com",
-          skills: ["HTML", "CSS", "JavaScript", "Python"],
+          email: 'daniel@alex.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
           age: 20,
           isLoggedIn: false,
           points: 40
         },
         John: {
-          email: "john@john.com",
-          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          email: 'john@john.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
           age: 20,
           isLoggedIn: true,
           point: 50
         },
         Thomas: {
-          email: "thomas@thomas.com",
-          skills: ["HTML", "CSS", "JavaScript", "React"],
+          email: 'thomas@thomas.com',
+          skills: ['HTML', 'CSS', 'JavaScript', 'React'],
           age: 20,
           isLoggedIn: false,
           points: 40
@@ -1485,25 +1485,25 @@ const numbersSquare = numbers.map((num) => num * num)
 console.log(numbersSquare) // [1,4,9,16,25]
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
 const namesToUpperCase = names.map((name) => name.toUpperCase());
-console.log(namesToUpperCase) //["ASABENEH", "MATHIAS", "ELIAS", "BROOK"]
+console.log(namesToUpperCase) //['ASABENEH', 'MATHIAS', 'ELIAS', 'BROOK']
 const countries = [
-  "Albania",
-  "Bolivia",
-  "Canada",
-  "Denmark",
-  "Ethiopia",
-  "Finland",
-  "Germany",
-  "Hungary",
-  "Ireland",
-  "Japan",
-  "Kenya"
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
 ];
 const countriesToUpperCase = countries.map(function(country){
   return country.toUpperCase();
 });
 console.log(countriesToUpperCase)
-// ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+// ['ALBANIA', 'BOLIVIA', 'CANADA', 'DENMARK', 'ETHIOPIA', 'FINLAND', 'GERMANY', 'HUNGARY', 'IRELAND', 'JAPAN', 'KENYA']
 /*
 // Arrow function
 const countriesToUpperCase = countries.map((country) => {
@@ -1518,15 +1518,15 @@ const countriesToUpperCase = countries.map(country => country.toUpperCase());
 ```js
 //Filter countries containing land
 const countriesContainingLand = countries.filter(country => country.includes('land'));
-console.log(countriesContainingLand )  //["Finland", "Ireland"]
+console.log(countriesContainingLand )  //['Finland', 'Ireland']
 const countriesEndByia = countries.filter(country => country.includes('ia'));
-console.log(countriesEndByia) //["Albania", "Bolivia","Ethiopia"]
+console.log(countriesEndByia) //['Albania', 'Bolivia','Ethiopia']
 const countriesHaveFiveLetters = countries.filter(country => country.length === 5);
-console.log(countriesHaveFiveLetters ) //  ["Japan", "Kenya"]
+console.log(countriesHaveFiveLetters ) //  ['Japan', 'Kenya']
 const scores = [{name:'Asabeneh', score:95},{name:'Mathias', score:80},{name:'Elias', score:50},{name:'Martha', score:85},{name:'John', score:100}];
 
 const scoresGreaterEight = scores.filter((score) => score.score > 80);
-console.log(scoresGreaterEight) //[{name: "Asabeneh", score: 95}, {name: "Martha", score: 85},{name: "John", score: 100}]
+console.log(scoresGreaterEight) //[{name: 'Asabeneh', score: 95}, {name: 'Martha', score: 85},{name: 'John', score: 100}]
 ```
 *reduce*: Reduce takes a callback function. The call back function takes accumulator and current value as a parameter and returns a single value:
 ```js
@@ -1580,7 +1580,7 @@ console.log(age) // 5
 #### Sorting string values
 ```js
 const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot'];
-console.log(products.sort()) // ["Apple", "Carrot", "Coffee", "Honey", "Milk", "Sugar"]
+console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
 
 //Now the original products array  is also sorted 
 ```
@@ -1618,7 +1618,7 @@ objArr.sort(function(a, b) {
   if (a['key'] > b['key']) return 1;
   return 0;
 });
-const users = [{name:"Asabeneh", age:150}, {name:"Brook", age:50}, {name:"Eyo", age:100},{name:"Elias", age:22}];
+const users = [{name:'Asabeneh', age:150}, {name:'Brook', age:50}, {name:'Eyo', age:100},{name:'Elias', age:22}];
 users.sort((a, b) => {
   if (a.age < b.age) return -1;
   if (a.age > b.age) return 1;
@@ -1765,31 +1765,31 @@ Destructuring keys as a function paramters. Lets create a function which take a 
 
     //Another Example
 const person = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
   age: 200,
-  country: "Finland",
-  job: "Instructor and Developer",
+  country: 'Finland',
+  job: 'Instructor and Developer',
   skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Node",
-    "MongoDB",
-    "Python",
-    "D3.js"
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js'
   ],
-  languages: ["Amharic", "English", "Suomi(Finnish)"]
+  languages: ['Amharic', 'English', 'Suomi(Finnish)']
 };
 // Lets create a function which give information about the person object without destructuring
 
 const getPersonInfo = obj => {
   const skills = obj.skills;
-  const formattedSkills = skills.slice(0, -1).join(", ");
+  const formattedSkills = skills.slice(0, -1).join(', ');
   const languages = obj.languages;
-  const formattedLanguages = languages.slice(0, -1).join(", ");
+  const formattedLanguages = languages.slice(0, -1).join(', ');
 
   return `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is  ${
     obj.age
@@ -1809,8 +1809,8 @@ const getPersonInfo = ({
   skills,
   languages
 }) => {
-  const formattedSkills = skills.slice(0, -1).join(", ");
-  const formattedLanguages = languages.slice(0, -1).join(", ");
+  const formattedSkills = skills.slice(0, -1).join(', ');
+  const formattedLanguages = languages.slice(0, -1).join(', ');
 
   return `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He teaches ${formattedSkills} and ${skills[skills.length - 1]}. He speakes ${formattedLanguages} and a little bit of ${languages[2]}.`;
 };
@@ -1849,9 +1849,9 @@ HTML document is structured as a JavaScript Object. Every HTML element has a dif
       <title>Document Object Model/title>
     </head>
     <body>
-     <h1 class="title" id="first-title">First Title</h1>
-     <h1 class="title" id="second-title">Second Title</h1>
-     <h1 class="title" id="third-title">Third Title</h1>
+     <h1 class='title' id='first-title'>First Title</h1>
+     <h1 class='title' id='second-title'>Second Title</h1>
+     <h1 class='title' id='third-title'>Third Title</h1>
      <h1></h1>
     </body>
   </html>
@@ -1859,7 +1859,7 @@ HTML document is structured as a JavaScript Object. Every HTML element has a dif
 #### Getting elements by tag name
 ***getElementsByTagName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
 ```js
-const allTitles = document.getElementsByTagName("h1");
+const allTitles = document.getElementsByTagName('h1');
 console.log(allTitles) //HTMCollections
 console.log(allTitles.length) // 4
 for(let i = 0; i < allTitles.length; i++){
@@ -1870,7 +1870,7 @@ for(let i = 0; i < allTitles.length; i++){
 #### Getting elements by class name
 ***getElementsByClassName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
 ```js
-const allTitles = document.getElementsByClassName("title");
+const allTitles = document.getElementsByClassName('title');
 console.log(allTitles) //HTMCollections
 console.log(allTitles.length) // 4
 for(let i = 0; i < allTitles.length; i++){
@@ -1880,27 +1880,27 @@ for(let i = 0; i < allTitles.length; i++){
 #### Getting an element by id
 ***getElementsById()***  targets a single HTML element. We pass the id without # as an argument. 
 ```js
-let firstTitle = document.getElementById("first-title");
+let firstTitle = document.getElementById('first-title');
 console.log(firstTitle) // <h1>First Title</h1>
 ```
 #### Getting elements by using querySelector using tag, class and id:
 ***querySelector***: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
 
 ```js
-let firstTitle = document.querySelect("h1");// select the first available h2 element
-let firstTitle = document.querySelector("#first-title"); // select id with first-title
-let firstTitle = document.querySelector(".title"); // select the first available h2 element with class title
+let firstTitle = document.querySelect('h1');// select the first available h2 element
+let firstTitle = document.querySelector('#first-title'); // select id with first-title
+let firstTitle = document.querySelector('.title'); // select the first available h2 element with class title
 
 ```
 ***querySelectorAll***: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use ***for loop*** or ***forEach*** to loop through each nodeList elements.
 ```js
-const allTitles = document.querySelectAll("h1");
+const allTitles = document.querySelectAll('h1');
 console.log(allTitles.length) // 4
 for(let i = 0; i < allTitles.length; i++){
   console.log(allTitles[i]);
 }
 allTitles.forEach(title => console.log(title))
-const allTitles = document.querySelectorAll(".title"); // the same goes for selecting using class
+const allTitles = document.querySelectorAll('.title'); // the same goes for selecting using class
 ```
 ### Adding attribute
 An attribute is added in the opening tag of HTML which gives additional information about the element. Common HTML attributes: id, class, src, style, href,disabled, title, alt. Lets add id and class for the fourth title.
@@ -1910,32 +1910,32 @@ The ***setAttribute()*** method set any html attribute. It takes two parameters 
 Let's add class and id attribute for the fourth title.
 
 ```js
-const titles = document.querySelectorAll("h1");
-titles[3].setAttribut("class", "title");
-titles[3].setAttribut("id", "fourth-title");
+const titles = document.querySelectorAll('h1');
+titles[3].setAttribut('class', 'title');
+titles[3].setAttribut('id', 'fourth-title');
 ```
 #### Adding attribute without setAttribute
 Some attributes are DOM object property and they can be set directly. For instance id and class
 ```js
 //another way to setting an attribute
-titles[3].className = "title";
-titles[3].id = "fourth-title";
+titles[3].className = 'title';
+titles[3].id = 'fourth-title';
 ```
 #### Adding class using classList
 The class list method is a good method to append additional class. It doens't override the original class if a class exists
 ```js
 //another way to setting an attribute: append the class, does't over ride
-titles[3].classList.add("title", "header-title")
+titles[3].classList.add('title', 'header-title')
 ```
 ### Adding Text conent
 ```js
-const titles = document.querySelectorAll("h1");
-titles[3].textContent = "Fourth Title";
+const titles = document.querySelectorAll('h1');
+titles[3].textContent = 'Fourth Title';
 ```
 ### Adding style
 Lets add some style to our titles. If the element has even index we give it green color else red.
 ```js
-const titles = document.querySelectorAll("h1");
+const titles = document.querySelectorAll('h1');
 titles.forEach((title,i) => {
   title.fontSize = '24px'; // all titles will have 24px font size
   if(i % 2 === 0){
@@ -1951,17 +1951,17 @@ titles.forEach((title,i) => {
 ### Creating an Element
 
 ```js
-let title = document.createElement("h1");
-let firstTitle = document.getElementById("first-title");
+let title = document.createElement('h1');
+let firstTitle = document.getElementById('first-title');
 ```
 ### Creating elements
 ```js
-let firstTitle = document.getElementById("first-title");
+let firstTitle = document.getElementById('first-title');
 let title
 for(let i = 0; i < 3; i++){
-  title = document.createElement("h1");
-  title.className = "title";
-  title.style.fontSize = "24px";
+  title = document.createElement('h1');
+  title.className = 'title';
+  title.style.fontSize = '24px';
 }
 ```
 
@@ -1970,9 +1970,9 @@ for(let i = 0; i < 3; i++){
 // creating multiple elements and appending to parent element
 let title;
 for(let i = 0; i < 3; i++){
-  title = document.createElement("h1");
-  title.className = "title";
-  title.style.fontSize = "24px";
+  title = document.createElement('h1');
+  title.className = 'title';
+  title.style.fontSize = '24px';
   document.body.appendChild(title);
 }
 ```
@@ -1981,16 +1981,16 @@ Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown, onkeyu
 We can add event listener method to any DOM object. Use use ***addEventListener()*** method to listen different event types on HTML elements.
 The following is an example of click type event.
 ```js
-const button = document.querySelector("button");
-button.addEventListener("click", e => {
+const button = document.querySelector('button');
+button.addEventListener('click', e => {
   console.log(e.target);
 });
 ```
 ### Getting value from an input element
 We usaully fill forms and forms accept data. Form fields are created using input HTML element.
 ```html
-<input type ="text" placeholder = "Mass in Killogram" />
-<input type = "text" placeholder = "Height in meters" />
+<input type ='text' placeholder = 'Mass in Killogram' />
+<input type = 'text' placeholder = 'Height in meters' />
 <button>Calculate BMI</button>
 ```
 ```js
@@ -2076,7 +2076,7 @@ let pattern = new RegEx('love','gi');  // declaring a regex pattern using RegEx 
 ```
 ```js
 let pattern = /[A-Z][a-z]{3,12}/;
-let name = "Asabeneh";
+let name = 'Asabeneh';
 pattern.test(name);
 //output:true
 ```
@@ -2100,40 +2100,40 @@ _setItem(), getItem(), removeItem(), clear(), key()_
 When we set data to be stored in a localStorage, it will be stored as a string.  If we are storing an array or an object, we should stringify it first to keep the format unless otherwise we lose the array structure or the object structure of the original data
 ```js
 localStorage.setItem('name', 'Asabeneh');
-console.log(localStorage) //Storage {name: "Asabeneh", length: 1}
+console.log(localStorage) //Storage {name: 'Asabeneh', length: 1}
 localStorage.setItem('age', 200);
-console.log(localStorage) //Storage {age: "200", name: "Asabeneh", length: 2}
+console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', length: 2}
 const skills = ['HTML', 'CSS', 'JS', 'React'];
 //Skills array has to be stringfied first to keep the format.
 const skillsJSON = JSON.stringify(skills,undefined, 4)
 localStorage.setItem('skills', skillsJSON);
-console.log(localStorage) //Storage {age: "200", name: "Asabeneh", skills: "HTML,CSS,JS,React", length: 3}
+console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', skills: 'HTML,CSS,JS,React', length: 3}
 ```
 If we are storing an array, an object or object array, we should stringify the object first. See the example below.
 ```js
 
 let skills = [
-  { tech: "HTML", level: 10 },
-  { tech: "CSS", level: 9 },
-  { tech: "JS", level: 8 },
-  { tech: "React", level: 9 },
-  { tech: "Redux", level: 10 },
-  { tech: "Node", level: 8 },
-  { tech: "MongoDB", level: 8 }
+  { tech: 'HTML', level: 10 },
+  { tech: 'CSS', level: 9 },
+  { tech: 'JS', level: 8 },
+  { tech: 'React', level: 9 },
+  { tech: 'Redux', level: 10 },
+  { tech: 'Node', level: 8 },
+  { tech: 'MongoDB', level: 8 }
 ];
 
 let skillJSON = JSON.stringify(skills);
-localStorage.setItem("skills", skillJSON);
+localStorage.setItem('skills', skillJSON);
 ```
 ##### Getting item from localStorage
 ```js
 let name = localStorage.getItem('name');
 let age = localStorage.getItem('age');
 let skills = localStorage.getItem('skills');
-console.log(name, age, skills) // 'Asabeneh', '200', '["HTML","CSS","JS","React"]'
+console.log(name, age, skills) // 'Asabeneh', '200', '['HTML','CSS','JS','React']'
 
 
-let skillsObj = JSON.parse(localStorage.getItem("skills"), undefined, 4);
+let skillsObj = JSON.parse(localStorage.getItem('skills'), undefined, 4);
 console.log(skillsObj);
 
 ```
@@ -2166,108 +2166,114 @@ ___
 
 <!-- code_chunk_output -->
 
-* [JavaScript for Everyone](#javascript-for-everyone)
-	* [Table of Contents](#table-of-contents)
-	* [Introduction](#introduction)
-	* [Setup](#setup)
-	* [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
-		* [Inline Script](#inline-script)
-		* [Internal script](#internal-script)
-		* [External script](#external-script)
-			* [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
-	* [Variables](#variables)
-			* [Exercise - 1 : Variables](#exercise-1-variables)
-	* [Comments](#comments)
-			* [Exercise - 2 : Comments](#exercise-2-comments)
-	* [Data Types](#data-types)
-			* [Exercises - 3 : Data Types](#exercises-3-data-types)
-		* [Strings](#strings)
-			* [String Concatination](#string-concatination)
-			* [Exercise - 4 : String](#exercise-4-string)
-		* [Numbers](#numbers)
-			* [Math Object](#math-object)
-		* [Booleans](#booleans)
-			* [Exercise - 5 : Booleans](#exercise-5-booleans)
-		* [Undefined](#undefined)
-		* [Null](#null)
-			* [Exercise - 6 : Data types](#exercise-6-data-types)
-	* [Operators](#operators)
-		* [Arthimetic Operators](#arthimetic-operators)
-			* [Exercises : Arthimetic Operators:](#exercises-arthimetic-operators)
-		* [Logical Operators](#logical-operators)
-			* [Exercises: Logical Operators](#exercises-logical-operators)
-		* [Comparison Operators](#comparison-operators)
-			* [Exercise - 7 : Comparison Operators](#exercise-7-comparison-operators)
-	* [Conditionals](#conditionals)
-			* [If](#if)
-			* [If Else](#if-else)
-			* [If else if else](#if-else-if-else)
-			* [Switch](#switch)
-			* [Ternary Operators](#ternary-operators)
-			* [Exercise - 8 : Conditionals](#exercise-8-conditionals)
-	* [Loops](#loops)
-		* [For Loop](#for-loop)
-		* [While loop](#while-loop)
-		* [Do while loop](#do-while-loop)
-			* [Exercises:Loops](#exercisesloops)
-	* [Arrays](#arrays)
-			* [Exercise - 9 : Arrays](#exercise-9-arrays)
-	* [More on Arrays](#more-on-arrays)
-			* [Exercise -10 : Array Methods](#exercise-10-array-methods)
-	* [Functions](#functions)
-		* [Function Declaration](#function-declaration)
-		* [Function Expression](#function-expression)
-		* [Anonymous Function](#anonymous-function)
-		* [Arrow Function](#arrow-function)
-		* [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
-			* [Exercise - 10 : Functions](#exercise-10-functions)
-	* [Object](#object)
-		* [Object Methods:](#object-methods)
-		* [Date Object](#date-object)
-			* [Exercises:](#exercises)
-			* [Exercises:Objects](#exercisesobjects)
-	* [Functional Programming](#functional-programming)
-			* [Sorting string values](#sorting-string-values)
-			* [Sorting Numeric  values](#sorting-numeric-values)
-			* [Sorting Object Arrays](#sorting-object-arrays)
-		* [Exercises:](#exercises-1)
-	* [Destructuring and Spread](#destructuring-and-spread)
-			* [Destructing  Arrays](#destructing-arrays)
-			* [Destructuring Object](#destructuring-object)
-			* [Renaming during structuring](#renaming-during-structuring)
-		* [Spread or Rest Operator](#spread-or-rest-operator)
-	* [Document Object Model](#document-object-model)
-		* [Getting Element](#getting-element)
-			* [Getting elements by tag name](#getting-elements-by-tag-name)
-			* [Getting elements by class name](#getting-elements-by-class-name)
-			* [Getting an element by id](#getting-an-element-by-id)
-			* [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
-		* [Adding attribute](#adding-attribute)
-			* [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
-			* [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
-			* [Adding class using classList](#adding-class-using-classlist)
-		* [Adding Text conent](#adding-text-conent)
-		* [Adding style](#adding-style)
-		* [Creating an Element](#creating-an-element)
-		* [Creating elements](#creating-elements)
-		* [Appending to a parent element](#appending-to-a-parent-element)
-		* [Event Listeners](#event-listeners)
-		* [Getting value from an input element](#getting-value-from-an-input-element)
-			* [Exercises:Document Object Model](#exercisesdocument-object-model)
-			* [DOM: Mini Projects](#dom-mini-projects)
-	* [Class](#class)
-			* [Exercises:Classes](#exercisesclasses)
-	* [Regular Expressions](#regular-expressions)
-		* [Creating a pattern](#creating-a-pattern)
-		* [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
-		* [RegExp Object Methods](#regexp-object-methods)
-			* [Exercises:Regular Expressions](#exercisesregular-expressions)
-	* [localStorage](#localstorage)
-				* [Set Item](#set-item)
-				* [Getting item from local storage](#getting-item-from-local-storage)
-	* [Exercises:Local Storage](#exerciseslocal-storage)
-	* [Cookies](#cookies)
-			* [Exercises:Cookies](#exercisescookies)
-		* [JavaScipt Tests](#javascipt-testshttpsgithubcomasabenehjavascript-for-everyonewikijavascript-test-1)
+- [JavaScript for Everyone](#JavaScript-for-Everyone)
+- [Table of Contents](#Table-of-Contents)
+- [Introduction](#Introduction)
+- [Setup](#Setup)
+  - [Adding JavaScript to a web page](#Adding-JavaScript-to-a-web-page)
+    - [Inline Script](#Inline-Script)
+    - [Internal script](#Internal-script)
+    - [External script](#External-script)
+      - [Exercises:Setting Up your machine](#ExercisesSetting-Up-your-machine)
+- [Variables](#Variables)
+      - [Exercise - 1 : Variables](#Exercise---1--Variables)
+  - [Comments](#Comments)
+      - [Exercise - 2 : Comments](#Exercise---2--Comments)
+  - [Data Types](#Data-Types)
+      - [Exercises - 3 : Data Types](#Exercises---3--Data-Types)
+    - [Strings](#Strings)
+      - [String Concatination](#String-Concatination)
+      - [Exercise - 4 : String](#Exercise---4--String)
+    - [Numbers](#Numbers)
+      - [Math Object](#Math-Object)
+    - [Booleans](#Booleans)
+      - [Exercise - 5 : Booleans](#Exercise---5--Booleans)
+    - [Undefined](#Undefined)
+    - [Null](#Null)
+      - [Exercise - 6 : Data types](#Exercise---6--Data-types)
+  - [Operators](#Operators)
+    - [Arthimetic Operators](#Arthimetic-Operators)
+      - [Exercises : Arthimetic Operators:](#Exercises--Arthimetic-Operators)
+    - [Logical Operators](#Logical-Operators)
+      - [Exercises: Logical Operators](#Exercises-Logical-Operators)
+    - [Comparison Operators](#Comparison-Operators)
+      - [Exercise - 7 : Comparison Operators](#Exercise---7--Comparison-Operators)
+- [Conditionals](#Conditionals)
+      - [If](#If)
+      - [If Else](#If-Else)
+      - [If else if else](#If-else-if-else)
+      - [Switch](#Switch)
+      - [Ternary Operators](#Ternary-Operators)
+      - [Exercise - 8 : Conditionals](#Exercise---8--Conditionals)
+- [Loops](#Loops)
+  - [For Loop](#For-Loop)
+  - [While loop](#While-loop)
+  - [Do while loop](#Do-while-loop)
+      - [Exercises:Loops](#ExercisesLoops)
+- [Arrays](#Arrays)
+      - [Exercise - 9 : Arrays](#Exercise---9--Arrays)
+- [More on Arrays](#More-on-Arrays)
+      - [Exercise -10 : Array Methods](#Exercise--10--Array-Methods)
+- [Functions](#Functions)
+    - [Function Declaration](#Function-Declaration)
+    - [Function Expression](#Function-Expression)
+    - [Anonymous Function](#Anonymous-Function)
+    - [Arrow Function](#Arrow-Function)
+    - [Arrow Function vs Declaration Function](#Arrow-Function-vs-Declaration-Function)
+      - [Exercise - 10 : Functions](#Exercise---10--Functions)
+- [Object](#Object)
+    - [Object Methods:](#Object-Methods)
+    - [Date Object](#Date-Object)
+      - [Exercises:](#Exercises)
+      - [Exercises:Objects](#ExercisesObjects)
+  - [Functional Programming](#Functional-Programming)
+      - [Sorting string values](#Sorting-string-values)
+      - [Sorting Numeric values](#Sorting-Numeric-values)
+      - [Sorting Object Arrays](#Sorting-Object-Arrays)
+    - [Exercises:](#Exercises-1)
+  - [Destructuring and Spread](#Destructuring-and-Spread)
+      - [Destructing Arrays](#Destructing-Arrays)
+      - [Destructuring Object](#Destructuring-Object)
+      - [Renaming during structuring](#Renaming-during-structuring)
+    - [Spread or Rest Operator](#Spread-or-Rest-Operator)
+- [Document Object Model (DOM)](#Document-Object-Model-DOM)
+    - [Getting Element](#Getting-Element)
+      - [Getting elements by tag name](#Getting-elements-by-tag-name)
+      - [Getting elements by class name](#Getting-elements-by-class-name)
+      - [Getting an element by id](#Getting-an-element-by-id)
+      - [Getting elements by using querySelector using tag, class and id:](#Getting-elements-by-using-querySelector-using-tag-class-and-id)
+    - [Adding attribute](#Adding-attribute)
+      - [Adding attribute using setAttribute](#Adding-attribute-using-setAttribute)
+      - [Adding attribute without setAttribute](#Adding-attribute-without-setAttribute)
+      - [Adding class using classList](#Adding-class-using-classList)
+    - [Adding Text conent](#Adding-Text-conent)
+    - [Adding style](#Adding-style)
+    - [Creating an Element](#Creating-an-Element)
+    - [Creating elements](#Creating-elements)
+    - [Appending to a parent element](#Appending-to-a-parent-element)
+    - [Event Listeners](#Event-Listeners)
+    - [Getting value from an input element](#Getting-value-from-an-input-element)
+      - [Exercises:Document Object Model](#ExercisesDocument-Object-Model)
+      - [DOM: Mini Projects](#DOM-Mini-Projects)
+  - [Class](#Class)
+      - [Exercises:Classes](#ExercisesClasses)
+  - [Regular Expressions](#Regular-Expressions)
+    - [Creating a pattern](#Creating-a-pattern)
+    - [Creatign a pattern with flags: global flag (g), case insensitive flag(i)](#Creatign-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
+    - [RegExp Object Methods](#RegExp-Object-Methods)
+      - [Exercises:Regular Expressions](#ExercisesRegular-Expressions)
+  - [localStorage](#localStorage)
+        - [Setting item to the localStorage](#Setting-item-to-the-localStorage)
+        - [Getting item from localStorage](#Getting-item-from-localStorage)
+        - [Clearing the localStorage](#Clearing-the-localStorage)
+  - [Exercises:Local Storage](#ExercisesLocal-Storage)
+  - [Cookies](#Cookies)
+  - [JavaScript Tests](#JavaScript-Tests)
+  - [JavaScript Interview Questions](#JavaScript-Interview-Questions)
+      - [Exercises:Cookies](#ExercisesCookies)
+    - [JavaScipt Tests](#JavaScipt-Tests)
+        - [JavaScript Test 1](#JavaScript-Test-1)
+        - [JavaScript Test 2](#JavaScript-Test-2)
+        - [JavaScript Test 3](#JavaScript-Test-3)
 
 <!-- /code_chunk_output -->

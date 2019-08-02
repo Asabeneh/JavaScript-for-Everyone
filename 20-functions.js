@@ -21,8 +21,8 @@ console.log(sumTwoNumbersAndReturn(10, 20));
 function printFullName(firstName, lastName) {
   return `${firstName} ${lastName}`;
 }
-console.log(printFullName("Asabeneh", "Yetayeh"));
-console.log(printFullName("Dean", "Phan"));
+console.log(printFullName('Asabeneh', 'Yetayeh'));
+console.log(printFullName('Dean', 'Phan'));
 
 function square(number) {
   return number * number;
@@ -59,9 +59,3 @@ function sumOfEvensAndOdds() {
 }
 
 console.log(sumOfEvensAndOdds());
-
-
-
-
-
-
