@@ -1,6 +1,6 @@
 # JavaScript for Everyone
 
-![JS](https://cdn-images-1.medium.com/max/1600/1*H-25KB7EbSHjv70HXrdl6w.png)
+![JS](https://res.cloudinary.com/dgqqxlkfa/image/upload/v1566725872/javascript_for_everyone/javascript_for_everyone.png)
 
 # Table of Contents
 
