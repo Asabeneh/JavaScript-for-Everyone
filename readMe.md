@@ -5,28 +5,30 @@
 # Table of Contents
 
 1. [Introduction](#introduction)
-2. [Setup](#setup)
-3. [Variables](#variables)
-4. [Data Types](#data-types)
-5. [Operators](#operators)
-6. [Conditionals](#conditionals)
-7. [Arrays](#arrays)
-8. [Loops](#loops)
-9. [Functions](#functions)
-10. [Scope](#scope)
-11. [Hoisting](#Hoisting)
-12. [Object](#object)
-13. [Document Object Model](#document-object-model)
-14. [Class](#class)
-15. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
-16. [Functional Programming](#functional-programming)
-17. [Destructuring](#destructuring)
-18. [Rest and Spread](#rest-and-spread)
-19. [Regular Expressions](#regular-expressions)
-20. [Local Storage](#local-storage)
-21. [Cookies](#cookies)
-22. [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests):
-23. [JavaScript Interview Questions](#javascript-interview-questions)
+1. [Setup](#setup)
+1. [Variables](#variables)
+1. [Data Types](#data-types)
+1. [Operators](#operators)
+1. [Conditionals](#conditionals)
+1. [Arrays](#arrays)
+1. [Loops](#loops)
+1. [Functions](#functions)
+1. [Scope](#scope)
+1. [Hoisting](#Hoisting)
+1. [Object](#object)
+1. [Map and Set](#map-and-set)
+1. [Document Object Model](#document-object-model)
+1. [Class](#class)
+1. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
+1. [Functional Programming](#functional-programming)
+1. [Destructuring](#destructuring)
+1. [Rest and Spread](#rest-and-spread)
+1. [Regular Expressions](#regular-expressions)
+1. [Local Storage](#local-storage)
+1. [Promises and Callback](#promises-and-callbacks)
+1. [Cookies](#cookies)
+1. [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests):
+1. [JavaScript Interview Questions](#javascript-interview-questions)
 
 
 # Introduction
@@ -111,8 +113,6 @@ The external script link can be on the header or body but it is preferred to put
       <script src="introduction.js"></script>
     </head>
     <body>
-      //it could be in the header or in the body 
-      <script src="introduction.js"></script>
     </body>
     </html
 ```
@@ -835,10 +835,10 @@ console.log(eightEmptyValues); // [empty x 8]
 const arr = Array(); // creates an an empty array
 console.log(arr);
 const eightXvalues = Array(8).fill('X'); // it creates eight element values
-console.log(eightXvalue); // ['X', 'X','X','X','X','X','X','X']
+console.log(eightXvalues); // ['X', 'X','X','X','X','X','X','X']
 ```
 
-      concat:To concatinate two arrays.
+      concat:To concatenate two arrays.
 
 ```js
 const firstList = [1, 2, 3];
@@ -899,8 +899,8 @@ toString:Converts array to string
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.toString()); // 1,2,3,4,5
-const names = ['Asabeneh', 'Matias', 'Elias', 'Brook'];
-console.log(names.toString()); // Asabeneh,Matias,Elias,Brook
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
+console.log(names.toString()); // Asabeneh,Mathias,Elias,Brook
 ```
 
 join:To join the elements of the array, the argument passed in the join method will be joined in the array and return as a string.
@@ -908,12 +908,12 @@ join:To join the elements of the array, the argument passed in the join method w
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.join()); // 1,2,3,4,5
-const names = ['Asabeneh', 'Matias', 'Elias', 'Brook'];
-console.log(names.join()); // Asabeneh,Matias,Elias,Brook
-console.log(names.join('')); //AsabenehMatiasEliasBrook
-console.log(names.join(' ')); //Asabeneh Matias Elias Brook
-console.log(names.join(', ')); //Asabeneh, Matias, Elias, Brook
-console.log(names.join(' # ')); //Asabeneh # Matias # Elias # Brook
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
+console.log(names.join()); // Asabeneh,Mathias,Elias,Brook
+console.log(names.join('')); //AsabenehMathiasEliasBrook
+console.log(names.join(' ')); //Asabeneh Mathias Elias Brook
+console.log(names.join(', ')); //Asabeneh, Mathias, Elias, Brook
+console.log(names.join(' # ')); //Asabeneh # Mathias # Elias # Brook
 ```
 
 Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position
@@ -2197,61 +2197,6 @@ console.log(result);
 #### Exercises:Regular Expressions
 - Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.’
 
-## localStorage
-
-Local storage is the para of the web storage API which is used to store data on the browser with no expiration data. The data will be available on the browser even after the browser is closed. There are five methods to work on local storage:
-_setItem(), getItem(), removeItem(), clear(), key()_
-
-##### Setting item to the localStorage
-When we set data to be stored in a localStorage, it will be stored as a string.  If we are storing an array or an object, we should stringify it first to keep the format unless otherwise we lose the array structure or the object structure of the original data
-```js
-localStorage.setItem('name', 'Asabeneh');
-console.log(localStorage) //Storage {name: 'Asabeneh', length: 1}
-localStorage.setItem('age', 200);
-console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', length: 2}
-const skills = ['HTML', 'CSS', 'JS', 'React'];
-//Skills array has to be stringified first to keep the format.
-const skillsJSON = JSON.stringify(skills,undefined, 4)
-localStorage.setItem('skills', skillsJSON);
-console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', skills: 'HTML,CSS,JS,React', length: 3}
-```
-If we are storing an array, an object or object array, we should stringify the object first. See the example below.
-```js
-
-let skills = [
-  { tech: 'HTML', level: 10 },
-  { tech: 'CSS', level: 9 },
-  { tech: 'JS', level: 8 },
-  { tech: 'React', level: 9 },
-  { tech: 'Redux', level: 10 },
-  { tech: 'Node', level: 8 },
-  { tech: 'MongoDB', level: 8 }
-];
-
-let skillJSON = JSON.stringify(skills);
-localStorage.setItem('skills', skillJSON);
-```
-##### Getting item from localStorage
-```js
-let name = localStorage.getItem('name');
-let age = localStorage.getItem('age');
-let skills = localStorage.getItem('skills');
-console.log(name, age, skills) // 'Asabeneh', '200', '['HTML','CSS','JS','React']'
-
-
-let skillsObj = JSON.parse(localStorage.getItem('skills'), undefined, 4);
-console.log(skillsObj);
-
-```
-##### Clearing the localStorage
-The clear method, will clear everything stored in the local storage
-```js
-localStorage.clear();
-```
-
-## Exercises:Local Storage
-
-## Cookies
 ## Promises and Callbacks
 From the following code blocks you will notice, the difference between callback and promises:
 
@@ -2355,12 +2300,64 @@ console.log(square(10))
   fetchData()
   ```
 
+## localStorage
 
+Local storage is the para of the web storage API which is used to store data on the browser with no expiration data. The data will be available on the browser even after the browser is closed. There are five methods to work on local storage:
+_setItem(), getItem(), removeItem(), clear(), key()_
+
+##### Setting item to the localStorage
+When we set data to be stored in a localStorage, it will be stored as a string.  If we are storing an array or an object, we should stringify it first to keep the format unless otherwise we lose the array structure or the object structure of the original data
+```js
+localStorage.setItem('name', 'Asabeneh');
+console.log(localStorage) //Storage {name: 'Asabeneh', length: 1}
+localStorage.setItem('age', 200);
+console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', length: 2}
+const skills = ['HTML', 'CSS', 'JS', 'React'];
+//Skills array has to be stringified first to keep the format.
+const skillsJSON = JSON.stringify(skills,undefined, 4)
+localStorage.setItem('skills', skillsJSON);
+console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', skills: 'HTML,CSS,JS,React', length: 3}
+```
+If we are storing an array, an object or object array, we should stringify the object first. See the example below.
+```js
+
+let skills = [
+  { tech: 'HTML', level: 10 },
+  { tech: 'CSS', level: 9 },
+  { tech: 'JS', level: 8 },
+  { tech: 'React', level: 9 },
+  { tech: 'Redux', level: 10 },
+  { tech: 'Node', level: 8 },
+  { tech: 'MongoDB', level: 8 }
+];
+
+let skillJSON = JSON.stringify(skills);
+localStorage.setItem('skills', skillJSON);
+```
+##### Getting item from localStorage
+```js
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+let skills = localStorage.getItem('skills');
+console.log(name, age, skills) // 'Asabeneh', '200', '['HTML','CSS','JS','React']'
+
+
+let skillsObj = JSON.parse(localStorage.getItem('skills'), undefined, 4);
+console.log(skillsObj);
+
+```
+##### Clearing the localStorage
+The clear method, will clear everything stored in the local storage
+```js
+localStorage.clear();
+```
+
+## Exercises:Local Storage
+
+## Cookies
 ## [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests)
 ## JavaScript Interview Questions
-
 #### Exercises:Cookies
-
 ### [JavaScipt Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
 ##### [JavaScript Test 1](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
 ##### [JavaScript Test 2](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-2)
@@ -2485,14 +2482,14 @@ ___
     - [Creating a pattern with flags: global flag (g), case insensitive flag(i)](#creating-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
     - [RegExp Object Methods](#regexp-object-methods)
       - [Exercises:Regular Expressions](#exercisesregular-expressions)
+  - [Promises and Callbacks](#promises-and-callbacks)
+  - [Async and Await](#async-and-await)
   - [localStorage](#localstorage)
         - [Setting item to the localStorage](#setting-item-to-the-localstorage)
         - [Getting item from localStorage](#getting-item-from-localstorage)
         - [Clearing the localStorage](#clearing-the-localstorage)
   - [Exercises:Local Storage](#exerciseslocal-storage)
   - [Cookies](#cookies)
-  - [Promises and Callbacks](#promises-and-callbacks)
-  - [Async and Await](#async-and-await)
   - [JavaScript Tests](#javascript-tests)
   - [JavaScript Interview Questions](#javascript-interview-questions)
       - [Exercises:Cookies](#exercisescookies)
