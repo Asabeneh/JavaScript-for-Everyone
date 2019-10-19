@@ -24,8 +24,8 @@
 1. [Destructuring](#destructuring)
 1. [Rest and Spread](#rest-and-spread)
 1. [Regular Expressions](#regular-expressions)
-1. [Local Storage](#local-storage)
 1. [Promises and Callback](#promises-and-callbacks)
+1. [Local Storage](#local-storage)
 1. [Cookies](#cookies)
 1. [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests):
 1. [JavaScript Interview Questions](#javascript-interview-questions)
