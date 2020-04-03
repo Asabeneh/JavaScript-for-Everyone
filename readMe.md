@@ -1,37 +1,55 @@
-# JavaScript for Everyone
 
 ![JS](https://res.cloudinary.com/dgqqxlkfa/image/upload/v1566725872/javascript_for_everyone/javascript_for_everyone.png)
 
-# Table of Contents
+- [Introduction](#introduction)
+- [Setup](#setup)
+  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
+    - [Inline Script](#inline-script)
+    - [Internal script](#internal-script)
+    - [External script](#external-script)
+  - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
+- [Variables](#variables)
+  - [Exercise - 1 : Variables](#exercise---1--variables)
+- [Comments](#comments)
+  - [Exercise - 2 : Comments](#exercise---2--comments)
+- [Data Types](#data-types)
+  - [Exercises - 3 : Data Types](#exercises---3--data-types)
+  - [Strings](#strings)
+    - [String Concatenation](#string-concatenation)
+    - [Exercise - 4 : String](#exercise---4--string)
+  - [Numbers](#numbers)
+    - [Math Object](#math-object)
+  - [Booleans](#booleans)
+    - [Exercise - 5 : Booleans](#exercise---5--booleans)
+  - [Undefined](#undefined)
+  - [Null](#null)
+    - [Exercise - 6 : Data types](#exercise---6--data-types)
+- [Operators](#operators)
+  - [Arithmetic Operators](#arithmetic-operators)
+    - [Exercises : Arithmetic Operators](#exercises--arithmetic-operators)
+  - [Logical Operators](#logical-operators)
+    - [Exercises: Logical Operators](#exercises-logical-operators)
+  - [Comparison Operators](#comparison-operators)
+    - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
+- [Conditionals](#conditionals)
+  - [If Condition](#if-condition)
+  - [If Else](#if-else)
+  - [If else if else](#if-else-if-else)
+  - [Switch](#switch)
+  - [Ternary Operators](#ternary-operators)
+  - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
+  - [Exercises:Local Storage](#exerciseslocal-storage)
+- [Cookies](#cookies)
+  - [Exercises:Cookies](#exercisescookies)
+- [JavaScript Tests](#javascript-tests)
+- [JavaScript Interview Questions](#javascript-interview-questions)
+- [JavaScript Tests](#javascript-tests-1)
+  - [JavaScript Test 1](#javascript-test-1)
+  - [JavaScript Test 2](#javascript-test-2)
+  - [JavaScript Test 3](#javascript-test-3)
 
-1. [Introduction](#introduction)
-1. [Setup](#setup)
-1. [Variables](#variables)
-1. [Data Types](#data-types)
-1. [Operators](#operators)
-1. [Conditionals](#conditionals)
-1. [Arrays](#arrays)
-1. [Loops](#loops)
-1. [Functions](#functions)
-1. [Scope](#scope)
-1. [Hoisting](#Hoisting)
-1. [Object](#object)
-1. [Map and Set](#map-and-set)
-1. [Document Object Model](#document-object-model)
-1. [Class](#class)
-1. [Call Back and Higher Order Functions](#call-back-and-higher-order-functions)
-1. [Functional Programming](#functional-programming)
-1. [Destructuring](#destructuring)
-1. [Rest and Spread](#rest-and-spread)
-1. [Regular Expressions](#regular-expressions)
-1. [Promises and Callback](#promises-and-callbacks)
-1. [Local Storage](#local-storage)
-1. [Cookies](#cookies)
-1. [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests):
-1. [JavaScript Interview Questions](#javascript-interview-questions)
+## Introduction
 
-
-# Introduction
 **_JavaScript for Everyone_** is a guide for both beginners and advanced JavaScript developers. Welcome to JavaScript. **_Congratulations_** for deciding to learn JavaScript, the language of the browser.
 
 In this step by step tutorial, you will learn JavaScript, the most popular programming language in the history of mankind.
@@ -40,22 +58,24 @@ You use JavaScript **_to add interactivity to websites, to develop mobile apps, 
 programming language for four consecutive years and is the most used programming language on
 Github.
 
-# Setup
+## Setup
 
 First thing first, lets install text or code editor. Install code editor, it could be [vscode](https://code.visualstudio.com/), [atom](https://atom.io/), [bracket](http://brackets.io/), [notepad++](https://notepad-plus-plus.org/) or others. I recommend vscode.
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 
 If you want help, you may join the [telegram](https://t.me/JavaScriptforEveryone) channel.
 
-## Adding JavaScript to a web page
+### Adding JavaScript to a web page
+
 JavaScript can be added to a web page in three ways:
+
 - **_Inline script_**
 - **_Internal script_**
 - **_External script_**
 
 The following sections show different ways of adding JavaScript code to your web page.
 
-### Inline Script
+#### Inline Script
 
 Create a folder on your desktop or in any location and create an **_index.html_** file in your folder. Then paste the following code and open it in a browser, either in [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b).
 
@@ -71,9 +91,12 @@ Create a folder on your desktop or in any location and create an **_index.html_*
   </html>
 ```
 
-### Internal script
+#### Internal script
+
 Internal script can be written in the _head_ or the _body_ but it is preferred to put it on the body of the html document.
 
+- Internal script  at the head
+
 ```html
 <!DOCTYPE html>
   <html>
@@ -84,10 +107,12 @@ Internal script can be written in the _head_ or the _body_ but it is preferred t
       </script>
     </head>
     <body>
-      
+  
     </body>
   </html>
 ```
+
+- Internal script  at the head
 
 ```html
 <!DOCTYPE html>
@@ -103,8 +128,12 @@ Internal script can be written in the _head_ or the _body_ but it is preferred t
   </html>
 ```
 
-### External script
-The external script link can be on the header or body but it is preferred to put it in the body.
+#### External script
+
+The external script link can be on the head or body but it is preferred to put it in the body.
+
+- External script  at the head
+
 ```html
 <!DOCTYPE html>
   <html>
@@ -116,6 +145,9 @@ The external script link can be on the header or body but it is preferred to put
     </body>
     </html
 ```
+
+- External script at the body
+
 ```html
 <!DOCTYPE html>
   <html>
@@ -123,16 +155,17 @@ The external script link can be on the header or body but it is preferred to put
       <title>JavaScript for Everyone</title>
     </head>
     <body>
-      //it could be in the header or in the body 
+      //it could be in the header or in the body
       // Here is the recommended place to put the script
       <script src="introduction.js"></script>
     </body>
     </html
 ```
 
-#### Exercises:Setting Up your machine
+### Exercises:Setting Up your machine
 
-# Variables
+## Variables
+
 Variables are _containers_ of data. Variables _store_ data in a memory location. When a variable is declared a memory location is reserved and when it is assigned to a value, the memory space will be filled. To declare a variable we use, _var_, _let_ or _const_ key words. For a variable which changes at different time we use _let_ but if the data doesn't change at all we use _const_. For example PI, country name, gravity.
 
 A JavaScript variable name  shouldn't begin with a number
@@ -141,6 +174,7 @@ A JavaScript variable name follow a camelCase convention.
 A JavaScript variable name shouldn't have space between words. The following are valid examples of JavaScript variables.
 
 Valid variables in JavaScript:
+
 ```js
     firstName
     lastName
@@ -162,49 +196,64 @@ Valid variables in JavaScript:
     year2019
     year_2019
 ```
-Camel case or the first way of declaring is conventional in JavaScript. In this material, camelCase variables will be used.
+
+Camel case(camelCase) or the first way of declaring is conventional in JavaScript. In this material, camelCase variables will be used.
 
 Invalid variable:
+
 ```js
   first-name
   1_num
   num_#_1
 ```
+
+Declaring variables
+
 ```js
 // Declaring different variables of different data types
+
 let firstName = 'Asabeneh'; // first name of a person
-let lastName = 'Yetayeh'; // last name of a person
-let country = 'Finland'; // country
-let city = 'Helsinki'; // capital city
-let age = 100; // age in years
+let lastName = 'Yetayeh';   // last name of a person
+let country = 'Finland';    // country
+let city = 'Helsinki';      // capital city
+let age = 100;              // age in years
 let isMarried = true;
-console.log(firstName, lastName, country, city, age, isMarried); //Asabeneh, Yetayeh, Finland, Helsinki, 100, True
+console.log(firstName, lastName, country, city, age, isMarried); // Asabeneh, Yetayeh, Finland, Helsinki, 100, True
 
 // Declaring variables with number values
-const gravity = 9.81; // earth gravity  in m/s2
-const boilingPoint = 100; // water boiling point, temperature in oC
-const PI = 3.14; // geometrical constant
-console.log(gravity, boilingPoint, PI); // 9.81, 100, 3.14
+
+const gravity = 9.81;                    // earth gravity  in m/s2
+const boilingPoint = 100;                // water boiling point, temperature in oC
+const PI = 3.14;                         // geometrical constant
+console.log(gravity, boilingPoint, PI);  // 9.81, 100, 3.14
+
 // Variables can also be declaring in one line separated by comma
+
 let name = 'Asabeneh', //name of a person
   job = 'teacher',
   live = 'Finland';
 console.log(name, job, live);
 ```
-#### Exercise - 1 : Variable
+
+### Exercise - 1 : Variables
+
 1. Declare four variables without assigning values
 2. Declare four variables with assigning values
 3. Declare variables to store your first name, last name, marital status, country and age in multiple lines
 4. Declare variables to store your first name, last name, marital status, country and age in a single line
 5. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to browser console.
    Output:
+
    ```sh
    I am 25 years old.
    You are 30 years old.
    ```
+
 ## Comments
+
 Commenting in JavaScript is similar to other programming languages. Comments can help to make code more readable.
 There are two ways of commenting:
+
 - _Single line commenting_
 - _Multiline commenting_
 
@@ -212,6 +261,7 @@ There are two ways of commenting:
 // let firstName = 'Asabeneh'; single line comment
 // let lastName = 'Yetayeh'; single line comment
 ```
+
 Multiline commenting:
 
 ```js
@@ -223,7 +273,7 @@ Multiline commenting:
     */
 ```
 
-#### Exercise - 2 : Comments
+### Exercise - 2 : Comments
 
 1. Write a single line comment which says, _comments can make code readable_
 1. Write a multiline comment which says, _comments can make code readable, easy to use_
@@ -233,7 +283,7 @@ Multiline commenting:
 
 In JavaScript and also other programming languages there are different kinds of data types. The following are JavaScript primitive data types:_String, Number, Boolean, undefined, Null_ and _Symbol_.
 
-#### Exercises - 3 : Data Types
+### Exercises - 3 : Data Types
 
 1. Declare variables and assign string, boolean, undefined and null data types
 1. The JavaScript ***typeof*** operator uses to check different data types. Check the data type of each variables from question number 1.
@@ -305,7 +355,7 @@ console.log(personInfoTwo);
 
 ### Numbers
 
-Numbers are integers and decimal values which can do all the arithemtic operations
+Numbers are integers and decimal values which can do all the arithmetic operations
 Lets' see some examples of Numbers
 
 ```js
@@ -319,29 +369,34 @@ const boilingPoint = 100; // temperature in oC, boiling point of water which is 
 const bodyTemp = 37; // oC average human body temperature, which is a constant
 console.log(age, gravity, mass, PI, boilingPoint, bodyTemp);
 ```
+
 #### Math Object
+
 In JavaScript the Math Object provides a lots of methods to work with numbers.
+
 ```js
 const PI = Math.PI
-console.log(PI) // 3.141592653589793
-console.log(Math.round(PI)) // 3;
-console.log(Math.floor(PI)) // 3;
-console.log(Math.ceil(PI)) // 4;
+
+console.log(PI)               // 3.141592653589793
+console.log(Math.round(PI))   // 3;
+console.log(Math.floor(PI))   // 3;
+console.log(Math.ceil(PI))    // 4;
 
 const randNum = Math.random() // creates random number between 0 to 0.999999
 console.log(randNum)
+
 // Let create random number between 0 to 10
+
 const num = Math.floor(Math.random () * 11) // creates random number between 0 and 10
 console.log(num)
 
 //Absolute value
-console.log(Math.abs(-10)) //10
+console.log(Math.abs(-10))   //10
 //Square root
-console.log(Math.sqrt(100)) // 10
-console.log(Math.sqrt(2)); //1.4142135623730951
+console.log(Math.sqrt(100))  // 10
+console.log(Math.sqrt(2));   //1.4142135623730951
 //
-console.log(Math.E) // 2.718
-
+console.log(Math.E)          // 2.718
 ```
 
 ### Booleans
@@ -351,7 +406,7 @@ Boolean value is either true or false. Any comparisons return a boolean value wh
 ```js
 let isLightOn = true;
 let isRaining = false;
-let hungery = false;
+let hungry = false;
 let isMarried = true;
 ```
 
@@ -393,13 +448,13 @@ console.log(empty); // -> null , means no value
 
 String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitive data types.
 
-1. The JavaScript typeof operator uses to check different data types. Check the data type of each variables from question number 1.
+1. The JavaScript *typeof* operator uses to check different data types. Check the data type of each variables from question number 1.
 
 ## Operators
 
-### Arthimetic Operators
+### Arithmetic Operators
 
-Arthimetic operators are mathematical operators:+, -, _, /, _
+Arithmetic operators are mathematical operators:+, -, _, /, _
 
 ```js
 let numOne = 4;
@@ -409,24 +464,27 @@ let diff = numOne - numTwo;
 let mult = numOne * numTwo;
 let div = numOne / numTwo;
 let remainder = numOne % numTwo;
+
 console.log(sum, diff, mult, div, remainder); // ->7,1,12,1.33,1
 
 let PI = 3.14;
-let radius = 100; // length in meter
+let radius = 100;          // length in meter
 
-const gravity = 9.81; // in m/s2
-let mass = 72; // in Kilogram
-const boilingPoint = 100; // temperature in oC, boiling point of water
-const bodyTemp = 37; // body temperature in oC
+const gravity = 9.81;      // in m/s2
+let mass = 72;             // in Kilogram
+const boilingPoint = 100;  // temperature in oC, boiling point of water
+const bodyTemp = 37;       // body temperature in oC
 
-//Lets calculate area of a circle
+// Lets calculate area of a circle
+
 const areaOfCircle = PI * radius * radius;
 console.log(areaOfCircle); // -> 314 m
+
 // Lets calculate weight of a substance
 const weight = mass * gravity;
 console.log(weight); // -> 706.32 N(Newton)
 
-//ConcatEnating string with numbers using string interpolation
+// ConcatEnating string with numbers using string interpolation
 /*
  The boiling point of water is 100 oC.
  Human body temperature is 37 oC.
@@ -437,7 +495,7 @@ console.log(
 );
 ```
 
-#### Exercises : Arithmetic Operators:
+#### Exercises : Arithmetic Operators
 
 JavaScript arithmetic operators are addition(+), subtraction(-), multiplication(\*), division(/), modulus(%), increment(++) and decrement(--).
 
@@ -445,6 +503,7 @@ JavaScript arithmetic operators are addition(+), subtraction(-), multiplication(
 let operandOne = 4;
 let operandTwo = 3;
 ```
+
 Using the above operands apply different JavaScript arithmetic operators
 
 ### Logical Operators
@@ -456,20 +515,25 @@ The following symbols are the common logical operators:
 ! negates true to false, false to true.
 
 ```js
-//&& ampersand example
+// && ampersand example
+
 const check = 4 > 3 && 10 > 5; // true and true -> true
 const check = 4 > 3 && 10 < 5; // true and false -> false
 const check = 4 < 3 && 10 < 5; // false and false -> false
-//|| pipe or, example
+
+// || pipe or, example
+
 const check = 4 > 3 || 10 > 5; // true and true -> true
 const check = 4 > 3 || 10 < 5; // true and false -> true
 const check = 4 < 3 || 10 < 5; // false and false -> false
-//! Negation examples
-let check = 4 > 3; // -> true
-let check = !(4 > 3); // -> false
-let isLightOn = true;
+
+// ! Negation examples
+
+let check = 4 > 3;           // -> true
+let check = !(4 > 3);        // -> false
+let isLightOn = true;        // -> true
 let isLightOff = !isLightOn; // -> false
-let isMarried = !false; // -> true
+let isMarried = !false;      // -> true
 ```
 
 #### Exercises: Logical Operators
@@ -519,13 +583,15 @@ Which are true or which are false ?
 1. 4 == '4'
 1. 4 === '4'
 
-# Conditionals
+## Conditionals
 
-#### If
+### If Condition
+
+We use if condition to check only on condition.
 
 ```js
 if (condition) {
-  //code goes here
+  // code goes here
 }
 
 let isRaining = true;
@@ -534,14 +600,17 @@ if (isRaining) {
 }
 ```
 
-#### If Else
+### If Else
+
+When we have more than one condition we use the if and else condition.
 
 ```js
 if (condition) {
-  // if the condition meets
+  // if the condition meets, this block of code runs
 } else {
-  // if condition doesn't meet
+  // if condition doesn't meet, this block code runs
 }
+
 let isRaining = true;
 if (isRaining) {
   console.log('You need a rain coat.');
@@ -550,7 +619,9 @@ if (isRaining) {
 }
 ```
 
-#### If else if else
+### If else if else
+
+Whenever we have multiple conditions.
 
 ```js
 // if else if else
@@ -566,7 +637,7 @@ if (weather === 'rainy') {
 }
 ```
 
-#### Switch
+### Switch
 
 Switch an alternative for if else if else
 
@@ -618,7 +689,7 @@ switch (day) {
 }
 ```
 
-#### Ternary Operators
+### Ternary Operators
 
 Another way to write conditionals is using ternary operators.
 
@@ -629,28 +700,40 @@ isRaining
   : console.log('No need for a rain coat.');
 ```
 
-#### Exercise - 8 : Conditionals
+### Exercise - 8 : Conditionals
 
 1. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
    Output:
+
    ```sh
    Enter your age: 30
    You are old enough to drive.
    ```
+
    Output:
+  
    ```sh
    Enter your age:15
    You are left with 3 years to drive.
    ```
+
 1. Compare the values of myAge and yourAge using if … else. Based on the comparison log to console who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
    Output:
+  
    ```sh
    Enter your age: 30
    You are 5 years older than me.
    ```
+
 1. If a is greater than b return a is greater than b else a is less than b.
    Output:
-   `sh let a = 4; let b = 3; 4 is greater than 3`
+
+   ```sh
+    let a = 4
+    let b = 3
+    4 is greater than 3
+    ```
+  
 1. Write a code which give grade students according to theirs scores:
    - 80-100, A
    - 70-89, B
@@ -664,14 +747,14 @@ isRaining
    - March, April or May, the season is Spring
    - June, July or August, the season is Summer
 
-# Loops
+## Loops
 
 In programming languages to carry out repetitive task we use different kinds of loop. The following examples are the commonly used loops.
 
-## For Loop
+### For Loop
 
 ```js
-//For loop structure
+// for loop structure
 for(initialization, condition, increment/decrement){
   // code goes here
 }
@@ -681,7 +764,7 @@ for(let i = 0; i <= 5; i++){
 
 ```
 
-## While loop
+### While loop
 
 ```js
 let i = 0;
@@ -691,7 +774,7 @@ while (i <= 5) {
 }
 ```
 
-## Do while loop
+### Do while loop
 
 ```js
 let i = 0;
@@ -701,11 +784,12 @@ do {
 } while (i <= 5);
 ```
 
-#### Exercises:Loops
+### Exercises:Loops
 
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop.
 1. Iterate 10 to 0 using for loop, do the same using while and do while loop.
 1. Write a loop that makes seven calls to console.log to output the following triangle:
+
    ```js
        #
        ##
@@ -715,28 +799,34 @@ do {
        ######
        #######
    ```
+
 1. Iterate the array, ['HTML', 'CSS', 'JavaScript'] using a for loop and print out the items.
 1. Use for loop to iterate from 0 to 100 and print only even numbers
 1. Use for loop to iterate from 0 to 100 and print only odd numbers
 1. Use for loop to iterate from 0 to 100 and print and print the sum of all numbers.
+
    ```js
    The sum all numbers is 5050.
    ```
+
 1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
    ```js
    The sum of all evens is 2550. And the sum of all odds is 2500.
    ```
 
-# Arrays
+## Arrays
 
 In contrast to variables array can store _multiple values_. Each value in an array has an _index_ and each index has _a reference in a memory address_. Each value can be accessed by using their _indexes_. The index of an array starts from _zero_ and the last element is less by one from the length of the array.
 
 ```js
 const numbers = [0, 3.14, 9.81, 37, 98.6, 100]; // set of numbers
+
 console.log(numbers.length) // => to know the size of the array, which is 6
-console.log(numbers) // -> [0, 3.14, 9.81, 37, 98.6, 100]
-console.log(numbers[0]) //  -> 0
-console.log(numbers[5]) //  -> 100
+console.log(numbers)        // -> [0, 3.14, 9.81, 37, 98.6, 100]
+console.log(numbers[0])     //  -> 0
+console.log(numbers[5])     //  -> 100
+
 let lastIndex = numbers.length - 1;
 console.log(numbers[lastIndex]) -> 100
 const webTechs = [
@@ -748,10 +838,12 @@ const webTechs = [
   'Node',
   'MongoDB'
 ]; // List of web technologies
-console.log(webTechs) // all the array items
+
+console.log(webTechs)        // all the array items
 console.log(webTechs.length) // => to know the size of the array, which is 7
-console.log(webTechs[0]) //  -> HTML
-console.log(webTechs[6]) //  -> MongoDB
+console.log(webTechs[0])     //  -> HTML
+console.log(webTechs[6])     //  -> MongoDB
+
 let lastIndex = webTechs.length - 1;
 console.log(webTechs[lastIndex]) -> MongoDB
 const countries = [
@@ -767,9 +859,11 @@ const countries = [
   'Japan',
   'Kenya'
 ]; // List of countries;
-console.log(countries) // -> all countries in array
-console.log(countries[0]) //  -> Albania
+
+console.log(countries)     // -> all countries in array
+console.log(countries[0])  //  -> Albania
 console.log(countries[10]) //  -> Kenya
+
 let lastIndex = countries.length - 1;
 console.log(countries[lastIndex]) -> // Kenya
 
@@ -783,14 +877,16 @@ const shoppingCart = [
   'Eggs',
   'Sugar'
 ]; // List of food products
-console.log(shoppingCart) // -> all shoppingCart in array
-console.log(shoppingCart[0]) //  -> Milk
-console.log(shoppingCart[7]) //  -> Sugar
-let lastIdex = shoppingCart.length - 1;
+
+console.log(shoppingCart)     // -> all shoppingCart in array
+console.log(shoppingCart[0])  //  -> Milk
+console.log(shoppingCart[7])  //  -> Sugar
+
+let lastIndex = shoppingCart.length - 1;
 console.log(shoppingCart[lastIndex]) -> // Sugar
 ```
 
-#### Exercise - 9 : Arrays
+### Exercise - 9 : Arrays
 
 1. Declare an _empty_ array;
 1. Declare an array with more than 5 number of items
@@ -817,7 +913,7 @@ console.log(shoppingCart[lastIndex]) -> // Sugar
 1. Remove the last IT company from the array
 1. Remove all IT companies
 
-# More on Arrays
+## More on Arrays
 
 There are different methods to manipulate an array. These are some of the available methods to deal with arrays:_Array,length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift_
 Array:To create an array.
@@ -825,80 +921,87 @@ Array:To create an array.
 ```js
 const arr = Array(); // creates an an empty array
 console.log(arr);
+
 const eightEmptyValues = Array(8); // it creates eight empty values
-console.log(eightEmptyValues); // [empty x 8]
+console.log(eightEmptyValues);     // [empty x 8]
 ```
 
-    fill:Fill all the array elements with a static value
+- *fill*: Fill all the array elements with a static value
 
 ```js
-const arr = Array(); // creates an an empty array
+const arr = Array();                     // creates an an empty array
 console.log(arr);
 const eightXvalues = Array(8).fill('X'); // it creates eight element values
-console.log(eightXvalues); // ['X', 'X','X','X','X','X','X','X']
+console.log(eightXvalues);               // ['X', 'X','X','X','X','X','X','X']
 ```
 
-      concat:To concatenate two arrays.
+- *concat*: To concatenate two arrays.
 
 ```js
 const firstList = [1, 2, 3];
 const secondList = [4, 5, 6];
 const thirdList = firstList.concat(secondList);
+
 console.log(thirdList); // [1,2,3,4,5,6]
 ```
 
-Length:To know the size of the array
+- *length*: To know the size of the array
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.length); // -> 5
 ```
 
-indexOf:To check if an item exist in an array. If it exist it returns the index else it returns -1.
+- *indexOf*: To check if an item exist in an array. If it exist it returns the index else it returns -1.
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
-console.log(numbers.indexOf(5)); // -> 4
-console.log(numbers.indexOf(0)); // -> -1
-console.log(numbers.indexOf(1)); // -> 0
-console.log(numbers.indexOf(6)); // -> -1
+
+console.log(numbers.indexOf(5));  // -> 4
+console.log(numbers.indexOf(0));  // -> -1
+console.log(numbers.indexOf(1));  // -> 0
+console.log(numbers.indexOf(6));  // -> -1
 ```
 
-lastIndexOf:Give the position of the last item in the array. If it exist it returns the index else it returns -1.
+- *lastIndexOf* :Give the position of the last item in the array. If it exist it returns the index else it returns -1.
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 3, 1, 2];
-console.log(numbers.lastIndexOf(2)); // -> 7
-console.log(numbers.lastIndexOf(0)); // -> -1
-console.log(numbers.lastIndexOf(1)); // -> 6
-console.log(numbers.lastIndexOf(4)); // -> 3
-console.log(numbers.lastIndexOf(6)); // -> -1
+
+console.log(numbers.lastIndexOf(2));  // -> 7
+console.log(numbers.lastIndexOf(0));  // -> -1
+console.log(numbers.lastIndexOf(1));  // -> 6
+console.log(numbers.lastIndexOf(4));  // -> 3
+console.log(numbers.lastIndexOf(6));  // -> -1
 ```
 
-includes:To check if an item exist in an array. If it exist it returns the true else it returns false.
+*includes*: To check if an item exist in an array. If it exist it returns the true else it returns false.
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
+
 console.log(numbers.includes(5)); // -> true
 console.log(numbers.includes(0)); // -> false
 console.log(numbers.includes(1)); // -> true
 console.log(numbers.includes(6)); // -> false
 ```
 
-Array.isArray:To check if the data type is an array
+- *isArray*:  To check if the data type is an array
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(Array.isArray(numbers)); // -> true
+
 const number = 100;
 console.log(Array.isArray(number)); // -> false
 ```
 
-toString:Converts array to string
+- *toString*: Converts array to string
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.toString()); // 1,2,3,4,5
+
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
 console.log(names.toString()); // Asabeneh,Mathias,Elias,Brook
 ```
@@ -907,97 +1010,99 @@ join:To join the elements of the array, the argument passed in the join method w
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
-console.log(numbers.join()); // 1,2,3,4,5
+console.log(numbers.join());        // 1,2,3,4,5
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
-console.log(names.join()); // Asabeneh,Mathias,Elias,Brook
-console.log(names.join('')); //AsabenehMathiasEliasBrook
-console.log(names.join(' ')); //Asabeneh Mathias Elias Brook
-console.log(names.join(', ')); //Asabeneh, Mathias, Elias, Brook
-console.log(names.join(' # ')); //Asabeneh # Mathias # Elias # Brook
+console.log(names.join());          // Asabeneh,Mathias,Elias,Brook
+console.log(names.join(''));        //AsabenehMathiasEliasBrook
+console.log(names.join(' '));       //Asabeneh Mathias Elias Brook
+console.log(names.join(', '));      //Asabeneh, Mathias, Elias, Brook
+console.log(names.join(' # '));     //Asabeneh # Mathias # Elias # Brook
 ```
 
 Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position
 
 ```js
   const numbers = [1,2,3,4,5];
-  console.log(numbers.slice() // -> it copies all  item
-  console.log(numbers.slice(0) // -> it copies all  item
+  console.log(numbers.slice()        // -> it copies all  item
+  console.log(numbers.slice(0)       // -> it copies all  item
   console.log(numbers.indexOf(0, numbers.length)) // it copies all  item
-  console.log(numbers.slice(1,4)) // -> [2,3,4] // it doesn't include the ending position
+  console.log(numbers.slice(1,4))    // -> [2,3,4] // it doesn't include the ending position
 ```
 
 Splice: It takes three parameters:Starting position, number of times to be removed and number items to be added.
 
 ```js
   const numbers = [1, 2, 3, 4, 5];
-  console.log(numbers.splice() // -> remove all items
-  console.log(numbers.splice(0,1)) // remove the first item
+  console.log(numbers.splice()      // -> remove all items
+  console.log(numbers.splice(0,1))  // remove the first item
   console.log(numbers.splice(3, 3, 6, 7, 8)) // -> [1,2,6,7,8] //it removes two item and replace three items
 
 ```
 
-Push: adding item in the end
+- *push*: adding item in the end
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 numbers.push(6);
-console.log(numbers); // -> [1,2,3,4,5,6]
-numbers.pop(); // -> remove one item from the end
-console.log(numbers); // -> [1,2,3,4,5]
+
+console.log(numbers);  // -> [1,2,3,4,5,6]
+
+numbers.pop();         // -> remove one item from the end
+console.log(numbers);  // -> [1,2,3,4,5]
 ```
 
-Pop: Removing item in the end
+- *pop*: Removing item in the end
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 numbers.pop(); // -> remove one item from the end
+
 console.log(numbers); // -> [1,2,3,4]
 ```
 
-shift: Removing item in the beginning
+- *shift*: Removing item in the beginning
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 numbers.shift(); // -> remove one item from the beginning
+
 console.log(numbers); // -> [2,3,4,5]
 ```
 
-unshift: Adding item in the beginning
+- *unshift*: Adding item in the beginning
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
-numbers.unshift(0); // -> remove one item from the beginning
-console.log(numbers); // -> [0,1,2,3,4,5]
+numbers.unshift(0);             // -> remove one item from the beginning
+console.log(numbers);           // -> [0,1,2,3,4,5]
 ```
 
 ---
 
-#### Exercise -10 : Array Methods
+### Exercise -10 : Array Methods
+
 ```js
 const shoppingCart = ['Milk','Coffee','Tea', 'Honey'];
 const todoList = [
-{
-	task:'Learn JavaScript',
-	time:'4/3/2019 8:30',
-	completed:true
-	
-},
-{
-	task:'Help some in need',
-	time:'4/3/2019 4:00',
-	completed:false
-	
-},
-{
-	task:'Do some physical exercises',
-	time:'4/3/2019 6:00',
-	completed:false
-	
-}]
-
+  {
+    task:'Learn JavaScript',
+    time:'4/3/2019 8:30',
+    completed:true
+  },
+  {
+    task:'Help some in need',
+    time:'4/3/2019 4:00',
+    completed:false
+  },
+  {
+    task:'Do some physical exercises',
+    time:'4/3/2019 6:00',
+    completed:false
+  }
+]
 ```
 
-# Functions
+## Functions
 
 A function is a block of code designed to perform a certain task.
 A function is declared by a function key word followed by a name, followed by parentheses (). A parentheses can take a parameter. If a function take a parameter it will be called with argument. A function can also take a default parameter.
@@ -1012,12 +1117,14 @@ A function can be declared or created in couple of ways:
 
 ```js
 //function without parameter
+
 function functionName(){
 // code goes here
 }
 functionName() // calling function by its name and with parentheses
 
 //function without parameter
+
 function addTwoNumbers() {
   var numOne = 10;
   var numTwo = 20;
@@ -1027,15 +1134,18 @@ function addTwoNumbers() {
 addTwoNumbers(); // function has to be called to be executed by it name
 
 // function with one parameter
+
 function functionName(parm1){
   //code goes her
 }
 functionName(parm1); // during calling or invoking one argument needed
+
 function areaOfCircle(r){
   let area = Math.PI * r * r;
   return area;
 }
 console.log(areaOfCircle(10)) // should be called with one argument
+
 function square(number) {
   return number * number;
 }
@@ -1046,18 +1156,21 @@ function functionName(parm1, parm2){
   //code goes her
 }
 functionName(parm1,parm2); // during calling or invoking two arguments needed
+
 // Function without parameter doesn't take input, so lets make a parameter with parameter
 function sumTwoNumbers(numOne, numTwo) {
   var sum = numOne + numTwo;
   console.log(sum);
 }
 sumTwoNumbers(10, 20); // calling functions
+
 // If a function doesn't return it doesn't store data, so it should return
 function sumTwoNumbersAndReturn(numOne, numTwo) {
   var sum = numOne + numTwo;
   return sum;
 }
 console.log(sumTwoNumbersAndReturn(10, 20));
+
 function printFullName(firstName, lastName) {
   return `${firstName} ${lastName}`;
 }
@@ -1081,13 +1194,13 @@ function sumArrayValues(arr) {
 }
 const numbers = [1, 2, 3, 4, 5];
 console.log(sumArrayValues(numbers));
-    //calling a function
-    AddTwoNumbers(4,3)
-    const areaOfCircle = (radius) => {
+  
+
+const areaOfCircle = (radius) => {
       let area = Math.PI * radius * radius;
       return area;
     }
-
+console.log(areaOfCircle(10))
 ```
 
 ### Function Expression
@@ -1111,7 +1224,13 @@ console.log(square(2)); // -> 4
 // Self invoking functions
 (function(n) {
   return n * n;
-})(10);
+})(2);
+
+const x = (function(n) {
+  return n * n;
+})(2);
+console.log(x) // 4
+
 ```
 
 ### Arrow Function
@@ -1121,16 +1240,21 @@ const square = n => {
   return n * n;
 };
 console.log(square(2)); // -> 4
+
 // if we have only one line, it can be written as follows
+// Explicit return
 const square = n => n * n; // -> 4
 ```
 
 ### Arrow Function vs Declaration Function
 
+Arrow function and regular functions are not exactly the same.
+
 ```js
+
 ```
 
-#### Exercise - 10 : Functions
+### Exercise - 10 : Functions
 
 1. Declare a function _fullName_ and it print out your full name.
 1. Declare a function _fullName_ and now it takes firstName, lastName as a parameter and it returns your full - name.
@@ -1152,27 +1276,33 @@ const square = n => n * n; // -> 4
    - _Obese_: BMI is 30 or more
 1. Write a function called _checkSeason_, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
 1. Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+
    ```js
    console.log(findMax(0, 10, 5));
    10;
    console.log(findMax(0, -10, -2));
    0;
    ```
+
 1. Linear equation is calculated as follows: _ax + b = c_. Write a function which calculates value of a linear equation, _solveLinEquation_.
 1. Quadratic equation is calculated as follows: _ax2 + bx + c = 0_. Write a function which calculates value or values of a quadratic equation, _solveQuadEquation_.
 1. Declare a function name _printArray_. It takes array as a parameter and it prints out each value of the array.
 1. Declare a function name _swapValues_. This function swaps value of x to y.
+
    ```js
    swapValues(3, 4); // x => 4, y=>3
    swapValues(4, 5); // x = 5, y = 4
    ```
+
 1. Declare a function name _reverseArray_. It takes array as a parameter and it returns the reverse of the array (don't use method).
+
    ```js
    console.log(reverseArray([1, 2, 3, 4, 5]));
    [5, 4, 3, 2, 1];
    console.log(reverseArray(['A', 'B', 'C']));
    ['C', 'B', 'A'];
    ```
+
 1. Declare a function name _capitalizeArray_. It takes array as a parameter and it returns the - capitalizedarray.
 1. Declare a function name _addItem_. It takes an item parameter and it returns an array after adding the item
 1. Declare a function name _removeItem_. It takes an index parameter and it returns an array after removing an item
@@ -1180,29 +1310,38 @@ const square = n => n * n; // -> 4
 1. Declare a function name _sumOfOdds_. It takes a number parameter and it adds all the odd numbers in that - range.
 1. Declare a function name _sumOfEven_. It takes a number parameter and it adds all the even numbers in that - range.
 1. Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
-   ```she
+
+   ```sh
    evensAndOdds(100);
    The number of odds are 50.
    The number of evens are 51.
    ```
-2. Write a functon which takes any number of arguments and return the sum of the arguments
+
+1. Write a function which takes any number of arguments and return the sum of the arguments
+
    ```js
    sum(1, 2, 3); // -> 6
    sum(1, 2, 3, 4); // -> 10
    ```
-3. Writ a function which generates a _randomUserIp_.
-4. Write a function which generates a _randomMacAddress_
-5. Declare a function name _randomHexaNumberGenerator_. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
-   ```she
+
+1. Writ a function which generates a _randomUserIp_.
+1. Write a function which generates a _randomMacAddress_
+1. Declare a function name _randomHexaNumberGenerator_. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
+   ```sh
    console.log(randomHexaNumberGenerator());
    '#ee33df'
    ```
-6. Declare a function name _userIdGenerator_. When this function is called it generates seven character id. The function return the id.
+  
+1. Declare a function name _userIdGenerator_. When this function is called it generates seven character id. The function return the id.
+
    ```sh
    console.log(userIdGenerator());
    41XTDbE
    ```
-7. Modify question number n . Declare a function name _userIdGeneratedByUser_. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+1. Modify question number n . Declare a function name _userIdGeneratedByUser_. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
    ```sh
    userIdGeneratedByUser()
    'kcsy2
@@ -1219,16 +1358,20 @@ const square = n => n * n; // -> 4
    dIV0SSUTgAdKwStr
    '
    ```
-8. Write a function name _rgbColorGenerator_ and it generates rgb colors.
+
+1. Write a function name _rgbColorGenerator_ and it generates rgb colors.
+
    ```sh
    rgbColorGenerator()
    rgb(125,244,255)
    ```
-9. Write a function ***arrayOfHexaColors*** which return any number of hexadecimal colors in an array.
-10. Write a function ***arrayOfRgbColors*** which return any number of RGB colors in an array.
-11. Write a function ***convertHexaToRgb*** which converts hexa color to rgb and it returns an rgb color.
-12. Write a function ***convertRgbToHexa*** which converts rgb to hexa color  and it returns an hexa color.
-13. Write a function ***generateColors*** which can generate any number of hexa or rgb colors. 
+
+1. Write a function ***arrayOfHexaColors*** which return any number of hexadecimal colors in an array.
+1. Write a function ***arrayOfRgbColors*** which return any number of RGB colors in an array.
+1. Write a function ***convertHexaToRgb*** which converts hexa color to rgb and it returns an rgb color.
+1. Write a function ***convertRgbToHexa*** which converts rgb to hexa color  and it returns an hexa color.
+1. Write a function ***generateColors*** which can generate any number of hexa or rgb colors.
+
     ```js
       generateColors('hexa', 3)
       ['#a3e12f','#03ed55','#eb3d2b']
@@ -1239,32 +1382,36 @@ const square = n => n * n; // -> 4
       ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80']
       generateColors('rgb', 1)
       'rgb(33,79, 176)'
-
     ```
-14. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
-15. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
-16. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
-17. Call your function _sum_, it takes any number of arguments and it returns the sum.
-18. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
-19. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
-20. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
-      ```js
-      console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
-      // →['Avocado', 'Tomato', 'Potato','Mango', 'LEMON', 'Carrot']
-      console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']);
-      // →['Google', 'Facebook','Apple', 'Amazon','MICROSOFT',  'IBM']
-      console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']);
-      // →'Not Found'
-      ```
-21. Write a function called *isPrime*, which checks if a number is prime number.
-22. Write a functions which checks if all items are unique in the array.
-23. Write a function which checks if all the items of the array are the same data type.
-24. JavaScript variable name does not support special characters or symbols except $ or _. Write a function ***isValidVariable** which check if a variable is valid or invalid variable.
-25. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+
+1. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
+1. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
+1. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
+1. Call your function _sum_, it takes any number of arguments and it returns the sum.
+1. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+1. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+1. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+
+    ```js
+    console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
+    // →['Avocado', 'Tomato', 'Potato','Mango', 'LEMON', 'Carrot']
+    console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']);
+    // →['Google', 'Facebook','Apple', 'Amazon','MICROSOFT',  'IBM']
+    console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']);
+    // →'Not Found'
+    ```
+
+1. Write a function called *isPrime*, which checks if a number is prime number.
+1. Write a functions which checks if all items are unique in the array.
+1. Write a function which checks if all the items of the array are the same data type.
+1. JavaScript variable name does not support special characters or symbols except $ or _. Write a function ***isValidVariable** which check if a variable is valid or invalid variable.
+1. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+
    ```js
    sevenRandomNumbers()[(1, 4, 5, 7, 9, 8, 0)];
    ```
-# Object
+
+## Object
 
 Everything can be an object and objects do have properties and properties have values.
 Creating an object literal. To create an object literal, we use two curly brackets.
@@ -1273,6 +1420,7 @@ An empty object
 ```js
 const person = {};
 ```
+
 Now, the person object has firstName, lastName, age, location, skills and getFullName properties. The getFullName is function inside the person object and we call it method. The _this_ key word refers to the object itself.Example of object:
 
 ```js
@@ -1307,7 +1455,9 @@ const rectangle = {
   }
 };
 ```
+
 Getting values from an object:
+
 ```js
   const person = {
     firstName:'Asabeneh',
@@ -1389,6 +1539,7 @@ console.log(values);
 ```
 
 _Object.entries_:To get the keys and values in an array
+
 ```js
 const entries = Object.entries(copyPerson);
 console.log(entries);
@@ -1400,9 +1551,12 @@ _hasOwnProperty_: To check if a specific key or property exist in an object
 console.log(copyPerson.hasOwnProperty('name'));
 console.log(copyPerson.hasOwnProperty('score'));
 ```
+
 ### Date Object
+
 In JavaScript current time and date is created using JavaScript Date Object.
 Some of the methods to extract date object values:*getFullYear(), getMonths(), getDate(), getDay(), getHours(), getMinutes*
+
 ```js
 const now = new Date ();
 const year = now.getFullYear(); // return year
@@ -1412,15 +1566,19 @@ const hours = now.getHours(); // return number (0 - 23)
 const minutes = now.getMinutes();// return number (0 -59)
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
 ```
-#### Exercises:
+
+#### Exercises
+
 1. Use the new Date() object to get _month, date, year, hour_ and _minute_.
 1. Write a function name _displayDateTime_ which display time in this format: 10/03/2019 04:08
+
    ```sh
    displayDateTime()
    10/03/2019 04:08
    ```
 
 #### Exercises:Objects
+
 1. Create an empty object called dog
 1. Print the the dog object on the console
 1. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return *woof woof*
@@ -1428,6 +1586,7 @@ console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
 1. Set new properties the dog object: breed, getDogInfo
 1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, accountInfo,addIncome, addExpense_ and _accountBalance_ methods. Incomes is a set of incomes and its description and the same for expenses.
 1. Count logged in users,count users having greater than equal to 50 points from the following object.
+
       ```js
       const users = {
         Alex: {
@@ -1474,12 +1633,15 @@ console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
         }
       };
     ```
+
 1. Set your name in the users object without modifying the original users object
 1. Get all keys or properties of users object
 1. Get all the values of users object
 1. ** Develop a small JavaScript library.
+
 ## Functional Programming
-*forEach*: Iterate an array elements and use for array. It takes a callback function with elements and index parameter.
+
+- *forEach*: Iterate an array elements and use for array. It takes a callback function with elements and index parameter.
 
 ```js
 arr.forEach(function(element, index){
@@ -1492,7 +1654,9 @@ arr.forEach((element, index) => {
 // The above code can be written using arrow function and explicit return
 arr.forEach((element, index) => console.log(index, element));
 ```
-*map*: Iterate an array elements and modify the array elements. It takes a callback function with elements and index parameter and return the modified array.
+
+- *map*: Iterate an array elements and modify the array elements. It takes a callback function with elements and index parameter and return the modified array.
+
 ```js
 const modifiedArray = arr.map(function(element,index){
   return element
@@ -1534,41 +1698,54 @@ const countriesToUpperCase = countries.map((country) => {
 const countriesToUpperCase = countries.map(country => country.toUpperCase());
 */
 ```
-*Filter*: Filter out items which full fill filtering conditions
+
+- *Filter*: Filter out items which full fill filtering conditions
 
 ```js
-//Filter countries containing land
+
+// Filter countries containing land
 const countriesContainingLand = countries.filter(country => country.includes('land'));
 console.log(countriesContainingLand )  //['Finland', 'Ireland']
+
 const countriesEndByia = countries.filter(country => country.includes('ia'));
 console.log(countriesEndByia) //['Albania', 'Bolivia','Ethiopia']
+
 const countriesHaveFiveLetters = countries.filter(country => country.length === 5);
 console.log(countriesHaveFiveLetters ) //  ['Japan', 'Kenya']
+
 const scores = [{name:'Asabeneh', score:95},{name:'Mathias', score:80},{name:'Elias', score:50},{name:'Martha', score:85},{name:'John', score:100}];
 
 const scoresGreaterEight = scores.filter((score) => score.score > 80);
 console.log(scoresGreaterEight) //[{name: 'Asabeneh', score: 95}, {name: 'Martha', score: 85},{name: 'John', score: 100}]
 ```
-*reduce*: Reduce takes a callback function. The call back function takes accumulator and current value as a parameter and returns a single value:
+
+- *reduce*: Reduce takes a callback function. The call back function takes accumulator and current value as a parameter and returns a single value:
+
 ```js
   const numbers = [1,2,3,4,5];
   const sum = numbers.reduce((accum, curr)=> accum + curr);
-  console.log(sum); //15
-  
+
+  console.log(sum); // 15
 ```
-*every*: Check if all the elements are similar in one aspect. It returns boolean
+
+- *every*: Check if all the elements are similar in one aspect. It returns boolean
+
 ```js
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
 const bools = [true, true, true, true];
 const result = bools.every((b)=> {
   return b === true;
 });
+
 console.log(result) //true
+
 const checkType = names.every((name) => typeof name ==='string');
+
 console.log(checkDataTypes) // true;
 ```
 
-*some*: Check if some of the elements are similar in one aspect. It returns boolean
+- *some*: Check if some of the elements are similar in one aspect. It returns boolean
+
 ```js
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
 const bools = [true, true, true, true];
@@ -1579,7 +1756,9 @@ console.log(result) //true
 const checkType = names.some((name) => typeof name ==='number');
 console.log(checkDataTypes) // false
 ```
-*find*: Return the first element which satisfies the condition
+
+- *find*: Return the first element which satisfies the condition
+
 ```js
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
 const ages = [24, 22,25,32,35,18];
@@ -1588,34 +1767,40 @@ console.log(result) // Asabeneh
 const age = ages.find((age) => age < 20);
 console.log(age) // 18
 ```
-*findIndex*: Return the position of the first element which satisfies the condition
+
+- *findIndex*: Return the position of the first element which satisfies the condition
+
 ```js
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
 const ages = [24, 22,25,32,35,18];
 const result = names.findIndex(name =>  name.length > 7);
 console.log(result) // 0
+
 const age = ages.findIndex((age) => age < 20);
 console.log(age) // 5
 ```
-*sort*: The sort methods arranges the array elements either ascending or descending order. By default, the ***sort()*** method sorts values as strings.This works well for string array items but not for numbers. If number values are sorted as strings and it give us wrong result. Sort method modify the original array.  It is recommended to copy the original document before you start sorting.
-#### Sorting string values
+
+- *sort*: The sort methods arranges the array elements either ascending or descending order. By default, the ***sort()*** method sorts values as strings.This works well for string array items but not for numbers. If number values are sorted as strings and it give us wrong result. Sort method modify the original array.  It is recommended to copy the original document before you start sorting.
+
+- *Sorting string values*
+
 ```js
 const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot'];
 console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
-
-//Now the original products array  is also sorted 
+//Now the original products array  is also sorted
 ```
-#### Sorting Numeric  values
-As you can see in the example below, 100 came first after sorted in ascending order. Sort converts items to string , since '100' and other numbers compared, 1 which the beginning of the string '100' became the smallest.  To avoid this, we use a compare call back function inside the sort method, which return a negative, zero or positive.
-```js
 
+- *Sorting Numeric  values*
+
+As you can see in the example below, 100 came first after sorted in ascending order. Sort converts items to string , since '100' and other numbers compared, 1 which the beginning of the string '100' became the smallest.  To avoid this, we use a compare call back function inside the sort method, which return a negative, zero or positive.
+
+```js
 const numbers = [9.81, 3.14, 100, 37]
 // Using sort method to sort number items provide a wrong result. see below
 console.log(numbers.sort()) //[100, 3.14, 37, 9.81]
 numbers.sort(function(a, b) {
 return a - b;
 })
-
 
 console.log(numbers) // [3.14, 9.81, 37, 100]
 numbers.sort(function(a, b) {
@@ -1624,7 +1809,9 @@ return b - a;
 console.log(numbers) //[100, 37, 9.81, 3.14]
 
 ```
-#### Sorting Object Arrays
+
+- *Sorting Object Arrays*
+
 When ever we sort objects in an array. We use the object key to compare. Lets see the example below.
 
 ```js
@@ -1633,28 +1820,34 @@ objArr.sort(function(a, b) {
   if (a.key > b.key) return 1;
   return 0;
 });
-// or 
+
+// or
+
 objArr.sort(function(a, b) {
   if (a['key'] < b['key']) return -1;
   if (a['key'] > b['key']) return 1;
   return 0;
 });
+
 const users = [{name:'Asabeneh', age:150}, {name:'Brook', age:50}, {name:'Eyo', age:100},{name:'Elias', age:22}];
 users.sort((a, b) => {
   if (a.age < b.age) return -1;
   if (a.age > b.age) return 1;
   return 0;
 });
+
 console.log(users); // sorted ascending
 //[{…}, {…}, {…}, {…}]
-
 ```
-### Exercises: 
+
+### Exercises
+
 ```js
   const countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand'];
   const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
+
 1. Explain the difference between ***forEach, map, filter, and reduce***.
 2. Define a call function before you them in forEach, map, filter or reduce.
 3. Use ***forEach*** to console.log each country in the countries array.
@@ -1687,10 +1880,13 @@ console.log(users); // sorted ascending
 30. Use the countries information, in the data folder. Sort countries by name, by capital, by population
 31. Sort out the ten most spoken languages by location.
 32. Sort out the ten most populated countries.
-   
+
 ## Destructuring and Spread
+
 Destructuring is a way to unpack arrays, and objects and assigning to a distinct variable.
-#### Destructing  Arrays
+
+### Destructing  Arrays
+
 ```js
   const numbers = [1, 2,3];
   let [numOne, numTwo, numThree] = numbers;
@@ -1701,9 +1897,10 @@ Destructuring is a way to unpack arrays, and objects and assigning to a distinct
   const scientificConstants = [2.72, 3.14, 9.81, 37, 100];
   let [e, pi, gravity, bodyTemp, boilingTemp] = scientificConstants
   console.log(e,pi,gravity, bodyTemp, boilingTemp) //2.72, 3.14, 9.81, 37, 100
-
 ```
+
 If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that index
+
 ```js
   const numbers = [1, 2,3];
   let [numOne, , , numThree] = numbers; //2 is omitted
@@ -1711,9 +1908,10 @@ If we like to skip on of the values in the array we use additional comma. The co
   const names = ['Asabeneh', 'Brook', 'David', 'John']
   let [, secondPerson, , fourth Person] = name; // first and third person is omitted
   console.log(secondPerson, fourthPerson) //Brook, John
-
 ```
+
 We can use default value in case the value of array for that index is undefined:
+
 ```js
 const names = [undefined, 'Brook', 'David'];
 let [firstPerson = 'Asabeneh', secondPerson, thirdPerson, fourthPerson = 'John' ] = names;
@@ -1721,40 +1919,45 @@ console.log(firstPerson, secondPerson, thirdPerson, fourthPerson) // Asabeneh Br
 ```
 
 #### Destructuring Object
+
 When we destructure the name of the variable we use to destructure should be exactly the same us the key or property of the object. See example below.
+
 ```js
 const rectangle = {
-  width: 20, 
+  width: 20,
   height:10,
   area: 200
 }
 let {width, height, area, perimeter} = rectangle;
 console.log(width, height, area, perimeter) //20 10 200 undefined
-
 ```
+
 #### Renaming during structuring
+
 ```js
 const rectangle = {
-  width: 20, 
+  width: 20,
   height:10,
   area: 200
 }
 let {width:w, heigh:h, area:a, perimeter:p} = rectangle;
 console.log(w, h, a, p) //20 10 200 undefined
-
 ```
+
 If the key is not found in the object the variable will be assigned to undefined. In case, the key is not in the object we can give a default value during declaration. See the example.
+
 ```js
 const rectangle = {
-  width: 20, 
+  width: 20,
   height:10,
   area: 200
 }
 let {width, heigh, area, perimeter = 60} = rectangle;
 console.log(width, height, area, perimeter)  //20 10 200 60
+
 //Lets modify the object:width to 30 and perimeter to 80
 const rectangle = {
-  width: 30, 
+  width: 30,
   height:10,
   area: 200,
   perimeter:80
@@ -1764,6 +1967,7 @@ console.log(width, height, area, perimeter) //20 10 200 80
 ```
 
 Destructuring keys as a function parameters. Lets create a function which take a rectangle object and it return a perimeter of a rectangle.
+
 ```js
     // Without destructuring
     const rect = {
@@ -1838,9 +2042,11 @@ console.log(getPersonInfo(person))
 Asabeneh Yetayeh lives in Finland. He is  200 years old. He is an Instructor and Developer. He teaches HTML, CSS, JavaScript, React, Redux, Node, MongoDB, Python and D3.js. He speaks Amharic, English and a little bit of Suomi(Finnish)
 */
 ```
+
 ### Spread or Rest Operator
 
-  #### Exercise: Destructuring
+#### Exercise: Destructuring
+
    ```js
    const constants = [2.72, 3.14, 9.81,37, 100]
    const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
@@ -1851,22 +2057,28 @@ Asabeneh Yetayeh lives in Finland. He is  200 years old. He is an Instructor and
      area:200,
      perimeter:60
    }
-
    ```
+
    1. Assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
    2. Assign the elements of countries array to fin, est, sw, den, nor
    3. Destructure the rectangle object by its properties or keys.
 
-# Map and Set
+## Map and Set
+
 ## Set
+
 Set is a collection of unique elements. Lets see how to create a set
+
 ### Creating a set
+
 ```js
   const companies = new Set()
 ```
+
 ### Adding an element to a set
+
 ```js
-  console.log(companies.size) // 0 
+  console.log(companies.size) // 0
   companies.add('Google') // add element to the set
   companies.add('Facebook')
   companies.add('Amazon')
@@ -1874,24 +2086,31 @@ Set is a collection of unique elements. Lets see how to create a set
   companies.add('Microsoft')
   console.log(companies.size) // 5 elements in the set
 ```
+
 ### Deleting an element a set
+
 ```js
 console.log(companies.delete('Google'))
 console.log(companies.size) // 4 elements left in the set
 ```
 
 ### Checking an element in the set
+
 ```js
 console.log(companies.has('Google')) // false
 console.log(companies.has('Facebook')) // true
 ```
 
 ### Clearing the set
+
 It removes all the elements
+
 ```js
   companies.clear()
 ```
+
 See the example below to learn how to use set.
+
 ```js
 
 const languages = [
@@ -1917,12 +2136,17 @@ for (const l of langSet) {
 }
 console.log(counts)
 ```
+
 ## Map
+
 ### Creating a Map
+
 ```js
   const countriesMap = new Map()
 ```
+
 ### Adding values to the Map
+
 ```js
   console.log(countriesMap.size)
   countriesMap.set('Finland', 'Helsinki')
@@ -1931,14 +2155,19 @@ console.log(counts)
   console.log(countriesMap)
   console.log(countriesMap.size)
 ```
+
 ### Getting a value from Map
+
 ```js
   console.log(countriesMap.get('Finland'))
 ```
+
 ### Checking key in Map
+
 ```js
  console.log(countriesMap.has('Finland'))
 ```
+
 Getting all values from map using loop
 
 ```js
@@ -1947,10 +2176,12 @@ Getting all values from map using loop
   }
   ```
 
-# Document Object Model (DOM)
+## Document Object Model (DOM)
+
 HTML document is structured as a JavaScript Object. Every HTML element has a different properties which can help to manipulate it. It is possible to get, create, append or remove HTML elements using JavaScript. Check the examples below. Selecting HTML element using JavaScript is similar to select CSS. To select an HTML element, we use tag name, id, class name. To create an HTML element we use tag name.
 
 ### Getting Element
+
 ```html
 <!DOCTYPE html>
   <html>
@@ -1965,8 +2196,11 @@ HTML document is structured as a JavaScript Object. Every HTML element has a dif
     </body>
   </html>
 ```
+
 #### Getting elements by tag name
+
 ***getElementsByTagName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection.
+
 ```js
 const allTitles = document.getElementsByTagName('h1');
 console.log(allTitles) //HTMCollections
@@ -1974,10 +2208,12 @@ console.log(allTitles.length) // 4
 for(let i = 0; i < allTitles.length; i++){
   console.log(allTitles[i]) // prints each elements in the HTMLCollection
 }
-
 ```
+
 #### Getting elements by class name
+
 ***getElementsByClassName()*** method returns an HTMLCollection object. An HTMLCollection is an array like list of HTML elements. The length property provides the size of the collection. It is possible to loop through all the HTMLCollection elements. See the example below
+
 ```js
 const allTitles = document.getElementsByClassName('title');
 console.log(allTitles) //HTMCollections
@@ -1986,22 +2222,28 @@ for(let i = 0; i < allTitles.length; i++){
   console.log(allTitles[i]) // prints each elements in the HTMLCollection
 }
 ```
+
 #### Getting an element by id
-***getElementsById()***  targets a single HTML element. We pass the id without # as an argument. 
+
+***getElementsById()***  targets a single HTML element. We pass the id without # as an argument.
+
 ```js
 let firstTitle = document.getElementById('first-title');
 console.log(firstTitle) // <h1>First Title</h1>
 ```
+
 #### Getting elements by using querySelector using tag, class and id:
+
 ***querySelector***: can be used to select HTML element by its tag name, id or class. If the tag name is used it selects only the first element.
 
 ```js
 let firstTitle = document.querySelect('h1');// select the first available h2 element
 let firstTitle = document.querySelector('#first-title'); // select id with first-title
 let firstTitle = document.querySelector('.title'); // select the first available h2 element with class title
-
 ```
+
 ***querySelectorAll***: can be used to select html element by its tag name or class. It return a nodeList which is an array like object which support array methods. We can use ***for loop*** or ***forEach*** to loop through each nodeList elements.
+
 ```js
 const allTitles = document.querySelectAll('h1');
 console.log(allTitles.length) // 4
@@ -2011,10 +2253,13 @@ for(let i = 0; i < allTitles.length; i++){
 allTitles.forEach(title => console.log(title))
 const allTitles = document.querySelectorAll('.title'); // the same goes for selecting using class
 ```
+
 ### Adding attribute
+
 An attribute is added in the opening tag of HTML which gives additional information about the element. Common HTML attributes: id, class, src, style, href,disabled, title, alt. Lets add id and class for the fourth title.
 
 #### Adding attribute using setAttribute
+
 The ***setAttribute()*** method set any html attribute. It takes two parameters the type of the attribute and the name of the attribute. 
 Let's add class and id attribute for the fourth title.
 
@@ -2023,26 +2268,37 @@ const titles = document.querySelectorAll('h1');
 titles[3].setAttribute('class', 'title');
 titles[3].setAttribute('id', 'fourth-title');
 ```
+
 #### Adding attribute without setAttribute
+
 Some attributes are DOM object property and they can be set directly. For instance id and class
+
 ```js
 //another way to setting an attribute
 titles[3].className = 'title';
 titles[3].id = 'fourth-title';
 ```
+
 #### Adding class using classList
+
 The class list method is a good method to append additional class. It doesn't override the original class if a class exists
+
 ```js
 //another way to setting an attribute: append the class, doesn't over ride
 titles[3].classList.add('title', 'header-title')
 ```
+
 ### Adding Text content
+
 ```js
 const titles = document.querySelectorAll('h1');
 titles[3].textContent = 'Fourth Title';
 ```
+
 ### Adding style
+
 Lets add some style to our titles. If the element has even index we give it green color else red.
+
 ```js
 const titles = document.querySelectorAll('h1');
 titles.forEach((title,i) => {
@@ -2063,7 +2319,9 @@ titles.forEach((title,i) => {
 let title = document.createElement('h1');
 let firstTitle = document.getElementById('first-title');
 ```
+
 ### Creating elements
+
 ```js
 let firstTitle = document.getElementById('first-title');
 let title
@@ -2075,6 +2333,7 @@ for(let i = 0; i < 3; i++){
 ```
 
 ### Appending to a parent element
+
 ```js
 // creating multiple elements and appending to parent element
 let title;
@@ -2085,23 +2344,30 @@ for(let i = 0; i < 3; i++){
   document.body.appendChild(title);
 }
 ```
+
 ### Event Listeners
+
 Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown, onkeyup, onload.
 We can add event listener method to any DOM object. Use use ***addEventListener()*** method to listen different event types on HTML elements.
 The following is an example of click type event.
+
 ```js
 const button = document.querySelector('button');
 button.addEventListener('click', e => {
   console.log(e.target);
 });
 ```
+
 ### Getting value from an input element
+
 We usually fill forms and forms accept data. Form fields are created using input HTML element.
+
 ```html
 <input type ='text' placeholder = 'Mass in Kilogram' />
 <input type = 'text' placeholder = 'Height in meters' />
 <button>Calculate BMI</button>
 ```
+
 ```js
 const mass = document.querySelector('#mass');
 const height = document.querySelector('#height');
@@ -2113,7 +2379,9 @@ button.addEventListen('click', ()=>{
 
 console.log(bmi)
 ```
+
 #### Exercises:Document Object Model
+
 ```html
   <!-- index.html -->
 <!DOCTYPE html>
@@ -2129,6 +2397,7 @@ console.log(bmi)
     </body>
   </html>
 ```
+
   1. Create an index.html file and put four p elements as above: Get the first paragraph by using ***document.querySelector(tagname)*** and tag name
   2. Get get each of the the paragraph using ***document.querySelector('#id')*** and by their id
   3. Get all the p as nodeList using ***document.querySelectorAll(tagname)*** and by their tag name
@@ -2142,12 +2411,13 @@ console.log(bmi)
   11. Create a div container on HTML document and create 100 numbers dynamically and append to the container div. Put each number in 150px by 150px box. If the number is even the background will be lightgreen else lightblue.
   12. Use the rgb color generator function or hexaColor generator to create 10 divs with random background colors
   13. Use the countries.js to visualize all the countries on the HTML document. You need one wrapper div and box for each countries. In the box display, the letter the country starts with, the name of the country and the number of characters for the country name.
-   
+
 #### DOM: Mini Projects
+
 1. BMI calculator
 2. Hexadecimal or RGB color Generator
 3. World Countries List
-   
+
 ## Class
 
 ```js
@@ -2165,28 +2435,35 @@ class Person {
 }
 ```
 
-#### Exercises:Classes
+### Exercises:Classes
 
 ## Regular Expressions
+
 Regular expression is a small program language which is used with many programming languages. Regular expression match or search for a pattern. We use ' or '' to create a string data type. We can create a pattern in two ways.
 
 ### Creating a pattern
+
 ```js
 let pattern = /love/; 
 let pattern = new RegEx('love');
 ```
+
 ### Creating a pattern with flags: global flag (g), case insensitive flag(i)
+
 ```js
 let pattern = /love/gi; // declaring a regex pattern
 let pattern = new RegEx('love','gi');  // declaring a regex pattern using RegEx object
 ```
+
 ```js
 let pattern = /[A-Z][a-z]{3,12}/;
 let name = 'Asabeneh';
 pattern.test(name);
 //output:true
 ```
+
 ### RegExp Object Methods
+
 ```js
 const str = 'I love JavaScript';
 const pattern = /love/;
@@ -2195,9 +2472,11 @@ console.log(result);
 ```
 
 #### Exercises:Regular Expressions
+
 - Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.’
 
 ## Promises and Callbacks
+
 From the following code blocks you will notice, the difference between callback and promises:
 
   ```js
@@ -2277,7 +2556,9 @@ square()
   .catch(err => console.log(err))
 console.log(square(10))
  ```
+
 ## Async and Await
+
 ```js
     const url = 'https://restcountries.eu/rest/v2/alll'
   fetch(url)
@@ -2305,8 +2586,10 @@ console.log(square(10))
 Local storage is the para of the web storage API which is used to store data on the browser with no expiration data. The data will be available on the browser even after the browser is closed. There are five methods to work on local storage:
 _setItem(), getItem(), removeItem(), clear(), key()_
 
-##### Setting item to the localStorage
+### Setting item to the localStorage
+
 When we set data to be stored in a localStorage, it will be stored as a string.  If we are storing an array or an object, we should stringify it first to keep the format unless otherwise we lose the array structure or the object structure of the original data
+
 ```js
 localStorage.setItem('name', 'Asabeneh');
 console.log(localStorage) //Storage {name: 'Asabeneh', length: 1}
@@ -2318,9 +2601,10 @@ const skillsJSON = JSON.stringify(skills,undefined, 4)
 localStorage.setItem('skills', skillsJSON);
 console.log(localStorage) //Storage {age: '200', name: 'Asabeneh', skills: 'HTML,CSS,JS,React', length: 3}
 ```
-If we are storing an array, an object or object array, we should stringify the object first. See the example below.
-```js
 
+If we are storing an array, an object or object array, we should stringify the object first. See the example below.
+
+```js
 let skills = [
   { tech: 'HTML', level: 10 },
   { tech: 'CSS', level: 9 },
@@ -2334,168 +2618,46 @@ let skills = [
 let skillJSON = JSON.stringify(skills);
 localStorage.setItem('skills', skillJSON);
 ```
-##### Getting item from localStorage
+
+### Getting item from localStorage
+
 ```js
 let name = localStorage.getItem('name');
 let age = localStorage.getItem('age');
 let skills = localStorage.getItem('skills');
-console.log(name, age, skills) // 'Asabeneh', '200', '['HTML','CSS','JS','React']'
 
+console.log(name, age, skills) // 'Asabeneh', '200', '['HTML','CSS','JS','React']'
 
 let skillsObj = JSON.parse(localStorage.getItem('skills'), undefined, 4);
 console.log(skillsObj);
-
 ```
-##### Clearing the localStorage
+
+### Clearing the localStorage
+
 The clear method, will clear everything stored in the local storage
+
 ```js
 localStorage.clear();
 ```
 
-## Exercises:Local Storage
+### Exercises:Local Storage
 
 ## Cookies
+
+### Exercises:Cookies
+
 ## [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Tests)
+
 ## JavaScript Interview Questions
-#### Exercises:Cookies
-### [JavaScipt Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
-##### [JavaScript Test 1](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
-##### [JavaScript Test 2](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-2)
-##### [JavaScript Test 3](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-3)
+
+## [JavaScript Tests](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
+
+### [JavaScript Test 1](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-1)
+
+### [JavaScript Test 2](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-2)
+
+### [JavaScript Test 3](https://github.com/Asabeneh/JavaScript-for-Everyone/wiki/JavaScript-Test-3)
+
 - [JavaScript Test 3: Solutions](https://github.com/Asabeneh/JavaScript-for-Everyone/blob/master/solutions/javascript-test-3.js)
 JavaScript-Test-4)
 - [JavaScript Test 4: Solutions](https://github.com/Asabeneh/JavaScript-for-Everyone/blob/master/solutions/javascript-test-4.js)
-
-___
-
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
-- [JavaScript for Everyone](#javascript-for-everyone)
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-- [Setup](#setup)
-  - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
-    - [Inline Script](#inline-script)
-    - [Internal script](#internal-script)
-    - [External script](#external-script)
-      - [Exercises:Setting Up your machine](#exercisessetting-up-your-machine)
-- [Variables](#variables)
-      - [Exercise - 1 : Variable](#exercise---1--variable)
-  - [Comments](#comments)
-      - [Exercise - 2 : Comments](#exercise---2--comments)
-  - [Data Types](#data-types)
-      - [Exercises - 3 : Data Types](#exercises---3--data-types)
-    - [Strings](#strings)
-      - [String Concatenation](#string-concatenation)
-      - [Exercise - 4 : String](#exercise---4--string)
-    - [Numbers](#numbers)
-      - [Math Object](#math-object)
-    - [Booleans](#booleans)
-      - [Exercise - 5 : Booleans](#exercise---5--booleans)
-    - [Undefined](#undefined)
-    - [Null](#null)
-      - [Exercise - 6 : Data types](#exercise---6--data-types)
-  - [Operators](#operators)
-    - [Arthimetic Operators](#arthimetic-operators)
-      - [Exercises : Arithmetic Operators:](#exercises--arithmetic-operators)
-    - [Logical Operators](#logical-operators)
-      - [Exercises: Logical Operators](#exercises-logical-operators)
-    - [Comparison Operators](#comparison-operators)
-      - [Exercise - 7 : Comparison Operators](#exercise---7--comparison-operators)
-- [Conditionals](#conditionals)
-      - [If](#if)
-      - [If Else](#if-else)
-      - [If else if else](#if-else-if-else)
-      - [Switch](#switch)
-      - [Ternary Operators](#ternary-operators)
-      - [Exercise - 8 : Conditionals](#exercise---8--conditionals)
-- [Loops](#loops)
-  - [For Loop](#for-loop)
-  - [While loop](#while-loop)
-  - [Do while loop](#do-while-loop)
-      - [Exercises:Loops](#exercisesloops)
-- [Arrays](#arrays)
-      - [Exercise - 9 : Arrays](#exercise---9--arrays)
-- [More on Arrays](#more-on-arrays)
-      - [Exercise -10 : Array Methods](#exercise--10--array-methods)
-- [Functions](#functions)
-    - [Function Declaration](#function-declaration)
-    - [Function Expression](#function-expression)
-    - [Anonymous Function](#anonymous-function)
-    - [Arrow Function](#arrow-function)
-    - [Arrow Function vs Declaration Function](#arrow-function-vs-declaration-function)
-      - [Exercise - 10 : Functions](#exercise---10--functions)
-- [Object](#object)
-    - [Object Methods:](#object-methods)
-    - [Date Object](#date-object)
-      - [Exercises:](#exercises)
-      - [Exercises:Objects](#exercisesobjects)
-  - [Functional Programming](#functional-programming)
-      - [Sorting string values](#sorting-string-values)
-      - [Sorting Numeric values](#sorting-numeric-values)
-      - [Sorting Object Arrays](#sorting-object-arrays)
-    - [Exercises:](#exercises-1)
-  - [Destructuring and Spread](#destructuring-and-spread)
-      - [Destructing Arrays](#destructing-arrays)
-      - [Destructuring Object](#destructuring-object)
-      - [Renaming during structuring](#renaming-during-structuring)
-    - [Spread or Rest Operator](#spread-or-rest-operator)
-      - [Exercise: Destructuring](#exercise-destructuring)
-- [Map and Set](#map-and-set)
-  - [Set](#set)
-    - [Creating a set](#creating-a-set)
-    - [Adding an element to a set](#adding-an-element-to-a-set)
-    - [Deleting an element a set](#deleting-an-element-a-set)
-    - [Checking an element in the set](#checking-an-element-in-the-set)
-    - [Clearing the set](#clearing-the-set)
-  - [Map](#map)
-    - [Creating a Map](#creating-a-map)
-    - [Adding values to the Map](#adding-values-to-the-map)
-    - [Getting a value from Map](#getting-a-value-from-map)
-    - [Checking key in Map](#checking-key-in-map)
-- [Document Object Model (DOM)](#document-object-model-dom)
-    - [Getting Element](#getting-element)
-      - [Getting elements by tag name](#getting-elements-by-tag-name)
-      - [Getting elements by class name](#getting-elements-by-class-name)
-      - [Getting an element by id](#getting-an-element-by-id)
-      - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
-    - [Adding attribute](#adding-attribute)
-      - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
-      - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
-      - [Adding class using classList](#adding-class-using-classlist)
-    - [Adding Text content](#adding-text-content)
-    - [Adding style](#adding-style)
-    - [Creating an Element](#creating-an-element)
-    - [Creating elements](#creating-elements)
-    - [Appending to a parent element](#appending-to-a-parent-element)
-    - [Event Listeners](#event-listeners)
-    - [Getting value from an input element](#getting-value-from-an-input-element)
-      - [Exercises:Document Object Model](#exercisesdocument-object-model)
-      - [DOM: Mini Projects](#dom-mini-projects)
-  - [Class](#class)
-      - [Exercises:Classes](#exercisesclasses)
-  - [Regular Expressions](#regular-expressions)
-    - [Creating a pattern](#creating-a-pattern)
-    - [Creating a pattern with flags: global flag (g), case insensitive flag(i)](#creating-a-pattern-with-flags-global-flag-g-case-insensitive-flagi)
-    - [RegExp Object Methods](#regexp-object-methods)
-      - [Exercises:Regular Expressions](#exercisesregular-expressions)
-  - [Promises and Callbacks](#promises-and-callbacks)
-  - [Async and Await](#async-and-await)
-  - [localStorage](#localstorage)
-        - [Setting item to the localStorage](#setting-item-to-the-localstorage)
-        - [Getting item from localStorage](#getting-item-from-localstorage)
-        - [Clearing the localStorage](#clearing-the-localstorage)
-  - [Exercises:Local Storage](#exerciseslocal-storage)
-  - [Cookies](#cookies)
-  - [JavaScript Tests](#javascript-tests)
-  - [JavaScript Interview Questions](#javascript-interview-questions)
-      - [Exercises:Cookies](#exercisescookies)
-    - [JavaScipt Tests](#javascipt-tests)
-        - [JavaScript Test 1](#javascript-test-1)
-        - [JavaScript Test 2](#javascript-test-2)
-        - [JavaScript Test 3](#javascript-test-3)
-
-<!-- /code_chunk_output -->
