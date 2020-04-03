@@ -52,12 +52,64 @@
   - [switch](#switch)
   - [Ternary Operators](#ternary-operators)
   - [Exercise: Conditionals](#exercise-conditionals)
-- [Promises and Callbacks](#promises-and-callbacks)
-- [Async and Await](#async-and-await)
-- [localStorage](#localstorage)
-  - [Setting item to the localStorage](#setting-item-to-the-localstorage)
-  - [Getting item from localStorage](#getting-item-from-localstorage)
-  - [Clearing the localStorage](#clearing-the-localstorage)
+- [Document Object Model (DOM)](#document-object-model-dom)
+  - [Getting Element](#getting-element)
+    - [Getting elements by tag name](#getting-elements-by-tag-name)
+    - [Getting elements by class name](#getting-elements-by-class-name)
+    - [Getting an element by id](#getting-an-element-by-id)
+    - [Getting elements by using querySelector using tag, class and id:](#getting-elements-by-using-queryselector-using-tag-class-and-id)
+  - [Adding attribute](#adding-attribute)
+    - [Adding attribute using setAttribute](#adding-attribute-using-setattribute)
+    - [Adding attribute without setAttribute](#adding-attribute-without-setattribute)
+    - [Adding class using classList](#adding-class-using-classlist)
+  - [Adding Text content](#adding-text-content)
+  - [Adding style](#adding-style)
+  - [Creating an Element](#creating-an-element)
+  - [Creating elements](#creating-elements)
+  - [Appending to a parent element](#appending-to-a-parent-element)
+  - [Event Listeners](#event-listeners)
+  - [Getting value from an input element](#getting-value-from-an-input-element)
+    - [Exercises:Document Object Model](#exercisesdocument-object-model)
+    - [DOM: Mini Projects](#dom-mini-projects)
+- [Classes](#classes)
+  - [Defining a classes](#defining-a-classes)
+  - [Class Instantiation](#class-instantiation)
+  - [Class Constructor](#class-constructor)
+  - [Default values with constructor](#default-values-with-constructor)
+  - [Class methods](#class-methods)
+  - [Properties with initial value](#properties-with-initial-value)
+  - [getter](#getter)
+  - [setter](#setter)
+  - [Static method](#static-method)
+- [Inheritance](#inheritance)
+  - [Overriding methods](#overriding-methods)
+- [Exercises](#exercises)
+  - [Exercises Level 1](#exercises-level-1)
+  - [Exercises Level 2](#exercises-level-2)
+  - [Exercises Level 3](#exercises-level-3)
+- [Regular Expressions](#regular-expressions)
+  - [RegEx parameters](#regex-parameters)
+    - [Pattern](#pattern)
+    - [Flags](#flags)
+  - [Creating a pattern with RegEx Constructor](#creating-a-pattern-with-regex-constructor)
+  - [Creating a pattern without RegEx Constructor](#creating-a-pattern-without-regex-constructor)
+  - [RegExp Object Methods](#regexp-object-methods)
+    - [Testing for  a match](#testing-for-a-match)
+    - [Array containing all of the match](#array-containing-all-of-the-match)
+    - [Replacing a substring](#replacing-a-substring)
+  - [Square Bracket](#square-bracket)
+  - [Escape character(\\) in RegEx](#escape-character-in-regex)
+  - [One or more times(+)](#one-or-more-times)
+  - [Period(.)](#period)
+  - [Zero or more times(*)](#zero-or-more-times)
+  - [Zero or one times(?)](#zero-or-one-times)
+  - [Quantifier in RegEx](#quantifier-in-regex)
+  - [Cart ^](#cart)
+  - [Exact match](#exact-match)
+- [💻 Exercises](#%f0%9f%92%bb-exercises)
+  - [Exercises: Level 1](#exercises-level-1-1)
+  - [Exercises: Level 2](#exercises-level-2-1)
+  - [Exercises: Level 3](#exercises-level-3-1)
   - [Exercises:Local Storage](#exerciseslocal-storage)
 - [Cookies](#cookies)
   - [Exercises:Cookies](#exercisescookies)
@@ -3588,44 +3640,401 @@ for (const l of langSet) {
 console.log(counts)
 ```
 
-## Map
+## Set
 
-### Creating a Map
+Set is a collection a collection of elements. Set can only contains unique elements.
+Lets see how to create a set
+
+### Creating an empty set
 
 ```js
-  const countriesMap = new Map()
+const companies = new Set()
+console.log(companies)
+```
+
+```sh
+{}
+```
+
+### Creating set from array
+
+```js
+const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French'
+]
+
+const setOfLangauges = new Set(languages)
+console.log(setOfLangauges)
+```
+
+```sh
+Set(4) {"English", "Finnish", "French", "Spanish"}
+```
+
+Set is an iterable object and we can iterate through each elements.
+
+```js
+const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French'
+]
+
+const setOfLangauges = new Set(languages)
+
+for (const language of setOfLangauges) {
+  console.log(language)
+}
+```
+
+```sh
+  English
+  Finnish
+  French
+  Spanish
+```
+
+### Adding an element to a set
+
+```js
+const companies = new Set() // creating an empty set
+console.log(companies.size) // 0
+
+companies.add('Google') // add element to the set
+companies.add('Facebook')
+companies.add('Amazon')
+companies.add('Oracle')
+companies.add('Microsoft')
+
+console.log(companies.size) // 5 elements in the set
+console.log(companies)
+```
+
+```sh
+Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
+```
+
+We can also use loop to add element to a set.
+
+```js
+const companies = ['Google', 'Facebook', 'Amazon', 'Oracle', 'Microsoft']
+setOfCompanies = new Set()
+for (const company of companies) {
+  setOfCompanies.add(company)
+}
+```
+
+```sh
+Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
+
+```
+
+### Deleting an element a set
+
+We can delete an element from a set using a delete method.
+
+```js
+console.log(companies.delete('Google'))
+console.log(companies.size) // 4 elements left in the set
+```
+
+### Checking an element in the set
+
+The has method can help to know if a certain element exists in a set.
+
+```js
+console.log(companies.has('Apple')) // false
+console.log(companies.has('Facebook')) // true
+```
+
+### Clearing the set
+
+It removes all the elements from a set.
+
+```js
+companies.clear()
+
+console.log(companies)
+```
+
+```sh
+{}
+
+```
+
+See the example below to learn how to use set.
+
+```js
+const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French'
+]
+const langSet = new Set(languages)
+console.log(langSet) // Set(4) {"English", "Finnish", "French", "Spanish"}
+console.log(langSet.size) // 4
+
+const counts = []
+const count = {}
+
+for (const l of langSet) {
+  const filteredLang = languages.filter(lng => lng === l)
+  console.log(filteredLang) // ["English", "English", "English"]
+  counts.push({ lang: l, count: filteredLang.length })
+}
+console.log(counts)
+```
+
+```js
+[
+  { lang: 'English', count: 3 },
+  { lang: 'Finnish', count: 1 },
+  { lang: 'French', count: 2 },
+  { lang: 'Spanish', count: 1 }
+]
+```
+
+Other use case of set. For instance to count unique item in an array.
+
+```js
+const numbers = [5, 3, 2, 5, 5, 9, 4, 5]
+const setOfNumbers = new Set(numbers)
+
+console.log(setOfNumbers)
+```
+
+```sh
+Set(5) {5, 3, 2, 9, 4}
+```
+
+### Union of sets
+
+To find a union to two sets can be achieved using spread operator. Lets find the union of set A and set B (A U B)
+
+```js
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+let c = [...a, ...b]
+
+let A = new Set(a)
+let B = new Set(b)
+let C = new Set(c)
+
+console.log(C)
+```
+
+```sh
+Set(6) {1, 2, 3, 4, 5,6}
+
+```
+
+### Intersection of sets
+
+To find an intersection of two sets can be achieved using filter. Lets find the union of set A and set B (A ∩ B)
+
+```js
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+
+let A = new Set(a)
+let B = new Set(b)
+
+let c = a.filter(num => B.has(num))
+let C = new Set(c)
+
+console.log(C)
+```
+
+```sh
+Set(3) {3, 4, 5}
+
+```
+
+### Difference of sets
+
+To find an the difference between two sets can be achieved using filter. Lets find the different of set A and set B (A \ B)
+
+```js
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+
+let A = new Set(a)
+let B = new Set(b)
+
+let c = a.filter(num => !B.has(num))
+let C = new Set(c)
+
+console.log(C)
+```
+
+```sh
+Set(2) {1, 2}
+
+```
+
+## Map
+
+### Creating an empty Map
+
+```js
+const map = new Map()
+console.log(map)
+```
+
+```sh
+Map(0) {}
+```
+
+### Creating an Map from array
+
+```js
+countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo']
+]
+const map = new Map(countries)
+console.log(map)
+console.log(map.size)
+```
+
+```sh
+Map(3) {"Finland" => "Helsinki", "Sweden" => "Stockholm", "Norway" => "Oslo"}
+3
 ```
 
 ### Adding values to the Map
 
 ```js
-  console.log(countriesMap.size)
-  countriesMap.set('Finland', 'Helsinki')
-  countriesMap.set('Estonia', 'Tallinn')
-  countriesMap.set('Sweden', 'Stockholm')
-  console.log(countriesMap)
-  console.log(countriesMap.size)
+const countriesMap = new Map()
+console.log(countriesMap.size) // 0
+countriesMap.set('Finland', 'Helsinki')
+countriesMap.set('Sweden', 'Stockholm')
+countriesMap.set('Norway', 'Oslo')
+console.log(countriesMap)
+console.log(countriesMap.size)
+```
+
+```sh
+Map(3) {"Finland" => "Helsinki", "Sweden" => "Stockholm", "Norway" => "Oslo"}
+3
 ```
 
 ### Getting a value from Map
 
 ```js
-  console.log(countriesMap.get('Finland'))
+console.log(countriesMap.get('Finland'))
+```
+
+```sh
+Helsinki
 ```
 
 ### Checking key in Map
 
+Check if a key exist in a map using *has* method. It returns *true* or *false*.
+
 ```js
- console.log(countriesMap.has('Finland'))
+console.log(countriesMap.has('Finland'))
+```
+
+```sh
+true
 ```
 
 Getting all values from map using loop
 
 ```js
-  for (const cnt of countriesMap) {
-    console.log(cnt)
-  }
-  ```
+for (const country of countriesMap) {
+  console.log(country)
+}
+```
+
+```sh
+(2) ["Finland", "Helsinki"]
+(2) ["Sweden", "Stockholm"]
+(2) ["Norway", "Oslo"]
+```
+
+```sh
+for (const [country, city] of countriesMap){
+console.log(country, city)
+}
+```
+
+```sh
+Finland Helsinki
+Sweden Stockholm
+Norway Oslo
+```
+
+### Exercises: Set and Map
+
+### Exercises:Level 1
+
+```js
+const a = {4, 5, 8, 9}
+const b = {3, 4, 5, 7}
+const countries = ['Finland', 'Sweden', 'Norway']
+```
+
+1. create an empty set
+2. Create a set containing 0 to 10 using loop
+3. Remove an element from a set
+4. Clear a set
+5. Create a set of 5 string elements from array
+6. Create a map of countries and number of characters of a country
+
+### Exercises:Level 2
+
+1. Find a union b
+2. Find a intersection b
+3. Find a with b
+
+### Exercises:Level 3
+
+1. How many languages are there in the countries object file.
+
+1. \*\*\* Use the countries data to find the 10 most spoken languages:
+
+   ````js
+   // Your output should look like this
+   console.log(mostSpokenLanguages(countries, 10))
+   [
+   {'English':91},
+   {'French':45},
+   {'Arabic':25},
+   {'Spanish':24},
+   {'Russian':9},
+   {'Portuguese':9},
+   {'Dutch':8},
+   {'German':7},
+   {'Chinese':5},
+   {'Swahili':4},
+   {'Serbian':4}]
+
+   // Your output should look like this
+   console.log(mostSpokenLanguages(countries, 3))
+
+  [
+   {'English':91},
+   {'French':45},
+   {'Arabic':25}
+   ]````
 
 ## Document Object Model (DOM)
 
