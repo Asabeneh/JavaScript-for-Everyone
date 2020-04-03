@@ -1,6 +1,5 @@
 
 ![JS](https://res.cloudinary.com/dgqqxlkfa/image/upload/v1566725872/javascript_for_everyone/javascript_for_everyone.png)
-
 - [Introduction](#introduction)
 - [Setup](#setup)
   - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
@@ -53,6 +52,12 @@
   - [switch](#switch)
   - [Ternary Operators](#ternary-operators)
   - [Exercise: Conditionals](#exercise-conditionals)
+- [Promises and Callbacks](#promises-and-callbacks)
+- [Async and Await](#async-and-await)
+- [localStorage](#localstorage)
+  - [Setting item to the localStorage](#setting-item-to-the-localstorage)
+  - [Getting item from localStorage](#getting-item-from-localstorage)
+  - [Clearing the localStorage](#clearing-the-localstorage)
   - [Exercises:Local Storage](#exerciseslocal-storage)
 - [Cookies](#cookies)
   - [Exercises:Cookies](#exercisescookies)
@@ -681,7 +686,7 @@ Everything in JavaScript is an object. A string is a primitive data type that me
 
 2. *Accessing characters in a string*: We can access each character in a string using its index. In programming, counting starts from 0. The first index of the string is zero, and the last index is one minus the length of the string.
 
-  ![Accessing sting by index](../images/string_indexes.png)
+  ![Accessing sting by index](./images/string_indexes.png)
   
 Let us access different characters in 'JavaScript' string.
 
@@ -703,7 +708,7 @@ console.log(lastIndex)  // 9
 console.log(string[lastIndex])    // t
 ```
 
-1. *toUpperCase()*: this method changes the string to uppercase letters.
+3. *toUpperCase()*: this method changes the string to uppercase letters.
 
 ```js
 let string = 'JavaScript'
@@ -864,7 +869,7 @@ console.log(string.charCodeAt(lastIndex)) // t ASCII is 116
 
 ```
 
-1.  *indexOf()*: Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+13.  *indexOf()*: Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
 
 ```js
 string.indexOf(substring)
@@ -882,7 +887,7 @@ console.log(string.indexOf('Script'))     //15
 console.log(string.indexOf('script'))     // -1
 ```
 
-1.  *lastIndexOf()*: Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+14.  *lastIndexOf()*: Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
 
 ```js
 //syntax
@@ -2257,7 +2262,7 @@ Setting a new keys in an object
   console.log(person)
 ```
 
-### Object Methods:
+### Object Methods
 
 _Object.assign_: To copy an object without modifying the original object
 
@@ -2400,6 +2405,690 @@ console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
 1. Get all keys or properties of users object
 1. Get all the values of users object
 1. ** Develop a small JavaScript library.
+
+## JSON
+
+JSON stands for JavaScript Object Notation. The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text or string only. JSON is a light weight data format for storing and transporting. JSON is mostly used when data is sent from a server to a client. JSON is an easier-to-use alternative to XML.
+
+**Example:**
+
+```js
+{
+"users":[
+  {
+    "firstName":"Asabeneh",
+    "lastName":"Yetayeh",
+    "age":250,
+    "email":"asab@asb.com"
+  },
+  {
+    "firstName":"Alex",
+    "lastName":"James",
+    "age":25,
+    "email":"alex@alex.com"
+  },
+  {
+  "firstName":"Lidiya",
+  "lastName":"Tekle",
+  "age":28,
+  "email":"lidiya@lidiya.com"
+  }
+]
+}
+```
+
+The above JSON example is not much different for a normal object. Then, what is the difference ? The difference is the key of a JSON object should be with double quotes or it should be a string. JavaScript Object and JSON are very similar that we can change JSON to Object and Object to JSON.
+
+Let us see the above example in more detail, it starts with a curly bracket. Inside the curly bracket, there is "users" key which has a value array. Inside the array we have different objects and each objects has keys, each keys has to have double quotes. For instance, we use "firstNaMe" instead of just firstName, however in object we use keys without double quotes. This is the major difference between an object and a JSON. Let's see more examples about JSON.
+
+**Example:**
+
+```js
+{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
+}
+```
+
+### Converting JSON to JavaScript Object
+
+Mostly we fetch JSON data from HTTP response or from a file, but we can store the JSON as a string and we can change to Object for sake of demonstration. In JavaScript the keyword _JSON_ has _parse()_ and _stringify()_ methods. When we want to change the JSON to an object we parse the JSON using _JSON.parse()_. When we want to change the object to JSON we use _JSON.stringify()_.
+
+#### JSON.parse()
+
+```js
+JSON.parse(json[, reviver])
+// json or text , the data
+// reviver is an optional callback function
+```
+
+```js
+const usersText = `{
+"users":[
+  {
+    "firstName":"Asabeneh",
+    "lastName":"Yetayeh",
+    "age":250,
+    "email":"asab@asb.com"
+  },
+  {
+    "firstName":"Alex",
+    "lastName":"James",
+    "age":25,
+    "email":"alex@alex.com"
+  },
+  {
+  "firstName":"Lidiya",
+  "lastName":"Tekle",
+  "age":28,
+  "email":"lidiya@lidiya.com"
+  }
+]
+}`
+
+const usersObj = JSON.parse(usersText, undefined, 4)
+console.log(usersObj)
+```
+
+### Using a reviver function with JSON.parse()
+
+To use the reviver function as a formatter, we put the keys we want to format first name and last name value. Let us say, we are interested to format the firstName and lastName of the JSON data .
+
+```js
+const usersText = `{
+"users":[
+  {
+    "firstName":"Asabeneh",
+    "lastName":"Yetayeh",
+    "age":250,
+    "email":"asab@asb.com"
+  },
+  {
+    "firstName":"Alex",
+    "lastName":"James",
+    "age":25,
+    "email":"alex@alex.com"
+  },
+  {
+  "firstName":"Lidiya",
+  "lastName":"Tekle",
+  "age":28,
+  "email":"lidiya@lidiya.com"
+  }
+]
+}`
+
+const usersObj = JSON.parse(usersText, (key, value) => {
+  let newValue =
+    typeof value == 'string' && key != 'email' ? value.toUpperCase() : value
+  return newValue
+})
+console.log(usersObj)
+```
+
+The _JSON.parse()_ is very handy to use. You do not have to pass optional parameter, you can just use it with the required parameter and you will achieve quite a lot.
+
+### Converting Object to JSON
+
+When we want to change the object to JSON we use _JSON.stringify()_. The stringify method takes one required parameter and two optional parameters. The replacer is used as filter and the space is an indentations. If we do not want to filter out any of the keys from the object we can just pass undefined.
+
+```js
+JSON.stringify(obj, replacer, space)
+// json or text , the data
+// reviver is an optional callback function
+```
+
+Let us convert the following object to a string. First let use keep all the keys and also let us have 4 space indentation.
+
+```js
+const users = {
+  Alex: {
+    email: 'alex@alex.com',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    age: 20,
+    isLoggedIn: false,
+    points: 30
+  },
+  Asab: {
+    email: 'asab@asab.com',
+    skills: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Redux',
+      'MongoDB',
+      'Express',
+      'React',
+      'Node'
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50
+  },
+  Brook: {
+    email: 'daniel@daniel.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+    age: 30,
+    isLoggedIn: true,
+    points: 50
+  },
+  Daniel: {
+    email: 'daniel@alex.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    age: 20,
+    isLoggedIn: false,
+    points: 40
+  },
+  John: {
+    email: 'john@john.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+    age: 20,
+    isLoggedIn: true,
+    points: 50
+  },
+  Thomas: {
+    email: 'thomas@thomas.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    age: 20,
+    isLoggedIn: false,
+    points: 40
+  },
+  Paul: {
+    email: 'paul@paul.com',
+    skills: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'MongoDB',
+      'Express',
+      'React',
+      'Node'
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40
+  }
+}
+
+const txt = JSON.stringify(users, undefined, 4)
+console.log(txt) // text means JSON- because json is a string form of an object.
+```
+
+```sh
+{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
+}
+```
+
+### Using a Filter Array with JSON.stringify
+
+Now, lets use the replacer as a filter. The user object has long list of keys but we are interested only in few of them. We put the keys we want to keep in array as show in the example and use it the place of the replacer.
+
+```js
+const user = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
+  country: 'Finland',
+  city: 'Helsinki',
+  email: 'alex@alex.com',
+  skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Pyhton'],
+  age: 250,
+  isLoggedIn: false,
+  points: 30
+}
+
+const txt = JSON.stringify(user,['firstName', 'lastName', 'country', 'city', 'age'],4)
+console.log(txt)
+```
+
+```sh
+{
+    "firstName": "Asabeneh",
+    "lastName": "Yetayeh",
+    "country": "Finland",
+    "city": "Helsinki",
+    "age": 250
+}
+```
+
+### Exercises
+
+```js
+const skills = ['HTML', 'CSS', 'JS', 'React','Node', 'Python']
+let age = 250;
+let isMarried = true
+const student = {
+  firstName:'Asabeneh',
+  lastName:'Yetayehe',
+  age:250,
+  isMarried:true,
+  skills:['HTML', 'CSS', 'JS', 'React','Node', 'Python', ]
+}
+const txt = `{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
+}
+`
+```
+
+### Exercises Level 1
+
+1. Change skills array to JSON using JSON.stringify()
+1. Stringify the age variable
+1. Stringify the isMarried variable
+1. Stringify the student object
+
+### Exercises Level 2
+
+1. Stringify the students object with only firstName, lastName and skills properties
+
+
+## Higher Order Function
+
+Higher order functions are functions which take other function as a parameter or return a function as a value. The function passed as a parameter is called callback.
+
+### Callback
+
+A callback is a function which can be passed as parameter to other function. See the example below.
+
+```js
+// a callback function, the function could be any name
+const callback = (n) => {
+  return n ** 2
+}
+​
+// function take other function as a callback
+function cube(callback, n) {
+  return callback(n) * n
+}
+​
+console.log(cube(callback, 3))
+```
+
+### Returning function
+
+Higher order functions return function as a value
+​
+
+```js
+// Higher order function returning an other function
+const higherOrder = n => {
+  const doSomething = m => {
+    const doWhatEver = t => {
+      return 2 * n + 3 * m + t
+    }
+    return doWhatEver
+  }
+​
+  return doSomething
+}
+console.log(higherOrder(2)(3)(10))
+```
+
+Let us see were we use call back functions.For instance the _forEach_ method uses call back.
+
+```js
+const numbers = [1, 2, 3, 4]
+​
+const sumArray = arr => {
+  let sum = 0
+  const callBack = function(element) {
+    sum += element
+  }
+  numbers.forEach(callback)
+  return sum
+
+}
+console.log(sumArray(numbers))
+```
+
+```sh
+15
+```
+
+The above example can be simplified as follows:
+
+```js
+const numbers = [1, 2, 3, 4]
+​
+const sumArray = arr => {
+  let sum = 0
+  numbers.forEach(function(element) {
+    sum += element
+  })
+  return sum
+
+}
+console.log(sumArray(numbers))
+```
+
+```sh
+15
+```
+
+### setting time
+
+In JavaScript we can execute some activity on certain interval of time or we can schedule(wait) for sometime to execute some activities.
+
+- setInterval
+- setTimeout
+
+#### setInterval
+
+In JavaScript, we use setInterval higher order function to do some activity continuously with in some interval of time. The setInterval global method take a callback function and a duration as a parameter. The duration is in milliseconds and the callback will be always called in that interval of time.
+
+```js
+// syntax
+function callBack() {
+  // code goes here
+}
+setInterval(callback, duration)
+```
+
+```js
+function sayHello() {
+  console.log('Hello')
+}
+setInterval(sayHello, 2000) // it prints hello in every 2 seconds
+```
+
+#### setTimeout
+
+In JavaScript, we use setTimeout higher order function to execute some action at some time in the future. The setTimeout global method take a callback function and a duration as a parameter. The duration is in milliseconds and the callback wait for that amount of time.
+
+```js
+// syntax
+function callback() {
+  // code goes here
+}
+setTimeout(callback, duration) // duration in milliseconds
+```
+
+```js
+function sayHello() {
+  console.log('Hello')
+}
+setTimeout(sayHello, 2000) // it prints hello after it waits for 2 seconds.
+```
+
+### Exercises Level 3
+
+1. Parse the *txt* JSON to object.
+2. Find the the user who has many skills from the variable stored in *txt*.
 
 ## Functional Programming
 
@@ -3180,62 +3869,1147 @@ console.log(bmi)
 2. Hexadecimal or RGB color Generator
 3. World Countries List
 
-## Class
+## Classes
+
+JavaScript is an object oriented programming language. Everything in JavScript is an object, with its properties and methods. We create class to create an object. A Class is like an object constructor, or a "blueprint" for creating objects. We instantiate a class to create an object. The class defines attributes and the behavior of the object, while the object, on the other hand, represents the class.
+
+Once we create a class we can create object from it whenever we want. Creating an object from a class is called class instantiation.
+
+In the object section, we saw how to create an object literal. Object literal is a singleton. If we want to get a similar object , we have to write it. However, class allows to create many objects. This helps to reduce amount of code and repetition of code.
+
+### Defining a classes
+
+To define a class in JavaScript we need the keyword _class_ , the name of a class in **CamelCase** and block code(two curly brackets). Let us create a class name Person.
+
+```sh
+// syntax
+class ClassName {
+    //  code goes here
+}
+
+```
+
+**Example:**
 
 ```js
 class Person {
-  constructor(firstName, lastName, age, location, skills) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.location = location;
-    this.skills = skills;
-  }
-  getFull() {
-    return `${this.firstName} ${this.lastName}`;
-  }
+  // code goes here
 }
 ```
 
-### Exercises:Classes
+We have created an Person class but it does not have any thing inside.
+
+### Class Instantiation
+
+Instantiation class means creating an object from a class. We need the keyword _new_ and we call the name of the class after the word new.
+
+Let us create a dog object from our Person class.
+
+```js
+class Person {
+  // code goes here
+}
+const person = new Person()
+console.log(person)
+```
+
+```sh
+Person {}
+```
+
+As you can see, we have created a person object. Since the class did not have any properties yet the object is also empty.
+
+Let use the class constructor to pass different properties for the class.
+
+### Class Constructor
+
+The constructor is a builtin function which allows as to create a blueprint for our object. The constructor function starts with a keyword constructor followed by a parenthesis. Inside the parenthesis we pass the properties of the object as parameter. We use the _this_ keyword to attach the constructor parameters with the class.
+
+The following Person class constructor has firstName and lastName property. These properties are attached to the Person class using _this_ keyword. _This_ refers to the class itself.
+
+```js
+class Person {
+  constructor(firstName, lastName) {
+    console.log(this) // Check the output from here
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+}
+
+const person = new Person()
+
+console.log(person)
+```
+
+```sh
+Person {firstName: undefined, lastName}
+```
+
+All the keys of the object are undefined. When ever we instantiate we should pass the value of the properties. Let us pass value at this time when we instantiate the class.
+
+```js
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh')
+
+console.log(person1)
+```
+
+```sh
+Person {firstName: "Asabeneh", lastName: "Yetayeh"}
+```
+
+As we have stated at the very beginning that once we create a class we can create many object using the class. Now, let us create many person objects using the Person class.
+
+```js
+class Person {
+  constructor(firstName, lastName) {
+    console.log(this) // Check the output from here
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh')
+const person2 = new Person('Lidiya', 'Tekle')
+const person3 = new Person('Abraham', 'Yetayeh')
+
+console.log(person1)
+console.log(person2)
+console.log(person3)
+```
+
+```sh
+Person {firstName: "Asabeneh", lastName: "Yetayeh"}
+Person {firstName: "Lidiya", lastName: "Tekle"}
+Person {firstName: "Abraham", lastName: "Yetayeh"}
+```
+
+Using the class Person we created three persons object. As you can see our class did not many properties let us add more properties to the class.
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    console.log(this) // Check the output from here
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+
+console.log(person1)
+```
+
+```sh
+Person {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki"}
+```
+
+### Default values with constructor
+
+The constructor function properties may have a default value like other regular functions.
+
+```js
+class Person {
+  constructor(
+    firstName = 'Asabeneh',
+    lastName = 'Yetayeh',
+    age = 250,
+    country = 'Finland',
+    city = 'Helsinki'
+  ) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+  }
+}
+
+const person1 = new Person() // it will take the default values
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+console.log(person1)
+console.log(person2)
+```
+
+```sh
+Person {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki"}
+Person {firstName: "Lidiya", lastName: "Tekle", age: 28, country: "Finland", city: "Espoo"}
+```
+
+### Class methods
+
+The constructor inside a class is a builtin function which allow us to create a blueprint for the object. In a class we can create class methods. Methods are JavaScript functions inside the class. Let us create some class methods.
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+console.log(person1.getFullName())
+console.log(person2.getFullName())
+```
+
+```sh
+Asabeneh Yetayeh
+test.js:19 Lidiya Tekle
+```
+
+### Properties with initial value
+
+When we create a class for some properties we may have an initial value. For instance if you are playing a game, you starting score will be zero. So, we may have a starting score or score which is zero. In other way, we may have an initial skill and we will acquire some skill after some time.
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+console.log(person1.score)
+console.log(person2.score)
+
+console.log(person1.skills)
+console.log(person2.skills)
+```
+
+```sh
+0
+0
+[]
+[]
+```
+
+A method could be regular method or a getter or a setter. Let us see, getter and setter.
+
+### getter
+
+The get method allow us to access value from the object. We write a get method using keyword _get_ followed by a function. Instead of accessing properties directly from the object we use getter to get the value. See the example bellow
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+  get getscore() {
+    return this.score
+  }
+  get getSkills() {
+    return this.skills
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+console.log(person1.getScore) // We do not need parenthesis to call a getter method
+console.log(person2.getScore)
+
+console.log(person1.getSkills)
+console.log(person2.getSkills)
+```
+
+```sh
+0
+0
+[]
+[]
+```
+
+### setter
+
+The setter method allow us to modify the value of certain properties. We write a setter method using keyword _set_ followed by a function. See the example bellow.
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+  get getScore() {
+    return this.score
+  }
+  get getSkills() {
+    return this.skills
+  }
+  set setScore(score) {
+    this.score += score
+  }
+  set setSkill(skill) {
+    this.skills.push(skill)
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+person1.setScore = 1
+person1.setSkill = 'HTML'
+person1.setSkill = 'CSS'
+person1.setSkill = 'JavaScript'
+
+person2.setScore = 1
+person2.setSkill = 'Planning'
+person2.setSkill = 'Managing'
+person2.setSkill = 'Organizing'
+
+console.log(person1.score)
+console.log(person2.score)
+
+console.log(person1.skills)
+console.log(person2.skills)
+```
+
+```sh
+1
+1
+["HTML", "CSS", "JavaScript"]
+["Planning", "Managing", "Organizing"]
+```
+
+Do not be puzzled by the difference between regular method and a getter. If you know how to make a regular method you are good. Let us add regular method called getPersonInfo in the Person class.
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+  get getScore() {
+    return this.score
+  }
+  get getSkills() {
+    return this.skills
+  }
+  set setScore(score) {
+    this.score += score
+  }
+  set setSkill(skill) {
+    this.skills.push(skill)
+  }
+  getPersonInfo() {
+    let fullName = this.getFullName()
+    let skills =
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(', ') +
+        ` and ${this.skills[this.skills.length - 1]}`
+    let formattedSkills = skills ? `He knows ${skills}` : ''
+
+    let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
+    return info
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+const person3 = new Person('John', 'Doe', 50, 'Mars', 'Mars city')
+
+person1.setScore = 1
+person1.setSkill = 'HTML'
+person1.setSkill = 'CSS'
+person1.setSkill = 'JavaScript'
+
+person2.setScore = 1
+person2.setSkill = 'Planning'
+person2.setSkill = 'Managing'
+person2.setSkill = 'Organizing'
+
+console.log(person1.getScore)
+console.log(person2.getScore)
+
+console.log(person1.getSkills)
+console.log(person2.getSkills)
+console.log(person3.getSkills)
+
+console.log(person1.getPersonInfo())
+console.log(person2.getPersonInfo())
+console.log(person3.getPersonInfo())
+```
+
+```sh
+1
+1
+["HTML", "CSS", "JavaScript"]
+["Planning", "Managing", "Organizing"]
+[]
+Asabeneh Yetayeh is 250. He lives Helsinki, Finland. He knows HTML, CSS and JavaScript
+Lidiya Tekle is 28. He lives Espoo, Finland. He knows Planning, Managing and Organizing
+John Doe is 50. He lives Mars city, Mars.
+```
+
+### Static method
+
+The static keyword defines a static method for a class. Static methods are not called on instances of the class. Instead, they are called on the class itself. These are often utility functions, such as functions to create or clone objects. An example of static method is _Date.now()_. The _now_ method is called directly from the class.
+
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+  get getScore() {
+    return this.score
+  }
+  get getSkills() {
+    return this.skills
+  }
+  set setScore(score) {
+    this.score += score
+  }
+  set setSkill(skill) {
+    this.skills.push(skill)
+  }
+  getPersonInfo() {
+    let fullName = this.getFullName()
+    let skills =
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(', ') +
+        ` and ${this.skills[this.skills.length - 1]}`
+
+    let formattedSkills = skills ? `He knows ${skills}` : ''
+
+    let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
+    return info
+  }
+  static favoriteSkill() {
+    const skills = ['HTML', 'CSS', 'JS', 'React', 'Python', 'Node']
+    const index = Math.floor(Math.random() * skills.length)
+    return skills[index]
+  }
+  static showDateTime() {
+    let now = new Date()
+    let year = now.getFullYear()
+    let month = now.getMonth() + 1
+    let date = now.getDate()
+    let hours = now.getHours()
+    let minutes = now.getMinutes()
+    if (hours < 10) {
+      hours = '0' + hours
+    }
+    if (minutes < 10) {
+      minutes = '0' + minutes
+    }
+
+    let dateMonthYear = date + '.' + month + '.' + year
+    let time = hours + ':' + minutes
+    let fullTime = dateMonthYear + ' ' + time
+    return fullTime
+  }
+}
+
+console.log(Person.favoriteSkill())
+console.log(Person.showDateTime())
+```
+
+```sh
+Node
+15.1.2020 23:56
+```
+
+The static methods are methods which can be used as utility functions.
+
+## Inheritance
+
+Using inheritance we can access all the properties and the methods of the parent class. This reduces repetition of code. If you remember, we have a Person parent class and we will create children from it. Our children class could be student, teach etc.
+
+```js
+// syntax
+class ChildClassName extends {
+ // code goes here
+}
+```
+
+Let us create a Student child class from Person parent class.
+
+```js
+class Student extends Person {
+  saySomething() {
+    console.log('I am a child of the person class')
+  }
+}
+
+const s1 = new Student('Asabeneh', 'Yetayeh', 'Finland', 250, 'Helsinki')
+console.log(s1)
+console.log(s1.saySomething())
+console.log(s1.getFullName())
+console.log(s1.getPersonInfo())
+```
+
+```sh
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: "Finland", country: 250, city: "Helsinki", …}
+I am a child of the person class
+Asabeneh Yetayeh
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: "Finland", country: 250, city: "Helsinki", …}
+Asabeneh Yetayeh is Finland. He lives Helsinki, 250.
+```
+
+### Overriding methods
+
+As you can see, we manage to access all the methods in the Person Class and we used it in the Student child class. We can customize the parent methods, we can add additional properties to a child class. If we want to customize, the methods and if we want to add extra properties, we need to use the constructor function the child class too. In side the constructor function we call the super() function to access all the properties from the parent class. The Person class didn't have gender but now let us give gender property for the child class, Student. If the same method name used in the child class, the parent method will be overridden.
+
+```js
+class Student extends Person {
+  constructor(firstName, lastName, age, country, city, gender) {
+    super(firstName, lastName, age, country, city)
+    this.gender = gender
+  }
+
+  saySomething() {
+    console.log('I am a child of the person class')
+  }
+  getPersonInfo() {
+    let fullName = this.getFullName()
+    let skills =
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(', ') +
+        ` and ${this.skills[this.skills.length - 1]}`
+
+    let formattedSkills = skills ? `He knows ${skills}` : ''
+    let pronoun = this.gender == 'Male' ? 'He' : 'She'
+
+    let info = `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}. ${formattedSkills}`
+    return info
+  }
+}
+
+const s1 = new Student(
+  'Asabeneh',
+  'Yetayeh',
+  250,
+  'Finland',
+  'Helsinki',
+  'Male'
+)
+const s2 = new Student('Lidiya', 'Tekle', 28, 'Finland', 'Helsinki', 'Female')
+s1.setScore = 1
+s1.setSkill = 'HTML'
+s1.setSkill = 'CSS'
+s1.setSkill = 'JavaScript'
+
+s2.setScore = 1
+s2.setSkill = 'Planning'
+s2.setSkill = 'Managing'
+s2.setSkill = 'Organizing'
+
+console.log(s1)
+
+console.log(s1.saySomething())
+console.log(s1.getFullName())
+console.log(s1.getPersonInfo())
+
+console.log(s2.saySomething())
+console.log(s2.getFullName())
+console.log(s2.getPersonInfo())
+```
+
+```sh
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki", …}
+Student {firstName: "Lidiya", lastName: "Tekle", age: 28, country: "Finland", city: "Helsinki", …}
+I am a child of the person class
+Asabeneh Yetayeh
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki", …}
+Asabeneh Yetayeh is 250. He lives in Helsinki, Finland. He knows HTML, CSS and JavaScript
+I am a child of the person class
+Lidiya Tekle
+Student {firstName: "Lidiya", lastName: "Tekle", age: 28, country: "Finland", city: "Helsinki", …}
+Lidiya Tekle is 28. She lives in Helsinki, Finland. He knows Planning, Managing and Organizing
+```
+
+Now, the getPersonInfo method has been overridden and it identifies if the person is male or female.
+
+## Exercises
+
+### Exercises Level 1
+
+1. Create an Animal class. The class will have name, age, color, legs properties and create different methods
+2. Create a Dog and Cat child class from the Animal Class.
+
+### Exercises Level 2
+
+1. Override the method you create in Animal class
+
+### Exercises Level 3
+
+1. Let's try to develop a program which calculate measure of central tendency of a sample(mean, median, mode) and measure of variability(range, variance, standard deviation). In addition to those measures find the min, max, count, percentile, and frequency distribution of the sample. You can create a class called Statistics and create all the functions which do statistical calculations as method for the Statistics class. Check the output below.
+
+```JS
+ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+
+console.log('Count:', statistics.count()) // 25
+console.log('Sum: ', statistics.sum()) // 744
+console.log('Min: ', statistics.min()) // 24
+console.log('Max: ', statistics.max()) // 38
+console.log('Range: ', statistics.range() // 14
+console.log('Mean: ', statistics.mean()) // 30
+console.log('Median: ',statistics.median()) // 29
+console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
+console.log('Variance: ',statistics.var()) // 17.5
+console.log('Standard Deviation: ', statistics.std()) // 4.2
+console.log('Variance: ',statistics.var()) // 17.5
+console.log('Frequency Distribution: ',statistics.freqDist()) // [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
+```
+
+```sh
+// you output should look like this
+console.log(statistics.describe())
+Count: 25
+Sum:  744
+Min:  24
+Max:  38
+Range:  14
+Mean:  30
+Median:  29
+Mode:  (26, 5)
+Variance:  17.5
+Standard Deviation:  4.2
+Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
+```
+
+1. Create a class called PersonAccount. It has firstname, lastname, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is also a set of expenses and its description.
 
 ## Regular Expressions
 
-Regular expression is a small program language which is used with many programming languages. Regular expression match or search for a pattern. We use ' or '' to create a string data type. We can create a pattern in two ways.
+A regular expression or RegEx is a small programming language that helps to find pattern in data. A RegEx can be used to check if some pattern exists in a different data types. To use RegEx in JavaScript either we use RegEx constructor or we can declare a RegEx pattern using two forward slashes followed by a flag. We can create a pattern in two ways.
 
-### Creating a pattern
+To declare a string we use a single quote, double quote a backtick to declare a regular expression we use two forward slashes and an optional flag. The flag could be g, i, m, s, u or y.
+
+### RegEx parameters
+
+A regular expression takes two parameters. One required search pattern and an optional flag.
+
+#### Pattern
+
+A pattern could be a text or any form of pattern which some sort of similarity. For instance the word spam in an email could be a pattern we are interested to look for in an email or a phone number format number might be our interest to look for.
+
+#### Flags
+
+Flags are optional parameters in a regular expression which determine the type of searching. Let see some of the flags:
+
+- g:is a global flag which means looking for a pattern in whole text
+- i: case insensitive flag(it searches for both lowercase and uppercase)
+- m: multiline
+
+### Creating a pattern with RegEx Constructor
+
+Declaring regular expression without global flag and case insensitive flag.
 
 ```js
-let pattern = /love/; 
-let pattern = new RegEx('love');
+// without flag
+let pattern = 'love'
+let regEx = new RegEx(pattern)
 ```
 
-### Creating a pattern with flags: global flag (g), case insensitive flag(i)
+Declaring regular expression with global flag and case insensitive flag.
 
 ```js
-let pattern = /love/gi; // declaring a regex pattern
-let pattern = new RegEx('love','gi');  // declaring a regex pattern using RegEx object
+let pattern = 'love'
+let flag = 'gi'
+let regEx = new RegEx(pattern, flag)
 ```
 
+Declaring a regex pattern using RegEx object. Writing the pattern and the flag inside the RegEx constructor
+
 ```js
-let pattern = /[A-Z][a-z]{3,12}/;
-let name = 'Asabeneh';
-pattern.test(name);
-//output:true
+let regEx = new RegEx('love','gi')
+```
+
+### Creating a pattern without RegEx Constructor
+
+Declaring regular expression with global flag and case insensitive flag.
+
+```js
+let regEx= /love/gi
+```
+
+The above regular expression is the same as the one which we created with RegEx constructor
+
+```js
+let regEx= new RegEx('love','gi')
 ```
 
 ### RegExp Object Methods
 
+Let see some of RegEx methods
+
+#### Testing for  a match
+
+*test()*:Tests for a match in a string. It returns true or false.
+
 ```js
-const str = 'I love JavaScript';
-const pattern = /love/;
-const result = pattern.test(str);
-console.log(result);
+const str = 'I love JavaScript'
+const pattern = /love/
+const result = pattern.test(str)
+console.log(result)
 ```
 
-#### Exercises:Regular Expressions
+```sh
+true
+```
 
-- Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.’
+#### Array containing all of the match
+
+*match()*:Returns an array containing all of the matches, including capturing groups, or null if no match is found.
+If we do not use a global flag, match() returns an array containing the pattern, index, input and group.
+
+```js
+const str = 'I love JavaScript'
+const pattern = /love/
+const result = str.match(pattern)
+console.log(result)
+```
+
+```sh
+["love", index: 2, input: "I love JavaScript", groups: undefined]
+```
+
+```js
+const str = 'I love JavaScript'
+const pattern = /love/g
+const result = str.match(pattern)
+console.log(result)
+```
+
+```sh
+["love"]
+```
+
+*search()*: Tests for a match in a string. It returns the index of the match, or -1 if the search fails.
+
+```js
+const str = 'I love JavaScript'
+const pattern = /love/g
+const result = str.search(pattern)
+console.log(result)
+```
+
+```sh
+2
+```
+
+#### Replacing a substring
+
+*replace()*: Executes a search for a match in a string, and replaces the matched substring with a replacement substring.
+
+```js
+const txt = 'Python is the most beautiful language that a human begin has ever created.\
+I recommend python for a first programming language'
+
+matchReplaced = txt.replace(/Python|python/, 'JavaScript')
+console.log(matchReplaced)
+```
+
+```sh
+JavaScript is the most beautiful language that a human begin has ever created.I recommend python for a first programming language
+```
+
+```js
+const txt = 'Python is the most beautiful language that a human begin has ever created.\
+I recommend python for a first programming language'
+
+matchReplaced = txt.replace(/Python|python/g, 'JavaScript')
+console.log(matchReplaced)
+```
+
+```sh
+JavaScript is the most beautiful language that a human begin has ever created.I recommend JavaScript for a first programming language
+```
+
+```js
+const txt = 'Python is the most beautiful language that a human begin has ever created.\
+I recommend python for a first programming language'
+
+matchReplaced = txt.replace(/Python/gi, 'JavaScript')
+console.log(matchReplaced)
+```
+
+```sh
+JavaScript is the most beautiful language that a human begin has ever created.I recommend JavaScript for a first programming language
+```
+
+```js
+
+const txt = '%I a%m te%%a%%che%r% a%n%d %% I l%o%ve te%ach%ing.\
+T%he%re i%s n%o%th%ing as m%ore r%ewarding a%s e%duc%at%i%ng a%n%d e%m%p%ow%er%ing \
+p%e%o%ple.\
+I fo%und te%a%ching m%ore i%n%t%er%%es%ting t%h%an any other %jobs.\
+D%o%es thi%s m%ot%iv%a%te %y%o%u to b%e a t%e%a%cher.'
+
+matches = txt.replace(/%/g, '')
+console.log(matches)  
+```
+
+```sh
+I am teacher and  I love teaching.There is nothing as more rewarding as educating and empowering people.I found teaching more interesting than any other jobs.Does this motivate you to be a teacher.
+```
+
+* []:  A set of characters
+  * [a-c] means, a or b or c
+  * [a-z] means, any letter a to z
+  * [A-Z] means, any character A to Z
+  * [0-3] means, 0 or 1 or 2 or 3
+  * [0-9] means any number 0 to 9
+  * [A-Za-z0-9] any character which is a to z, A to Z, 0 to 9
+* \\:  uses to escape special characters
+  * \d mean:match where the string contains digits (numbers from 0-9)
+  * \D mean: match where the string does not contain digits
+* . : any character except new line character(\n)
+* ^: starts with
+  * r'^substring' eg r'^love', a sentence which starts with a word love
+  * r'[^abc] mean not a, not b, not c.
+* $: ends with
+  * r'substring$' eg r'love$', sentence ends with a word love
+* *: zero or more times
+  * r'[a]*' means a optional or it can be occur many times.
+* +: one or more times
+  * r'[a]+' mean at least once or more times
+* ?: zero or one times
+  *  r'[a]?' mean zero times or once
+* {3}: Exactly 3 characters
+* {3,}: At least 3 character
+* {3,8}: 3 to 8 characters
+* |: Either or
+  * r'apple|banana' mean either of an apple or a banana
+* (): Capture and group
+
+![Regular Expression cheat sheet](./images/regex.png)
+
+Let's use example to clarify the above meta characters
+
+### Square Bracket
+
+Let's use square bracket to include lower and upper case
+
+```js
+const pattern = '[Aa]pple' // this square bracket mean either A or a
+const txt = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. '
+const matches = txt.match(pattern)
+
+console.log(matches)  
+```
+
+```sh
+["Apple", index: 0, input: "Apple and banana are fruits. An old cliche says an…by a banana a day keeps the doctor far far away. ", groups: undefined]
+
+```
+
+```js
+const pattern = /[Aa]pple/g // this square bracket mean either A or a
+const txt = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. '
+const matches = txt.match(pattern)
+
+console.log(matches)  
+```
+
+```sh
+["Apple", "apple"]
+```
+
+If we want to look for the banana, we write the pattern as follows:
+
+```js
+const pattern = /[Aa]pple|[Bb]anana/g // this square bracket mean either A or a
+const txt = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. Banana is easy to eat too.'
+const matches = txt.match(pattern)
+
+console.log(matches)  
+```
+
+```sh
+["Apple", "banana", "apple", "banana", "Banana"]
+```
+
+Using the square bracket and or operator , we manage to extract Apple, apple, Banana and banana.
+
+### Escape character(\\) in RegEx
+
+```js
+const pattern = /\d/g  // d is a special character which means digits
+const txt = 'This regular expression example was made in January 12,  2020.'
+const matches = txt. match(pattern)
+
+console.log(matches)  // ["1", "2", "2", "0", "2", "0"], this is not what we want
+```
+
+```js
+const pattern = /\d+/g  // d is a special character which means digits
+const txt = 'This regular expression example was made in January 12,  2020.'
+const matches = txt. match(pattern)
+
+console.log(matches)  // ["12", "2020"], this is not what we want
+```
+
+### One or more times(+)
+
+```js
+const pattern = /\d+/g  // d is a special character which means digits
+const txt = 'This regular expression example was made in January 12,  2020.'
+const matches = txt. match(pattern)
+console.log(matches)  // ["12", "2020"], this is not what we want
+```
+
+### Period(.)
+
+```js
+const pattern = /[a]./g  // this square bracket means a and . means any character except new line
+const txt = 'Apple and banana are fruits'
+const matches = txt.match(pattern)
+
+console.log(matches)  // ["an", "an", "an", "a ", "ar"]
+```
+
+```js
+const pattern = /[a].+/g  // . any character, + any character one or more times 
+const txt = 'Apple and banana are fruits'
+const matches = txt.match(pattern)
+
+console.log(matches)  // ['and banana are fruits']
+```
+
+### Zero or more times(*)
+
+Zero or many times. The pattern could may not occur or it can occur many times.
+
+```js
+
+const pattern = /[a].*/g  //. any character, + any character one or more times 
+const txt = 'Apple and banana are fruits'
+const matches = txt.match(pattern)
+
+console.log(matches)  // ['and banana are fruits']
+
+```
+
+### Zero or one times(?)
+
+Zero or one times. The pattern could may not occur or it may occur once.
+
+```js
+const txt = 'I am not sure if there is a convention how to write the word e-mail.\
+Some people write it email others may write it as Email or E-mail.'
+const pattern = /[Ee]-?mail/g  // ? means optional
+matches = txt.match(pattern)
+
+console.log(matches)  // ["e-mail", "email", "Email", "E-mail"]
+
+```
+
+### Quantifier in RegEx
+
+We can specify the length of the substring we look for in a text, using a curly bracket. Lets imagine, we are interested in substring that their length are 4 characters
+
+```js
+const txt = 'This regular expression example was made in December 6,  2019.'
+const pattern = /\d{4}/g  // exactly four times
+const matches = txt.match(pattern)
+console.log(matches)  // ['2019']
+```
+
+```js
+const txt = 'This regular expression example was made in December 6,  2019.'
+const pattern = /\d{1,4}/g   // 1 to 4
+const matches = txt.match(pattern)
+console.log(matches)  // ['6', '2019']
+```
+
+### Cart ^
+
+- Starts with
+  
+```js
+const txt = 'This regular expression example was made in December 6,  2019.'
+const pattern = /^This/ // ^ means starts with
+const matches = txt.match(pattern)
+console.log(matches)  // ['This']
+```
+
+- Negation
+
+```js
+const txt = 'This regular expression example was made in December 6,  2019.'
+const pattern = /[^A-Za-z,. ]+/g  // ^ in set character means negation, not A to Z, not a to z, no space, no coma no period
+const matches = txt.match(pattern)
+console.log(matches)  // ["6", "2019"]
+```
+
+### Exact match
+
+It should have ^ starting and $ which is an end.
+
+```js
+let pattern = /^[A-Z][a-z]{3,12}$/;
+let name = 'Asabeneh';
+let result = pattern.test(name)
+
+console.log(result) // true
+```
+
+## 💻 Exercises
+
+### Exercises: Level 1
+
+1. Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.’
+1. The position of some particles on the horizontal x-axis -12, -4, -3 and  -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers and find the distance between the two furthest particles.
+
+```js
+points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
+sortedPoints =  [-4, -3, -1, -1, 0, 2, 4, 8]
+distance = 12
+```
+
+1. Write a pattern which identify if a string is a valid JavaScript variable
+
+    ```sh
+    is_valid_variable('first_name') # True
+    is_valid_variable('first-name') # False
+    is_valid_variable('1first_name') # False
+    is_valid_variable('firstname') # True
+    ```
+
+### Exercises: Level 2
+
+1. Write a function called *tenMostFrequentWords* which get the ten most frequent word from a string?
+
+    ```js
+        paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+        console.log(tenMostFrequentWords(paragraph))
+    ```
+
+    ```sh
+        [
+        {word:'love', count:6},
+        {word:'you', count:5},
+        {word:'can', count:3},
+        {word:'what', count:2},
+        {word:'teaching', count:2},
+        {word:'not', count:2},
+        {word:'else', count:2},
+        {word:'do', count:2},
+        {word:'I', count:2},
+        {word:'which', count:1},
+        {word:'to', count:1},
+        {word:'the', count:1},
+        {word:'something', count:1},
+        {word:'if', count:1},
+        {word:'give', count:1},
+        {word:'develop',count:1},
+        {word:'capabilities',count:1},
+        {word:'application', count:1},
+        {word:'an',count:1},
+        {word:'all',count:1},
+        {word:'Python',count:1},
+        {word:'If',count:1}]
+    ```
+
+    ```js
+    console.log(tenMostFrequentWords(paragraph, 10))
+    ```
+
+    ```sh
+   [{word:'love', count:6},
+    {word:'you', count:5},
+    {word:'can', count:3},
+    {word:'what', count:2},
+    {word:'teaching', count:2},
+    {word:'not', count:2},
+    {word:'else', count:2},
+    {word:'do', count:2},
+    {word:'I', count:2},
+    {word:'which', count:1}
+    ]
+    ```
+
+### Exercises: Level 3
+
+1. Writ a function which cleans text. Clean the following text. After cleaning, count three most frequent words in the string.
+  
+  ```js
+    sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+
+   console.log(cleanText(sentence))
+   ```
+
+   ```sh
+    I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher
+    ```
+1. Write a function which find the most frequent words. After cleaning, count three most frequent words in the string.
+
+    ```js
+    console.log(mostFrequentWords(cleanedText))
+    [{word:'I', count:3}, {word:'teaching', count:2}, {word:'teacher', count:2}]
+    ```
+
 
 ## Promises and Callbacks
 
