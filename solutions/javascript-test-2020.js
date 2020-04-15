@@ -126,23 +126,27 @@ console.log('==================== BEGIN Q3 ============================ ')
 
 // 3. 1
 const howManyDaysInMonth = () => {
-  const m = prompt('Enter month').toLowerCase()
-  const firstLetter = m[0].toUpperCase()
-  const remainingStr = m.slice(1)
+  const userInput = prompt('Enter a month: ')
+    .trim()
+    .toLowerCase()
+
+  const firstLetter = userInput[0].toUpperCase()
+  const remainingStr = userInput.slice(1)
   const month = firstLetter + remainingStr
 
   let statement
-  switch (m) {
+  let days
+  switch (userInput) {
     case 'february':
-      day = 28
-      statement = `${month} has ${day}.`
+      days = 28
+      statement = `${month} has ${days} days.`
       break
     case 'april':
     case 'june':
     case 'september':
     case 'november':
-      day = 30
-      statement = `${month} has ${day}.`
+      days = 30
+      statement = `${month} has ${days} days.`
       break
     case 'january':
     case 'march':
@@ -151,8 +155,8 @@ const howManyDaysInMonth = () => {
     case 'august':
     case 'october':
     case 'december':
-      day = 31
-      statement = `${month} has ${day}.`
+      days = 31
+      statement = `${month} has ${days} days.`
       break
     default:
       return 'The given value is not a month'
@@ -625,7 +629,6 @@ const mostSpokenLanguages = async (n = 10) => {
 }
 
 console.log('Most spoken languages', mostSpokenLanguages(15))
-
 
 // 8.2
 
