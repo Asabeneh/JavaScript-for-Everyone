@@ -18,19 +18,22 @@ const multiplicationTable = n => {
     console.log(`${i} * ${i} = ${i * i}`)
   }
 }
+
 multiplicationTable(11)
 console.log('----------------------------------------------------------- ')
 
+// 1. 3
 const exponentialTable = () => {
   console.log(`i\ti^2\t^3`)
   for (let i = 0; i < 11; i++) {
     console.log(`${i}\t${i ** 2}\t${i ** 3}`)
   }
 }
+
 exponentialTable()
 console.log('----------------------------------------------------------- ')
 
-// 1. 3
+// 1. 4
 const countries = [
   'ALBANIA',
   'BOLIVIA',
@@ -81,6 +84,7 @@ const printProductItems = arr => {
     console.log(`The price of ${product} is ${formattedPrice}`)
   }
 }
+
 printProductItems(products)
 console.log('----------------------------------------------------------- ')
 
@@ -94,11 +98,10 @@ const sumOfAllPrices = arr => {
   }
   return total
 }
-console.log(
-  'the sum of all the prices using for, for of, or forEach ',
-  sumOfAllPrices(products)
-)
+
+console.log('the sum of all  prices using for of', sumOfAllPrices(products))
 console.log('----------------------------------------------------------- ')
+
 // 2. 3
 const total = products
   .map(prod => prod.price)
@@ -115,7 +118,6 @@ const totalUsingReduce = products.reduce((accu, curr) => {
 }, 0)
 
 console.log('reduce total', totalUsingReduce)
-
 console.log(sumOfAllPrices(products))
 console.log('==================== END Q2   ============================ ')
 
@@ -157,8 +159,8 @@ const howManyDaysInMonth = () => {
   }
   return statement
 }
-console.log(howManyDaysInMonth())
 
+console.log(howManyDaysInMonth())
 console.log('----------------------------------------------------------- ')
 
 // 3. 2
@@ -203,14 +205,15 @@ const generate = (type = 'id') => {
       return 'Not a valid format'
   }
 }
+
 console.log(generate())
 console.log(generate('id'))
 console.log(generate('hexa'))
 console.log(generate('hexadecimal'))
 console.log(generate('rgb'))
 console.log(generate('RGB'))
-
 console.log(generate('rgb'))
+
 console.log('==================== END Q3   ============================ ')
 
 console.log('==================== BEGIN Q4 ============================ ')
@@ -235,7 +238,6 @@ const countries2 = [
 const c = ['ESTONIA', 'FRANCE', 'GHANA']
 countries2.splice(4, 3, ...c)
 console.log(countries2)
-
 console.log('----------------------------------------------------------- ')
 
 // 4. 2
@@ -251,7 +253,6 @@ const arrOne = [1, 4, 6, 2, 1]
 console.log(checkUniqueness(arrOne)) // false
 const arrTwo = [1, 4, 6, 2, 3]
 console.log(checkUniqueness(arrTwo)) // true
-
 console.log('----------------------------------------------------------- ')
 
 // 4. 3
@@ -284,7 +285,6 @@ console.log(frontEnd, backEnd)
 console.log('----------------------------------------------------------- ')
 
 // 5. 2
-// const [[h, css, j, r] = f, [n, e, m] = b] = fullStack
 const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
 const [
   name,
@@ -303,6 +303,7 @@ console.log(
   reactScore
 )
 console.log('----------------------------------------------------------- ')
+
 // 5. 3
 const students = [
   ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
@@ -586,7 +587,6 @@ const numberOfLanguages = async () => {
     'Total number of langauges in the countries API:',
     Array.from(langSet).length
   )
-
   console.log('----------------------------------------------------------- ')
 }
 numberOfLanguages()
@@ -626,7 +626,7 @@ const mostSpokenLanguages = async (n = 10) => {
 
 console.log('Most spoken languages', mostSpokenLanguages(15))
 
-console.log('----------------------------------------------------------- ')
+
 // 8.2
 
 const add = (a, b) => {
