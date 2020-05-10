@@ -1,7 +1,36 @@
+<div align="center">
+  <h1> JavaScript for Everyone</h1>
+  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
+  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
+  </a>
+  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
+  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
+  </a>
+
+  <sub>Author:
+  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+  <small> January, 2018</small>
+  </sub>
+</div>
 
 ![JS](https://res.cloudinary.com/dgqqxlkfa/image/upload/v1566725872/javascript_for_everyone/javascript_for_everyone.png)
 - [Introduction](#introduction)
 - [Setup](#setup)
+- [Requirements](#requirements)
+- [Setup](#setup-1)
+  - [Install Node.js](#install-nodejs)
+  - [Browser](#browser)
+    - [Installing Google Chrome](#installing-google-chrome)
+    - [Opening Google Chrome Console](#opening-google-chrome-console)
+    - [Writing Code on browser Console](#writing-code-on-browser-console)
+      - [Console.log](#consolelog)
+      - [Console.log with multiple arguments](#consolelog-with-multiple-arguments)
+      - [Comment](#comment)
+      - [Syntax](#syntax)
+    - [Arithmetics](#arithmetics)
+  - [Code Editor](#code-editor)
+    - [Installing Visual Studio Code](#installing-visual-studio-code)
+    - [How to use visual studio code](#how-to-use-visual-studio-code)
   - [Adding JavaScript to a web page](#adding-javascript-to-a-web-page)
     - [Inline Script](#inline-script)
     - [Internal script](#internal-script)
@@ -135,6 +164,193 @@ First thing first, lets install text or code editor. Install code editor, it cou
 Install either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/?v=b) if you didn't have yet.
 
 If you want help, you may join the [telegram](https://t.me/JavaScriptforEveryone) channel.
+
+## Requirements
+
+No prior knowledge of programming is required to follow this guide. You need only:
+
+1. Motivation
+2. Computer
+3. Internet
+4. Browser
+5. Code Editor
+
+## Setup
+
+I believe you have the motivation and a strong desire to be a developer, computer and Internet. If you have those, then you have everything.
+
+### Install Node.js
+
+You may not need it right now but you may need it for later. Install [node.js](https://nodejs.org/en/).
+
+![Node download](images/download_node.png)
+
+After downloading double click and install
+
+ ![Install node](images/install_node.png)
+
+We can check if node is installed in our local machine by opening our device terminal or command  prompt.
+
+```sh
+asabeneh $ node -v
+v12.14.0
+```
+
+I am using node version 12.14.0, which is the recommended version of node.
+
+### Browser
+
+There are many browsers out there. However, I strongly recommend Google Chrome.
+
+#### Installing Google Chrome
+
+Install [google chrome](https://www.google.com/chrome/) if you do not have one yet. We can write small JavaScript code on the browser console, but we do not use the browser console to develop applications.
+
+![Google Chrome](images/google_chrome.png)
+
+#### Opening Google Chrome Console
+
+You can open Google Chrome either by clicking three dots at the top right corner of the Chrome browser or using a shortcut. I prefer using shortcuts.
+
+![Opening chrome](images/opening_developer_tool.png)
+
+To open the Chrome console using a short cut.
+
+```sh
+Mac
+Command+Option+I
+
+Windows:
+Ctl+Shift+I
+```
+
+![Opening console](images/opening_chrome_console_shortcut.png)
+
+After you open the Google Chrome console, try to explore the marked buttons. We will spend most of the time on the Console part. The Console is the place where your JavaScript code goes. The Google Console V8 engine changes your JavaScript code to machine code.
+Let us write a JavaScript code on the Google Chrome console:
+
+![write code on console](./images/js_code_on_chrome_console.png)
+
+#### Writing Code on browser Console
+
+We can write any JavaScript code on the Google console or any browser console. However, for this challenge, we only focus on Google Chrome console. Open the console using:
+
+```sh
+Mac
+Command+Option+I
+
+Windows:
+Ctl+Shift+I
+```
+
+##### Console.log
+
+To write our first JavaScript code, we used a builtin function **console.log()**. We passed an argument as input data, and the function displays the output. We passed 'Hello, World' as input data or argument in the console.log() function.
+
+```js
+console.log('Hello, World!')
+```
+
+##### Console.log with multiple arguments
+
+The console.log(param1, param2, param3), can take multiple arguments.
+
+![console log multiple arguments](./images/console_log_multipl_arguments.png)
+
+```js
+console.log('Hello', 'World', '!')
+console.log('HAPPY', 'NEW', 'YEAR', 2020)
+console.log('Welcome', 'to', 30, 'Days', 'Of', 'JavaScript')
+```
+
+As you can see from the above snippet code, *console.log()* can take multiple arguments.
+
+Congratulations! You wrote your first JavaScript code using *console.log()*.
+
+##### Comment
+
+We add comments to our code. Comments are very important to make code more readable and to leave remarks in our code. JavaScript does not execute the comment part of our code. Any text starts with // in JavaScript is a comment or anything enclose like this /* */ is a comment.
+
+**Example: Single Line Comment**
+
+ // This is the first comment  
+ // This is the second comment  
+ // I am a single line comment  
+
+**Example: Multiline Comment**
+
+  /*
+  This is a multiline comment  
+  Multiline comments can take multiple lines  
+  JavaScript is the language of the web  
+  */
+
+##### Syntax
+
+JavaScript is a programming language. As a result, it has its syntax like other programming languages. If we do not write a syntax that JavaScript understands, it will raise different types of errors. We will explore different kinds of JavaScript errors later. For now, let us see syntax errors.
+
+![Error](images/raising_syntax_error.png)
+
+I made a deliberate mistake. As a result, the console raises a syntax error. Actually, the syntax is very informative. It informs what type of mistake we made. By reading the error feedback guideline, we can correct the syntax and fix the problem. The process of identifying and removing errors from a program is called debugging. Let us fix the errors:
+
+```js
+console.log("Hello, World!")
+console.log('Hello, World!')
+```
+
+So far, we saw how to display text using a *console.log()*. If we are printing text or string using *console.log()*, the text has to be under the single, double, or backtick.
+**Example:**
+
+```js
+console.log("Hello, World!")
+console.log('Hello, World!')
+console.log(`Hello, World!`)
+```
+
+#### Arithmetics
+
+Now, let us practice more writing JavaScript codes using *console.log()* on google chrome console for number data types.
+In addition to the text, we can also do mathematical calculations using JavaScript. Let us do the following simple calculations.
+
+![Arithmetic](images/arithmetic.png)
+
+```js
+console.log(2 + 3)   // Addition
+console.log(3 - 2)   // Subtraction
+console.log(2 * 3)   // Multiplication  
+console.log(3 / 2)   // Division
+console.log(3 % 2)   // Modulus - finding remainder
+console.log(3 ** 2)  // Exponential
+```
+
+### Code Editor
+
+We can write our codes on the browser console, but it won't be for bigger projects. In a real working environment, developers use different code editors to write their codes. In this 30 days python JavaScript challenge, we will use visual studio code.
+
+#### Installing Visual Studio Code
+
+Visual studio code is a very popular open-source text editor.  I would recommend to [download](https://code.visualstudio.com/) visual studio code, but if you are in favor of other editors, feel free to follow with what you have.
+
+![Vscode](images/vscode.png)
+
+If you installed visual studio code, let us start using it.
+
+#### How to use visual studio code
+
+Open the visual studio code by double-clicking the visual studio icon. When you open it, you will get this kind of interface. Try to interact with the labeled icons.
+
+![Vscode ui](./images/vscode_ui.png)
+
+![Vscode add project](./images/adding_project_to_vscode.png)
+
+![Vscode open project](./images/opening_project_on_vscode.png)
+
+![script file](images/scripts_on_vscode.png)
+
+![running script](./images/running_script.png)
+
+![coding running](./images/launched_on_new_tab.png)
+
 
 ### Adding JavaScript to a web page
 
