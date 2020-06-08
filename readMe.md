@@ -12,9 +12,13 @@
   <small> January, 2018</small>
   </sub>
 </div>
-<small>Support Asabeneh to create more educational materials</small>
 
-[<img src = './images/become_patreon.png' alt='become-asabeneh-patreon' title='click' />](https://www.patreon.com/asabeneh?fan_landing=true)  
+<div>
+
+<small>Support [**Asabeneh**](https://www.patreon.com/asabeneh?fan_landing=true) to create more educational materials</small>  
+[<img src = './images/become_patreon.png' alt='become-asabeneh-patreon' title='click' />](https://www.patreon.com/asabeneh?fan_landing=true) 
+ 
+</div>  
 
 ![JS](https://res.cloudinary.com/dgqqxlkfa/image/upload/v1566725872/javascript_for_everyone/javascript_for_everyone.png)
 - [Introduction](#introduction)
