@@ -15,12 +15,12 @@
 
 <div>
 
-<small>Support [**Asabeneh**](https://www.patreon.com/asabeneh?fan_landing=true) to create more educational materials</small>  
-[<img src = './images/become_patreon.png' alt='become-asabeneh-patreon' title='click' />](https://www.patreon.com/asabeneh?fan_landing=true) 
- 
-</div>  
+<small>Support the **author** to create more educational materials</small>  
+<a href = "https://www.paypal.me/asabeneh"><img src='./images/paypal_lg.png' alt='Paypal Logo' style="width:10%"/></a>
 
-![JS](https://res.cloudinary.com/dgqqxlkfa/image/upload/v1566725872/javascript_for_everyone/javascript_for_everyone.png)
+</div> 
+
+![JS](./images/javascript_for_everyone.png)
 - [Introduction](#introduction)
 - [Setup](#setup)
 - [Requirements](#requirements)
@@ -126,7 +126,7 @@
 - [Functional Programming](#functional-programming)
   - [Exercises](#exercises-1)
 - [Destructuring and Spread](#destructuring-and-spread)
-  - [Destructing  Arrays](#destructing-arrays)
+  - [Destructing  Arrays](#destructing--arrays)
     - [Destructuring Object](#destructuring-object)
     - [Renaming during structuring](#renaming-during-structuring)
   - [Spread or Rest Operator](#spread-or-rest-operator)
@@ -200,7 +200,7 @@
   - [Creating a pattern with RegEx Constructor](#creating-a-pattern-with-regex-constructor)
   - [Creating a pattern without RegEx Constructor](#creating-a-pattern-without-regex-constructor)
   - [RegExp Object Methods](#regexp-object-methods)
-    - [Testing for  a match](#testing-for-a-match)
+    - [Testing for  a match](#testing-for--a-match)
     - [Array containing all of the match](#array-containing-all-of-the-match)
     - [Replacing a substring](#replacing-a-substring)
   - [Square Bracket](#square-bracket)
