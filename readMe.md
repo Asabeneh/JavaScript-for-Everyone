@@ -3689,25 +3689,25 @@ Destructuring is a way to unpack arrays, and objects and assigning to a distinct
 ### Destructing  Arrays
 
 ```js
-  const numbers = [1, 2,3];
+  const numbers = [1, 2, 3];
   let [numOne, numTwo, numThree] = numbers;
   console.log(numOne, numTwo, numThree) // 1,2,3
-  const names = ['Asabeneh', 'Brook', 'David', 'John']
-  let [firstPerson, secondPerson, ThirdPerson, fourth Person] = names;
+  const names = ['Asabeneh', 'Brook', 'David', 'John'];
+  let [firstPerson, secondPerson, ThirdPerson, fourthPerson] = names;
   console.log(firstName, secondPerson,thirdPerson, fourthPerson) //Asabeneh, Brook, David, John
   const scientificConstants = [2.72, 3.14, 9.81, 37, 100];
-  let [e, pi, gravity, bodyTemp, boilingTemp] = scientificConstants
+  let [e, pi, gravity, bodyTemp, boilingTemp] = scientificConstants;
   console.log(e,pi,gravity, bodyTemp, boilingTemp) //2.72, 3.14, 9.81, 37, 100
 ```
 
-If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that index
+If we like to skip one of the values in the array we use additional comma. The comma helps to omit the value at that index
 
 ```js
-  const numbers = [1, 2,3];
-  let [numOne, , , numThree] = numbers; //2 is omitted
-  console.log(numOne,, numThree) // 1,2,3
-  const names = ['Asabeneh', 'Brook', 'David', 'John']
-  let [, secondPerson, , fourth Person] = name; // first and third person is omitted
+  const numbers = [1, 2, 3];
+  let [numOne, , numThree] = numbers; //2 is omitted
+  console.log(numOne, numThree) // 1,2,3
+  const names = ['Asabeneh', 'Brook', 'David', 'John'];
+  let [, secondPerson, , fourthPerson] = names; // first and third person is omitted
   console.log(secondPerson, fourthPerson) //Brook, John
 ```
 
